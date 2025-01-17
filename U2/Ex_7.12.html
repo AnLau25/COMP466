@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test 7.12</title>
+        <script>
+            var accnum, initblnc, items, credit, creditlim;
+            var get_Accnum, get_Initblnc, get_Items, get_Credit, get_Creditlim;
+
+            get_Accnum = window.prompt("Enter account number: ");
+            get_Initblnc = window.prompt("Enter initial balace: ");
+            get_Items = window.prompt("Enter number of items: ");
+            get_Credit = window.prompt("Enter present credit: ");
+            get_Creditlim = window.prompt("Enter credit limit: ");
+
+            accnum= parseInt(get_Accnum);
+            initblnc= parseInt(get_Initblnc);
+            items= parseInt(get_Items);
+            credit= parseInt(get_Credit);
+            creditlim= parseInt(get_Creditlim);
+
+            newBlnc = initblnc + items - credit;
+
+            document.write("<p>Account number: "+ accnum +" </p>");
+            document.write("<p>Initial balace: "+ initblnc +" </p>");
+            document.write("<p>Number of items: "+ items +" </p>");
+            document.write("<p>Present credit: "+ credit +" </p>");
+            document.write("<p>Credit limit: "+ creditlim +" </p>");
+
+            if(newBlnc>=creditlim){
+                document.write("<p><strong>Transaction denied</strong></p>");
+            }else{
+                document.write("<p><strong>Transaction aprooved</strong></p>");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Dummy page</h1>
+        <img src="DummyMax.jpg"/>
+    </body>
+</html>

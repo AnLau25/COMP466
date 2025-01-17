@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Test 9.8</title>
+    <script>
+        var total = 85.75;
+        var current = 15;
+        var charges, payButton;
+
+        function start() {
+            document.getElementById('sliderValue');
+            payButton = document.getElementById('pay');
+            payButton.addEventListener('click', pageUp, false); 
+            updateCharges(current);
+        }
+
+        function updateValue(val) {
+            document.getElementById('sliderValue').textContent = val;
+            current = parseFloat(val); 
+            updateCharges(current);
+        }
+
+        function pageUp(){
+            event.preventDefault();
+            total=total+charges;
+            slider.value = 15;
+            updateValue(15);
+            document.getElementById('earn').textContent = total.toFixed(2) + "$";
+        }
+
+        function updateCharges(h) {
+            if (h <= 3) {
+                charges = 2.00;
+            } else if (h == 24) {
+                charges = 10.00;
+            } else if (3 < h && h < 24) {
+                charges = 2.00 + 0.5 * (h - 3);
+            }
+            document.getElementById('charges').textContent = charges.toFixed(2) + "$";
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        <label for="slider">How much time will you stay:</label>
+        <br />
+        <div class="slider-container">
+            <span id="minValue" class="slider-label">3h</span>
+            <input type="range" id="slider" name="slider" step="0.25" min="3" max="24" value="15"
+                oninput="updateValue(this.value)">
+            <span id="maxValue" class="slider-label">24h</span>
+            <p>Hours: <span id="sliderValue">15</span>h</p>
+            <p>Charges: <span id="charges">8.00$</span></p>
+        </div>
+
+        <button id="pay">Pay parking</button>
+        <p>Earnings: <span id="earn">85.75$</span></p>
+    </form>
+
+    <h1>Dummy page</h1>
+    <img src="DummyMax.jpg" />
+</body>
+
+</html>

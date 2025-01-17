@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Test 5.9</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden; 
+            }
+            img {
+                position: absolute; /* Allow free movement within the viewport */
+                width: 200px;
+                height: 200px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <img src="dvd.png" alt="Nostalga" id="movingImage" />
+
+        <script>
+            const img = document.getElementById("movingImage");
+
+            // Set initial position and direction
+            let x = 100;
+            let y = 100;
+            let dx = 3; // Horizontal speed
+            let dy = 2; // Vertical speed
+
+            function moveImage() {
+                // Update position
+                x += dx;
+                y += dy;
+
+                // Check for collision with the edges and reverse direction
+                if (x <= 0 || x + img.width >= window.innerWidth) {
+                    dx = -dx; // Reverse horizontal direction
+                }
+                if (y <= 0 || y + img.height >= window.innerHeight) {
+                    dy = -dy; // Reverse vertical direction
+                }
+
+                // Apply the new position
+                img.style.left = x + "px";
+                img.style.top = y + "px";
+
+                // Continue the animation
+                requestAnimationFrame(moveImage);
+            }
+
+            // Start the animation
+            moveImage();
+        </script>
+    </body>
+</html>

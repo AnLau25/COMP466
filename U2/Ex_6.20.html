@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test 6.20</title>
+        <script>
+            var a, s, d, f, g, xl, xs;
+            var geta, gets, getd, getf, getg;
+
+            geta = window.prompt("Enter a number: ");
+            gets = window.prompt("Enter a number: ");
+            getd = window.prompt("Enter a number: ");
+            getf = window.prompt("Enter a number: ");
+            getg = window.prompt("Enter a number: ");
+
+            a= parseInt(geta);
+            s= parseInt(gets);
+            d= parseInt(getd);
+            f= parseInt(getf);
+            g= parseInt(getg);
+
+            
+
+            if(a>s && a>d && a>f && a>g){
+                xl=a;
+            }else if(s>d && s>f && s>g && s>a){
+                xl=s;
+            }else if(d>f && d>g && d>a && d>s){
+                xl=d;
+            }else if(f>g && f>a && f>s && f>d){
+                xl=f;
+            }else if(g>a && g>s && g>d && g>f){
+                xl=g;
+            }
+
+            if(a<s && a<d && a<f && a<g){
+                xs=a;
+            }else if(s<d && s<f && s<g && s<a){
+                xs=s;
+            }else if(d<f && d<g && d<a && d<s){
+                xs=d;
+            }else if(f<g && f<a && f<s && f<d){
+                xs=f;
+            }else if(g<a && g<s && g<d && g<f){
+                xs=g;
+            }
+
+            document.write("<h1>"+ xl + "</h1>" + "<h5>"+ xs +"</h5>");
+
+        </script>
+    </head>
+    <body>
+        <h1>Dummy page</h1>
+        <img src="DummyMax.jpg"/>
+    </body>
+</html>
+
+<!--Write a script that takes three integers from the user and displays the sum, average, product, smallest 
+and largest of the numbers in an alert dialog.-->

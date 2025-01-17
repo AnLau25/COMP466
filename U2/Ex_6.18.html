@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test 6.18</title>
+        <script>
+            var a,s,d, xl, xs;
+            var geta,gets,getd;
+
+            geta = window.prompt("Enter a number: ");
+            gets = window.prompt("Enter a number: ");
+            getd = window.prompt("Enter a number: ");
+
+            a= parseInt(geta);
+            s= parseInt(gets);
+            d= parseInt(getd);
+
+            res1 = a+s+d;
+            res2 = res1/3;
+            res3 = a*s*d;
+
+            if(a>s && a>d){
+                xl=a;
+            }else if(s>d && s>a){
+                xl=s;
+            }else if(d>a && d>s){
+                xl=d;
+            }
+
+            if(a<s && a<d){
+                xs=a;
+            }else if(s<d && s<a){
+                xs=s;
+            }else if(d<a && d<s){
+                xs=d;
+            }
+
+            window.alert("Sum: "+ res1 + "\nAvr: " + res2 + "\nMult: " + res3 + "\nMax: " + xl + "\nMin: " + xs);
+
+        </script>
+    </head>
+    <body>
+        <h1>Dummy page</h1>
+        <img src="DummyMax.jpg"/>
+    </body>
+</html>
+
+<!--Write a script that takes three integers from the user and displays the sum, average, product, smallest 
+and largest of the numbers in an alert dialog.-->
