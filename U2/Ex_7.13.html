@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 7.13</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            text-align: start;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <script>
+        const items = [239.99, 129.75, 99.75, 350.89];
+
+        function start() {
+            const calcButton = document.getElementById('calc');
+            calcButton.addEventListener('click', calculate_pay, false);
+        }
+
+        function calculate_pay() {
+            let n = parseInt(document.getElementById('n_in').value);
+            let total = 200.00;
+            while (n > 0) {
+                const get_item = window.prompt("Enter item number: ");
+                total += items[get_item-1]*0.09;
+                n--;
+            }
+            document.getElementById('pay').textContent = total.toFixed(2) + "$";
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                for (let i in items) {
+                    document.write("<tr>");
+                    document.write("<td>" + i + "</td>");
+                    document.write("<td>" + items[i] + "</td>");
+                    document.write("</tr>");
+                }
+            </script>
+        </tbody>
+    </table>
+    <form id="pay_form" method="post" action="https://www.msn.com/es-es/deportes/motor/aston-martin-sustituye-a-krack-como-director-de-equipo-con-efecto-inmediato/ar-BB1rduoo?ocid=msedgntp&pc=U531&cvid=a5d5dd257a4c4d07b128178eab232480&ei=22" autocomplete="on">
+        <h1>Calculate paycheck</h1>
+        <p>
+            <label>Number of items sold:
+                <input name="fname" id="n_in" type="text" placeholder="Number of items" pattern="\d+" size="25" maxlength="30" required />
+            </label>
+        </p>
+        <p>Pay: <span id="pay">0.00$</span></p>
+        <button id="calc" type="button">Calculate</button>
+    </form>
+</body>
+
+</html>

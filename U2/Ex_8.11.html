@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 8.11</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            text-align: start;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <script>
+        const items = [
+            [2.98, 0, 0], 
+            [4.50, 0, 0], 
+            [9.98, 0, 0], 
+            [4.49, 0, 0], 
+            [6.87, 0, 0]
+        ];
+
+        function start() {
+            const calcButton = document.getElementById('calc');
+            calcButton.addEventListener('click', calculate_total, false);
+            //Don't press enter if u hasnt assigned it
+        }
+
+        function calculate_total(event) {
+            let inputField = document.getElementById('amount');
+            let pattern = new RegExp(inputField.getAttribute('pattern'));
+
+            if (!pattern.test(inputField.value)) { 
+                alert("Invalid input. Please enter a number in the format 'item,amount'."); 
+                event.preventDefault(); 
+                return;
+            }
+
+            let n = inputField.value.split(",");
+
+            switch (parseInt(n[0])) {
+                case 1:
+                    items[0][1] += parseInt(n[1]);
+                    items[0][2] += parseInt(n[1]) * items[0][0];
+                    document.getElementById('0_number').textContent = (items[0][1]);
+                    document.getElementById('0_amount').textContent = (items[0][2]).toFixed(2) + "$";
+                    break;
+                case 2:
+                    items[1][1] += parseInt(n[1]);
+                    items[1][2] += parseInt(n[1]) * items[1][0];
+                    document.getElementById('1_number').textContent = (items[1][1]);
+                    document.getElementById('1_amount').textContent = (items[1][2]).toFixed(2) + "$";
+                    break;
+                case 3:
+                    items[2][1] += parseInt(n[1]);
+                    items[2][2] += parseInt(n[1]) * items[2][0];
+                    document.getElementById('2_number').textContent = (items[2][1]);
+                    document.getElementById('2_amount').textContent = (items[2][2]).toFixed(2) + "$";
+                break;
+                case 4:
+                    items[3][1] += parseInt(n[1]);
+                    items[3][2] += parseInt(n[1]) * items[3][0];
+                    document.getElementById('3_number').textContent = (items[3][1]);
+                    document.getElementById('3_amount').textContent = (items[3][2]).toFixed(2) + "$";
+                break;
+                case 5:
+                    items[4][1] += parseInt(n[1]);
+                    items[4][2] += parseInt(n[1]) * items[4][0];
+                    document.getElementById('4_number').textContent = (items[4][1]);
+                    document.getElementById('4_amount').textContent = (items[4][2]).toFixed(2) + "$";
+                break;    
+                default:
+                    alert("Invalid item number.");
+                    break;
+            }
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Sold</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                for (let i in items) {
+                    document.write("<tr>");
+                    document.write("<td>" + (parseInt(i) + 1) + "</td>");
+                    document.write("<td>" + (items[i][0]).toFixed(2) + "$ </td>");
+                    document.write("<td id='" + i + "_number'>" + "N/a" + "</td>");
+                    document.write("<td id='" + i + "_amount'>" + "N/a" + "</td>");
+                    document.write("</tr>");
+                }
+            </script>
+        </tbody>
+    </table>
+    <form id="pay_form" method="post"
+        action="https://www.msn.com/es-es/deportes/motor/aston-martin-sustituye-a-krack-como-director-de-equipo-con-efecto-inmediato/ar-BB1rduoo?ocid=msedgntp&pc=U531&cvid=a5d5dd257a4c4d07b128178eab232480&ei=22"
+        autocomplete="on">
+        <h1>Sales accounting</h1>
+        <p>
+            <label>Number of items sold format 'item,amount':
+                <input name="fname" id="amount" type="text" placeholder="Number of items" pattern="\d+\,+\d+" size="25"
+                    maxlength="30" required />
+            </label>
+        </p>
+        <button id="calc" type="button">Calculate</button>
+    </form>
+</body>
+
+</html>

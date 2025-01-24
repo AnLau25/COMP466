@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="nutrition.xsl"?>
+<cookiePack>
+    <branding>
+        <brandName>Grandma White’s cookies</brandName>
+        <serving>1 Pack : 1 serving</serving>
+    </branding>
+    <nutLabel>
+        <fact id="calories"><value>260</value></fact>
+        <fact id="fatCal"><value>100</value></fact>
+        <fact id="fatGrms"><value>11g</value></fact>
+        <fact id="satFat"><value>2g</value></fact>
+        <fact id="chlstrl"><value>250mg</value></fact>
+        <fact id="carbs"><value>36g</value></fact>
+        <fact id="fiber"><value>2g</value></fact>
+        <fact id="sgrs"><value>15g</value></fact>
+        <fact id="prtn"><value>5g</value></fact>
+    </nutLabel>
+</cookiePack>
+
+
+
+<!--Ex_15.7-->
