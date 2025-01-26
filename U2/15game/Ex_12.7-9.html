@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Puzzle Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2px;
+            width: 400px;
+            height: 400px;
+            background-color: #333;
+        }
+
+        .quadrant {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+            background-image: url('DummyMax.jpg');
+            /* Replace with your image path */
+            background-size: 400px 400px;
+            /* Ensure the full image matches the game board size */
+            background-repeat: no-repeat;
+        }
+
+        .empty {
+            background-color: #f0f0f0;
+            cursor: default;
+            background-image: none;
+            /* Remove the background for the empty tile */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-board"></div>
+
+    <script>
+        let clicks = 0;
+        const gameBoard = document.querySelector('.game-board');
+        const winningConfiguration = [...Array(15).keys()].map(n => n + 1).concat('');
+
+        function isGameSolved() {
+            return tiles.every((tile, index) => tile === winningConfiguration[index]);
+        }
+
+
+        // Create an array for the game state (1-15 + empty space)
+        let tiles = Array.from({ length: 15 }, (_, i) => i + 1);
+        tiles.push(''); // Add the empty tile
+        shuffle(tiles); // Shuffle the tiles
+        let emptyIndex = tiles.indexOf(''); // Keep track of the empty tile
+
+        // Render the initial game board
+        tiles.forEach((tile, index) => {
+            const div = document.createElement('div');
+            div.classList.add('quadrant');
+            if (tile === '') div.classList.add('empty');
+            div.dataset.index = index;
+
+            // Set background position for tiles
+            if (tile !== '') {
+                const row = Math.floor((tile - 1) / 4);
+                const col = (tile - 1) % 4;
+                div.style.backgroundPosition = `${-col * 100}px ${-row * 100}px`;
+            }
+
+            div.textContent = tile; // Optional: Show tile numbers
+            div.draggable = tile !== ''; // Non-empty tiles are draggable
+            gameBoard.appendChild(div);
+        });
+
+        const quadrants = document.querySelectorAll('.quadrant');
+
+        // Add drag-and-drop functionality
+        quadrants.forEach((quadrant) => {
+            // Handle drag start
+            quadrant.addEventListener('dragstart', (e) => {
+                if (quadrant.classList.contains('empty')) {
+                    e.preventDefault();
+                } else {
+                    e.dataTransfer.setData('text/plain', quadrant.dataset.index);
+                }
+            });
+
+            // Allow drop on empty square
+            quadrant.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const draggedIndex = e.dataTransfer.getData('text');
+                if (isValidMove(draggedIndex, emptyIndex)) {
+                    quadrant.classList.add('hover');
+                }
+            });
+
+            // Handle drop
+            quadrant.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const draggedIndex = parseInt(e.dataTransfer.getData('text'), 10);
+
+                if (isValidMove(draggedIndex, emptyIndex)) {
+                    // Swap tiles
+                    [tiles[draggedIndex], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[draggedIndex]];
+                    emptyIndex = draggedIndex; // Update empty tile index
+                    updateBoard(); // Update the board visually
+                }
+            });
+
+            // Remove hover effect
+            quadrant.addEventListener('dragleave', () => {
+                quadrant.classList.remove('hover');
+            });
+        });
+
+        // Shuffle tiles
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Check if the move is valid
+        function isValidMove(draggedIndex, emptyIndex) {
+            const validMoves = [
+                emptyIndex - 1, // Left
+                emptyIndex + 1, // Right
+                emptyIndex - 4, // Above
+                emptyIndex + 4, // Below
+            ];
+            return validMoves.includes(draggedIndex) && isSameRowOrColumn(draggedIndex, emptyIndex);
+        }
+
+        // Ensure moves stay within the same row or column
+        function isSameRowOrColumn(draggedIndex, emptyIndex) {
+            const sameRow = Math.floor(draggedIndex / 4) === Math.floor(emptyIndex / 4);
+            const sameColumn = draggedIndex % 4 === emptyIndex % 4;
+            return sameRow || sameColumn;
+        }
+
+        // Update the board visually
+        function updateBoard() {
+            quadrants.forEach((quadrant, index) => {
+                quadrant.textContent = tiles[index];
+                quadrant.classList.toggle('empty', tiles[index] === '');
+                quadrant.draggable = tiles[index] !== ''; // Only non-empty tiles are draggable
+
+                if (tiles[index] !== '') {
+                    const row = Math.floor((tiles[index] - 1) / 4);
+                    const col = (tiles[index] - 1) % 4;
+                    quadrant.style.backgroundPosition = `${-col * 100}px ${-row * 100}px`;
+                } else {
+                    quadrant.style.backgroundPosition = '';
+                }
+            });
+            clicks++;
+            document.getElementById('moveCounter').textContent = clicks;
+
+            if (isGameSolved()) {
+                alert(`Congratulations! You solved the puzzle in ${clicks} moves.`);
+            }
+        }
+    </script>
+
+    <p>Moves: <span id="moveCounter">0</span></p>
+</body>
+
+</html>
