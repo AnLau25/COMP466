@@ -1,24 +1,28 @@
 {
-  "producs": {
-    "p1": {
-      "title1": "title1",
-      "price2": "5.00",
-      "thumb2": "thumb2"
+  "products": [
+    {   
+      "ID": "p3",  
+      "title": "title1",
+      "price": "5.10",
+      "thumbnail": "thumbs.p1.thumb1"
     },
-    "p2": {
-      "title2": "title2",
-      "price2": "5.00",
-      "thumb2": "thumb2"
+    {
+      "ID": "p2", 
+      "title": "title2",
+      "price": "5.20",
+      "thumbnail": "thumbs.p2.thumb2"
     },
-    "p3": {
-      "title3": "title3",
-      "price3": "5.00",
-      "thumb3": "thumb3"
+    { 
+      "ID": "p3",
+      "title": "title3",
+      "price": "5.30",
+      "thumbnail": "thumbs.p3.thumb3"
     },
-    "p4": {
-      "title4": "title4",
-      "price4": "5.00",
-      "thumb4": "thumb4"
+    {
+      "ID": "p4",
+      "title": "title4",
+      "price": "5.40",
+      "thumbnail": "thumbs.p4.thumb4"
     }
-  }
+  ]
 }
