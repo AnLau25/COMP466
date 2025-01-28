@@ -1,0 +1,24 @@
+{
+  "producs": {
+    "p1": {
+      "title1": "title1",
+      "price2": "5.00",
+      "thumb2": "thumb2"
+    },
+    "p2": {
+      "title2": "title2",
+      "price2": "5.00",
+      "thumb2": "thumb2"
+    },
+    "p3": {
+      "title3": "title3",
+      "price3": "5.00",
+      "thumb3": "thumb3"
+    },
+    "p4": {
+      "title4": "title4",
+      "price4": "5.00",
+      "thumb4": "thumb4"
+    }
+  }
+}
