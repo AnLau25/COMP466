@@ -22,4 +22,5 @@ products.products.forEach(product => {
 
     // Append the row to the table body
     tableBody.appendChild(row);
-});
+});//Figure how ti loop through columns, add the btn + hover
+//Check on the examples from the one in ch15 where they did the img thing

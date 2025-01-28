@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="resume.xsl"?>
+<resume xmlns="http://part1.com/resume"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://part1.com/resume resume.xsd">
+    <geninfo>
+        <name>Ana Laura Valdés</name>
+        <age>21</age>
+        <hobbies>Fútbol, F1</hobbies>
+        <edubg>
+            <uni>University of Ottawa</uni>
+            <major>Software Engineering</major>
+            <prev>Collège catholique Samuel-Genest</prev>
+        </edubg>
+    </geninfo>
+    <workinfo>
+        <position id="CISSSO">
+            <description>Intern in Operational Security</description>
+        </position>
+        <position id="Shoppers">
+            <description>Pharmacy Assistant</description>
+        </position>
+    </workinfo>
+</resume>
