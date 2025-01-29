@@ -1,26 +1,33 @@
-import products from 'prods.json';
-import descriptions from 'descripts.json';
-import thumbnails from 'thubs.json';
+import prods from './prods.json' assert { type: "json" };
 
-console.log(products);
-console.log(descriptions);
-console.log(thumbnails);
+console.log(prods);
 
 const tableHead = document.querySelector("#productTable thead");
 const tableBody = document.querySelector("#productTable tbody");
 
-products.products.forEach(product => {
-    const row = document.createElement("tr");
+// Create a single header row
+const headerRow = document.createElement("tr");
+prods.products.forEach(product => {
+    const th = document.createElement("th");
+    th.textContent = product.title;
+    headerRow.appendChild(th);
+});
+tableHead.appendChild(headerRow);
 
-    // Create table cells for each property
-    row.innerHTML = `
-      <td>${product.id}</td>
-      <td>${product.title}</td>
-      <td>${product.price}</td>
-      <td><img src="${product.thumbnail}" alt="${product.title}" width="50"></td>
-    `;
+// Create a single row that holds product images
+const imageRow = document.createElement("tr");
+prods.products.forEach(product => {
+    const imageCell = document.createElement("td");
+    imageCell.innerHTML = `<img src="${prods.thumbnails[product.ID]}" alt="${product.title}" width="50">`;
+    imageRow.appendChild(imageCell);
+});
+tableBody.appendChild(imageRow);
 
-    // Append the row to the table body
-    tableBody.appendChild(row);
-});//Figure how ti loop through columns, add the btn + hover
-//Check on the examples from the one in ch15 where they did the img thing
+// Create a single row that holds product prices
+const priceRow = document.createElement("tr");
+prods.products.forEach(product => {
+    const priceCell = document.createElement("td");
+    priceCell.textContent = `$${product.price.toFixed(2)}`;
+    priceRow.appendChild(priceCell);
+});
+tableBody.appendChild(priceRow);

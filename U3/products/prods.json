@@ -1,28 +1,42 @@
 {
+  "full_images": {
+    "p1": "img1.jpg",
+    "p2": "img2.jpg",
+    "p3": "img3.jpg",
+    "p4": "img4.jpg"
+  },
+  "thumbnails": {
+    "p1": "img1B.jpg",
+    "p2": "img2B.jpg",
+    "p3": "img3B.jpg",
+    "p4": "img4B.jpg"
+  },
+  "descriptions": {
+    "p1": "A good description for p1 would go here",
+    "p2": "A good description for p2 would go here",
+    "p3": "A good description for p3 would go here",
+    "p4": "A good description for p4 would go here"
+  },
   "products": [
-    {   
-      "ID": "p3",  
+    {
+      "ID": "p1",
       "title": "title1",
-      "price": "5.10",
-      "thumbnail": "thumbs.p1.thumb1"
+      "price": 5.10
     },
     {
-      "ID": "p2", 
+      "ID": "p2",
       "title": "title2",
-      "price": "5.20",
-      "thumbnail": "thumbs.p2.thumb2"
+      "price": 5.20
     },
-    { 
+    {
       "ID": "p3",
       "title": "title3",
-      "price": "5.30",
-      "thumbnail": "thumbs.p3.thumb3"
+      "price": 5.30
     },
     {
       "ID": "p4",
       "title": "title4",
-      "price": "5.40",
-      "thumbnail": "thumbs.p4.thumb4"
+      "price": 5.40
     }
   ]
 }
