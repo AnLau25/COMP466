@@ -1,15 +1,15 @@
 {
   "full_images": {
-    "p1": "img1.jpg",
-    "p2": "img2.jpg",
-    "p3": "img3.jpg",
-    "p4": "img4.jpg"
+    "p1": "DummyMax.jpg",
+    "p2": "DummyMax.jpg",
+    "p3": "DummyMax.jpg",
+    "p4": "DummyMax.jpg"
   },
   "thumbnails": {
-    "p1": "img1B.jpg",
-    "p2": "img2B.jpg",
-    "p3": "img3B.jpg",
-    "p4": "img4B.jpg"
+    "p1": "DummyMax.jpg",
+    "p2": "DummyMax.jpg",
+    "p3": "DummyMax.jpg",
+    "p4": "DummyMax.jpg"
   },
   "descriptions": {
     "p1": "A good description for p1 would go here",
