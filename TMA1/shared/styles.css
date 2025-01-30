@@ -62,7 +62,7 @@ p {
 	color: darkgreen;
 }
 
-#hero .cta{
+.cta{
     display: inline-block;
     padding: 10px 30px;
     color: darkgreen;
@@ -77,7 +77,7 @@ p {
     transition-property: background-color,color;
 }
 
-#hero .cta:hover{
+.cta:hover{
     color: white;
 	z-index: 10;
     background-color: darkgreen;
@@ -175,7 +175,7 @@ p {
 }
 /*Hero*/
 
-#U1 .U1 {
+.section-container {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
@@ -183,12 +183,17 @@ p {
 	padding: 100px 0;
 }
 
-#U1 .top {
+.section-container .top {
 	max-width: 500px;
 	margin: 0 auto;
 }
 
-#U1 .bottom {
+.section-container .top p{
+	color: black;
+	text-align: center;
+}
+
+.section-container .bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -196,7 +201,7 @@ p {
 	margin-top: 50px;
 }
 
-#U1 .item {
+.section-container .item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -212,7 +217,7 @@ p {
 	overflow: hidden;
 }
 
-#U1 .item::after {
+.section-container .item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -224,74 +229,85 @@ p {
 	z-index: -1;
 }
 
-#U1 .bottom .icon {
+.section-container .bottom .icon {
 	height: auto;
 	width: auto;
 	margin-bottom: 20px;
 }
 
-#U1 .item h2 {
+.section-container .item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 
-#U1 p {
+.section-container p {
 	color: white;
 	text-align: left;
 }
 
-#U1 .subs {
+.section-container .subs {
     display: flex;
     align-items: center;
     gap: 10px; 
 }
 
-#U1 .all-exmpls {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-#U1 .exmpl-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 80%;
-	margin: 20px auto;
-	overflow: hidden;
-	border-radius: 10px;
-}
-#U1 .exmpl-info {
-	padding: 30px;
-	flex-basis: 50%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	color: white;
-}
-#U1 .exmpl-info h1 {
-	font-size: 4rem;
-	font-weight: 500;
-}
-#U1 .exmpl-info h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	margin-top: 10px;
+.section-container .all-exmpls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#U1 .exmpl-img {
-	flex-basis: 50%;
-	height: 300px;
-	overflow: hidden;
-	position: relative;
+.section-container .exmpl-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
 }
 
+.section-container .exmpl-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.section-container .exmpl-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.section-container .exmpl-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 84%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: rgb(14, 12, 12);
+    min-height: 300px; /* Ensures a minimum height */
+    overflow: hidden;
+}
+
+.section-container .exmpl-cont {
+    flex-basis: 50%;
+    display: flex;
+    align-items: stretch; /* Allows content to take full height */
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section-container .exmpl-cont img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 /* End U1 Section */
 
