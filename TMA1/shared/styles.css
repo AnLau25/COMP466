@@ -48,6 +48,7 @@ p {
 	margin-top: 5px;
 	letter-spacing: 0.05rem;
 }
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -183,17 +184,17 @@ p {
 	padding: 100px 0;
 }
 
-.section-container .top {
+.top {
 	max-width: 500px;
 	margin: 0 auto;
 }
 
-.section-container .top p{
+.top p{
 	color: black;
 	text-align: center;
 }
 
-.section-container .bottom {
+.bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -201,15 +202,13 @@ p {
 	margin-top: 50px;
 }
 
-.section-container .item {
+.item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
-	justify-content: center;
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
@@ -217,7 +216,7 @@ p {
 	overflow: hidden;
 }
 
-.section-container .item::after {
+.item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -229,13 +228,13 @@ p {
 	z-index: -1;
 }
 
-.section-container .bottom .icon {
+.bottom .icon {
 	height: auto;
 	width: auto;
 	margin-bottom: 20px;
 }
 
-.section-container .item h2 {
+.item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
@@ -247,20 +246,20 @@ p {
 	text-align: left;
 }
 
-.section-container .subs {
+.subs {
     display: flex;
     align-items: center;
     gap: 10px; 
 }
 
-.section-container .all-exmpls {
+.all-exmpls {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.section-container .exmpl-info {
+.exmpl-info {
     padding: 30px;
     flex-basis: 50%;
     height: auto;
@@ -272,18 +271,18 @@ p {
     color: white;
 }
 
-.section-container .exmpl-info h1 {
+.exmpl-info h1 {
     font-size: 4rem;
     font-weight: 500;
 }
 
-.section-container .exmpl-info h2 {
+.exmpl-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
 }
 
-.section-container .exmpl-item {
+.exmpl-item {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -295,7 +294,7 @@ p {
     overflow: hidden;
 }
 
-.section-container .exmpl-cont {
+.exmpl-cont {
     flex-basis: 50%;
     display: flex;
     align-items: stretch; /* Allows content to take full height */
@@ -303,7 +302,7 @@ p {
     overflow: hidden;
 }
 
-.section-container .exmpl-cont img {
+.exmpl-cont img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -311,4 +310,44 @@ p {
 
 /* End U1 Section */
 
+/*Q-section*/
+.q-container {
+	flex-direction: column;
+	text-align: center;
+	margin: 0 auto;
+	padding: 100px 0;
+}
 
+.q-container .item{
+	/*make les big*/
+}
+
+.choice-container{
+	display: flex;
+	margin-bottom: 10px;
+	font-size: 30px;
+	border-radius: 10px;
+	background-color: rgb(197, 192, 192);
+}
+
+.choice-container:hover{
+	cursor: pointer;
+	box-shadow: 10px 7px 0px 0 darkgreen;
+	transform: translateY(-1px);
+	transition: transform 150ms;
+}
+
+.choice-let{
+	padding: 10px;
+	color: white;
+	border: solid darkgreen;
+	background-color: darkgreen;
+}
+
+.choice-def{
+	padding: 10px;
+}
+
+.choice-container p {
+	margin: 0px;
+}
