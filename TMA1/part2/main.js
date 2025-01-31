@@ -1,4 +1,6 @@
 const question = document.getElementById("question");
+const qNum = document.getElementById('qNum-txt');
+const qScr = document.getElementById('qScr-txt');
 const choices = Array.from(document.getElementsByClassName("choice-def"));
 
 let currentQ = {};
@@ -36,7 +38,7 @@ let questions = [
     }
 ];
 
-const maxQ = 3; 
+const qMax = 3;
 
 startQuiz = () => {
     qCounter = 0;
@@ -47,17 +49,88 @@ startQuiz = () => {
 };
 
 getNextq = () => {
+    if (qAvailable.length == 0 || qCounter >= qMax) {
+        return window.location.assign('/part2/end.html');
+    }
     qCounter++;
-    const qIndex = Math.floor(Math.random()*qAvailable.length);
-    currentQ =  qAvailable[qIndex];
-    question.innerText =  currentQ.question; 
+    qNum.innerText = `${qCounter}/${qMax}`;
+    const qIndex = Math.floor(Math.random() * qAvailable.length);
+    currentQ = qAvailable[qIndex];
+    question.innerText = currentQ.question;
 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQ['choice' + number];
     });
+
+    qAvailable.splice(qIndex, 1);
+    ans = true;
 };
 
-startQuiz();
 
-//Make work
+scorePlus = () =>{
+    score += 10;
+    qScr.innerText = score;
+    localStorage.setItem('lastScore', score);
+}
+
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        if (!ans) return;
+
+        ans = false;
+        const selChoice = e.target;
+        const selAns = selChoice.dataset['number'];
+
+        const correction =
+            selAns == currentQ.answer ? 'correct' : 'incorrect';
+
+        if (correction == 'incorrect') {
+            choices.forEach(choice => {
+                if (choice.dataset['number'] == currentQ.answer) {
+                    choice.parentElement.classList.add('correct');
+                    setTimeout(() => {
+                        choice.parentElement.classList.remove('correct');
+                    },1000);
+                }
+            });
+        }else{
+            scorePlus();
+        };
+
+        selChoice.parentElement.classList.add(correction);
+
+        setTimeout(() => {
+            selChoice.parentElement.classList.remove(correction);
+            choice.parentElement.classList.remove('correct');
+            getNextq();
+        },1000);
+
+    });
+
+});
+
+startQuiz();
+/*
+
+        if(!ans) return;
+
+        ans = false;
+        const selChoice = e.target;
+        const selAns =  selChoice.dataset['number'];
+
+        console.log(selAns == currentQ.answer);
+
+        const correction = 
+            selAns == currentQ.answer ? 'correct' : 'incorrect';
+
+        console.log(selAns == currentQ.answer);
+
+        selChoice.parentElement.classList.add(correction);
+
+        //selChoice.parentElement.classList.remove(correction);
+
+
+
+        make 3 text file
+*/

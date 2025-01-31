@@ -312,14 +312,18 @@ p {
 
 /*Q-section*/
 .q-container {
+    display: flex;
 	flex-direction: column;
 	text-align: center;
+    align-items: center;
 	margin: 0 auto;
 	padding: 100px 0;
 }
 
 .q-container .item{
-	/*make les big*/
+	display: block;
+    padding: 50px;
+    min-width: 500px;
 }
 
 .choice-container{
@@ -350,4 +354,17 @@ p {
 
 .choice-container p {
 	margin: 0px;
+}
+
+.correct{
+    background-color: rgb(51, 143, 51);
+}
+
+.incorrect{
+    background-color: #d64545;
+}
+
+#qNum{
+    display: flex;
+    gap: 50px;
 }
