@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\documents\\a_uni\\yoff\\atha\\comp466\\u4\\DisplayTable\\DisplayTable.csproj": {}
+    "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U4\\DisplayTable\\DisplayTable.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\documents\\a_uni\\yoff\\atha\\comp466\\u4\\DisplayTable\\DisplayTable.csproj": {
+    "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U4\\DisplayTable\\DisplayTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\documents\\a_uni\\yoff\\atha\\comp466\\u4\\DisplayTable\\DisplayTable.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U4\\DisplayTable\\DisplayTable.csproj",
         "projectName": "DisplayTable",
-        "projectPath": "C:\\Users\\User\\documents\\a_uni\\yoff\\atha\\comp466\\u4\\DisplayTable\\DisplayTable.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U4\\DisplayTable\\DisplayTable.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\documents\\a_uni\\yoff\\atha\\comp466\\u4\\DisplayTable\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U4\\DisplayTable\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
