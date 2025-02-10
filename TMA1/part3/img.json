@@ -1,0 +1,101 @@
+{
+    "image1":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax1"
+    },
+
+    "image2":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax2"
+    },
+
+    "image3":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax3"
+    },
+
+    "image4":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax4"
+    },
+
+    "image5":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax1"
+    },
+
+    "image6":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax2"
+    },
+
+    "image7":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax3"
+    },
+
+    "image8":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax4"
+    },
+
+    "image9":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax1"
+    },
+
+    "image10":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax2"
+    },
+
+    "image11":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax3"
+    },
+
+    "image12":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax4"
+    },
+
+    "image13":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax1"
+    },
+
+    "image14":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax2"
+    },
+
+    "image15":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax3"
+    },
+
+    "image16":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax4"
+    },
+
+    "image17":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax1"
+    },
+
+    "image18":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax2"
+    },
+
+    "image19":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax3"
+    },
+
+    "image20":{
+        "img":"/shared/DummyMax.jpg",
+        "caption":"DummyMax4"
+    }
+}

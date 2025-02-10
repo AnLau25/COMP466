@@ -30,6 +30,7 @@ html {
 
 /*part 1*/
 
+/*part2*/
 a {
 	text-decoration: none;
 }
@@ -67,6 +68,7 @@ p {
     display: inline-block;
     padding: 10px 30px;
     color: darkgreen;
+    font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     border: 2px solid darkgreen;
 	z-index: 10;
@@ -189,7 +191,7 @@ p {
 	margin: 0 auto;
 }
 
-.top p{
+.section-container .section-subtitle{
 	color: black;
 	text-align: center;
 }
@@ -368,3 +370,33 @@ p {
     display: flex;
     gap: 50px;
 }
+/*part2*/
+
+/*partr3*/
+.slider{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: auto;
+    height: 500px;
+}
+
+.select-label{
+    display: block;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-disabled{
+    display: inline-block;
+    padding: 10px 30px;
+    color: darkgray;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    border: 2px solid darkgray;
+	z-index: 10;
+    font-size: 2rem;
+    text-transform: uppercase; 
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+}
+/*partr3*/

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/shared/styles.css"/>
+    <script src="canvas.js"></script>
+    <title>Canva Slideshow</title>
+</head>
+
+<body>
+    <div class="section-container">
+        <h1>Here is my canvas App</h1>
+        <canvas class="slider"id="slider">
+            Imgs here
+        </canvas>
+        <p class="section-subtitle" id="caption">Image caption here</p>
+        <form class="slider-buttons">
+            <button type="button" id="play" class="cta">Start</button>
+            <button type="button" id="mode" class="cta">Random</button>
+            <button type="button" id="prev" class="cta">&lt;</button>
+            <button type="button" id="next" class="cta">&gt;</button>
+            <label class="select-label">Choose effect:
+                <select class="cta" id="effect-select">
+                    <option value="0" selected>Plain</option>
+                    <option value="1">Monochrome</option>
+                    <option value="2">Pattern</option>
+                    <option value="3">Pixel</option>
+                    <option value="4">Gradient</option>
+            </select>
+        </label>
+        </form>
+    </div>
+</body>
+
+</html>
