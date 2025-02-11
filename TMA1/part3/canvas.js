@@ -155,7 +155,7 @@ function applyTransitionEffect(pic, effect, oldPic) {
             break;
 
         case "3":
-            let scale = 1.5;
+            let scale = 2;
             let shrinkInterval = setInterval(() => {
                 context.clearRect(0, 0, slider.width, slider.height);
                 context.save();
@@ -168,7 +168,7 @@ function applyTransitionEffect(pic, effect, oldPic) {
                 if (scale <= 1) {
                     clearInterval(shrinkInterval);
                 }
-            }, 50);
+            }, 60);
             break;
 
         default: // Default No Effect
