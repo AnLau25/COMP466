@@ -372,7 +372,7 @@ p {
 }
 /*part2*/
 
-/*partr3*/
+/*part3*/
 .slider{
     border: 1px solid black;
     border-radius: 10px;
@@ -381,8 +381,11 @@ p {
 }
 
 .select-label{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 25px;
+    margin: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -399,4 +402,27 @@ p {
     letter-spacing: 0.1rem;
     margin-top: 10px;
 }
-/*partr3*/
+/*part3*/
+
+/*part4*/
+.convert-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.convert-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.convert-container .select-label{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 25px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+/*part4*/

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+    <script src="calc.js"></script>
+    <title>Tools Website</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <h1><span>The tools</span> you <span>need</span></h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="#measures" data-after="Unit1">Measurement Converters</a></li>
+                        <li><a href="#mortgage" data-after="unit2">Mortgage Calculator</a></li>
+                        <li><a href="#temp" data-after="unit3">Temperature Converter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header -->
+
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="text-block">
+                <h1>Welcome to my <span>useful tools</span> page</h1>
+                <p>On this page you will find an odd set of useful tools for ‘just in case’ situations. You will have
+                    access to measurement converters, a mortgage calculator and a hex to rbg translator.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section  -->
+
+    <!-- Measures Section -->
+    <section id="measures">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>tool 1: </span>Measurement converters</h1>
+                <p class="section-subtitle">From metric to emperial here are some of the most useful measurement
+                    convertions</p>
+            </div>
+
+            <form class="convert-form">
+                <div class="convert-container">
+                    <label class="select-label">Convert lengths:
+                        <select class="cta" id="lengths">
+                            <option value="0" selected>inches-cm</option>
+                            <option value="1">inches-meters</option>
+                            <option value="2">feet-cm</option>
+                            <option value="3">feet-meters</option>
+                            <option value="4">miles-km</option>
+                        </select>
+                    </label>
+                    <label class="select-label">Imperial:
+                        <input class="cta" name="limp" type="text" placeholder="inches" size="25" maxlength="30" required />
+                    </label>
+                    <label class="select-label">Metric:
+                        <input class="cta" name="lmet" type="text" placeholder="cm" size="25" maxlength="30" required />
+                    </label>
+                </div>
+
+                <div class="convert-container">
+                    <label class="select-label">Convert weights:
+                        <select class="cta" id="weights">
+                            <option value="0" selected>Oz-gr</option>
+                            <option value="1">lb-kg</option>
+                        </select>
+                    </label>
+                    <label class="select-label">Imperial:
+                        <input class="cta" name="wimp" type="text" placeholder="oz"/>
+                    </label>
+                    <label class="select-label">Metric:
+                        <input class="cta" name="wnmet" type="text" placeholder="gr"/>
+                    </label>
+                </div>
+
+                <div class="convert-container">
+                   <h1 class="select-label">Convert areas:</h1>
+                    <label class="select-label">Imperial:
+                        <input class="cta" name="aimp" type="text" placeholder="square feet"/>
+                    </label>
+                    <label class="select-label">Metric:
+                        <input class="cta" name="amet" type="text" placeholder="square meters"/>
+                    </label>
+                </div>
+
+                <div class="convert-container">
+                    <h1 class="select-label">Convert volumes:</h1>
+                     <label class="select-label">Imperial:
+                         <input class="cta" name="vimp" type="text" placeholder="galons"/>
+                     </label>
+                     <label class="select-label">Metric:
+                         <input class="cta" name="vmet" type="text" placeholder="liters"/>
+                     </label>
+                 </div>                
+            </form>
+
+    </section>
+    <!-- End Measures Section -->
+
+    <!-- Mortgage Section -->
+    <section id="mortgage">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>tool 2: </span>Mortgage calculator</h1>
+                <p class="section-subtitle">Considering mortage and don't know where to start? Here is a useful
+                    calculator.</p>
+            </div>
+            
+
+    </section>
+    <!-- End Mortgage Section -->
+
+    <!-- Temperature Section -->
+    <section id="temp">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>tool 3: </span>Temperature converter</h1>
+                <p class="section-subtitle">Whether you need scientific Kelvins or cooking essential farenheits, this
+                    useful tool has got you covered.</p>
+            </div>
+
+    </section>
+    <!-- End Temperature Section -->
+
+
+</body>
+
+</html>
