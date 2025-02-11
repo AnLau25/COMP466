@@ -103,92 +103,81 @@ function updateCanvas() {
     if (!slider || !slider.getContext) return;
     let images = Object.values(imgData);
     let pic = new Image();
+    let effect = selectE.value;
+    let oldPic = context.getImageData(0, 0, slider.width, slider.height);
 
     pic.onload = function () {
-        context.clearRect(0, 0, slider.width, slider.height);
-        context.drawImage(pic, 0, 0, slider.width, slider.height);
-        applyEffect(selectE.value);
-
+        applyTransitionEffect(pic, effect, oldPic);
     };
 
     pic.src = images[index].img;
     txt.textContent = images[index].caption;
 }
 
-function applyEffect(effect) {
-    let img = context.getImageData(0, 0, slider.width, slider.height);
-    let data = img.data;
+function applyTransitionEffect(pic, effect, oldPic) {
+    context.clearRect(0, 0, slider.width, slider.height);
 
     switch (effect) {
         case "1":
-            for (let i = 0; i < data.length; i += 4) {
-                let red = data[i];
-                let green = data[i + 1];
-                let blue = data[i + 2];
-                let avg = (red + green + blue) / 3;
-                data[i] = data[i + 1] = data[i + 2] = avg;
-            }
-            break;
-        case "2":
-            let images = Object.values(imgData);
-            if (images.length === 0) return;
-
-            let pic = new Image();
-            pic.src = images[index].img;
-
-            pic.onload = function () {
-                let cols = 3, rows = 3; // 3x3 grid
-                let imgWidth = slider.width / cols;
-                let imgHeight = slider.height / rows;
-
+            let alpha = 0;
+            let fadeIn = setInterval(() => {
                 context.clearRect(0, 0, slider.width, slider.height);
-
-                for (let y = 0; y < rows; y++) {
-                    for (let x = 0; x < cols; x++) {
-                        context.drawImage(pic, x * imgWidth, y * imgHeight, imgWidth, imgHeight);
-                    }
+                context.globalAlpha = alpha;
+                context.drawImage(pic, 0, 0, slider.width, slider.height);
+                alpha += 0.1;
+                if (alpha >= 1) {
+                    context.globalAlpha = 1;
+                    clearInterval(fadeIn);
                 }
-            };
+            }, 50);
             break;
+
+        case "2": 
+            context.putImageData(oldPic, 0, 0);
+            let pixels = oldPic.data;
+            let totalPixels = pixels.length / 4;
+            let pixelIndexes = Array.from({ length: totalPixels }, (_, i) => i);
+
+            let pixelOutInterval = setInterval(() => {
+                if (pixelIndexes.length === 0) {
+                    clearInterval(pixelOutInterval);
+                    context.drawImage(pic, 0, 0, slider.width, slider.height); // Draw new image after effect completes
+                    return;
+                }
+                for (let i = 0; i < 500; i++) {
+                    if (pixelIndexes.length === 0) break;
+                    let randomIndex = Math.floor(Math.random() * pixelIndexes.length);
+                    let pixelPos = pixelIndexes.splice(randomIndex, 1)[0] * 4;
+                    pixels[pixelPos + 3] = 0;
+                }
+                context.putImageData(oldPic, 0, 0);
+            }, 10);
+            break;
+
         case "3":
-            let step = 10;
-            for (let y = 0; y < slider.height; y += step) {
-                for (let x = 0; x < slider.width; x += step) {
-                    let idx = (y * slider.width + x) * 4;
-                    let r = data[idx], g = data[idx + 1], b = data[idx + 2];
-                    for (let dy = 0; dy < step; dy++) {
-                        for (let dx = 0; dx < step; dx++) {
-                            let id = ((y + dy) * slider.width + (x + dx)) * 4;
-                            if (id < data.length) {
-                                data[id] = r;
-                                data[id + 1] = g;
-                                data[id + 2] = b;
-                            }
-                        }
-                    }
-                }
-            }
-            break;
-        case "4":
-            for (let y = 0; y < slider.height; y++) {
-                for (let x = 0; x < slider.width; x++) {
-                    let index = (y * slider.width + x) * 4;
-                    let redGradient = (x / slider.width) * 255;
-                    let greenGradient = (y / slider.height) * 255;
+            let scale = 1.5;
+            let shrinkInterval = setInterval(() => {
+                context.clearRect(0, 0, slider.width, slider.height);
+                context.save();
+                context.translate(slider.width / 2, slider.height / 2);
+                context.scale(scale, scale);
+                context.drawImage(pic, -slider.width / 2, -slider.height / 2, slider.width, slider.height);
+                context.restore();
 
-                    data[index] = (data[index] + redGradient) / 2;
-                    data[index + 1] = (data[index + 1] + greenGradient) / 2;
-                    data[index + 2] = (data[index + 2] + 128) / 2;
+                scale -= 0.05;
+                if (scale <= 1) {
+                    clearInterval(shrinkInterval);
                 }
-            }
+            }, 50);
             break;
-        default:
-            return;
+
+        default: // Default No Effect
+            context.drawImage(pic, 0, 0, slider.width, slider.height);
+            break;
     }
-
-
-    context.putImageData(img, 0, 0);
 }
+
+
 
 
 
