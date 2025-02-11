@@ -64,7 +64,8 @@
                         </select>
                     </label>
                     <label class="select-label">Imperial:
-                        <input class="cta" name="limp" type="text" placeholder="inches" size="25" maxlength="30" required />
+                        <input class="cta" name="limp" type="text" placeholder="inches" size="25" maxlength="30"
+                            required />
                     </label>
                     <label class="select-label">Metric:
                         <input class="cta" name="lmet" type="text" placeholder="cm" size="25" maxlength="30" required />
@@ -79,34 +80,34 @@
                         </select>
                     </label>
                     <label class="select-label">Imperial:
-                        <input class="cta" name="wimp" type="text" placeholder="oz"/>
+                        <input class="cta" name="wimp" type="text" placeholder="oz" />
                     </label>
                     <label class="select-label">Metric:
-                        <input class="cta" name="wnmet" type="text" placeholder="gr"/>
+                        <input class="cta" name="wnmet" type="text" placeholder="gr" />
                     </label>
                 </div>
 
                 <div class="convert-container">
-                   <h1 class="select-label">Convert areas:</h1>
+                    <h1 class="select-label">Convert areas:</h1>
                     <label class="select-label">Imperial:
-                        <input class="cta" name="aimp" type="text" placeholder="square feet"/>
+                        <input class="cta" name="aimp" type="text" placeholder="square feet" />
                     </label>
                     <label class="select-label">Metric:
-                        <input class="cta" name="amet" type="text" placeholder="square meters"/>
+                        <input class="cta" name="amet" type="text" placeholder="square meters" />
                     </label>
                 </div>
 
                 <div class="convert-container">
                     <h1 class="select-label">Convert volumes:</h1>
-                     <label class="select-label">Imperial:
-                         <input class="cta" name="vimp" type="text" placeholder="galons"/>
-                     </label>
-                     <label class="select-label">Metric:
-                         <input class="cta" name="vmet" type="text" placeholder="liters"/>
-                     </label>
-                 </div>                
+                    <label class="select-label">Imperial:
+                        <input class="cta" name="vimp" type="text" placeholder="galons" />
+                    </label>
+                    <label class="select-label">Metric:
+                        <input class="cta" name="vmet" type="text" placeholder="liters" />
+                    </label>
+                </div>
             </form>
-
+        </div>
     </section>
     <!-- End Measures Section -->
 
@@ -118,8 +119,23 @@
                 <p class="section-subtitle">Considering mortage and don't know where to start? Here is a useful
                     calculator.</p>
             </div>
-            
+            <form class="convert-form">
 
+                <div class="convert-container">
+                    <label class="select-label">Loan Amount:
+                        <input class="cta" name="amnt" type="text" placeholder="Amount in CAD" />
+                    </label>
+                    <label class="select-label">Interest rate:
+                        <input class="cta" name="rate" type="text" placeholder="Percentage %" />
+                    </label>
+                    <label class="select-label">Loan fixed term:
+                        <input class="cta" name="term" type="text" placeholder="In years" />
+                    </label>
+                </div>
+                <button type="button" id="calcMortgage" class="cta">Calculate</button>
+            </form>
+            <h1 id="soln">Your monthly mortage would be: <span></span></h1>
+        </div>
     </section>
     <!-- End Mortgage Section -->
 
@@ -131,7 +147,20 @@
                 <p class="section-subtitle">Whether you need scientific Kelvins or cooking essential farenheits, this
                     useful tool has got you covered.</p>
             </div>
-
+            <form class="convert-form">
+                <div class="convert-container">
+                    <label class="select-label">Farenheit:
+                        <input class="cta" name="heit" type="text" placeholder="Degrees farenheit" />
+                    </label>
+                    <label class="select-label">Celcius:
+                        <input class="cta" name="cius" type="text" placeholder="Degrees celcius" />
+                    </label>
+                    <label class="select-label">Kelvin:
+                        <input class="cta" name="vin" type="text" placeholder="Degrees kelvin" />
+                    </label>
+                </div>
+            </form>
+        </div>
     </section>
     <!-- End Temperature Section -->
 

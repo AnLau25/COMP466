@@ -422,7 +422,15 @@ p {
     flex-direction: column;
     align-items: start;
     font-size: 25px;
-    margin: 10px;
+    margin: 30px;
     font-family: 'Montserrat', sans-serif;
+}
+
+#soln{
+    margin: 30px;
+}
+
+#temp{
+    padding-bottom: 100px;
 }
 /*part4*/
