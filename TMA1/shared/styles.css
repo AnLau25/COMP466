@@ -10,6 +10,7 @@ table {
 
 th,
 td {
+    font-size: 15px;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -43,7 +44,7 @@ a {
 	justify-content: center;
 }
 
-p {
+p, caption {
 	color: black;
 	font-size: 15px;
 	margin-top: 5px;
@@ -93,6 +94,18 @@ p {
 }
 .brand h1 span {
 	color: darkgreen;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-nav .cta{
+    font-size: 15px;
+    text-transform: none;
+    
 }
 /*General*/
 

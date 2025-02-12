@@ -9,7 +9,7 @@
             </head>
             <body>
                 <table border="1">
-                    <caption>Resume</caption>
+                    <caption>My resume</caption>
                     <thead>
                         <tr>
                             <th colspan="2">General Information</th>
@@ -73,6 +73,10 @@
                         </xsl:for-each>
                     </tbody>
                 </table>
+                <div class='main-nav'>
+                    <a href="/tma1.htm" type="button" class="cta">&lt; Go back to cover page</a>
+                    <a href="/part2/index.html" type="button" class="cta">See next solution &gt;</a>
+                </div>
             </body>
         </html>
     </xsl:template>
