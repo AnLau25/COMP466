@@ -1,37 +1,37 @@
 {
     "image1":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax1"
+        "img":"/shared/frtulla.jpg",
+        "caption":"Red fruits in a bush"
     },
 
     "image2":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax2"
+        "img":"/shared/redCar.jpg",
+        "caption":"Image of a red car "
     },
 
     "image3":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax3"
+        "img":"/shared/sourPatch.jpg",
+        "caption":"Picture of bags of SourPatch"
     },
 
     "image4":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax4"
+        "img":"/shared/grayScale.jpg",
+        "caption":"Chess themed picture"
     },
 
     "image5":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax1"
+        "img":"/shared/cup.jpg",
+        "caption":"Cup surrounded by red rose petals"
     },
 
     "image6":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax2"
+        "img":"/shared/apples.jpg",
+        "caption":"Picture of three apples"
     },
 
     "image7":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax3"
+        "img":"/shared/odd.jpg",
+        "caption":"Picture in a psychedelic ambience"
     },
 
     "image8":{
