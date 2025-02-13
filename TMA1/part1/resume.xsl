@@ -74,7 +74,7 @@
                     </tbody>
                 </table>
                 <div class='main-nav'>
-                    <a href="/tma1.htm" type="button" class="cta">&lt; Go back to cover page</a>
+                    <a href="/tma1.htm#q1" type="button" class="cta">&lt; Go back to cover page</a>
                     <a href="/part2/index.html" type="button" class="cta">See next solution &gt;</a>
                 </div>
             </body>
