@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Griffy&family=Mountains+of+Christmas:wght@400;700&display=swap';
 *{
     overflow-x: hidden;
 }
@@ -390,7 +391,7 @@ p, caption {
     border: 1px solid black;
     border-radius: 10px;
     width: auto;
-    height: 500px;
+    height: 400px;
 }
 
 .select-label{
@@ -414,6 +415,19 @@ p, caption {
     text-transform: uppercase; 
     letter-spacing: 0.1rem;
     margin-top: 10px;
+}
+
+#canvas .section-container{
+    padding: 0px;
+}
+
+.abi{
+    /*font-weight: bold;*/
+    color: mediumslateblue;
+    /*font-family: 'Griffy', serif;*/
+    /*font-family: 'Mountains of Christmas', serif;*/
+    font-family: "Fredericka the Great", serif;
+
 }
 /*part3*/
 
