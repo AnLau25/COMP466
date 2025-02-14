@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Griffy&family=Mountains+of+Christmas:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Griffy&family=Mountains+of+Christmas:wght@400;700&family=Rubik+Burned&display=swap';
+
 *{
     overflow-x: hidden;
 }
@@ -421,12 +422,15 @@ p, caption {
     padding: 0px;
 }
 
+
 .abi{
     /*font-weight: bold;*/
     color: mediumslateblue;
     /*font-family: 'Griffy', serif;*/
     /*font-family: 'Mountains of Christmas', serif;*/
-    font-family: "Fredericka the Great", serif;
+    /*font-family: "Fredericka the Great", serif;*/
+    font-family: "Rubik Burned", serif;
+    /*ad on hover*/
 
 }
 /*part3*/
