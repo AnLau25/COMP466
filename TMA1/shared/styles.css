@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Griffy&family=Mountains+of+Christmas:wght@400;700&family=Rubik+Burned&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great:wght@400;700&family=Rubik+Burned&display=swap';
 
 *{
     overflow-x: hidden;
@@ -392,7 +392,7 @@ p, caption {
     border: 1px solid black;
     border-radius: 10px;
     width: auto;
-    height: 400px;
+    max-height: 400px;
 }
 
 .select-label{
@@ -424,14 +424,14 @@ p, caption {
 
 
 .abi{
-    /*font-weight: bold;*/
+    font-weight: 100;
     color: mediumslateblue;
-    /*font-family: 'Griffy', serif;*/
-    /*font-family: 'Mountains of Christmas', serif;*/
-    /*font-family: "Fredericka the Great", serif;*/
-    font-family: "Rubik Burned", serif;
-    /*ad on hover*/
+    font-size: 20px;
+    font-family: "Fredericka the Great", serif;
+}
 
+.abi:hover{
+    text-decoration: underline;
 }
 /*part3*/
 

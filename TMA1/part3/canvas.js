@@ -2,6 +2,7 @@ let imgData = {};
 let index = 0;
 let isPlaying = false;
 let isSequential = false
+let isEffect2Running = false;
 let slider,
     context,
     slideInterval,
@@ -100,25 +101,40 @@ function showNext() {
 }
 
 function updateCanvas() {
+    if (isEffect2Running) return
     if (!slider || !slider.getContext) return;
     let images = Object.values(imgData);
     let pic = new Image();
     let effect = selectE.value;
+
+    let prevWidth = slider.width;
+    let prevHeight = slider.height;
+
     let oldPic = context.getImageData(0, 0, slider.width, slider.height);
 
     pic.onload = function () {
-        applyTransitionEffect(pic, effect, oldPic);
+        if (effect === "2") {
+            applyTransitionEffect(pic, effect, oldPic, () => {
+                slider.width = pic.width;
+                slider.height = pic.height;
+                context.drawImage(pic, 0, 0, slider.width, slider.height);
+            });
+        } else {
+            slider.width = pic.width;
+            slider.height = pic.height;
+            applyTransitionEffect(pic, effect, oldPic);
+        }
     };
 
     pic.src = images[index].img;
     txt.textContent = images[index].caption;
 }
 
-function applyTransitionEffect(pic, effect, oldPic) {
+function applyTransitionEffect(pic, effect, oldPic, onComplete = () => {}) {
     context.clearRect(0, 0, slider.width, slider.height);
 
     switch (effect) {
-        case "1":
+        case "1": 
             let alpha = 0;
             let fadeIn = setInterval(() => {
                 context.clearRect(0, 0, slider.width, slider.height);
@@ -128,33 +144,42 @@ function applyTransitionEffect(pic, effect, oldPic) {
                 if (alpha >= 1) {
                     context.globalAlpha = 1;
                     clearInterval(fadeIn);
+                    onComplete();
                 }
             }, 50);
             break;
 
         case "2": 
+            isEffect2Running = true;
             context.putImageData(oldPic, 0, 0);
-            let pixels = oldPic.data;
-            let totalPixels = pixels.length / 4;
-            let pixelIndexes = Array.from({ length: totalPixels }, (_, i) => i);
+            let gridSize = 10;
+            let cols = Math.ceil(slider.width / gridSize);
+            let rows = Math.ceil(slider.height / gridSize);
+            let squares = [];
 
-            let pixelOutInterval = setInterval(() => {
-                if (pixelIndexes.length === 0) {
-                    clearInterval(pixelOutInterval);
-                    context.drawImage(pic, 0, 0, slider.width, slider.height); // Draw new image after effect completes
+            for (let x = 0; x < cols; x++) {
+                for (let y = 0; y < rows; y++) {
+                    squares.push({ x: x * gridSize, y: y * gridSize });
+                }
+            }
+
+            let interval = setInterval(() => {
+                if (squares.length === 0) {
+                    clearInterval(interval);
+                    isEffect2Running = false;
+                    onComplete(); 
                     return;
                 }
-                for (let i = 0; i < 500; i++) {
-                    if (pixelIndexes.length === 0) break;
-                    let randomIndex = Math.floor(Math.random() * pixelIndexes.length);
-                    let pixelPos = pixelIndexes.splice(randomIndex, 1)[0] * 4;
-                    pixels[pixelPos + 3] = 0;
+                for (let i = 0; i < 50 && squares.length > 0; i++) {
+                    let randIndex = Math.floor(Math.random() * squares.length);
+                    let { x, y } = squares.splice(randIndex, 1)[0];
+                    context.fillStyle = "white";
+                    context.fillRect(x, y, gridSize, gridSize);
                 }
-                context.putImageData(oldPic, 0, 0);
             }, 10);
             break;
 
-        case "3":
+        case "3": 
             let scale = 2;
             let shrinkInterval = setInterval(() => {
                 context.clearRect(0, 0, slider.width, slider.height);
@@ -167,15 +192,18 @@ function applyTransitionEffect(pic, effect, oldPic) {
                 scale -= 0.05;
                 if (scale <= 1) {
                     clearInterval(shrinkInterval);
+                    onComplete();
                 }
-            }, 60);
+            }, 50);
             break;
 
-        default: // Default No Effect
+        default:
             context.drawImage(pic, 0, 0, slider.width, slider.height);
+            onComplete();
             break;
     }
 }
+
 
 
 
