@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const lengthMet = document.querySelector("input[name='lmet']");
     const lengthPlaceholders = [
         ["inches", "cm"],
-        ["inches", "meters"],
+        ["inches", "m"],
         ["feet", "cm"],
-        ["feet", "meters"],
+        ["feet", "m"],
         ["miles", "km"]
     ];
 

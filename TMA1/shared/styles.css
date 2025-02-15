@@ -1,9 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great:wght@400;700&family=Rubik+Burned&display=swap';
 
-*{
-    overflow-x: hidden;
-}
 
 table {
     border-collapse: collapse;
@@ -24,9 +21,9 @@ th {
 }
 
 html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
 }
@@ -35,67 +32,69 @@ html {
 
 /*part2*/
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-p, caption {
-	color: black;
-	font-size: 15px;
-	margin-top: 5px;
-	letter-spacing: 0.05rem;
+p,
+caption {
+    color: black;
+    font-size: 15px;
+    margin-top: 5px;
+    letter-spacing: 0.05rem;
 }
 
 .section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
 }
 
 .section-title span {
-	color: darkgreen;
+    color: darkgreen;
 }
 
-.cta{
+.cta {
     display: inline-block;
     padding: 10px 30px;
     color: darkgreen;
     font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     border: 2px solid darkgreen;
-	z-index: 10;
+    z-index: 10;
     font-size: 2rem;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-top: 10px;
-    transition: .3s ease; 
-    transition-property: background-color,color;
+    transition: .3s ease;
+    transition-property: background-color, color;
 }
 
-.cta:hover{
+.cta:hover {
     color: white;
-	z-index: 10;
+    z-index: 10;
     background-color: darkgreen;
 }
 
 .brand h1 {
-	font-size: 30px;
-	text-transform: uppercase;
-	color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
 }
+
 .brand h1 span {
-	color: darkgreen;
+    color: darkgreen;
 }
 
 .main-nav {
@@ -104,11 +103,21 @@ p, caption {
     width: 100%;
 }
 
-.main-nav .cta{
+.main-nav .cta {
     font-size: 15px;
     text-transform: none;
-    
+
 }
+
+.section-ul ul {
+    text-align: start;
+    font-size: 15px;
+}
+
+.section-ul li {
+    margin-bottom: 5px;
+}
+
 /*General*/
 
 #header {
@@ -119,7 +128,7 @@ p, caption {
     width: 100%;
 }
 
-#header .header {
+.header {
     min-height: 8vh;
     background-color: rgba(30, 31, 30, 0.24);
     transition: 0.3s ease background-color;
@@ -134,52 +143,53 @@ p, caption {
     padding: 0 10px;
 }
 
-#header .nav-list ul {
+.nav-list ul {
     list-style: none;
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: transparent; 
-    position: static; 
-    width: auto;     
-    height: auto; 
+    background-color: transparent;
+    position: static;
+    width: auto;
+    height: auto;
 }
 
-#header .nav-list ul a {
-    font-size: 1.5rem; 
+.nav-list ul a {
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: rgb(32, 32, 32);
     text-transform: uppercase;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     display: inline-block;
     position: relative;
 }
 
-#header .nav-list ul li {
-    display: inline-block; 
-    margin: 0 10px; 
+.nav-list ul li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-#header .nav-list ul li:hover a {
+.nav-list ul li:hover a {
     color: darkgreen;
 }
+
 /*Head*/
 
-#hero{
+#hero {
     background-color: darkgray;
 }
 
 #hero h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	z-index: 10;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    z-index: 10;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
     color: black;
 }
 
@@ -187,86 +197,87 @@ p, caption {
     color: darkgreen;
 }
 
-#hero .text-block{
+#hero .text-block {
     padding-right: 50rem;
     padding-left: 50rem;
 }
+
 /*Hero*/
 
 .section-container {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 
 .top {
-	max-width: 500px;
-	margin: 0 auto;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.section-container .section-subtitle{
-	color: black;
-	text-align: center;
+.section-container .section-subtitle {
+    color: black;
+    text-align: center;
 }
 
 .bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .item {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
+    z-index: -1;
 }
 
 .bottom .icon {
-	height: auto;
-	width: auto;
-	margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
 }
 
 .item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .section-container p {
-	color: white;
-	text-align: left;
+    color: white;
+    text-align: left;
 }
 
 .subs {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .all-exmpls {
@@ -307,14 +318,16 @@ p, caption {
     margin: 20px auto;
     border-radius: 10px;
     background: rgb(14, 12, 12);
-    min-height: 300px; /* Ensures a minimum height */
+    min-height: 300px;
+    /* Ensures a minimum height */
     overflow: hidden;
 }
 
 .exmpl-cont {
     flex-basis: 50%;
     display: flex;
-    align-items: stretch; /* Allows content to take full height */
+    align-items: stretch;
+    /* Allows content to take full height */
     justify-content: center;
     overflow: hidden;
 }
@@ -330,72 +343,73 @@ p, caption {
 /*Q-section*/
 .q-container {
     display: flex;
-	flex-direction: column;
-	text-align: center;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
-	margin: 0 auto;
-	padding: 100px 0;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 
-.q-container .item{
-	display: block;
+.q-container .item {
+    display: block;
     padding: 50px;
     min-width: 500px;
 }
 
-.choice-container{
-	display: flex;
-	margin-bottom: 10px;
-	font-size: 30px;
-	border-radius: 10px;
-	background-color: rgb(197, 192, 192);
+.choice-container {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(197, 192, 192);
 }
 
-.choice-container:hover{
-	cursor: pointer;
-	box-shadow: 10px 7px 0px 0 darkgreen;
-	transform: translateY(-1px);
-	transition: transform 150ms;
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 10px 7px 0px 0 darkgreen;
+    transform: translateY(-1px);
+    transition: transform 150ms;
 }
 
-.choice-let{
-	padding: 10px;
-	color: white;
-	border: solid darkgreen;
-	background-color: darkgreen;
+.choice-let {
+    padding: 10px;
+    color: white;
+    border: solid darkgreen;
+    background-color: darkgreen;
 }
 
-.choice-def{
-	padding: 10px;
+.choice-def {
+    padding: 10px;
 }
 
 .choice-container p {
-	margin: 0px;
+    margin: 0px;
 }
 
-.correct{
+.correct {
     background-color: rgb(51, 143, 51);
 }
 
-.incorrect{
+.incorrect {
     background-color: #d64545;
 }
 
-#qNum{
+#qNum {
     display: flex;
     gap: 50px;
 }
+
 /*part2*/
 
 /*part3*/
-.slider{
+.slider {
     border: 1px solid black;
     border-radius: 10px;
     width: auto;
     max-height: 400px;
 }
 
-.select-label{
+.select-label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -404,51 +418,52 @@ p, caption {
     font-family: 'Montserrat', sans-serif;
 }
 
-.cta-disabled{
+.cta-disabled {
     display: inline-block;
     padding: 10px 30px;
     color: darkgray;
     font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     border: 2px solid darkgray;
-	z-index: 10;
+    z-index: 10;
     font-size: 2rem;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-top: 10px;
 }
 
-#canvas .section-container{
+#canvas .section-container {
     padding: 0px;
 }
 
 
-.abi{
+.abi {
     font-weight: 100;
     color: mediumslateblue;
     font-size: 20px;
     font-family: "Fredericka the Great", serif;
 }
 
-.abi:hover{
+.abi:hover {
     text-decoration: underline;
 }
+
 /*part3*/
 
 /*part4*/
-.convert-container{
+.convert-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.convert-form{
+.convert-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.convert-container .select-label{
+.convert-container .select-label {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -457,11 +472,12 @@ p, caption {
     font-family: 'Montserrat', sans-serif;
 }
 
-#soln{
+#soln {
     margin: 30px;
 }
 
-#temp{
+#temp {
     padding-bottom: 100px;
 }
+
 /*part4*/
