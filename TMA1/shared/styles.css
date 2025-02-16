@@ -109,7 +109,7 @@ caption {
 
 }
 
-.section-ul ul {
+.section-ul ul, ol {
     text-align: start;
     font-size: 15px;
 }
