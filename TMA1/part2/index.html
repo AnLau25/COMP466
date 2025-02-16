@@ -244,15 +244,18 @@
                             <p><strong>General CSS stylings</strong></p>
                             <ul>
                                 <li><strong>Absolute Positioning:</strong> Removes an element from the normal flow and
-                                    positions it relative to its nearest positioned ancestor .class {position: absolute;}.</li>
+                                    positions it relative to its nearest positioned ancestor .class {position:
+                                    absolute;}.</li>
                                 <li><strong>Relative Positioning:</strong> Positions the element relative to its normal
                                     position .class {position: relative;}.</li>
                                 <li><strong>Background Image:</strong> .class {background-image: url('background.png');}
                                 </li>
                                 <li><strong>Background Color:</strong> .class {background-color: lightgray;}</li>
-                                <li><strong>Width and height:</strong>Set the dimensions of the element. .class {width: 200px; height: 100px;}</li>
+                                <li><strong>Width and height:</strong>Set the dimensions of the element. .class {width:
+                                    200px; height: 100px;}</li>
                                 <li><strong>Margin:</strong> Space outside the border. .class {margin: 15px;}</li>
-                                <li><strong>Border:</strong> The boundary around the content. .class {border: 5px solid black;}</li>
+                                <li><strong>Border:</strong> The boundary around the content. .class {border: 5px solid
+                                    black;}</li>
                                 <li><strong>Padding:</strong> Space between the content and the border. .class
                                     {padding: 10px;}</li>
                             </ul>
@@ -419,60 +422,94 @@
 
                     <div class="exmpl-item">
                         <div class="exmpl-info">
-                            <h1>Functions</h1>
-                            <p>Functions are a way to efficiently repeat actions or to have certain actions at handy to
-                                call without having to re-write them for the sake of having organized code. In js, you
-                                create a function by calling “function” giving them a name, (parameters) and a return if
-                                necessary.</p>
-                            <p><strong>When creating functions, pay close attention to the scope of your
-                                    variables:</strong>
+                            <h1>Control Structures</h1>
+                            <p>JavaScript has control structures that enable us to manage the flow of a program
+                                effectively. These include loops, which allow us to repeat actions and iterate through
+                                collections of data, and control structures, that help us make decisions and handle
+                                various outcomes, so the program responds appropriately to different scenarios and
+                                choices.
                             </p>
                             <div class="section-ul">
                                 <ul>
-                                    <li><strong>Local scope</strong>: Defined within a function, accessible only inside
-                                        it.
+                                    <li><strong>Selection structures:</strong>
+                                      <ul>
+                                        <li><strong>if Statement</strong> – Executes a block of code if a condition is 'true'.</li>
+                                        <li><strong>if...else Statement</strong> – Executes one block if the condition is 'true', otherwise executes another block.</li>
+                                        <li><strong>switch Statement</strong> – Evaluates an expression and executes corresponding cases.</li>
+                                      </ul>
                                     </li>
-                                    <li><strong>Global scope</strong>: Defined outside any function, accessible
-                                        throughout
-                                        the script.</li>
+                                    <li><strong>Repetition (loop) structures:</strong>
+                                      <ul>
+                                        <li><strong>while Loop</strong> – Evaluates the condition before executing the loop body.</li>
+                                        <li><strong>do...while Loop</strong> – Executes the loop body first, then checks the condition.</li>
+                                        <li><strong>for Loop</strong> – A compact structure that includes initialization, condition, and update in one statement.</li>
+                                      </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="exmpl-cont">
-                            <img src="/shared/ex7.jpg" alt="img">
-                        </div>
-                    </div>
-
-                    <div class="exmpl-item">
-                        <div class="exmpl-info">
-                            <h1>Arrays and Methods</h1>
-                            <div class="section-ul">
-                                <ul>
-                                    <li><strong>Math Object:</strong> Provides mathematical constants and functions.
-                                    </li>
-                                    <li><strong>String Object:</strong> Series of characters enclosed in quotes.</li>
-                                    <li><strong>Arrays:</strong> Are a collection of elements stored under a single name
-                                        that can be accessed by using an index starting from zero. Arrays are passed as
-                                        arguments to functions like other variables.</li>
-                                    <li><strong>Array Methods:</strong></li>
-                                    <ul>
-                                        <li><strong>Mutator Methods:</strong> Modify the array</li>
-                                        <li><strong>Accessor Methods:</strong> Return new arrays or values without
-                                            modifying the original array</li>
-                                        <li><strong>Iteration Methods:</strong> Loop through elements</li>
-                                    </ul>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="exmpl-cont">
-                            <img src="/shared/ex8.jpg" alt="img">
+                            <img src="/shared/ex9.jpg" alt="img">
                         </div>
                     </div>
                 </div>
 
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Functions</h1>
+                        <p>Functions are a way to efficiently repeat actions or to have certain actions at handy to
+                            call without having to re-write them for the sake of having organized code. In js, you
+                            create a function by calling “function” giving them a name, (parameters) and a return if
+                            necessary.</p>
+                        <p><strong>When creating functions, pay close attention to the scope of your
+                                variables:</strong>
+                        </p>
+                        <div class="section-ul">
+                            <ul>
+                                <li><strong>Local scope</strong>: Defined within a function, accessible only inside
+                                    it.
+                                </li>
+                                <li><strong>Global scope</strong>: Defined outside any function, accessible
+                                    throughout
+                                    the script.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/ex7.jpg" alt="img">
+                    </div>
+                </div>
 
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Arrays and Methods</h1>
+                        <div class="section-ul">
+                            <ul>
+                                <li><strong>Math Object:</strong> Provides mathematical constants and functions.
+                                </li>
+                                <li><strong>String Object:</strong> Series of characters enclosed in quotes.</li>
+                                <li><strong>Arrays:</strong> Are a collection of elements stored under a single name
+                                    that can be accessed by using an index starting from zero. Arrays are passed as
+                                    arguments to functions like other variables.</li>
+                                <li><strong>Array Methods:</strong></li>
+                                <ul>
+                                    <li><strong>Mutator Methods:</strong> Modify the array</li>
+                                    <li><strong>Accessor Methods:</strong> Return new arrays or values without
+                                        modifying the original array</li>
+                                    <li><strong>Iteration Methods:</strong> Loop through elements</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/ex8.jpg" alt="img">
+                    </div>
+                </div>
             </div>
-            <a href="/part2/quiz.html" type="button" class="cta">Test your knowledge</a>
+
+
+        </div>
+        <a href="/part2/quiz.html" type="button" class="cta">Test your knowledge</a>
         </div>
     </section>
     <!-- End u2 Section -->

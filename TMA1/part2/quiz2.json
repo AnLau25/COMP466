@@ -1,0 +1,322 @@
+[
+  {
+    "question": "What is JavaScript primarily used for?",
+    "choice1": "Server-side scripting",
+    "choice2": "Creating static web pages",
+    "choice3": "Creating dynamic and interactive web pages",
+    "choice4": "Database management",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is NOT a reserved keyword in JavaScript?",
+    "choice1": "abstract",
+    "choice2": "goto",
+    "choice3": "volatile",
+    "choice4": "define",
+    "answer": 4
+  },
+  {
+    "question": "How many ways are there to declare a variable in JavaScript?",
+    "choice1": "1",
+    "choice2": "2",
+    "choice3": "3",
+    "choice4": "4",
+    "answer": 3
+  },
+  {
+    "question": "Which keyword declares a block-scoped variable that cannot be re-declared?",
+    "choice1": "var",
+    "choice2": "let",
+    "choice3": "const",
+    "choice4": "static",
+    "answer": 2
+  },
+  {
+    "question": "Which variable declaration cannot be reassigned a new value?",
+    "choice1": "var",
+    "choice2": "let",
+    "choice3": "const",
+    "choice4": "static",
+    "answer": 3
+  },
+  {
+    "question": "Which data type is NOT supported in JavaScript?",
+    "choice1": "Number",
+    "choice2": "BigInt",
+    "choice3": "Boolean",
+    "choice4": "Character",
+    "answer": 4
+  },
+  {
+    "question": "What operator is used for checking equality in JavaScript?",
+    "choice1": "=",
+    "choice2": "==",
+    "choice3": "===",
+    "choice4": "=>",
+    "answer": 2
+  },
+  {
+    "question": "What operator is used for addition in JavaScript?",
+    "choice1": "-",
+    "choice2": "*",
+    "choice3": "+",
+    "choice4": "%",
+    "answer": 3
+  },
+  {
+    "question": "What does the 'floor' function do?",
+    "choice1": "Generates a random number",
+    "choice2": "Rounds up a number",
+    "choice3": "Finds the square root of a number",
+    "choice4": "Rounds down a number",
+    "answer": 4
+  },
+  {
+    "question": "What JavaScript function is used to generate a random number?",
+    "choice1": "random",
+    "choice2": "rand()",
+    "choice3": "Math()",
+    "choice4": "number()",
+    "answer": 1
+  },
+  {
+    "question": "Where is it most common to place JavaScript code within an HTML file?",
+    "choice1": "Inside the <body> tag",
+    "choice2": "Inside the <div> tag",
+    "choice3": "Inside the <footer> tag",
+    "choice4": "Inside the <head> tag",
+    "answer": 4
+  },
+  {
+    "question": "How should JavaScript be included in an HTML file for better structure?",
+    "choice1": "Inline inside elements",
+    "choice2": "Through an external script file",
+    "choice3": "As a comment in HTML",
+    "choice4": "Inside a <meta> tag",
+    "answer": 2
+  },
+  {
+    "question": "What does 'document.writeln(\"Hello, world!\");' do?",
+    "choice1": "Displays an alert",
+    "choice2": "Writes \"Hello, world!\" and moves to a new line",
+    "choice3": "Creates a new paragraph",
+    "choice4": "Inserts an HTML element",
+    "answer": 2
+  },
+  {
+    "question": "Which object represents the entire HTML document in JavaScript?",
+    "choice1": "Window",
+    "choice2": "Element",
+    "choice3": "Document",
+    "choice4": "Console",
+    "answer": 3
+  },
+  {
+    "question": "Which object provides interaction with users through alert boxes?",
+    "choice1": "Window",
+    "choice2": "Document",
+    "choice3": "Console",
+    "choice4": "Form",
+    "answer": 1
+  },
+  {
+    "question": "What JavaScript method creates an alert box?",
+    "choice1": "console.log()",
+    "choice2": "window.alert()",
+    "choice3": "document.write()",
+    "choice4": "prompt()",
+    "answer": 2
+  },
+  {
+    "question": "What method is used to accept user input in JavaScript?",
+    "choice1": "prompt()",
+    "choice2": "alert()",
+    "choice3": "confirm()",
+    "choice4": "log()",
+    "answer": 1
+  },
+  {
+    "question": "What is the default index of the first element in a JavaScript array?",
+    "choice1": "1",
+    "choice2": "0",
+    "choice3": "-1",
+    "choice4": "It varies",
+    "answer": 2
+  },
+  {
+    "question": "What are JavaScript arrays primarily used for?",
+    "choice1": "Storing multiple values in a single variable",
+    "choice2": "Performing arithmetic calculations",
+    "choice3": "Defining functions",
+    "choice4": "Declaring constants",
+    "answer": 1
+  },
+  {
+    "question": "What is NOT a type of JavaScript array method?",
+    "choice1": "Mutator methods",
+    "choice2": "Accessor methods",
+    "choice3": "Compiler methods",
+    "choice4": "Iteration methods",
+    "answer": 3
+  },
+  {
+    "question": "What method modifies an array in JavaScript?",
+    "choice1": "Mutator method",
+    "choice2": "Accessor method",
+    "choice3": "Iteration method",
+    "choice4": "Math method",
+    "answer": 1
+  },
+  {
+    "question": "What method returns a new array without modifying the original?",
+    "choice1": "Mutator method",
+    "choice2": "Accessor method",
+    "choice3": "Iteration method",
+    "choice4": "Console method",
+    "answer": 2
+  },
+  {
+    "question": "What is a function in JavaScript?",
+    "choice1": "A method for defining variables",
+    "choice2": "A reserved keyword",
+    "choice3": "A way to declare objects",
+    "choice4": "A reusable block of code that performs a task",
+    "answer": 4
+  },
+  {
+    "question": "What keyword is used to define a function in JavaScript?",
+    "choice1": "define",
+    "choice2": "function",
+    "choice3": "create",
+    "choice4": "def",
+    "answer": 2
+  },
+  {
+    "question": "What scope makes a variable accessible throughout the script?",
+    "choice1": "Inline scope",
+    "choice2": "Local scope",
+    "choice3": "Block scope",
+    "choice4": "Global scope",
+    "answer": 4
+  },
+  {
+    "question": "What is the scope of a variable declared inside a function?",
+    "choice1": "Local scope",
+    "choice2": "Global scope",
+    "choice3": "Block scope",
+    "choice4": "Universal scope",
+    "answer": 1
+  },
+  {
+    "question": "What JavaScript object provides mathematical constants and functions?",
+    "choice1": "Math",
+    "choice2": "Number",
+    "choice3": "Calculation",
+    "choice4": "Arithmetic",
+    "answer": 1
+  },
+  {
+    "question": "What is a String object in JavaScript?",
+    "choice1": "A numeric value",
+    "choice2": "A series of characters enclosed in quotes",
+    "choice3": "A function",
+    "choice4": "A boolean value",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is NOT a JavaScript collection in the DOM?",
+    "choice1": "Images",
+    "choice2": "Links",
+    "choice3": "Headers",
+    "choice4": "Forms",
+    "answer": 3
+  },
+  {
+    "question": "What does 'pow' function do?",
+    "choice1": "Generates random values",
+    "choice2": "Rounds numbers",
+    "choice3": "Converts strings to numbers",
+    "choice4": "Computes exponents",
+    "answer": 4
+  },
+  {
+    "question": "What is 'sqrt' used for?",
+    "choice1": "Calculating square roots",
+    "choice2": "Finding the largest number",
+    "choice3": "Converting strings to numbers",
+    "choice4": "Finding the sine of a number",
+    "answer": 1
+  },
+  {
+    "question": "Which operator is used for modulus division?",
+    "choice1": "/",
+    "choice2": "*",
+    "choice3": "-",
+    "choice4": "%",
+    "answer": 4
+  },
+  {
+    "question": "What type of loop is NOT available in JavaScript?",
+    "choice1": "for",
+    "choice2": "while",
+    "choice3": "repeat-until",
+    "choice4": "do-while",
+    "answer": 3
+  },
+  {
+    "question": "Which keyword is used for variable assignment?",
+    "choice1": "=",
+    "choice2": "==",
+    "choice3": ":=",
+    "choice4": "===",
+    "answer": 1
+  },
+  {
+    "question": "What type of loop repeats at least once before checking the condition?",
+    "choice1": "if",
+    "choice2": "for",
+    "choice3": "while",
+    "choice4": "do-while",
+    "answer": 4
+  },
+  {
+    "question": "What is used to create a conditional statement?",
+    "choice1": "if-else",
+    "choice2": "for",
+    "choice3": "while",
+    "choice4": "loop",
+    "answer": 1
+  },
+  {
+    "question": "What keyword is used to stop a loop?",
+    "choice1": "stop",
+    "choice2": "break",
+    "choice3": "return",
+    "choice4": "exit",
+    "answer": 2
+  },
+  {
+    "question": "How do you define an array in JavaScript?",
+    "choice1": "let arr = [1,2,3];",
+    "choice2": "let arr = {1,2,3};",
+    "choice3": "let arr = (1,2,3);",
+    "choice4": "let arr = <1,2,3>;",
+    "answer": 1
+  },
+  {
+    "question": "Which of these is a JavaScript relational operator?",
+    "choice1": "+",
+    "choice2": "===",
+    "choice3": "=",
+    "choice4": ">=",
+    "answer": 4
+  },
+  {
+    "question": "What method loops through an array in JavaScript?",
+    "choice1": "forEach()",
+    "choice2": "round()",
+    "choice3": "ceil()",
+    "choice4": "alert()",
+    "answer": 1
+  }
+]
