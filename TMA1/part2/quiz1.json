@@ -1,0 +1,322 @@
+[
+  {
+    "question": "What is client-side programming responsible for?",
+    "choice1": "Managing databases",
+    "choice2": "Processing client requests",
+    "choice3": "Rendering the UI",
+    "choice4": "Running server applications",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is NOT an example of client-side technology?",
+    "choice1": "HTML",
+    "choice2": "CSS",
+    "choice3": "PHP",
+    "choice4": "JavaScript",
+    "answer": 3
+  },
+  {
+    "question": "What is a key responsibility of a web server?",
+    "choice1": "Hosting websites",
+    "choice2": "Handling user interactions in the browser",
+    "choice3": "Creating UI components",
+    "choice4": "Writing frontend scripts",
+    "answer": 1
+  },
+  {
+    "question": "Which of the following languages is commonly used for server-side programming?",
+    "choice1": "Python",
+    "choice2": "CSS",
+    "choice3": "JavaScript (client-side)",
+    "choice4": "HTML",
+    "answer": 1
+  },
+  {
+    "question": "What does a web server do when it receives a request?",
+    "choice1": "Processes it and sends back the appropriate response",
+    "choice2": "Executes JavaScript in the browser",
+    "choice3": "Loads an offline webpage",
+    "choice4": "Blocks unauthorized users",
+    "answer": 1
+  },
+  {
+    "question": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+    "choice1": "Defines metadata",
+    "choice2": "Declares the document as HTML5",
+    "choice3": "Applies CSS styles",
+    "choice4": "Specifies the document language",
+    "answer": 2
+  },
+  {
+    "question": "Which tag wraps the entire HTML document?",
+    "choice1": "<head>",
+    "choice2": "<body>",
+    "choice3": "<html>",
+    "choice4": "<meta>",
+    "answer": 3
+  },
+  {
+    "question": "Where should metadata be placed in an HTML document?",
+    "choice1": "Inside the <head> tag",
+    "choice2": "Inside the <body> tag",
+    "choice3": "Before the <!DOCTYPE> declaration",
+    "choice4": "In a separate file",
+    "answer": 1
+  },
+  {
+    "question": "What tag contains the visible content of a webpage?",
+    "choice1": "<head>",
+    "choice2": "<meta>",
+    "choice3": "<script>",
+    "choice4": "<body>",
+    "answer": 4
+  },
+  {
+    "question": "Which of the following is NOT included in the <head> section?",
+    "choice1": "Visible content",
+    "choice2": "Metadata",
+    "choice3": "Styles",
+    "choice4": "Scripts",
+    "answer": 1
+  },
+  {
+    "question": "HTML5 is primarily used for:",
+    "choice1": "Structuring content on the web",
+    "choice2": "Executing server-side logic",
+    "choice3": "Running background processes",
+    "choice4": "Creating complex algorithms",
+    "answer": 1
+  },
+  {
+    "question": "Which of the following does HTML5 NOT support natively?",
+    "choice1": "Headings",
+    "choice2": "Paragraphs",
+    "choice3": "Conditional logic",
+    "choice4": "Links",
+    "answer": 3
+  },
+  {
+    "question": "How do you create a hyperlink in HTML?",
+    "choice1": "<link>",
+    "choice2": "<a href=\"url\">Click here</a>",
+    "choice3": "<a href=\"url\">Click here</a>",
+    "choice4": "<hyperlink>",
+    "answer": 3
+  },
+  {
+    "question": "Which tag is used for defining headings?",
+    "choice1": "<p>",
+    "choice2": "<title>",
+    "choice3": "<h1> - <h6>",
+    "choice4": "<header>",
+    "answer": 3
+  },
+  {
+    "question": "What tag is used for inserting an image in HTML?",
+    "choice1": "<img>",
+    "choice2": "<image>",
+    "choice3": "<pic>",
+    "choice4": "<img src=\"image.jpg\" alt=\"description\">",
+    "answer": 4
+  },
+  {
+    "question": "What does <thead> represent?",
+    "choice1": "A paragraph",
+    "choice2": "Table header",
+    "choice3": "Table row",
+    "choice4": "Table column",
+    "answer": 2
+  },
+  {
+    "question": "The <td> tag is used for:",
+    "choice1": "Table data cells",
+    "choice2": "Table headers",
+    "choice3": "Defining table rows",
+    "choice4": "Styling the table",
+    "answer": 1
+  },
+  {
+    "question": "Which tag defines a row in an HTML table?",
+    "choice1": "<thead>",
+    "choice2": "<td>",
+    "choice3": "<table>",
+    "choice4": "<tr>",
+    "answer": 4
+  },
+  {
+    "question": "What does <tbody> contain?",
+    "choice1": "The main content of the table",
+    "choice2": "The title cells",
+    "choice3": "Metadata",
+    "choice4": "Images",
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is used for column headings in tables?",
+    "choice1": "<td>",
+    "choice2": "<th>",
+    "choice3": "<tr>",
+    "choice4": "<col>",
+    "answer": 2
+  },
+  {
+    "question": "Which tag is used to create a form?",
+    "choice1": "<input>",
+    "choice2": "<fieldset>",
+    "choice3": "<form>",
+    "choice4": "<label>",
+    "answer": 3
+  },
+  {
+    "question": "What type of input hides characters when entered?",
+    "choice1": "text",
+    "choice2": "email",
+    "choice3": "password",
+    "choice4": "hidden",
+    "answer": 3
+  },
+  {
+    "question": "Which form input allows users to select multiple options?",
+    "choice1": "Checkbox",
+    "choice2": "Radio button",
+    "choice3": "Select dropdown",
+    "choice4": "Button",
+    "answer": 1
+  },
+  {
+    "question": "What does <select> do in an HTML form?",
+    "choice1": "Displays a paragraph",
+    "choice2": "Creates a dropdown menu",
+    "choice3": "Defines a form section",
+    "choice4": "Submits a form",
+    "answer": 2
+  },
+  {
+    "question": "Which input type allows users to pick a color?",
+    "choice1": "color",
+    "choice2": "text",
+    "choice3": "number",
+    "choice4": "search",
+    "answer": 1
+  },
+  {
+    "question": "What does CSS stand for?",
+    "choice1": "Computer Styling System",
+    "choice2": "Cascading Style Structure",
+    "choice3": "Cascading Style Sheets",
+    "choice4": "Creative Style Selector",
+    "answer": 3
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "choice1": "To style HTML elements",
+    "choice2": "To write server-side scripts",
+    "choice3": "To structure a document",
+    "choice4": "To store website data",
+    "answer": 1
+  },
+  {
+    "question": "Which CSS property is used to change text color?",
+    "choice1": "background-color",
+    "choice2": "color",
+    "choice3": "font-style",
+    "choice4": "text-transform",
+    "answer": 2
+  },
+  {
+    "question": "What is the CSS Box Model used for?",
+    "choice1": "Controlling layout and spacing",
+    "choice2": "Adding animations",
+    "choice3": "Creating images",
+    "choice4": "Styling tables",
+    "answer": 1
+  },
+  {
+    "question": "Which positioning type removes an element from normal flow?",
+    "choice1": "static",
+    "choice2": "relative",
+    "choice3": "absolute",
+    "choice4": "fixed",
+    "answer": 3
+  },
+  {
+    "question": "Which is the most specific type of CSS styling?",
+    "choice1": "External stylesheet",
+    "choice2": "Inline styles",
+    "choice3": "Embedded stylesheet",
+    "choice4": "Internal stylesheet",
+    "answer": 2
+  },
+  {
+    "question": "Where is an external CSS file linked?",
+    "choice1": "<head>",
+    "choice2": "<body>",
+    "choice3": "<footer>",
+    "choice4": "Inside the <head> section",
+    "answer": 4
+  },
+  {
+    "question": "Which tag is used for embedding CSS inside HTML?",
+    "choice1": "<css>",
+    "choice2": "<style>",
+    "choice3": "<link>",
+    "choice4": "<style>",
+    "answer": 2
+  },
+  {
+    "question": "What is the advantage of using external CSS?",
+    "choice1": "Reusable across multiple pages",
+    "choice2": "Overrides inline styles",
+    "choice3": "Only works for one page",
+    "choice4": "Slows down load times",
+    "answer": 1
+  },
+  {
+    "question": "Inline styles are defined using which attribute?",
+    "choice1": "style",
+    "choice2": "class",
+    "choice3": "id",
+    "choice4": "font",
+    "answer": 1
+  },
+  {
+    "question": "What is the most common measurement unit used to specify space in a document?",
+    "choice1": "cm",
+    "choice2": "in",
+    "choice3": "px",
+    "choice4": "vw",
+    "answer": 3
+  },
+  {
+    "question": "Which CSS property is used to set the dimensions of an element?",
+    "choice1": "padding",
+    "choice2": "width and height",
+    "choice3": "margin",
+    "choice4": "border",
+    "answer": 2
+  },
+  {
+    "question": "What does the margin property define?",
+    "choice1": "Space between content and border",
+    "choice2": "Space outside the border",
+    "choice3": "The thickness of the element’s boundary",
+    "choice4": "The width and height of an element",
+    "answer": 2
+  },
+  {
+    "question": "Which property defines the boundary around the content of an element?",
+    "choice1": "margin",
+    "choice2": "padding",
+    "choice3": "border",
+    "choice4": "width",
+    "answer": 3
+  },
+  {
+    "question": "What does the padding property control in an element?",
+    "choice1": "Space between the content and the border",
+    "choice2": "Space outside the border",
+    "choice3": "The element’s width and height",
+    "choice4": "The viewport dimensions",
+    "answer": 1
+  }
+]

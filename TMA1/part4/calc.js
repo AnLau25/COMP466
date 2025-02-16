@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const lengthImp = document.querySelector("input[name='limp']");
     const lengthMet = document.querySelector("input[name='lmet']");
     const lengthPlaceholders = [
-        ["inches", "cm"],
-        ["inches", "m"],
-        ["feet", "cm"],
-        ["feet", "m"],
-        ["miles", "km"]
+        ["in", "cm"],
+        ["in", "m"],
+        ["ft", "cm"],
+        ["ft", "m"],
+        ["mi", "km"]
     ];
 
     function updateLengthConversion() {
