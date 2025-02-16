@@ -95,6 +95,27 @@
                             In addition, it provides quizzes which can be accessed at the end of each section or at the
                             end of the whole page in their own section.
                         </p>
+                        <div class="section-ul">
+                            <p><strong>Quiz functionality:</strong></p>
+                            <ul>
+                                <li>Retrieves quiz file name from the URL query parameter (defaulting to "quiz1.json") and stores it in `localStorage`.</li>
+                                <li>Fetches quiz questions from the specified JSON file.</li>
+                                <li>Initializes quiz variables such as score, question counter, and available questions.</li>
+                                <li>Starts the quiz by resetting values and loading the first question.</li>
+                                <li>Selects a random question from the available ones and displays it.</li>
+                                <li>Updates the question counter on the screen.</li>
+                                <li>Assigns possible answer choices to corresponding HTML elements.</li>
+                                <li>Listens for user answer selection and determines correctness:
+                                  <ul>
+                                    <li>If correct, increments the score and updates the display.</li>
+                                    <li>If incorrect, briefly highlights the correct answer.</li>
+                                  </ul>
+                                </li>
+                                <li>Moves to the next question after a short delay.</li>
+                                <li>Ends the quiz after 20 questions or when no questions remain, redirecting the user to an end page.</li>
+                              </ul>
+                              
+                        </div>
                         <a href="/part2/index.html" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
@@ -121,8 +142,27 @@
                         <p>The slideshow will offer the user the opportunity to visit their images chronologically or
                             randomly, pausing when necessary and having the possibility to move forwards and backwards
                             through the slides.
-                            Furthermore, the user can choose between 3 transitions: Flash out, Pixel out and Shrink in.
-                        </p>
+                        <div class="section-ul">
+                            <p><strong>Canvas functionality:</strong></p>
+                            <ul>
+                                <li>Loads images from an external 'img.json' file and stores them in 'imgData'.</li>
+                                <li>Displays images on an HTML canvas ('slider'), with captions ('txt').</li>
+                                <li>Provides play/pause functionality to cycle through images automatically ('togglePlay').</li>
+                                <li>Allows switching between sequential and random slideshow modes ('toggleMode').</li>
+                                <li>Implements navigation buttons to move between images manually ('showPrev', 'showNext').</li>
+                                <li>Updates the canvas with the current image and caption ('updateCanvas').</li>
+                                <li>Supports different transition effects when switching images ('applyTransitionEffect'):
+                                  <ul>
+                                    <li><strong>Effect 1:</strong> Fade-in effect.</li>
+                                    <li><strong>Effect 2:</strong> Grid-based reveal effect.</li>
+                                    <li><strong>Effect 3:</strong> Shrinking zoom effect.</li>
+                                  </ul>
+                                </li>
+                                <li>Uses event listeners to handle button clicks and dropdown selections.</li>
+                                <li>Manages variables like 'index' to track the current image and 'isPlaying' to control the slideshow.</li>
+                              </ul>
+                              
+                        </div>
                         <a href="/part3/index.html" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
