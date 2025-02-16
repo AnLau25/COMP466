@@ -1,0 +1,322 @@
+[
+  {
+    "question": "What does XML stand for?",
+    "choice1": "Extensible Markup Layout",
+    "choice2": "Extra Modern Language",
+    "choice3": "Extensible Markup Language",
+    "choice4": "Extended Multi Language",
+    "answer": 3
+  },
+  {
+    "question": "Who developed XML?",
+    "choice1": "Microsoft",
+    "choice2": "Mozilla",
+    "choice3": "Google",
+    "choice4": "W3C",
+    "answer": 4
+  },
+  {
+    "question": "Which of the following is NOT a key feature of XML?",
+    "choice1": "Case-sensitive",
+    "choice2": "Requires every start tag to have a matching end tag",
+    "choice3": "Used for styling web pages",
+    "choice4": "Ensures proper nesting of tags",
+    "answer": 3
+  },
+  {
+    "question": "What is the purpose of XML?",
+    "choice1": "To replace HTML",
+    "choice2": "To format web pages",
+    "choice3": "To create animations",
+    "choice4": "To describe and structure data",
+    "answer": 4
+  },
+  {
+    "question": "What must an XML document start with?",
+    "choice1": "An XML declaration specifying the version",
+    "choice2": "A DOCTYPE declaration",
+    "choice3": "A root element",
+    "choice4": "A namespace declaration",
+    "answer": 1
+  },
+  {
+    "question": "In XML, attribute values must be enclosed in:",
+    "choice1": "Parentheses",
+    "choice2": "Curly brackets",
+    "choice3": "Square brackets",
+    "choice4": "Single or double quotes",
+    "answer": 4
+  },
+  {
+    "question": "An XML document must contain:",
+    "choice1": "At least one DOCTYPE declaration",
+    "choice2": "JavaScript functions",
+    "choice3": "A single root element",
+    "choice4": "A CSS stylesheet",
+    "answer": 3
+  },
+  {
+    "question": "XML differs from HTML because:",
+    "choice1": "XML is only used for databases",
+    "choice2": "XML allows users to define custom markup languages",
+    "choice3": "XML does not use tags",
+    "choice4": "XML is a programming language",
+    "answer": 2
+  },
+  {
+    "question": "What does XML ensure regarding elements?",
+    "choice1": "Elements can overlap",
+    "choice2": "Elements must be predefined",
+    "choice3": "Elements must be in lowercase",
+    "choice4": "Elements must be properly nested",
+    "answer": 4
+  },
+  {
+    "question": "What is the role of namespaces in XML?",
+    "choice1": "They style XML documents",
+    "choice2": "They prevent element name conflicts",
+    "choice3": "They encrypt XML data",
+    "choice4": "They speed up XML processing",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is NOT a correct XML rule?",
+    "choice1": "All tags must have closing tags",
+    "choice2": "Tags are case-sensitive",
+    "choice3": "XML documents must always have a DOCTYPE declaration",
+    "choice4": "Tags must be properly nested",
+    "answer": 3
+  },
+  {
+    "question": "How can XML documents be validated?",
+    "choice1": "Using JavaScript",
+    "choice2": "Using an XSD (XML Schema Definition)",
+    "choice3": "Using CSS",
+    "choice4": "Using SQL",
+    "answer": 2
+  },
+  {
+    "question": "What is required for an XML document to be well-formed?",
+    "choice1": "Must include JavaScript",
+    "choice2": "Must use predefined tags",
+    "choice3": "Must have more than one root element",
+    "choice4": "Must have properly nested tags",
+    "answer": 4
+  },
+  {
+    "question": "What does RIA stand for?",
+    "choice1": "Rich Internet Analytics",
+    "choice2": "Rich Internet Applications",
+    "choice3": "Rapid Internet Access",
+    "choice4": "Remote Interactive Apps",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a key characteristic of RIAs?",
+    "choice1": "Works only offline",
+    "choice2": "Requires full-page reloads for updates",
+    "choice3": "Does not support JavaScript",
+    "choice4": "Provides a desktop-app-like user experience",
+    "answer": 4
+  },
+  {
+    "question": "How do RIAs improve user experience?",
+    "choice1": "By using asynchronous requests instead of full-page reloads",
+    "choice2": "By disabling interactivity",
+    "choice3": "By requiring users to download entire applications",
+    "choice4": "By limiting server communication",
+    "answer": 1
+  },
+  {
+    "question": "What does AJAX stand for?",
+    "choice1": "Asynchronous JavaScript and XHTML",
+    "choice2": "Advanced JavaScript and XML",
+    "choice3": "Automated JSON and XML",
+    "choice4": "Asynchronous JavaScript and XML",
+    "answer": 4
+  },
+  {
+    "question": "What is the key advantage of using AJAX?",
+    "choice1": "It replaces JavaScript",
+    "choice2": "It improves search engine ranking",
+    "choice3": "It allows web pages to update without reloading",
+    "choice4": "It disables interactivity",
+    "answer": 3
+  },
+  {
+    "question": "Which technology enables AJAX to work asynchronously?",
+    "choice1": "Java",
+    "choice2": "SQL",
+    "choice3": "CSS",
+    "choice4": "XMLHttpRequest",
+    "answer": 4
+  },
+  {
+    "question": "What is the major use of AJAX in RIAs?",
+    "choice1": "Enhancing security",
+    "choice2": "Partial page updates",
+    "choice3": "Creating database tables",
+    "choice4": "Blocking JavaScript execution",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is an example of AJAX functionality?",
+    "choice1": "Autocomplete (Type-ahead search)",
+    "choice2": "Printing documents",
+    "choice3": "Playing videos",
+    "choice4": "Saving data to a local file",
+    "answer": 1
+  },
+  {
+    "question": "How does 'Edit-in-Place' work in RIAs?",
+    "choice1": "Opens a new window for editing",
+    "choice2": "Allows inline content editing without reloading the page",
+    "choice3": "Requires a server restart",
+    "choice4": "Uses external text editors",
+    "answer": 2
+  },
+  {
+    "question": "What does 'Partial Page Updates' mean in AJAX?",
+    "choice1": "Refreshing the entire web page",
+    "choice2": "Using Java instead of JavaScript",
+    "choice3": "Deleting all elements before reloading",
+    "choice4": "Updating only specific sections without reloading",
+    "answer": 4
+  },
+  {
+    "question": "What prevents malicious cross-domain requests in AJAX?",
+    "choice1": "Cookies",
+    "choice2": "Same-Origin Policy (SOP)",
+    "choice3": "JSON format",
+    "choice4": "HTTPS",
+    "answer": 2
+  },
+  {
+    "question": "What is the main JavaScript object used in AJAX?",
+    "choice1": "XMLHttpRequest",
+    "choice2": "XSLTProcessor",
+    "choice3": "JSONParser",
+    "choice4": "WebSocket",
+    "answer": 1
+  },
+  {
+    "question": "What is the purpose of a callback function in AJAX?",
+    "choice1": "It automatically refreshes the page",
+    "choice2": "It sends data to the server",
+    "choice3": "It blocks other scripts from running",
+    "choice4": "It executes once the server responds",
+    "answer": 4
+  },
+  {
+    "question": "How does AJAX send a request to the server?",
+    "choice1": "Using the .send() method",
+    "choice2": "Using document.write()",
+    "choice3": "Using JSON.stringify()",
+    "choice4": "Using CSS selectors",
+    "answer": 1
+  },
+  {
+    "question": "What method initializes an AJAX request?",
+    "choice1": ".start()",
+    "choice2": ".open(method, url, async)",
+    "choice3": ".getRequest()",
+    "choice4": ".load()",
+    "answer": 2
+  },
+  {
+    "question": "Which property of XMLHttpRequest holds the server response?",
+    "choice1": "responseText",
+    "choice2": "sendData",
+    "choice3": "requestHeader",
+    "choice4": "statusCode",
+    "answer": 1
+  },
+  {
+    "question": "What is the role of .setRequestHeader() in AJAX?",
+    "choice1": "It cancels a request",
+    "choice2": "It defines an XML schema",
+    "choice3": "It sets HTTP headers for the request",
+    "choice4": "It parses JSON data",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is NOT an XMLHttpRequest method?",
+    "choice1": ".send()",
+    "choice2": ".fetch()",
+    "choice3": ".open()",
+    "choice4": ".setRequestHeader()",
+    "answer": 2
+  },
+  {
+    "question": "What happens after the server sends a response in AJAX?",
+    "choice1": "The browser reloads",
+    "choice2": "The user must refresh manually",
+    "choice3": "The callback function processes the response",
+    "choice4": "The request is canceled",
+    "answer": 3
+  },
+  {
+    "question": "How does AJAX handle asynchronous operations?",
+    "choice1": "By allowing the page to remain interactive while requests are processed",
+    "choice2": "By blocking all user interactions until the request completes",
+    "choice3": "By refreshing the page automatically",
+    "choice4": "By requiring a page reload after every request",
+    "answer": 1
+  },
+  {
+    "question": "What type of data formats can be used in AJAX responses?",
+    "choice1": "HTML only",
+    "choice2": "CSV only",
+    "choice3": "Plain text only",
+    "choice4": "XML and JSON",
+    "answer": 4
+  },
+  {
+    "question": "Which event is triggered when an AJAX request completes successfully?",
+    "choice1": "onClick",
+    "choice2": "onreadystatechange",
+    "choice3": "onLoad",
+    "choice4": "onSubmit",
+    "answer": 2
+  },
+  {
+    "question": "Why is AJAX preferred over traditional form submission?",
+    "choice1": "It replaces the need for a backend",
+    "choice2": "It disables JavaScript execution",
+    "choice3": "It prevents security threats",
+    "choice4": "It allows seamless page updates without reloading",
+    "answer": 4
+  },
+  {
+    "question": "What does the 'async' parameter in .open() specify?",
+    "choice1": "Whether the request should be asynchronous",
+    "choice2": "The data format for the response",
+    "choice3": "The security level of the request",
+    "choice4": "The size of the response",
+    "answer": 1
+  },
+  {
+    "question": "Which protocol does AJAX commonly use?",
+    "choice1": "FTP",
+    "choice2": "SMTP",
+    "choice3": "HTTP/HTTPS",
+    "choice4": "WebSocket",
+    "answer": 3
+  },
+  {
+    "question": "Which JavaScript object is commonly used to process JSON responses in AJAX?",
+    "choice1": "DOMParser",
+    "choice2": "XSLTProcessor",
+    "choice3": "fetchAPI",
+    "choice4": "JSON.parse()",
+    "answer": 4
+  },
+  {
+    "question": "What allows AJAX to work with different servers securely?",
+    "choice1": "SOP (Same-Origin Policy)",
+    "choice2": "CORS (Cross-Origin Resource Sharing)",
+    "choice3": "SQL Queries",
+    "choice4": "JSON Encoding",
+    "answer": 2
+  }
+]
