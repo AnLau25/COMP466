@@ -1,6 +1,8 @@
 const lastScore = localStorage.getItem('lastScore');
+const lastFile = localStorage.getItem('lastFile');
 const endScore = document.getElementById('endScr-txt');
-endScore.innerText = (lastScore/1) + "%"
+const backbtn = document.getElementById("goback");
+backbtn.setAttribute('href',`/part2/quiz.html?quiz=${lastFile}`)
+endScore.innerText = ((lastScore/200)*100).toFixed(2) + "%"
 
-/*up to 10q
-multy page select*/
+/*up to 20q*/

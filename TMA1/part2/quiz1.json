@@ -40,7 +40,7 @@
     "answer": 1
   },
   {
-    "question": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+    "question": "What is the purpose of the '<!DOCTYPE html>' declaration?",
     "choice1": "Defines metadata",
     "choice2": "Declares the document as HTML5",
     "choice3": "Applies CSS styles",

@@ -9,36 +9,28 @@ let score = 0;
 let qCounter = 0;
 let qAvailable = [];
 
-let questions = [
-    {
-        question: "Here q?",
-        choice1: "q?",
-        choice2: "no q",
-        choice3: "q q",
-        choice4: "yes q",
-        answer: 1
-    },
+let questions = [];
 
-    {
-        question: "Here q?",
-        choice1: "q?",
-        choice2: "no q",
-        choice3: "q q q",
-        choice4: "yes q",
-        answer: 1
-    },
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
 
-    {
-        question: "Here q?",
-        choice1: "q?",
-        choice2: "no q",
-        choice3: "qq qq",
-        choice4: "yes q",
-        answer: 1
+const quizFile = getQueryParam("quiz") || "quiz1.json";
+localStorage.setItem('lastFile', quizFile);
+
+fetch(quizFile)
+    .then(res => res.json())
+    .then(loadquizq => {
+        questions = loadquizq;
+        startQuiz();
+    })
+    .catch(e => {
+        console.error("Error loading quiz:", e);
     }
-];
+);
 
-const qMax = 3;
+const qMax = 20;
 
 startQuiz = () => {
     qCounter = 0;
@@ -68,7 +60,7 @@ getNextq = () => {
 };
 
 
-scorePlus = () =>{
+scorePlus = () => {
     score += 10;
     qScr.innerText = score;
     localStorage.setItem('lastScore', score);
@@ -91,10 +83,10 @@ choices.forEach(choice => {
                     choice.parentElement.classList.add('correct');
                     setTimeout(() => {
                         choice.parentElement.classList.remove('correct');
-                    },1000);
+                    }, 1000);
                 }
             });
-        }else{
+        } else {
             scorePlus();
         };
 
@@ -104,33 +96,10 @@ choices.forEach(choice => {
             selChoice.parentElement.classList.remove(correction);
             choice.parentElement.classList.remove('correct');
             getNextq();
-        },1000);
+        }, 1000);
 
     });
 
 });
 
-startQuiz();
-/*
 
-        if(!ans) return;
-
-        ans = false;
-        const selChoice = e.target;
-        const selAns =  selChoice.dataset['number'];
-
-        console.log(selAns == currentQ.answer);
-
-        const correction = 
-            selAns == currentQ.answer ? 'correct' : 'incorrect';
-
-        console.log(selAns == currentQ.answer);
-
-        selChoice.parentElement.classList.add(correction);
-
-        //selChoice.parentElement.classList.remove(correction);
-
-
-
-        make 3 text file
-*/
