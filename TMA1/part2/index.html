@@ -50,7 +50,7 @@
     <section id="u1">
         <div class="section-container">
             <div class="top">
-                <h1 class="section-title"><span>Unit 1: </span>HTML5</h1>
+                <h1 class="section-title"><span>Unit 1: </span>HTML5 & CSS</h1>
                 <p class="section-subtitle">This section summarizes HTML5's core features and functionality, describing
                     in detail its structure,
                     elements, and capabilities for web document creation.</p>
@@ -311,33 +311,88 @@
     <section id="u2">
         <div class="section-container">
             <div class="top">
-                <h1 class="section-title"><span>Unit 1: </span>HTML5</h1>
-                <p class="section-subtitle">This section summarizes HTML5's core features and functionality, describing
-                    in detail its structure,
-                    elements, and capabilities for web document creation.</p>
+                <h1 class="section-title"><span>Unit 2: </span>JavaScript</h1>
+                <p class="section-subtitle">This section summarizes JavaScript's core features and functionality,
+                    describing
+                    in detail its structure and use for the creation of interactive and responsive web pages.</p>
             </div>
 
             <div class="bottom">
                 <div class="item">
                     <div class="subs">
                         <img class="icon" src="https://img.icons8.com/bubbles/100/000000/services.png" />
-                        <h2>Pharmacy Assistant</h2>
+                        <h2>JavaScript</h2>
                     </div>
-                    <p>During my last year in high school (2022) I participated in a COOP placement as a pharmacy
-                        assistant at a Shoppers Drug Mart. There I fulfilled the task of pharmacist's assistant,
-                        which mainly consisted of filling and handing out prescriptions and keeping the inventory.</p>
-                </div>
-
-                <div class="item">
-                    <div class="subs">
-                        <img class="icon" src="https://img.icons8.com/bubbles/100/000000/services.png" />
-                        <h2>Pharmacy Assistant</h2>
+                    <p>JavaScript is programming language widely used for web development, allowing sus to create
+                        dynamic and interactive web pages.</p>
+                    <p>Unlike the two previously shown languages, JS does allow us to create variables, loops, functions
+                        and all the structures we would usually have access too in object-oriented languages. Much like
+                        in those other languages, JavaScript has reserved keywords that are not used but cannot be
+                        redefined, including abstract, goto, synchronized, and volatile. Careful when naming your
+                        variables.</p>
+                    <p><strong>There are three ways to create variables:</strong></p>
+                    <div class="section-ul">
+                        <ul>
+                            <li><strong>var:</strong> Function-scoped, hoisted, can be re-declared.</li>
+                            <li><strong>let:</strong> Block-scoped, hoisted (but not initialized), cannot be
+                                re-declared.</li>
+                            <li><strong>const:</strong> Block-scoped, hoisted (but not initialized), value cannot be
+                                reassigned (but objects can be modified).</li>
+                        </ul>
                     </div>
-                    <p>During my last year in high school (2022) I participated in a COOP placement as a pharmacy
-                        assistant at a Shoppers Drug Mart. There I fulfilled the task of pharmacist's assistant,
-                        which mainly consisted of filling and handing out prescriptions and keeping the inventory.</p>
+                    <p><strong>The data types supported by JavaScript are: </strong>Number, String, Boolean, Object,
+                        Undefined, Null, Symbol, BigInt</p>
+                    <p><strong>Some of the general operators provided are:</strong></p>
+                    <div class="section-ul">
+                        <ul>
+                            <li><strong>Arithmetic Operators:</strong> `+`, `-`, `*`, `/`, `%`</li>
+                            <li><strong>Relational Operators:</strong> `>`, `<`, `>=`, `<=`< /li>
+                            <li><strong>Equality Operator:</strong> `==`</li>
+                            <li><strong>Assignment Operators:</strong> `=`, `+=`, `-=`, `*=`, `/=`, etc.</li>
+                            <li><strong>Increment & Decrement:</strong> `++`, `--`</li>
+                        </ul>
+                    </div>
+                    <p><strong>JS also provides a set of mathematical functions:</strong></p>
+                    <div class="section-ul">
+                        <ul>
+                            <li><strong>abs</strong>, <strong>ceil</strong>, <strong>floor</strong>, <strong>round</strong> – for rounding numbers</li>
+                            <li><strong>sqrt</strong>, <strong>pow</strong> – for square roots and exponents</li>
+                            <li><strong>sin</strong>, <strong>cos</strong>, <strong>tan</strong> – for trigonometric calculations</li>
+                            <li><strong>random</strong> – for generating random numbers</li>
+                          </ul>
+                    </div>
                 </div>
                 <div class="all-exmpls">
+
+                    <div class="exmpl-item">
+                        <div class="exmpl-info">
+                            <h1>Calling JS in HTML</h1>
+                            <p>While the &lt;script&gt; tag virtually allows you to put scripts anywhere in your code,
+                                it is common place to embed the scripts in the head of your document. Still, when
+                                handling an important load of scripts, it is a good programming practice to completely
+                                separate the HTML and the script by importing the latter via a source link.</p>
+                        </div>
+                        <div class="exmpl-cont">
+                            <img src="/shared/ex5.jpg" alt="img">
+                        </div>
+                    </div>
+
+                    <div class="exmpl-item">
+                        <div class="exmpl-info">
+                            <h1>JS core objects</h1>
+                            <p>The document object represents the HTML document currently loaded in the browser and
+                                provides methods to dynamically write content, such as document.writeln("Hello,
+                                world!");, which moves the cursor to a new line after writing output.</p>
+                            <p>The document object represents the HTML document currently loaded in the browser and
+                                provides methods tThe window object, on the other hand, enables JavaScript to interact
+                                with users through various methods, including displaying alert boxes with
+                                window.alert("This is an alert box!"); and accepting user input through prompt boxes.
+                            </p>
+                        </div>
+                        <div class="exmpl-cont">
+                            <img src="/shared/ex6.jpg" alt="img">
+                        </div>
+                    </div>
 
                     <div class="exmpl-item">
                         <div class="exmpl-info">
@@ -351,21 +406,20 @@
                             <img src="/shared/DummyMax.jpg" alt="img">
                         </div>
                     </div>
+                </div>
+                <div class="item">
+                    <div class="subs">
+                        <img class="icon" src="https://img.icons8.com/bubbles/100/000000/services.png" />
+                        <h2>Pharmacy Assistant</h2>
+                    </div>
+                    <p>During my last year in high school (2022) I participated in a COOP placement as a pharmacy
+                        assistant at a Shoppers Drug Mart. There I fulfilled the task of pharmacist's assistant,
+                        which mainly consisted of filling and handing out prescriptions and keeping the inventory.</p>
+                    <div class="section-ul">
 
-                    <div class="exmpl-item">
-                        <div class="exmpl-info">
-                            <h1>SEE-Tool Website</h1>
-                            <h2>University of Ottawa Group Exmpl</h2>
-                            <p>Team exmpl in which we faced the challenge of creating a product and advertise it
-                                through a website. Thanks to this, I was able to experiment with web development,
-                                as well as having the opportunity to work with other developers. (In charge of the home
-                                page and the menu.)</p>
-                        </div>
-                        <div class="exmpl-cont">
-                            <img src="/shared/DummyMax.jpg" alt="img">
-                        </div>
                     </div>
                 </div>
+
             </div>
             <a href="/part2/quiz.html" type="button" class="cta">Test your knowledge</a>
         </div>
