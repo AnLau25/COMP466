@@ -21,7 +21,7 @@
 
     "image5":{
         "img":"/shared/cup.jpg",
-        "caption":"Cup surrounded by red rose petals"
+        "caption":"Calyx surrounded by red rose petals"
     },
 
     "image6":{
@@ -35,67 +35,67 @@
     },
 
     "image8":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax4"
+        "img":"/shared/juice.jpg",
+        "caption":"Ice-tea in a glass decorated by a lemon slice"
     },
 
     "image9":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax1"
+        "img":"/shared/vamp1.jpg",
+        "caption":"Picture showcasing a volume of a novel surrounded by rose petals"
     },
 
     "image10":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax2"
+        "img":"/shared/lily.jpg",
+        "caption":"Field of flower buds"
     },
 
     "image11":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax3"
+        "img":"/shared/neon.jpg",
+        "caption":"Neon sign to a Chinese restaurant in a dark alley"
     },
 
     "image12":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax4"
+        "img":"/shared/build.jpg",
+        "caption":"Picture of a church in a mysterious ambience"
     },
 
     "image13":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax1"
+        "img":"/shared/brut.jpg",
+        "caption":"Grayscale image of a brutalist building"
     },
 
     "image14":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax2"
+        "img":"/shared/maison.jpg",
+        "caption":"Picture showcasing two mason jars"
     },
 
     "image15":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax3"
+        "img":"/shared/anx.jpg",
+        "caption":"Composition conveying the feeling of anxiety"
     },
 
     "image16":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax4"
+        "img":"/shared/flaque.jpg",
+        "caption":"Puddle of watter after a rainy day, grayscale"
     },
 
     "image17":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax1"
+        "img":"/shared/moon.jpg",
+        "caption":"Picture of the moon, surrounded by tree branches, in a clear night"
     },
 
     "image18":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax2"
+        "img":"/shared/cup2.jpg",
+        "caption":"Spilled calyx, scattering rose petals"
     },
 
     "image19":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax3"
+        "img":"/shared/eng.jpg",
+        "caption":"Photo of the reflection of an angel statue, grayscale"
     },
 
     "image20":{
-        "img":"/shared/DummyMax.jpg",
-        "caption":"DummyMax4"
+        "img":"/shared/mint.jpg",
+        "caption":"Image of a shrub, close-up view"
     }
 }
