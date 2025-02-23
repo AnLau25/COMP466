@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Inter</title>
+</head>
+
+<body>
+    <h1>Buscando en la base de datos MySQL</h1>
+    <form method="post" action="sqlaccs.php">
+        <label for="select">¿Qué quieres mostrar?</label>
+        <select name="select" id="select">
+            <option value="*">Todo</option>
+            <option value="ID">ID</option>
+            <option value="Title">Título</option>
+            <option value="Category">Categoría</option>
+            <option value="ISBN">ISBN</option>
+        </select>
+        <p><input type="submit" value="Enviar consulta"></p>
+    </form>
+</body>
+
+</html>
