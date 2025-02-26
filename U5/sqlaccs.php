@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$database = mysqli_connect("localhost:33", "iwi3htp", "Password", "products");
+$database = mysqli_connect("localhost:33", "root", "", "products");
 if (!$database) {
     die("Error en la conexión: " . mysqli_connect_error());
 }
