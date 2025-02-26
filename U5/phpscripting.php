@@ -21,4 +21,5 @@
 <!--So, if we change this here, it shows up on OG folder!-->
 <!--So, if we change this here, SymLinks are top!--> 
 <!--Even on the repository!--> 
+<!--C:\Windows\system32>mklink /D C:\xampp\htdocs\NameofLinkFolder C:\SourceFolderLink-->
 </html>
