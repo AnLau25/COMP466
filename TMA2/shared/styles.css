@@ -189,8 +189,6 @@ caption {
     position: relative;
     color: transparent;
     z-index: 10;
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
     color: black;
 }
 
@@ -199,8 +197,7 @@ caption {
 }
 
 #hero .text-block {
-    padding-right: 50rem;
-    padding-left: 50rem;
+    
 }
 
 /*Hero*/
