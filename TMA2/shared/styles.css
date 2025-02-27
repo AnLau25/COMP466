@@ -281,6 +281,8 @@ caption {
     gap: 10px;
 }
 
+/*exmpl to be re-named based on requirements*/
+
 .all-exmpls {
     display: flex;
     align-items: center;
@@ -339,77 +341,6 @@ caption {
     object-fit: cover;
 }
 
-/* End U1 Section */
-
-/*Q-section*/
-.q-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-
-.q-container .item {
-    display: block;
-    padding: 50px;
-    min-width: 500px;
-}
-
-.choice-container {
-    display: flex;
-    margin-bottom: 10px;
-    font-size: 30px;
-    border-radius: 10px;
-    background-color: rgb(197, 192, 192);
-}
-
-.choice-container:hover {
-    cursor: pointer;
-    box-shadow: 10px 7px 0px 0 darkgreen;
-    transform: translateY(-1px);
-    transition: transform 150ms;
-}
-
-.choice-let {
-    padding: 10px;
-    color: white;
-    border: solid darkgreen;
-    background-color: darkgreen;
-}
-
-.choice-def {
-    padding: 10px;
-}
-
-.choice-container p {
-    margin: 0px;
-}
-
-.correct {
-    background-color: rgb(51, 143, 51);
-}
-
-.incorrect {
-    background-color: #d64545;
-}
-
-#qNum {
-    display: flex;
-    gap: 50px;
-}
-
-/*part2*/
-
-/*part3*/
-.slider {
-    border: 1px solid black;
-    border-radius: 10px;
-    width: auto;
-    max-height: 400px;
-}
-
 .select-label {
     display: flex;
     flex-direction: column;
@@ -433,11 +364,6 @@ caption {
     margin-top: 10px;
 }
 
-#canvas .section-container {
-    padding: 0px;
-}
-
-
 .abi {
     font-weight: 100;
     color: mediumslateblue;
@@ -450,35 +376,3 @@ caption {
 }
 
 /*part3*/
-
-/*part4*/
-.convert-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.convert-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.convert-container .select-label {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    font-size: 25px;
-    margin: 30px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#soln {
-    margin: 30px;
-}
-
-#temp {
-    padding-bottom: 100px;
-}
-
-/*part4*/
