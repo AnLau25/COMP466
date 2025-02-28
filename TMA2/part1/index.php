@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>README</title>
+    <title>Bookmark</title>
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
         </script>
@@ -56,14 +56,14 @@
             <div class="bottom">
                 <form class="inline-form">
                     <label class="select-label">Link:
-                        <input class="cta" name="serimp" type="text" placeholder="Link to your website"
-                            size="50" maxlength="50" required />
+                        <input class="cta" name="link" type="text" placeholder="Link to your website"
+                            size="50" required />
                     </label>
                     <label class="select-label">Bookmark name:
-                        <input class="cta" name="serimp" type="text" placeholder="Link to your website"
+                        <input class="cta" name="linkName" type="text" placeholder="Name of your bookmark"
                             size="50" maxlength="50" required />
                     </label>
-                    <button type="button" id="calcMortgage" class="cta">Add</button>
+                    <button type="button" id="newLink" class="cta">Add</button>
                 </form>
             </div>
         </div>

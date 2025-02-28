@@ -339,13 +339,13 @@ caption {
     object-fit: cover;
 }
 
-.select-label {
+.input-label {
     display: flex;
     flex-direction: column;
     align-items: start;
-    font-size: 25px;
-    margin: 10px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
 }
 
 .cta-disabled {
@@ -375,4 +375,16 @@ caption {
 /*part1*/
 .inline-form{
     display: block;
+}
+
+.login-container .cta{
+    text-transform: none;
+    font-size: 15px;
+}
+
+.login-container{
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 35em;
 }
