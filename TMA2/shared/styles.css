@@ -197,7 +197,8 @@ caption {
 }
 
 #hero .text-block {
-    
+    padding-right: 40rem;
+    padding-left: 40rem;
 }
 
 /*Hero*/
