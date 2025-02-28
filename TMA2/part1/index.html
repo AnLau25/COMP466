@@ -18,13 +18,14 @@
             <div class="nav-bar">
                 <div class="brand">
                     <a href="#hero">
-                        <h1><span>The</span> homework <span>page</span></h1>
+                        <h1><span>The</span> bookmark <span>page</span></h1>
                     </a>
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="#find" data-after="unit1">Find a bookmark</a></li>
-                        <li><a href="#create" data-after="Unit1">Create a bookmark</a></li>
+                        <li><a href="#create" data-after="create">Create a bookmark</a></li>
+                        <li><a href="#find" data-after="find">Find a bookmark</a></li>
+                        <button type="button" id="calcMortgage" class="cta">Log Out</button>
                     </ul>
                 </div>
             </div>
@@ -44,99 +45,48 @@
     </section>
     <!-- End Hero Section  -->
 
-    <!-- q1 Section -->
-    <section id="q1">
+    <!-- create Section -->
+    <section id="create">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>New </span>bookmark</h1>
+                <p class="section-subtitle">Create a new bookmark</p>
+            </div>
+
+            <div class="bottom">
+                <form class="inline-form">
+                    <label class="select-label">Link:
+                        <input class="cta" name="serimp" type="text" placeholder="Link to your website"
+                            size="50" maxlength="50" required />
+                    </label>
+                    <label class="select-label">Bookmark name:
+                        <input class="cta" name="serimp" type="text" placeholder="Link to your website"
+                            size="50" maxlength="50" required />
+                    </label>
+                    <button type="button" id="calcMortgage" class="cta">Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End create Section -->
+
+    <!-- find Section -->
+    <section id="find">
         <div class="section-container">
             <div class="top">
                 <h1 class="section-title">Browse your <span>links</span></h1>
             </div>
-            <form>
-                
-            </form>
-            
-        </div>
-    </section>
-    <!-- End q1 Section -->
-
-    <!-- q2 Section -->
-    <section id="q2">
-        <div class="section-container">
-            <div class="top">
-                <h1 class="section-title"><span>Question 2: </span>Tools Page</h1>
-                <p class="section-subtitle">Set of three useful tools</p>
-            </div>
-
             <div class="bottom">
-                <div class="exmpl-item">
-                    <div class="exmpl-info">
-                        <h1>Explanation</h1>
-                        <p>As requested, this page features three tools. The first is a standard measurement converter
-                            for the imperial and metric systems, covering the most common conventions based on my
-                            knowledge
-                            and an article from the <a href="https://www.unitscenter.com/converters" class="abi"
-                                target="_blank">UnitCenter</a> website. The second tool is a simple mortgage calculator,
-                            and the third is a temperature converter that supports Fahrenheit, Celsius, and Kelvin.</p>
-                        <div class="section-ul">
-                            <p> <strong>Measurement converter:</strong> </p>
-                            <ul>
-                                <li>The equations for the length conversion (or rather, the factors) come from the first
-                                    <a href="https://www.google.com/search?q=miles+to+km&rlz=1C1CHBF_enCA913CA913&oq=miles+t&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQLhiABDIGCAMQBhhAMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAuGIAEMgcIBxAAGIAEMgcICBAAGIAEMgkICRAuGAoYgATSAQgyNzM5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                                        class="abi" target="_blank">Google page</a>.
-                                </li>
-                                <li>To go from inches to centimeters, we use \(inches \cdot 2.54\)</li>
-                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
-                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
-                                <li>To go from feet to centimeters, we use \(feet \cdot 30.48\)</span></li>
-                                <li>To go from feet to meters, we use \(feet \cdot 0.3048\)</span></li>
-                                <li>To go from miles to kilometer, we use \(miles \cdot 1.609\)</span></li>
-                                <li>Finally, for the reverse operation, would have to divide the metric values. But, for
-                                    consistency reasons, we chose to multiply by the inverse of the factor.
-                                    So, \(metric \cdot (\frac{1}{factor})\).</li>
-                            </ul>
-                        </div>
-                        <div class="section-ul">
-                            <p> <strong>Mortgage calculator:</strong> </p>
-                            <ul>
-                                <li>For this tool, unlike the other two, I chose to use a button with an event listener to generate the answer. </li>
-                                <li>Since, to calculate the mortgage, you imperatively need all three values, the button allows for the page to verify the validity of all three variables before calculating.</li>
-                                <li>The equation used to calculate the mortgage comes from a page dedicated to explaining this concept in the <a href="https://www.calculatorsoup.com/calculators/financial/mortgage-calculator.php" class="abi" target="_blank">Calculator Soup</a> website.  </li>
-                                <li>Thus, this equation for the mortgage is: \(MP = \frac{PVi(1 + i)^n}{(1 + i)^n - 1}\)</li>
-                                    <ul>
-                                        <li>\(MP\), being the monthly payment</li>
-                                        <li>\(n\), the term in months</li>
-                                        <li>\(i\), being the monthly interest rate</li>
-                                        <li>\(PV\), as the mortage amount or present value</li>
-                                    </ul>
-                            </ul>
-                        </div>
-                        <div class="section-ul">
-                            <p> <strong>Temperature converter:</strong> </p>
-                            <ul>
-                                <li>I chose to build a temperature converter because not only did I feel it matched with the previous tools, it is also quite handy as a standalone.</li>
-                                <li>The previous tools seem to imply a house buying/building purpose. Knowing the temperature could be useful for someone buying a house in a foreign country and checking  for security measures.</li>
-                                <li>Additionally, things like heating or inbuilt ovens could have parameters associated with temperature measurement.</li>
-                                <li>Those conditions mainly regards Fahrenheit and Celsius. Kelvin conversion was solely added to have a more complete tool and  for “in case of” situations.</li>
-                                <li>For simplicity, we only convert back and forth between Celsius and the other two temperatures. </li>
-                                <li>The equations were sourced from the <a href="https://byjus.com/temperature-conversion-formula/" class="abi" target="_blank">Byjus</a> website and they are:</li>
-                                <ul>
-                                    <li>\(C^o = (F^o - 32) \cdot \frac{5}{9} \)</li>
-                                    <li>\(F^o = (C^o\frac{9}{5}) + 32\)</li>
-                                    <li>\(C^o = K^o - 273.15\)</li>
-                                    <li>\(K^o = C^o + 273.15\)</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <a href="/part2/index.html" type="button" class="cta">See Solution</a>
-                    </div>
-                    <div class="exmpl-cont">
-                        <img src="/shared/q2.jpg" alt="img">
-                    </div>
-                </div>
+                <form>
+                    <label class="select-label">What are we looking for?
+                        <input class="cta" name="serimp" type="text" placeholder="Name or Link of the website you need"
+                            size="50" maxlength="50" required />
+                    </label>
+                </form>
             </div>
         </div>
     </section>
-    <!-- End q2 Section -->
-
+    <!-- End find Section -->
 
 </body>
 
