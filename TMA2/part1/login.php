@@ -1,3 +1,6 @@
+<?php
+    include('connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,16 +30,16 @@
             <div class="login-container">
                 <p>Help us dentify you, so we can get your bookmarks!</p>
                 <form class="">
-                    <label class="input-label">Link:
-                        <input class="cta" name="link" type="text" placeholder="Type in your username"
+                    <label class="input-label">Username:
+                        <input class="cta" name="usr" type="text" placeholder="Type in your username"
                             size="30" required />
                     </label>
-                    <label class="input-label">Bookmark name:
-                        <input class="cta" name="linkName" type="text" placeholder="Type in your password"
+                    <label class="input-label">Password:
+                        <input class="cta" name="pswrd" type="text" placeholder="Type in your password"
                             size="30" maxlength="50" required />
                     </label>
-                    <p class="section-subtitle">New arround here? No wories, sign up <a style="font-family: 'Montserrat', sans-serif;" href="./signin.php" class="abi">here</a>!</p>
-                    <button type="button" id="newLink" class="cta">LOG-IN</button>
+                    <p class="section-subtitle">New arround here? No wories, sign up <a href="./signin.php" class="abi">here</a>!</p>
+                    <button type="submit" id="newLink" class="cta">LOG-IN</button>
                 </form>
 
             </div>
