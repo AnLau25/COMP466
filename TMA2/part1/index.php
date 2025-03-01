@@ -1,5 +1,5 @@
 <?php
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
                     <ul>
                         <li><a href="#create" data-after="create">Create a bookmark</a></li>
                         <li><a href="#find" data-after="find">Find a bookmark</a></li>
-                        <button type="button" id="calcMortgage" class="cta">Log Out</button>
+                        <a href="login.php" type="button" class="cta">Log Out</a>
                     </ul>
                 </div>
             </div>

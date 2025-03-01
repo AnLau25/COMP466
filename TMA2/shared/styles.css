@@ -390,3 +390,7 @@ caption {
     max-width: 35em;
     background-color: whitesmoke;
 }
+
+.theyWouldntLetMeInlineStyle{
+    background-color: darkgray;
+}
