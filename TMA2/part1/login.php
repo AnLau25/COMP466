@@ -29,7 +29,7 @@
         <div class="hero container">
             <div class="login-container">
                 <p>Help us dentify you, so we can get your bookmarks!</p>
-                <form class="">
+                <form action="index.php" method="post">
                     <label class="input-label">Username:
                         <input class="cta" name="usr" type="text" placeholder="Type in your username"
                             size="30" required />

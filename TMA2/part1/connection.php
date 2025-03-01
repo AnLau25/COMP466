@@ -1,4 +1,10 @@
 <?php
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "bookmarks";
+    $port = 33;
+    
     $database = mysqli_connect("localhost", "root", "", "bookmarks", 33);
     if ($database->connect_error) {
         die("Error en la conexión: ".$database->connect_error);

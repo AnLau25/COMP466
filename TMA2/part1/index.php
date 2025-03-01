@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php
+    
+?>
 
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -54,12 +57,12 @@
             </div>
 
             <div class="bottom">
-                <form class="inline-form">
-                    <label class="select-label">Link:
+                <form>
+                    <label class="input-label">Link:
                         <input class="cta" name="link" type="text" placeholder="Link to your website"
                             size="50" required />
                     </label>
-                    <label class="select-label">Bookmark name:
+                    <label class="input-label">Bookmark name:
                         <input class="cta" name="linkName" type="text" placeholder="Name of your bookmark"
                             size="50" maxlength="50" required />
                     </label>
@@ -78,7 +81,7 @@
             </div>
             <div class="bottom">
                 <form>
-                    <label class="select-label">What are we looking for?
+                    <label class="input-label">What are we looking for?
                         <input class="cta" name="serimp" type="text" placeholder="Name or Link of the website you need"
                             size="50" maxlength="50" required />
                     </label>

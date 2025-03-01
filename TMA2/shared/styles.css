@@ -373,9 +373,10 @@ caption {
 }
 
 /*part1*/
-.inline-form{
+/*.inline-form{
     display: block;
-}
+    align-items: start;
+}*/
 
 .login-container .cta{
     text-transform: none;
