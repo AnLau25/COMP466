@@ -73,10 +73,9 @@
                         <input class="cta" name="pswrd" type="password"  placeholder="Type in your password"
                             size="30" maxlength="50" required />
                     </label>
-                    <p class="section-subtitle">New arround here? No wories, sign up <a href="./signin.php" class="abi">here</a>!</p>
-                    <button type="submit" name="submit" class="cta">LOG-IN</button>
+                    <p class="section-subtitle">New arround here? No wories, sign up <a href="./signin.php" class="abi">HERE</a>!</p>
+                    <button type="submit" name="submit" class="cta">LOGIN</button>
                 </form>
-
             </div>
     </section>
 

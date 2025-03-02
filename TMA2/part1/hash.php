@@ -14,9 +14,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     // Test if the hashed password matches the plaintext password
     if (password_verify($plaintextPassword, $hashedPassword)) {
-        echo "Password for user '$username' has been successfully hashed and verified!<br>";
+        echo "Password for user '$username' verified<br>";
     } else {
-        echo "Password verification failed for user '$username'.<br>";
+        echo "Failed for user '$username'.<br>";
     }
 
     // Update the database with the hashed password
@@ -26,5 +26,5 @@ while ($row = mysqli_fetch_assoc($result)) {
     mysqli_stmt_execute($stmt);
 }
 
-echo "Passwords updated to hashed format!";
+echo "Passwords updated to hash";
 ?>

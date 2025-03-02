@@ -362,14 +362,15 @@ caption {
 }
 
 .abi {
-    font-weight: 100;
-    color: mediumslateblue;
+    font-weight: bold;
+    color: darkgreen;
     font-size: 20px;
-    font-family: "Fredericka the Great", serif;
+    /*font-family: "Fredericka the Great", serif;*/
 }
 
 .abi:hover {
     text-decoration: underline;
+    color: mediumslateblue !important;
 }
 
 /*part1*/
@@ -394,3 +395,14 @@ caption {
 .theyWouldntLetMeInlineStyle{
     background-color: darkgray;
 }
+
+.text-block ul, .bottom ul{
+    list-style-type: circle;
+    font-size: 15px;
+    text-align: start;
+}
+
+.text-block li, .bottom li{
+    margin-bottom: 5px;
+}
+
