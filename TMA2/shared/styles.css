@@ -75,7 +75,6 @@ caption {
     border: 2px solid darkgreen;
     z-index: 10;
     font-size: 2rem;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: .3s ease;
     transition-property: background-color, color;
@@ -342,7 +341,7 @@ caption {
 .input-label {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: start !important;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
@@ -380,7 +379,6 @@ caption {
 }*/
 
 .login-container .cta{
-    text-transform: none;
     font-size: 15px;
 }
 
@@ -397,12 +395,19 @@ caption {
 }
 
 .text-block ul, .bottom ul{
-    list-style-type: circle;
+    list-style-type: none;
     font-size: 15px;
     text-align: start;
 }
 
+
+
 .text-block li, .bottom li{
     margin-bottom: 5px;
+}
+
+.link-display{
+    display: flex;
+    justify-content: space-between;
 }
 

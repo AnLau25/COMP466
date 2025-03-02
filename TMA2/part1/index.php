@@ -38,7 +38,7 @@
 
         if (mysqli_stmt_execute($stmt)) {
             echo '<script>
-                    alert("Website Bookmarked successfully!");
+                    alert("Website bookmarked successfully!");
                     window.location.href = "index.php";
                 </script>';
         } else {
@@ -80,7 +80,7 @@
                         <li><a href="#create" data-after="create">Create a bookmark</a></li>
                         <li><a href="#find" data-after="find">Browse your bookmarks</a></li>
                         <form action="logout.php" method="post">
-                            <button type="submit" class="cta">Log Out</button>
+                            <button type="submit" class="cta">LOG OUT</button>
                         </form>
                     </ul>
                 </div>
@@ -138,7 +138,7 @@
                         <input class="cta" name="name" type="text" placeholder="Name of your bookmark"
                             size="50" maxlength="50" required />
                     </label>
-                    <button type="submit" name="newLink" class="cta">Add</button>
+                    <button type="submit" name="newLink" class="cta">ADD</button>
                 </form>
             </div>
         </div>
@@ -152,35 +152,53 @@
                 <h1 class="section-title">Browse your <span>links</span></h1>
             </div>
             <div class="bottom">
-                <form>
+                <form onsubmit="return false;">
                     <label class="input-label">What are we looking for?
-                        <input class="cta" name="serimp" type="text" placeholder="Name or Link of the website you need"
-                            size="50" maxlength="50" required />
+                        <input class="cta" name="serimp" id="searchInput" type="text"
+                            placeholder="Name or Link of the website you need" size="50" maxlength="50" required />
                     </label>
-                    <?php
-                        $userLinks = "SELECT link_name, link_adr
-                                    FROM links
-                                    WHERE user_name='$username'
-                                    ORDER BY link_name ASC";
-                        $byname = mysqli_query($database, $userLinks);
-
-                        if (!$byname) {
-                            echo "<p>";
-                            die("Query error.");
-                            echo "</p>";
-                        } else {
-                            echo "<ul>";
-                            while ($row = $byname->fetch_assoc()) {
-                                echo '<li><a class="abi" target="_blank" href="' . $row['link_adr'] . '">' . $row['link_name'] . '</a></li>';
-                            }
-                            echo "</ul>";
-                        }
-                    ?>
+                    <ul id="resultsList"></ul>
                 </form>
-                
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadLinks();
+
+            document.getElementById("searchInput").addEventListener("keyup", function() {
+                loadLinks(this.value);
+            });
+
+            function loadLinks(searchQuery = "") {
+                let resultsList = document.getElementById("resultsList");
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "search_links.php?query=" + encodeURIComponent(searchQuery), true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        resultsList.innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        });
+
+        function deleteLink(linkId) {
+            if (confirm("Are you sure you want to delete this link?")) {
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "delete_link.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert(xhr.responseText);
+                        location.reload(); // Refresh the list after deletion
+                    }
+                };
+                xhr.send("link_id=" + encodeURIComponent(linkId));
+            }
+        }
+    </script>
     <!-- End find Section -->
 
 </body>

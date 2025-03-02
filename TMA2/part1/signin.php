@@ -1,62 +1,5 @@
 <?php
-include('connection.php');
-if (!$database) {
-    die("No systems: " . mysqli_connect_error());
-}
-
-if (isset($_POST['submit'])) {
-    $username = trim($_POST['usr']);
-    $password = trim($_POST['pswrd1']);
-    $verificator = trim($_POST['pswrd2']);
-
-    if ($password !== $verificator) {
-        echo '<script>
-                alert("Signup failed. Passwords do not match!");
-                window.location.href = "signin.php";
-              </script>';
-        exit();
-    }
-
-    // Check if username already exists
-    $check_sql = "SELECT user_name FROM users WHERE user_name = ?";
-    $check_stmt = mysqli_prepare($database, $check_sql);
-    mysqli_stmt_bind_param($check_stmt, "s", $username);
-    mysqli_stmt_execute($check_stmt);
-    mysqli_stmt_store_result($check_stmt);
-
-    if (mysqli_stmt_num_rows($check_stmt) > 0) {
-        echo '<script>
-                alert("Signup failed. Username already taken. Please choose another one.");
-                window.location.href = "signin.php";
-              </script>';
-        mysqli_stmt_close($check_stmt);
-        exit();
-    }
-    mysqli_stmt_close($check_stmt);
-
-    // Hash the password securely
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-    // Insert the new user
-    $sql = "INSERT INTO users (user_name, user_pswrd) VALUES (?, ?)";
-    $stmt = mysqli_prepare($database, $sql);
-    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPassword);
-
-    if (mysqli_stmt_execute($stmt)) {
-        echo '<script>
-                alert("Signin successful! Please log in.");
-                window.location.href = "login.php";
-              </script>';
-    } else {
-        echo '<script>
-                alert("Signin failed. Please try again.");
-                window.location.href = "signin.php";
-              </script>';
-    }
-
-    // Close statement
-    mysqli_stmt_close($stmt);
-}
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +9,8 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmark</title>
-    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/shared/styles.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="theyWouldntLetMeInlineStyle">
@@ -106,6 +50,33 @@ if (isset($_POST['submit'])) {
 
             </div>
     </section>
+    <script>
+        $(document).ready(function() {
+            $("form").on("submit", function(event) {
+                event.preventDefault();
+                
+                var formData = $(this).serialize(); 
+
+                $.ajax({
+                    type: "POST",
+                    url: "signin_process.php",
+                    data: formData,
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.status === "success") {
+                            alert(response.message);
+                            window.location.href = "login.php"; 
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert("An error occurred. Please try again.");
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
