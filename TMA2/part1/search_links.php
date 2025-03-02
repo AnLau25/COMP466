@@ -9,7 +9,6 @@
 
    $username = $_SESSION['username']; 
 
-
     $query = isset($_GET['query']) ? $database->real_escape_string($_GET['query']) : '';
 
     $sql = "SELECT link_name, link_adr, link_id FROM links 
@@ -26,7 +25,7 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<li class="link-display">
-                    <a class="abi" target="_blank" href="' . $row['link_adr'] . '">' . $row['link_name'] . '</a> 
+                    <a href="' . $row['link_adr'] . '" target="_blank" class="abi saved-link" data-link-id="' . $row['link_id'] . '">' . $row['link_name'] . '</a> 
                     <div">
                         <button type="button" class="cta" onclick="editLink(' . $row['link_id'] . ')">EDIT</button>
                         <button type="button" class="cta" onclick="deleteLink(' . $row['link_id'] . ')">DELETE</button>

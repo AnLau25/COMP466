@@ -160,11 +160,28 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         resultsList.innerHTML = xhr.responseText;
+                        attachClickHandlers();
                     }
                 };
                 xhr.send();
             }
         });
+
+        function attachClickHandlers() {
+            document.querySelectorAll(".saved-link").forEach(link => {
+                link.addEventListener("click", function (event) {
+                    let linkId = this.getAttribute("data-link-id");
+                    updateClickCount(linkId);
+                });
+            });
+        }
+
+        function updateClickCount(linkId) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "link_click.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("link_id=" + encodeURIComponent(linkId));
+        }
 
         function deleteLink(linkId) {
             if (confirm("Are you sure you want to delete this link?")) {
