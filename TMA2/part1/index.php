@@ -8,49 +8,6 @@
     }
 
     $username = $_SESSION['username']; 
-
-    if (isset($_POST['newLink'])) {
-        $link = trim($_POST['link']);
-        $linkname = trim($_POST['name']);
-
-        $check_sql = "SELECT link_name, link_adr FROM links WHERE user_name = ? AND link_adr = ?";
-        $check_stmt = mysqli_prepare($database, $check_sql);
-        mysqli_stmt_bind_param($check_stmt, "ss", $username, $link);
-        mysqli_stmt_execute($check_stmt);
-        mysqli_stmt_bind_result($check_stmt, $link_name, $link_adr);
-        mysqli_stmt_store_result($check_stmt);
-
-        if (mysqli_stmt_num_rows($check_stmt) > 0) {
-            mysqli_stmt_fetch($check_stmt);
-            echo '<script>
-                    alert("This URL is already saved as \'' . $link_name . '\'.");
-                    window.location.href = "index.php";
-                </script>';
-            mysqli_stmt_close($check_stmt);
-            exit();
-        }
-        mysqli_stmt_close($check_stmt);
-
-        // Insert the new user
-        $sql = "INSERT INTO links (link_adr, link_name, user_name) VALUES (?, ?, ?)";
-        $stmt = mysqli_prepare($database, $sql);
-        mysqli_stmt_bind_param($stmt, "sss", $link, $linkname, $username);
-
-        if (mysqli_stmt_execute($stmt)) {
-            echo '<script>
-                    alert("Website bookmarked successfully!");
-                    window.location.href = "index.php";
-                </script>';
-        } else {
-            echo '<script>
-                    alert("Bookmark failed. Please try again.");
-                    window.location.href = "index.php;
-                </script>';
-        }
-
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +86,7 @@
             </div>
 
             <div class="bottom">
-                <form method="post">
+                <form id="addLink">
                     <label class="input-label">Link:
                         <input class="cta" name="link" type="text" placeholder="Link to your website"
                             size="50" required />
@@ -142,6 +99,31 @@
                 </form>
             </div>
         </div>
+        <script>
+             document.getElementById("addLink").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                let formData = new FormData(this);
+                formData.append("newLink", "1"); 
+
+                fetch("add_link.php", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message); 
+                    if (data.status === "success") {
+                        document.getElementById("addLink").reset();
+                        location.reload(); 
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+            });
+        </script>
     </section>
     <!-- End create Section -->
 
@@ -192,7 +174,7 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         alert(xhr.responseText);
-                        location.reload(); // Refresh the list after deletion
+                        location.reload(); 
                     }
                 };
                 xhr.send("link_id=" + encodeURIComponent(linkId));
