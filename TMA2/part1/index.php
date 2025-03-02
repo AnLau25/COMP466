@@ -183,6 +183,64 @@
     </script>
     <!-- End find Section -->
 
+    <!--Modal-->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Link</h2>
+            <form id="editForm" onsubmit="return false;">
+                <input type="hidden" id="editLinkId">
+                <label class="input-label">Link Name:
+                    <input class="cta" type="text" id="editLinkName" required>
+                </label>
+                <label class="input-label">Link URL:
+                    <input class="cta" type="url" id="editLinkUrl" required>
+                </label>
+                <button type="submit" class="cta">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <!--I know I should have a script file at this point, please ignore it this onece-->
+    <script>
+        function editLink(linkId) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "get_link.php?link_id=" + encodeURIComponent(linkId), true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let linkData = JSON.parse(xhr.responseText);
+                    document.getElementById("editLinkId").value = linkData.link_id;
+                    document.getElementById("editLinkName").value = linkData.link_name;
+                    document.getElementById("editLinkUrl").value = linkData.link_adr;
+                    document.getElementById("editModal").style.display = "block";
+                }
+            };
+            xhr.send();
+        }
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.getElementById("editModal").style.display = "none";
+        });
+
+        document.getElementById("editForm").addEventListener("submit", function () {
+            let linkId = document.getElementById("editLinkId").value;
+            let linkName = document.getElementById("editLinkName").value;
+            let linkUrl = document.getElementById("editLinkUrl").value;
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "update_link.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert(xhr.responseText);
+                    location.reload();
+                }
+            };
+            xhr.send("link_id=" + encodeURIComponent(linkId) + "&link_name=" + encodeURIComponent(linkName) + "&link_adr=" + encodeURIComponent(linkUrl));
+        });
+
+    </script>
+    <!--Modal-->
+
 </body>
 <!-- It hurts me more than u (could use timer, we'll see)
 <script>

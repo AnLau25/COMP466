@@ -411,3 +411,36 @@ caption {
     justify-content: space-between;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% 30% 25% 30%;
+    padding: 20px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.modal-content .input-label input {
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+#addLink{
+    margin-top: 40px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
