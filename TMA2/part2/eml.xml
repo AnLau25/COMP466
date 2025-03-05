@@ -5,13 +5,14 @@
 
     <unit>
         <head>
-            <unit-title>
+            <title>
                 <span>Unit 1: </span>HTML5 &amp; CSS
-            </unit-title>
-            <unit-subtitle>
+            </title>
+            <subtitle>
                 This section summarizes HTML5's core features and functionality, describing in detail its structure, elements, and capabilities for web document creation.
-            </unit-subtitle>
+            </subtitle>
         </head>
+
         <materia>
             <title>
                 Client-side vs Server-side
@@ -25,18 +26,6 @@
                 manages databases, performs authentication, and generates dynamic content before sending
                 responses back to the client. Examples include Python, PHP, Node.js, and Java.
             </paragraph>
-            <list>
-                <paragraph>
-                    <strong>A web server holds the data of a domain for users to call via IP and URL, its main
-                    tasks involve:</strong>
-                </paragraph>
-                <item><strong>Hosting Websites:</strong> Stores the files (HTML, CSS, JavaScript, images,
-                etc.) needed for a website and serves them to users upon request.</item>
-                <item><strong>Handling Requests:</strong> Processes it and sends back appropriate responses to
-                requests, like opening the right page for a URL.</item>
-                <item><strong>Running Applications:</strong> Web servers can execute server-side code (like
-                PHP, Python, or Node.js) to generate dynamic content.</item>
-            </list>
             <list>
                 <paragraph>
                     <strong>A web server holds the data of a domain for users to call via IP and URL, its main
@@ -76,54 +65,112 @@
             </list>
         </materia>
 
-        <materia>
+        <example>
             <title>
-                CSS
+                Basic Structure
             </title>
             <paragraph>
-                Cascading Style Sheets (CSS) provide a powerful way to control the appearance and layout of
-                HTML elements. CSS allows for styling elements in various ways, including inline styles,
-                embedded style sheets, and external style sheets.
+                All HTML5 follow this structure, regardless of the elements you choose to include.
             </paragraph>
             <list>
-                <paragraph><strong>General CSS stylings</strong></paragraph>
-                <li><strong>Absolute Positioning:</strong> .class {position: absolute;}</li>
-                <li><strong>Relative Positioning:</strong> .class {position: relative;}</li>
-                <li><strong>Background Image:</strong> .class {background-image: url('background.png');}</li>
-                <li><strong>Background Color:</strong> .class {background-color: lightgray;}</li>
-                <li><strong>Width and height:</strong> .class {width: 200px; height: 100px;}</li>
-                <li><strong>Margin:</strong> .class {margin: 15px;}</li>
-                <li><strong>Border:</strong> .class {border: 5px solid black;}</li>
-                <li><strong>Padding:</strong> .class {padding: 10px;}</li>
+                <item><strong>DOCTYPE:</strong> Opens your document, declaring it as HTML5.</item>
+                <item><strong>HTML tag:</strong> Wraps the entire document as a single structure.</item>
+                <item><strong>Head tag:</strong> Contains the metadata of the document (title, styles, scripts and links).</item>
+                <item><strong>Body tag:</strong> Contains the visible content of the document, is where you will put what the user will see and interact with.</item>
             </list>
-        </materia>
-                <bottom>
-                    
+            <img>
+                /shared/ex1.jpg
+            </img>
+        </example>
+        
+        <example>
+            <title>
+                Tables
+            </title>
+            <paragraph>
+                The table structure will allow you to use the space as an Excel sheet. Making divisions for titles and content as needed.
+            </paragraph>
+            <list>
+                <item><strong>thead:</strong> Read table head is the element that contains your table title cells.</item>
+                <item><strong>th:</strong> Title head.</item>
+                <item><strong>tbody:</strong> Read table body, contains the cells that form the body of the table, the data.</item>
+                <item><strong>td:</strong> Table data cell.</item>
+                <item><strong>tr:</strong> Table rows, which allow you to align your cells in rows for display.</item>
+            </list>
+            <img>
+                /shared/ex2.jpg
+            </img>
+        </example>
+       
+        <example>
+            <title>
+                Forms and input types
+            </title>
+            <paragraph>
+                In HTML5, the &lt;form&gt; element is used to create interactive forms for users to submit data to a web server. Forms
+                are essential for collecting user input, such as text, selections, and files. HTML5 introduced several new form elements 
+                and attributes to enhance functionality and usability. 
+            </paragraph>
+            <list>
+                <p><strong>HTML5 clasic structures</strong></p>
+                <item><strong>text:</strong> Generic text input field.</item>
+                <item><strong>password:</strong> Password input field with hidden characters.</item>
+                <item><strong>button:</strong> A button that can execute functions defined by JavaScript.</item>
+                <item><strong>submit:</strong> Button that submits the form.</item>
+                <item><strong>reset:</strong> Button that resets the form values.</item>
+                <item><strong>radio:</strong> Allows to select an option from a group.</item>
+                <item><strong>checkbox:</strong> Allows to select one or more options from a group.</item>
+                <item><strong>select:</strong> Dropdown to select predefined options.</item>
+                <item><strong>textarea:</strong> Multi-line text field.</item>
+            </list>
+            <img>
+                /shared/ex2.jpg
+            </img>
+        </example>
 
+           <div class="exmpl-item">
+                        <div class="exmpl-info">
+                            <h1></h1>
+                            <p></p>
+                            <div class="section-ul">
+                                <ul>
+                                    
+                                </ul>
+                                <p><strong>HTML5 new form structures</strong></p>
+                                <ul>
+                                    <li><strong>color:</strong> Allows the user to select a color via a pop-up
+                                        interface.
+                                    </li>
+                                    <li><strong>date:</strong> Allows the selection of a date in yyyy-mm-dd format.</li>
+                                    <li><strong>datetime:</strong> Allows the user to enter date and time with UTC time
+                                        zone.</li>
+                                    <li><strong>datetime-local:</strong> Similar to datetime, but without timezone.</li>
+                                    <li><strong>email:</strong> Specialized field for email addresses, with built-in
+                                        validation.</li>
+                                    <li><strong>month:</strong> Allows to select a month and year in yyyy-mm format.
+                                    </li>
+                                    <li><strong>number:</strong> Only accepts numeric values and can include minimum and
+                                        maximum ranges.</li>
+                                    <li><strong>range:</strong> Appears as a slider to select values in a range.</li>
+                                    <li><strong>search:</strong> Designed for entering search queries, visually similar
+                                        to a
+                                        text field.</li>
+                                    <li><strong>tel:</strong> Optimized for entering phone numbers, although without
+                                        built-in validation.</li>
+                                    <li><strong>time:</strong> Allows selection of a time in hh:mm format.</li>
+                                    <li><strong>url:</strong> Validates the entry as a URL.</li>
+                                    <li><strong>week:</strong> Allows the selection of a week and a year in yyyy-Wnn
+                                        format.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="exmpl-cont">
+                            <img src="/shared/ex3.jpg" alt="img">
+                        </div>
+                    </div>
+                </div>
                 
-             
-
-                <item>
-                    <subs>
-                        <icon src="https://img.icons8.com/bubbles/100/000000/services.png"/>
-                        <h2>Forms and input types</h2>
-                    </subs>
-                    <description>
-                        <p>In HTML5, the &lt;form&gt; element is used to create interactive forms for users to submit data to a web server.</p>
-                    </description>
-                    <section-ul>
-                        <p><strong>HTML5 classic structures</strong></p>
-                        <ul>
-                            <li><strong>text:</strong> Generic text input field.</li>
-                            <li><strong>password:</strong> Password input field with hidden characters.</li>
-                            <li><strong>button:</strong> A button that can execute JavaScript functions.</li>
-                            <li><strong>submit:</strong> Button that submits the form.</li>
-                        </ul>
-                    </section-ul>
-                </item>
-                
-                <cta href="/part2/quiz.html?quiz=quiz1.json" type="button">Test your knowledge</cta>
-            </bottom>
-
     </unit>   
 </eml>
