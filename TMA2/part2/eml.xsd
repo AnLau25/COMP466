@@ -1,43 +1,11 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           targetNamespace="http://part1.com/resume" 
-           xmlns="http://part2.com/eml.xml"
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://part2.com/eml"
+           xmlns="http://part2.com/eml"
            elementFormDefault="qualified">
+
     <xs:element name="eml">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="geninfo">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="name" type="xs:string" />
-                            <xs:element name="age" type="xs:integer" />
-                            <xs:element name="hobbies" type="xs:string" />
-                            <xs:element name="edubg">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="uni" type="xs:string" />
-                                        <xs:element name="major" type="xs:string" />
-                                        <xs:element name="prev" type="xs:string" />
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="workinfo">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="position" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="description" type="xs:string" />
-                                    </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required" />
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
+        
     </xs:element>
+
 </xs:schema>
