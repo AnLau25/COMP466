@@ -3,7 +3,7 @@
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://part2.com/eml eml.xsd">
 
-    <unit>
+    <unit id='U1'>
         <head>
             <title>
                 <span>Unit 1: </span>HTML5 &amp; CSS
@@ -123,54 +123,92 @@
                 <item><strong>select:</strong> Dropdown to select predefined options.</item>
                 <item><strong>textarea:</strong> Multi-line text field.</item>
             </list>
+            <list>
+                <paragraph><strong>HTML5 new form structures</strong></paragraph>
+                    <item><strong>color:</strong> Allows the user to select a color via a pop-up interface.</item>
+                    <item><strong>date:</strong> Allows the selection of a date in yyyy-mm-dd format.</item>
+                    <item><strong>datetime:</strong> Allows the user to enter date and time with UTC time zone.</item>
+                    <item><strong>datetime-local:</strong> Similar to datetime, but without timezone.</item>
+                    <item><strong>email:</strong> Specialized field for email addresses, with built-inbvalidation.</item>
+                    <item><strong>month:</strong> Allows to select a month and year in yyyy-mm format.</item>
+                    <item><strong>number:</strong> Only accepts numeric values and can include minimum and maximum ranges.</item>
+                    <item><strong>range:</strong> Appears as a slider to select values in a range.</item>
+                    <item><strong>search:</strong> Designed for entering search queries, visually similar to a text field.</item>
+                    <item><strong>tel:</strong> Optimized for entering phone numbers, although without built-in validation.</item>
+                    <item><strong>time:</strong> Allows selection of a time in hh:mm format.</item>
+                    <item><strong>url:</strong> Validates the entry as a URL.</item>
+                     <item><strong>week:</strong> Allows the selection of a week and a year in yyyy-Wnn format.</item>
+            </list>
             <img>
                 /shared/ex3.jpg
             </img>
         </example>
 
-           <div class="exmpl-item">
-                        <div class="exmpl-info">
-                            <h1></h1>
-                            <p></p>
-                            <div class="section-ul">
-                                <ul>
-                                    
-                                </ul>
-                                <p><strong>HTML5 new form structures</strong></p>
-                                <ul>
-                                    <li><strong>color:</strong> Allows the user to select a color via a pop-up
-                                        interface.
-                                    </li>
-                                    <li><strong>date:</strong> Allows the selection of a date in yyyy-mm-dd format.</li>
-                                    <li><strong>datetime:</strong> Allows the user to enter date and time with UTC time
-                                        zone.</li>
-                                    <li><strong>datetime-local:</strong> Similar to datetime, but without timezone.</li>
-                                    <li><strong>email:</strong> Specialized field for email addresses, with built-in
-                                        validation.</li>
-                                    <li><strong>month:</strong> Allows to select a month and year in yyyy-mm format.
-                                    </li>
-                                    <li><strong>number:</strong> Only accepts numeric values and can include minimum and
-                                        maximum ranges.</li>
-                                    <li><strong>range:</strong> Appears as a slider to select values in a range.</li>
-                                    <li><strong>search:</strong> Designed for entering search queries, visually similar
-                                        to a
-                                        text field.</li>
-                                    <li><strong>tel:</strong> Optimized for entering phone numbers, although without
-                                        built-in validation.</li>
-                                    <li><strong>time:</strong> Allows selection of a time in hh:mm format.</li>
-                                    <li><strong>url:</strong> Validates the entry as a URL.</li>
-                                    <li><strong>week:</strong> Allows the selection of a week and a year in yyyy-Wnn
-                                        format.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="exmpl-cont">
-                            <img src="/shared/ex3.jpg" alt="img">
-                        </div>
-                    </div>
-                </div>
+        <materia>
+            <title>
+                Introduction to CSS
+            </title>
+            <paragraph>Cascading Style Sheets (CSS) provide a powerful way to control the appearance and layout of
+            HTML elements. CSS allows for styling elements in various ways, including inline styles,
+            embedded style sheets, and external style sheets.</paragraph>
+            <paragraph>The CSS laguage renders element following a box model. The box model allows you to control
+            the spacing, borders, and overall layout of elements on a web page, ensuring a more
+            organized and visually appealing design.</paragraph>
+            <paragraph>Additionally, there are different ways to tell the programs how much space you want an
+            element to take in the document. The most common measurement is pixels (px), but you can
+            also use the typical cm and in, the more relative em (relative to font size) and vw or vh
+            (viewport width and height). </paragraph>
+            <list>
+                <paragraph><strong>General CSS stylings</strong></paragraph>
+                <item><strong>Absolute Positioning:</strong> Removes an element from the normal flow and
+                positions it relative to its nearest positioned ancestor .class {position: absolute;}.</item>
+                <item><strong>Relative Positioning:</strong> Positions the element relative to its normal position .class {position: relative;}.</item>
+                <item><strong>Background Image:</strong> .class {background-image: url('background.png');}</item>
+                <item><strong>Background Color:</strong> .class {background-color: lightgray;}</item>
+                <item><strong>Width and height:</strong>Set the dimensions of the element. .class {width: 200px; height: 100px;}</item>
+                <item><strong>Margin:</strong> Space outside the border. .class {margin: 15px;}</item>
+                <item><strong>Border:</strong> The boundary around the content. .class {border: 5px solid black;}</item>
+                <item><strong>Padding:</strong> Space between the content and the border. .class {padding: 10px;}</item>
+            </list>
+        </materia>
                 
+                
+        <example>
+            <title>
+                CSS in HTML
+            </title>
+            <p>There are three main ways to call/ CSS styles in an HTML document. In order, the closer the style is to its element, 
+            the more it affects t. Thus, inline overrides embedded which overrides external styling. </p>
+            <list>           
+                <item><strong>Inline Styles:</strong> Are directly applied within the HTML element using the <code>style</code> attribute.
+                    <list>
+                        <item>Useful for applying specific styles to individual elements.</item>
+                        <item>Offers the highest level of specificity, overriding embedded and external styles.</item>
+                        <item>Best suited for quick, one-off customizations rather than large-scale styling.</item>
+                    </list>
+                </item>
+                <item><strong>Embedded Style Sheets:</strong>Is defined within a <code>&lt;style&gt;</code> tag located in the <code>&lt;head&gt;</code> section of the HTML document.
+                    <list>
+                        <item>Provides a centralized way to manage styles for a single page.</item>
+                        <item>Allows better organization and readability compared to inline styles.</item>
+                        <item>Styles defined here override those in external stylesheets but are overridden by inline styles.</item>
+                    </list>
+                </item>
+                <item><strong>External Style Sheets:</strong> Is contained in a separate <code>.css</code> file, linked to the HTML document via the <code>&lt;link&gt;</code> element.
+                    <list>
+                        <item>Promotes reusability and consistency across multiple pages of a website.</item>
+                        <item>Eases maintenance by keeping content and design separate.</item>
+                        <item>External styles are less specific than embedded and inline styles and can be overridden by them.</item>
+                    </list>
+                </item>
+            </list>
+            <img>
+                /shared/ex4.jpg
+            </img>
+        </example>
+
+
+
+
     </unit>   
 </eml>
