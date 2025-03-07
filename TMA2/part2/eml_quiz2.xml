@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml_quiz2 xmlns="http://part2.com/eml_quiz2"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <question>
+        <text>What is JavaScript primarily used for?</text>
+        <choices>
+        <wrong>Server-side scripting</wrong>
+        <wrong>Creating static web pages</wrong>
+        <correct>Creating dynamic and interactive web pages</correct>
+        <wrong>Database management</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which of the following is NOT a reserved keyword in JavaScript?</text>
+        <choices>
+        <wrong>abstract</wrong>
+        <wrong>goto</wrong>
+        <wrong>volatile</wrong>
+        <correct>define</correct>
+        </choices>
+    </question>
+    <question>
+        <text>How many ways are there to declare a variable in JavaScript?</text>
+        <choices>
+        <wrong>1</wrong>
+        <wrong>2</wrong>
+        <correct>3</correct>
+        <wrong>4</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which keyword declares a block-scoped variable that cannot be re-declared?</text>
+        <choices>
+        <wrong>var</wrong>
+        <correct>let</correct>
+        <wrong>const</wrong>
+        <wrong>static</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which variable declaration cannot be reassigned a new value?</text>
+        <choices>
+        <wrong>var</wrong>
+        <wrong>let</wrong>
+        <correct>const</correct>
+        <wrong>static</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which data type is NOT supported in JavaScript?</text>
+        <choices>
+        <wrong>Number</wrong>
+        <wrong>BigInt</wrong>
+        <wrong>Boolean</wrong>
+        <correct>Character</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What operator is used for checking equality in JavaScript?</text>
+        <choices>
+        <wrong>=</wrong>
+        <correct>==</correct>
+        <wrong>===</wrong>
+        <wrong>=&gt;</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What operator is used for addition in JavaScript?</text>
+        <choices>
+        <wrong>-</wrong>
+        <wrong>*</wrong>
+        <correct>+</correct>
+        <wrong>%</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What does the 'floor' function do?</text>
+        <choices>
+        <wrong>Generates a random number</wrong>
+        <wrong>Rounds up a number</wrong>
+        <wrong>Finds the square root of a number</wrong>
+        <correct>Rounds down a number</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What JavaScript function is used to generate a random number?</text>
+        <choices>
+        <correct>random</correct>
+        <wrong>rand()</wrong>
+        <wrong>Math()</wrong>
+        <wrong>number()</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Where is it most common to place JavaScript code within an HTML file?</text>
+        <choices>
+        <wrong>Inside the &lt;body&gt; tag</wrong>
+        <wrong>Inside the &lt;div&gt; tag</wrong>
+        <wrong>Inside the &lt;footer&gt; tag</wrong>
+        <correct>Inside the &lt;head&gt; tag</correct>
+        </choices>
+    </question>
+    <question>
+        <text>How should JavaScript be included in an HTML file for better structure?</text>
+        <choices>
+        <wrong>Inline inside elements</wrong>
+        <correct>Through an external script file</correct>
+        <wrong>As a comment in HTML</wrong>
+        <wrong>Inside a &lt;meta&gt; tag</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What does 'document.writeln("Hello, world!");' do?</text>
+        <choices>
+        <wrong>Displays an alert</wrong>
+        <correct>Writes "Hello, world!" and moves to a new line</correct>
+        <wrong>Creates a new paragraph</wrong>
+        <wrong>Inserts an HTML element</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which object represents the entire HTML document in JavaScript?</text>
+        <choices>
+        <wrong>Window</wrong>
+        <wrong>Element</wrong>
+        <correct>Document</correct>
+        <wrong>Console</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which object provides interaction with users through alert boxes?</text>
+        <choices>
+        <correct>Window</correct>
+        <wrong>Document</wrong>
+        <wrong>Console</wrong>
+        <wrong>Form</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What JavaScript method creates an alert box?</text>
+        <choices>
+        <wrong>console.log()</wrong>
+        <correct>window.alert()</correct>
+        <wrong>document.write()</wrong>
+        <wrong>prompt()</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What method is used to accept user input in JavaScript?</text>
+        <choices>
+        <correct>prompt()</correct>
+        <wrong>alert()</wrong>
+        <wrong>confirm()</wrong>
+        <wrong>log()</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What is the default index of the first element in a JavaScript array?</text>
+        <choices>
+        <wrong>1</wrong>
+        <correct>0</correct>
+        <wrong>-1</wrong>
+        <wrong>It varies</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What are JavaScript arrays primarily used for?</text>
+        <choices>
+        <correct>Storing multiple values in a single variable</correct>
+        <wrong>Performing arithmetic calculations</wrong>
+        <wrong>Defining functions</wrong>
+        <wrong>Declaring constants</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What is NOT a type of JavaScript array method?</text>
+        <choices>
+        <wrong>Mutator methods</wrong>
+        <wrong>Accessor methods</wrong>
+        <correct>Compiler methods</correct>
+        <wrong>Iteration methods</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What method modifies an array in JavaScript?</text>
+        <choices>
+        <correct>Mutator method</correct>
+        <wrong>Accessor method</wrong>
+        <wrong>Iteration method</wrong>
+        <wrong>Math method</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What method returns a new array without modifying the original?</text>
+        <choices>
+        <wrong>Mutator method</wrong>
+        <correct>Accessor method</correct>
+        <wrong>Iteration method</wrong>
+        <wrong>Console method</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What is a function in JavaScript?</text>
+        <choices>
+        <wrong>A method for defining variables</wrong>
+        <wrong>A reserved keyword</wrong>
+        <wrong>A way to declare objects</wrong>
+        <correct>A reusable block of code that performs a task</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What keyword is used to define a function in JavaScript?</text>
+        <choices>
+        <wrong>define</wrong>
+        <correct>function</correct>
+        <wrong>create</wrong>
+        <wrong>def</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What scope makes a variable accessible throughout the script?</text>
+        <choices>
+        <wrong>Inline scope</wrong>
+        <wrong>Local scope</wrong>
+        <wrong>Block scope</wrong>
+        <correct>Global scope</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What is the scope of a variable declared inside a function?</text>
+        <choices>
+        <correct>Local scope</correct>
+        <wrong>Global scope</wrong>
+        <wrong>Block scope</wrong>
+        <wrong>Universal scope</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What JavaScript object provides mathematical constants and functions?</text>
+        <choices>
+        <correct>Math</correct>
+        <wrong>Number</wrong>
+        <wrong>Calculation</wrong>
+        <wrong>Arithmetic</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What is a String object in JavaScript?</text>
+        <choices>
+        <wrong>A numeric value</wrong>
+        <correct>A series of characters enclosed in quotes</correct>
+        <wrong>A function</wrong>
+        <wrong>A boolean value</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which of the following is NOT a JavaScript collection in the DOM?</text>
+        <choices>
+        <wrong>Images</wrong>
+        <wrong>Links</wrong>
+        <correct>Headers</correct>
+        <wrong>Forms</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What does 'pow' function do?</text>
+        <choices>
+        <wrong>Generates random values</wrong>
+        <wrong>Rounds numbers</wrong>
+        <wrong>Converts strings to numbers</wrong>
+        <correct>Computes exponents</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What is 'sqrt' used for?</text>
+        <choices>
+        <correct>Calculating square roots</correct>
+        <wrong>Finding the largest number</wrong>
+        <wrong>Converting strings to numbers</wrong>
+        <wrong>Finding the sine of a number</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which operator is used for modulus division?</text>
+        <choices>
+        <wrong>/</wrong>
+        <wrong>*</wrong>
+        <wrong>-</wrong>
+        <correct>%</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What type of loop is NOT available in JavaScript?</text>
+        <choices>
+        <wrong>for</wrong>
+        <wrong>while</wrong>
+        <correct>repeat-until</correct>
+        <wrong>do-while</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which keyword is used for variable assignment?</text>
+        <choices>
+        <correct>=</correct>
+        <wrong>==</wrong>
+        <wrong>:=</wrong>
+        <wrong>===</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What type of loop repeats at least once before checking the condition?</text>
+        <choices>
+        <wrong>if</wrong>
+        <wrong>for</wrong>
+        <wrong>while</wrong>
+        <correct>do-while</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What is used to create a conditional statement?</text>
+        <choices>
+        <correct>if-else</correct>
+        <wrong>for</wrong>
+        <wrong>while</wrong>
+        <wrong>loop</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>What keyword is used to stop a loop?</text>
+        <choices>
+        <wrong>stop</wrong>
+        <correct>break</correct>
+        <wrong>return</wrong>
+        <wrong>exit</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>How do you define an array in JavaScript?</text>
+        <choices>
+        <correct>let arr = [1,2,3];</correct>
+        <wrong>let arr = {1,2,3};</wrong>
+        <wrong>let arr = (1,2,3);</wrong>
+        <wrong>let arr = &lt;1,2,3&gt;;</wrong>
+        </choices>
+    </question>
+    <question>
+        <text>Which of these is a JavaScript relational operator?</text>
+        <choices>
+        <wrong>+</wrong>
+        <wrong>===</wrong>
+        <wrong>=</wrong>
+        <correct>&gt;=</correct>
+        </choices>
+    </question>
+    <question>
+        <text>What method loops through an array in JavaScript?</text>
+        <choices>
+        <correct>forEach()</correct>
+        <wrong>round()</wrong>
+        <wrong>ceil()</wrong>
+        <wrong>alert()</wrong>
+        </choices>
+    </question>
+</eml_quiz2>
