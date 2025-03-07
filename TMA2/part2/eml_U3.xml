@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml_U3 xmlns="http://part2.com/eml_U3"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <head>
+        <title>
+            Unit 3: XML and Ajax
+        </title>
+        <subtitle>
+            This section gives an over view of XML and Ajaxs technologies, their uses and how they can improve your web projects.
+        </subtitle>
+    </head>
+    <lesson>
+        <title>
+            What is XML
+        </title>
+        <paragraph>
+            XML (Extensible Markup Language) is a widely supported, open source technology for
+            describing data. Developed in 1996 by the W3C, XML provides a standard format for data exchange
+            between applications over the Internet.
+        </paragraph>
+        <paragraph>
+            Unlike HTML, which is used for displaying content in web browsers, XML allows document authors to
+            define custom markup languages for describing any type of data, such as financial reports,
+            scientific data, or configurations.
+        </paragraph>
+        <list>
+            <list-paragraph>
+                Key XML features:
+            </list-paragraph>
+            <item>Case-sensitive</item>
+            <item>Must start with an XML declaration specifying the version</item>
+            <item>Requires every start tag to have a matching end tag (unless empty)</item>
+            <item>Encloses attribute values in single or double quotes</item>
+            <item>Ensures proper nesting of tags (no overlapping)</item>
+        </list>
+    </lesson>
+    <example-block>
+        <example>
+            <title>XML Structure</title>
+            <paragraph>
+                Much like HTML, an XML document consists of elements enclosed in tags. A well-formed XML document has:
+            </paragraph>
+            <list>
+                <list-paragraph>Key features of well-formed XML documents</list-paragraph>
+                <item>A root element that contains all other elements</item>
+                <item>Nested child elements structured according to defined rules</item>
+            </list>
+            <img>/shared/ex10.jpg</img>
+        </example>
+        <example>
+            <title>Namespaces and validation</title>
+            <paragraph>
+                Namespaces prevent element name conflicts in large XML documents by uniquely identifying elements using URIs. 
+                Furthermore, the types and contents can be validated in a XSD.
+            </paragraph>
+            <list>
+                <list-paragraph>XML documents can be validated using</list-paragraph>
+                <item>A root element that contains all other elements</item>
+                <item>Nested child elements structured according to defined rules</item>
+            </list>
+            <img>/shared/ex11.jpg</img>
+        </example>
+    </example-block>
+    <lesson>
+        <title>
+            RIAs &amp; Ajax
+        </title>
+        <paragraph>
+            RIAs (Rich Internet Applications) are web applications designed to provide a user experience
+            similar to that of desktop applications. They focus on high performance and a rich graphical user interface (GUI), making them more interactive and responsive.
+        </paragraph>
+        <paragraph>
+            Unlike traditional web applications, which reload entire pages with each interaction, RIAs use
+            XMLHttpRequests to fetch data asynchronously. This allows users to continue interacting with the
+            page while data is retrieved, significantly improving responsiveness and performance.
+        </paragraph>
+        <paragraph>
+            What is Ajax? Ajax (Asynchronous JavaScript and XML) is a web development technique that allows web
+            applications to send and receive data asynchronously without refreshing the entire page. Ergo,
+            what enables and drives RIA development.
+        </paragraph>
+        <list>
+            <list-paragraph>
+                Applications of Ajax in RIAs:
+            </list-paragraph>
+            <item>
+                Type-ahead Search (Autocomplete): Sends asynchronous calls based on
+                user input to complete based on previous searches. Improves user experience with
+                predictive text suggestions.
+            </item>
+            <item>
+                Edit-in-Place: Enables inline content editing without navigating to a
+                separate page.
+            </item>
+            <item>
+                Partial Page Updates: Updates only the necessary section of the page
+                instead of reloading the entire document.
+            </item>
+            <item>
+                Asynchronous Requests: Allows multiple requests to be processed
+                concurrently without blocking user interactions.
+            </item>
+            <item>
+                Security: To prevent malicious attacks like cross-site scripting (XSS),
+                SOP restricts web pages from making Ajax requests to domains different from their own.
+            </item>
+        </list>
+    </lesson>
+    <example-block>
+        <example>
+            <title>
+                Implementing Ajax
+            </title>
+            <list>
+                <list-paragraph>Ajax key components</list-paragraph>
+                <item>XMLHttpRequest Object: The most important JavaScript object in Ajax, enabling asynchronous communication with the server.</item>
+                <item>Callback Functions: Functions that execute once the server responds, allowing partial updates to the web page.</item>
+                <item>Partial Page Updates: Instead of reloading the entire page, only the relevant section of the page is updated.</item>
+            </list>
+            <list>
+                <list-paragraph>How it works</list-paragraph>
+                <item>The user interacts with the web page (e.g., entering text in a search box).</item>
+                <item>JavaScript sends an asynchronous request to the server using XMLHttpRequest.</item>
+                <item>The server processes the request and sends back data (e.g., search results in XML or JSON format).</item>
+                <item>The callback function processes the data and updates the relevant part of the page without requiring a full reload.</item>
+            </list>
+            <list>
+                <list-paragraph>XMLHttpRequest Object Methods and Properties</list-paragraph>
+                <item>.open(method, url, async): Initializes the request.</item>
+                <item>.send(data): Sends the request.</item>
+                <item>.setRequestHeader(header, value): Sets HTTP headers.</item>
+            </list>
+            <img>
+                /shared/ex12.jpg
+            </img>
+        </example>
+    </example-block>
+</eml_U3>
