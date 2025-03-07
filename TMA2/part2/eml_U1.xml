@@ -59,82 +59,84 @@
                 </item>
             </list>
         </lesson>
-        <example>
-            <title>
-                Basic Structure
-            </title>
-            <paragraph>
-                All HTML5 follow this structure, regardless of the elements you choose to include.
-            </paragraph>
-            <list>
-                <item>DOCTYPE: Opens your document, declaring it as HTML5.</item>
-                <item>HTML tag: Wraps the entire document as a single structure.</item>
-                <item>Head tag: Contains the metadata of the document (title, styles, scripts and links).</item>
-                <item>Body tag: Contains the visible content of the document, is where you will put what the user will see and interact with.</item>
-            </list>
-            <img>
-                /shared/ex1.jpg
-            </img>
-        </example>
-        <example>
-            <title>
-                Tables
-            </title>
-            <paragraph>
-                The table structure will allow you to use the space as an Excel sheet. Making divisions for titles and content as needed.
-            </paragraph>
-            <list>
-                <item>thead: Read table head is the element that contains your table title cells.</item>
-                <item>th: Title head.</item>
-                <item>tbody: Read table body, contains the cells that form the body of the table, the data.</item>
-                <item>td: Table data cell.</item>
-                <item>tr: Table rows, which allow you to align your cells in rows for display.</item>
-            </list>
-            <img>
-                /shared/ex2.jpg
-            </img>
-        </example>
-        <example>
-            <title>
-                Forms and input types
-            </title>
-            <paragraph>
-                In HTML5, the &lt;form&gt; element is used to create interactive forms for users to submit data to a web server. Forms
-                are essential for collecting user input, such as text, selections, and files. HTML5 introduced several new form elements 
-                and attributes to enhance functionality and usability. 
-            </paragraph>
-            <list>
-                <list-paragraph>HTML5 clasic structures</list-paragraph>
-                <item>text: Generic text input field.</item>
-                <item>password: Password input field with hidden characters.</item>
-                <item>button: A button that can execute functions defined by JavaScript.</item>
-                <item>submit: Button that submits the form.</item>
-                <item>reset: Button that resets the form values.</item>
-                <item>radio: Allows to select an option from a group.</item>
-                <item>checkbox: Allows to select one or more options from a group.</item>
-                <item>select: Dropdown to select predefined options.</item>
-                <item>textarea: Multi-line text field.</item>
-            </list>
-            <list>
-                <list-paragraph>HTML5 new form structures</list-paragraph>
-                    <item>color: Allows the user to select a color via a pop-up interface.</item>
-                    <item>date: Allows the selection of a date in yyyy-mm-dd format.</item>
-                    <item>datetime: Allows the user to enter date and time with UTC time zone.</item>
-                    <item>datetime-local: Similar to datetime, but without timezone.</item>
-                    <item>email: Specialized field for email addresses, with built-inbvalidation.</item>
-                    <item>month: Allows to select a month and year in yyyy-mm format.</item>
-                    <item>number: Only accepts numeric values and can include minimum and maximum ranges.</item>
-                    <item>range: Appears as a slider to select values in a range.</item>
-                    <item>search: Designed for entering search queries, visually similar to a text field.</item>
-                    <item>tel: Optimized for entering phone numbers, although without built-in validation.</item>
-                    <item>time: Allows selection of a time in hh:mm format.</item>
-                    <item>url: Validates the entry as a URL.</item>
-                     <item>week: Allows the selection of a week and a year in yyyy-Wnn format.</item>
-            </list>
-            <img>
-                /shared/ex3.jpg
-            </img>
-        </example>
+        <example-block>
+            <example>
+                <title>
+                    Basic Structure
+                </title>
+                <paragraph>
+                    All HTML5 follow this structure, regardless of the elements you choose to include.
+                </paragraph>
+                <list>
+                    <item>DOCTYPE: Opens your document, declaring it as HTML5.</item>
+                    <item>HTML tag: Wraps the entire document as a single structure.</item>
+                    <item>Head tag: Contains the metadata of the document (title, styles, scripts and links).</item>
+                    <item>Body tag: Contains the visible content of the document, is where you will put what the user will see and interact with.</item>
+                </list>
+                <img>
+                    /shared/ex1.jpg
+                </img>
+            </example>
+            <example>
+                <title>
+                    Tables
+                </title>
+                <paragraph>
+                    The table structure will allow you to use the space as an Excel sheet. Making divisions for titles and content as needed.
+                </paragraph>
+                <list>
+                    <item>thead: Read table head is the element that contains your table title cells.</item>
+                    <item>th: Title head.</item>
+                    <item>tbody: Read table body, contains the cells that form the body of the table, the data.</item>
+                    <item>td: Table data cell.</item>
+                    <item>tr: Table rows, which allow you to align your cells in rows for display.</item>
+                </list>
+                <img>
+                    /shared/ex2.jpg
+                </img>
+            </example>
+            <example>
+                <title>
+                    Forms and input types
+                </title>
+                <paragraph>
+                    In HTML5, the &lt;form&gt; element is used to create interactive forms for users to submit data to a web server. Forms
+                    are essential for collecting user input, such as text, selections, and files. HTML5 introduced several new form elements 
+                    and attributes to enhance functionality and usability. 
+                </paragraph>
+                <list>
+                    <list-paragraph>HTML5 clasic structures</list-paragraph>
+                    <item>text: Generic text input field.</item>
+                    <item>password: Password input field with hidden characters.</item>
+                    <item>button: A button that can execute functions defined by JavaScript.</item>
+                    <item>submit: Button that submits the form.</item>
+                    <item>reset: Button that resets the form values.</item>
+                    <item>radio: Allows to select an option from a group.</item>
+                    <item>checkbox: Allows to select one or more options from a group.</item>
+                    <item>select: Dropdown to select predefined options.</item>
+                    <item>textarea: Multi-line text field.</item>
+                </list>
+                <list>
+                    <list-paragraph>HTML5 new form structures</list-paragraph>
+                        <item>color: Allows the user to select a color via a pop-up interface.</item>
+                        <item>date: Allows the selection of a date in yyyy-mm-dd format.</item>
+                        <item>datetime: Allows the user to enter date and time with UTC time zone.</item>
+                        <item>datetime-local: Similar to datetime, but without timezone.</item>
+                        <item>email: Specialized field for email addresses, with built-inbvalidation.</item>
+                        <item>month: Allows to select a month and year in yyyy-mm format.</item>
+                        <item>number: Only accepts numeric values and can include minimum and maximum ranges.</item>
+                        <item>range: Appears as a slider to select values in a range.</item>
+                        <item>search: Designed for entering search queries, visually similar to a text field.</item>
+                        <item>tel: Optimized for entering phone numbers, although without built-in validation.</item>
+                        <item>time: Allows selection of a time in hh:mm format.</item>
+                        <item>url: Validates the entry as a URL.</item>
+                        <item>week: Allows the selection of a week and a year in yyyy-Wnn format.</item>
+                </list>
+                <img>
+                    /shared/ex3.jpg
+                </img>
+            </example>
+        </example-block>
         <lesson>
             <title>
                 Introduction to CSS
@@ -161,38 +163,40 @@
                 <item>Border: The boundary around the content. .class {border: 5px solid black;}</item>
                 <item>Padding: Space between the content and the border. .class {padding: 10px;}</item>
             </list>
-        </lesson>              
-        <example>
-            <title>
-                CSS in HTML
-            </title>
-            <p>There are three main ways to call/ CSS styles in an HTML document. In order, the closer the style is to its element, 
-            the more it affects t. Thus, inline overrides embedded which overrides external styling. </p>
-            <list>           
-                <item>Inline Styles: Are directly applied within the HTML element using the style attribute.
-                    <list>
-                        <item>Useful for applying specific styles to individual elements.</item>
-                        <item>Offers the highest level of specificity, overriding embedded and external styles.</item>
-                        <item>Best suited for quick, one-off customizations rather than large-scale styling.</item>
-                    </list>
-                </item>
-                <item>Embedded Style Sheets:Is defined within a &lt;style&gt; tag located in the &lt;head&gt; section of the HTML document.
-                    <list>
-                        <item>Provides a centralized way to manage styles for a single page.</item>
-                        <item>Allows better organization and readability compared to inline styles.</item>
-                        <item>Styles defined here override those in external stylesheets but are overridden by inline styles.</item>
-                    </list>
-                </item>
-                <item>External Style Sheets: Is contained in a separate .css file, linked to the HTML document via the &lt;link&gt; element.
-                    <list>
-                        <item>Promotes reusability and consistency across multiple pages of a website.</item>
-                        <item>Eases maintenance by keeping content and design separate.</item>
-                        <item>External styles are less specific than embedded and inline styles and can be overridden by them.</item>
-                    </list>
-                </item>
-            </list>
-            <img>
-                /shared/ex4.jpg
-            </img>
-        </example>
+        </lesson>     
+        <example-block>         
+            <example>
+                <title>
+                    CSS in HTML
+                </title>
+                <paragraph>There are three main ways to call/ CSS styles in an HTML document. In order, the closer the style is to its element, 
+                the more it affects t. Thus, inline overrides embedded which overrides external styling. </paragraph>
+                <list>           
+                    <item>Inline Styles: Are directly applied within the HTML element using the style attribute.
+                        <list>
+                            <item>Useful for applying specific styles to individual elements.</item>
+                            <item>Offers the highest level of specificity, overriding embedded and external styles.</item>
+                            <item>Best suited for quick, one-off customizations rather than large-scale styling.</item>
+                        </list>
+                    </item>
+                    <item>Embedded Style Sheets:Is defined within a &lt;style&gt; tag located in the &lt;head&gt; section of the HTML document.
+                        <list>
+                            <item>Provides a centralized way to manage styles for a single page.</item>
+                            <item>Allows better organization and readability compared to inline styles.</item>
+                            <item>Styles defined here override those in external stylesheets but are overridden by inline styles.</item>
+                        </list>
+                    </item>
+                    <item>External Style Sheets: Is contained in a separate .css file, linked to the HTML document via the &lt;link&gt; element.
+                        <list>
+                            <item>Promotes reusability and consistency across multiple pages of a website.</item>
+                            <item>Eases maintenance by keeping content and design separate.</item>
+                            <item>External styles are less specific than embedded and inline styles and can be overridden by them.</item>
+                        </list>
+                    </item>
+                </list>
+                <img>
+                    /shared/ex4.jpg
+                </img>
+            </example>
+        </example-block>
 </eml_U1>

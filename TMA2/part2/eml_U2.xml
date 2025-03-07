@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml_U2 xmlns="http://part2.com/eml_U2"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <head>
+        <title>
+            Unit 2: JavaScript
+        </title>
+        <subtitle>
+            This section summarizes JavaScript's core features and functionality, describing 
+            in detail its structure and use for the creation of interactive and responsive web pages.
+        </subtitle>
+    </head>
+    <lesson>
+        <title>
+            JavaScript
+        </title>
+        <paragraph>
+            JavaScript is programming language widely used for web development, allowing us to create
+            dynamic and interactive web pages.
+        </paragraph>
+        <paragraph>
+            Unlike the two previously shown languages, JS does allow us to create variables, loops, functions,
+            and all the structures we would usually have access to in object-oriented languages. Much like
+            in those other languages, JavaScript has reserved keywords that are not used but cannot be
+            redefined, including abstract, goto, synchronized, and volatile. Careful when naming your
+            variables.
+        </paragraph>
+        <list>
+            <list-paragraph>There are three ways to create variables:</list-paragraph>
+            <item>var: Function-scoped, hoisted, can be re-declared.</item>
+            <item>let: Block-scoped, hoisted (but not initialized), cannot be re-declared.</item>
+            <item>const: Block-scoped, hoisted (but not initialized), value cannot be
+                reassigned (but objects can be modified).
+            </item>
+        </list>
+        <paragraph>
+            The data types supported by JavaScript are: Number, String, Boolean, Object, Undefined, Null, Symbol, BigInt.
+        </paragraph>
+        <list>
+            <list-paragraph>Some of the general operators provided are:</list-paragraph>
+            <item>Arithmetic Operators: `+`, `-`, `*`, `/`, `%`</item>
+            <item>Relational Operators: `&gt;`, `&lt;`, `&gt;=`, `&lt;=`</item>
+            <item>Equality Operator: `==`</item>
+            <item>Assignment Operators: `=`, `+=`, `-=`, `*=`, `/=`, etc.</item>
+            <item>Increment &amp; Decrement: `++`, `--`</item>
+        </list>
+        <list>
+            <list-paragraph>JS also provides a set of mathematical functions:</list-paragraph>
+            <item>abs, ceil, floor, round – for rounding numbers</item>
+            <item>sqrt, pow – for square roots and exponents</item>
+            <item>sin, cos, tan – for trigonometric calculations</item>
+            <item>random – for generating random numbers</item>
+        </list>
+    </lesson>
+    <example-block>
+        <example>
+            <title>
+                Calling JS in HTML
+            </title>
+            <paragraph>
+                While the &lt;script&gt; tag virtually allows you to put scripts anywhere in your code,
+                it is common place to embed the scripts in the head of your document. Still, when
+                handling an important load of scripts, it is a good programming practice to completely
+                separate the HTML and the script by importing the latter via a source link.
+            </paragraph>
+            <img>
+                /shared/ex5.jpg
+            </img>
+        </example>
+        <example>
+            <title>
+                JS DOM objects
+            </title>
+            <paragraph>
+                The document object represents the HTML document currently loaded in the browser and
+                provides methods to dynamically write content, such as document.writeln("Hello,
+                world!");, which moves the cursor to a new line after writing output.
+            </paragraph>
+            <paragraph>
+                The document object represents the HTML document currently loaded in the browser and
+                provides methods. The window object, on the other hand, enables JavaScript to interact
+                with users through various methods, including displaying alert boxes with
+                window.alert("This is an alert box!"); and accepting user input through prompt boxes.
+            </paragraph>
+            <list>
+                <list-paragraph>The DOM provides various collections:</list-paragraph>
+                <item>Images Collection</item>
+                <item>Links Collection</item>
+                <item>Forms Collection</item>
+                <item>Anchors Collection</item>
+            </list>
+            <img>
+                /shared/ex6.jpg
+            </img>
+        </example>
+        <example>
+            <title>
+                Control Structures
+            </title>
+            <paragraph>
+                JavaScript has control structures that enable us to manage the flow of a program effectively. These include loops, which allow us to repeat actions and iterate through collections of data, and control structures, that help us make decisions and handle various outcomes, so the program responds appropriately to different scenarios and choices.
+            </paragraph>
+            <list>
+                <item>
+                    <list-paragraph>Selection structures:</list-paragraph>
+                    <list>
+                        <item>
+                            if Statement – Executes a block of code if a condition is 'true'.
+                        </item>
+                        <item>
+                            if...else Statement – Executes one block if the condition is 'true', otherwise executes another block.
+                        </item>
+                        <item>
+                            switch Statement – Evaluates an expression and executes corresponding cases.
+                        </item>
+                    </list>
+                </item>
+                <item>
+                    <list-paragraph>Repetition (loop) structures:</list-paragraph>
+                    <list>
+                        <item>
+                            while Loop – Evaluates the condition before executing the loop body.
+                        </item>
+                        <item>
+                            do...while Loop – Executes the loop body first, then checks the condition.
+                        </item>
+                        <item>
+                            for Loop – A compact structure that includes initialization, condition, and update in one statement.
+                        </item>
+                    </list>
+                </item>
+            </list>
+            <img>
+                /shared/ex9.jpg
+            </img>
+        </example>
+
+        <example>
+            <title>
+                Functions
+            </title>
+            <paragraph>
+                Functions are a way to efficiently repeat actions or to have certain actions at hand to call without having to 
+                re-write them for the sake of having organized code. In JavaScript, you create a function by calling “function,” 
+                giving them a name, (parameters), and a return if necessary.
+            </paragraph>
+            <list>
+                <list-paragraph>When creating functions, pay close attention to the scope of your variables:</list-paragraph>
+                <item>
+                    Local scope: Defined within a function, accessible only inside it.
+                </item>
+                <item>
+                    Global scope: Defined outside any function, accessible throughout the script.
+                </item>
+            </list>
+            <img>
+                /shared/ex7.jpg
+            </img>
+        </example>
+        <example>
+            <title>
+                Arrays and Methods
+            </title>
+            <list>
+                <item>
+                    Math Object: Provides mathematical constants and functions.
+                </item>
+                <item>
+                    String Object: Series of characters enclosed in quotes.
+                </item>
+                <item>
+                    Arrays: Are a collection of elements stored under a single name that can be accessed by using an index starting from zero. 
+                    Arrays are passed as arguments to functions like other variables.
+                </item>
+                <item>
+                    Array Methods:
+                    <list>
+                        <item>Mutator Methods: Modify the array</item>
+                        <item>Accessor Methods: Return new arrays or values without modifying the original array</item>
+                        <item>Iteration Methods: Loop through elements</item>
+                    </list>
+                </item>
+            </list>
+            <img>
+                /shared/ex8.jpg
+            </img>
+        </example>
+
+
+
+
+    </example-block>
+
+
+</eml_U2>
