@@ -1,6 +1,7 @@
 <?php
 include('connect.php');
 
+
 $sql = "SELECT user_name, user_pswrd FROM users";
 $result = mysqli_query($database, $sql);
 

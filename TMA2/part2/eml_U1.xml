@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eml_U1 xmlns="http://part2.com/eml_U1"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
         <head>
             <title>
                 Unit 1: HTML5 &amp; CSS
@@ -10,7 +9,6 @@
                 This section summarizes HTML5's core features and functionality, describing in detail its structure, elements, and capabilities for web document creation.
             </subtitle>
         </head>
-
         <lesson>
             <title>
                 Client-side vs Server-side
@@ -37,7 +35,6 @@
                 PHP, Python, or Node.js) to generate dynamic content.</item>
             </list>
         </lesson>
-
         <lesson>
             <title>
                 Introduction to HTML5
@@ -62,7 +59,6 @@
                 </item>
             </list>
         </lesson>
-
         <example>
             <title>
                 Basic Structure
@@ -80,7 +76,6 @@
                 /shared/ex1.jpg
             </img>
         </example>
-        
         <example>
             <title>
                 Tables
@@ -99,7 +94,6 @@
                 /shared/ex2.jpg
             </img>
         </example>
-       
         <example>
             <title>
                 Forms and input types
@@ -141,7 +135,6 @@
                 /shared/ex3.jpg
             </img>
         </example>
-
         <lesson>
             <title>
                 Introduction to CSS
@@ -168,9 +161,7 @@
                 <item>Border: The boundary around the content. .class {border: 5px solid black;}</item>
                 <item>Padding: Space between the content and the border. .class {padding: 10px;}</item>
             </list>
-        </lesson>
-                
-                
+        </lesson>              
         <example>
             <title>
                 CSS in HTML

@@ -34,8 +34,11 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="#create" data-after="create">Create a bookmark</a></li>
-                        <li><a href="#find" data-after="find">Browse your bookmarks</a></li>
+                    <li><a href="#u1" data-after="Unit1">See Unit 1</a></li>
+                        <li><a href="#u2" data-after="unit2">See Unit 2</a></li>
+                        <li><a href="#u3" data-after="unit3">See Unit 3</a></li>
+                        <li><a href="#quiz" data-after="quiz">Quiz yourself</a></li>
+                        <li><a href="/tma1.htm#q2" data-after="quiz">&lt; Go back to cover page</a></li>
                         <form action="logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>

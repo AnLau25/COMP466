@@ -16,5 +16,6 @@ INSERT INTO users (user_name, user_pswrd) VALUES
 CREATE TABLE xml_storage (
     id INT AUTO_INCREMENT PRIMARY KEY,
     filename VARCHAR(255),
+    status ENUM('unread', 'read', 'tested') NOT NULL,
     xml_content LONGTEXT 
 );
