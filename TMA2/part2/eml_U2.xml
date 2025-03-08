@@ -84,10 +84,10 @@
             </paragraph>
             <list>
                 <list-paragraph>The DOM provides various collections:</list-paragraph>
-                <item>Images Collection</item>
-                <item>Links Collection</item>
-                <item>Forms Collection</item>
-                <item>Anchors Collection</item>
+                    <item>Images Collection</item>
+                    <item>Links Collection</item>
+                    <item>Forms Collection</item>
+                    <item>Anchors Collection</item>
             </list>
             <img>
                 /shared/ex6.jpg
@@ -101,33 +101,27 @@
                 JavaScript has control structures that enable us to manage the flow of a program effectively. These include loops, which allow us to repeat actions and iterate through collections of data, and control structures, that help us make decisions and handle various outcomes, so the program responds appropriately to different scenarios and choices.
             </paragraph>
             <list>
+                <list-paragraph>Selection structures:</list-paragraph>  
+                    <item>
+                        if Statement – Executes a block of code if a condition is 'true'.
+                    </item>
+                    <item>
+                        if...else Statement – Executes one block if the condition is 'true', otherwise executes another block.
+                    </item>
+                    <item>
+                        switch Statement – Evaluates an expression and executes corresponding cases.
+                    </item>
+            </list>
+            <list>
+                <list-paragraph>Repetition (loop) structures:</list-paragraph>
                 <item>
-                    <list-paragraph>Selection structures:</list-paragraph>
-                    <list>
-                        <item>
-                            if Statement – Executes a block of code if a condition is 'true'.
-                        </item>
-                        <item>
-                            if...else Statement – Executes one block if the condition is 'true', otherwise executes another block.
-                        </item>
-                        <item>
-                            switch Statement – Evaluates an expression and executes corresponding cases.
-                        </item>
-                    </list>
+                    while Loop – Evaluates the condition before executing the loop body.
                 </item>
                 <item>
-                    <list-paragraph>Repetition (loop) structures:</list-paragraph>
-                    <list>
-                        <item>
-                            while Loop – Evaluates the condition before executing the loop body.
-                        </item>
-                        <item>
-                            do...while Loop – Executes the loop body first, then checks the condition.
-                        </item>
-                        <item>
-                            for Loop – A compact structure that includes initialization, condition, and update in one statement.
-                        </item>
-                    </list>
+                    do...while Loop – Executes the loop body first, then checks the condition.
+                </item>
+                <item>
+                    for Loop – A compact structure that includes initialization, condition, and update in one statement.
                 </item>
             </list>
             <img>

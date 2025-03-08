@@ -36,6 +36,7 @@
                     <ul>
                         <li><a href="#create" data-after="create">Create a bookmark</a></li>
                         <li><a href="#find" data-after="find">Browse your bookmarks</a></li>
+                        <li><a href="../tma2.htm#q1" data-after="quiz">&lt; Go back to cover page</a></li>
                         <form action="logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
@@ -259,14 +260,6 @@
     <!--Modal-->
 
 </body>
-<!-- It hurts me more than u (could use timer, we'll see)
-<script>
-    window.addEventListener('beforeunload', function (e) {
-        fetch('logout.php', {
-            method: 'POST',
-            keepalive: true
-        });
-    });
-</script>
--->
+<!-- It hurts me more than u (could use timer, we'll see)-->
+<script src="./shared/sessClosing.php"></script>
 </html>

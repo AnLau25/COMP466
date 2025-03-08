@@ -1,7 +1,7 @@
 <?php
     include('connect.php');
 
-    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_U1.xml';
+    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_U3.xml';
 
     $xmlContent = file_get_contents($xmlFile);
     if ($xmlContent === false) {

@@ -8,27 +8,46 @@
     }
 
     $username = $_SESSION['username']; 
+
+    $id = 2; 
+    $query = "SELECT xml_content FROM xml_storage WHERE id = ?";
+    $stmt = mysqli_prepare($database, $query);
+
+    if (!$stmt) {
+        die(json_encode(["status" => "error", "message" => "Failed to prepare statement: " . mysqli_error($database)]));
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $xmlContent);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
+
+    if (!$xmlContent) {
+        die("Error: No XML data found.");
+    }
+
+    $xml = simplexml_load_string($xmlContent);
+    if ($xml === false) {
+        die("Error: Failed to parse XML. Please check its structure.");
+    }
 ?>
 
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Learning Website</title>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
-        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+    <title>Unit 2: JavaScript</title>
 </head>
-
 <body>
-    <!-- Header -->
+<!-- Header -->
     <section id="header">
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/index.php">
                         <h1><span>Learning</span> made<span> fun</span></h1>
                     </a>
                 </div>
@@ -46,22 +65,14 @@
             </div>
         </div>
     </section>
-    <!-- End Header -->
+<!-- End Header -->
 
-    <!-- Hero Section  -->
-    <section id="hero">
-        <div class="hero container">
-            <div class="text-block">
-                <h1>Hi there, <span><?php echo htmlspecialchars($username); ?>!</span></h1>
-                <h2>This is your progress:</h2>
-                
-        </div>
+    <section id="u2">
+        <?php
+            include 'lessonParser.php';
+            $htmlContent = xml_lesson_parse($xml);
+            echo $htmlContent;
+        ?>
     </section>
-    <!-- End Hero Section  -->
-
-
 </body>
-<!-- It hurts me more than u (could use timer, we'll see)-->
-<script src="./shared/sessClosing.php"></script>
-
 </html>

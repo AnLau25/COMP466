@@ -10,4 +10,10 @@
         die("Error en la conexión: ".$database->connect_error);
     }
     echo "";
+
+
+/*
+
+*/
+
 ?>

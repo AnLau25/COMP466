@@ -21,9 +21,17 @@
     mysqli_stmt_execute($stmt);
     mysqli_stmt_bind_result($stmt, $xmlContent);
     mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
+
+    if (!$xmlContent) {
+        die("Error: No XML data found.");
+    }
 
     $xml = simplexml_load_string($xmlContent);
-    ?>
+    if ($xml === false) {
+        die("Error: Failed to parse XML. Please check its structure.");
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,22 +42,21 @@
     <title>Unit 1: HTML5 &amp; CSS</title>
 </head>
 <body>
-    <!-- Header -->
+<!-- Header -->
     <section id="header">
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/part2/index.php">
                         <h1><span>Learning</span> made<span> fun</span></h1>
                     </a>
                 </div>
                 <div class="nav-list">
                     <ul>
-                    <li><a href="#u1" data-after="Unit1">See Unit 1</a></li>
-                        <li><a href="#u2" data-after="unit2">See Unit 2</a></li>
-                        <li><a href="#u3" data-after="unit3">See Unit 3</a></li>
-                        <li><a href="#quiz" data-after="quiz">Quiz yourself</a></li>
-                        <li><a href="/tma1.htm#q2" data-after="quiz">&lt; Go back to cover page</a></li>
+                    <li><a href="/part2/U1.php" data-after="Unit1">See Unit 1</a></li>
+                        <li><a href="/part2/U2.php" data-after="unit2">See Unit 2</a></li>
+                        <li><a href="/part2/U3.php" data-after="unit3">See Unit 3</a></li>
+                        <li><a href="../tma2.htm#q2" data-after="quiz">&lt; Go back to cover page</a></li>
                         <form action="logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
@@ -58,48 +65,14 @@
             </div>
         </div>
     </section>
-    <!-- End Header -->
-    
-    <?php
+<!-- End Header -->
 
-        function parseElement($element)
-        {
-            $html = "";
-            foreach ($element->children() as $child) {
-                $tag = $child->getName();
-                switch ($tag) {
-                    case 'title':
-                        $html .= "<h2>" . trim($child) . "</h2>";
-                        break;
-                    case 'subtitle':
-                    case 'paragraph':
-                    case 'list-paragraph':
-                        $html .= "<p>" . trim($child) . "</p>";
-                        break;
-                    case 'list':
-                        $html .= "<ul>" . parseElement($child) . "</ul>";
-                        break;
-                    case 'item':
-                        $html .= "<li>" . trim($child) . "</li>";
-                        break;
-                    case 'img':
-                        $html .= "<img src='" . trim($child) . "' alt='Image'>";
-                        break;
-                    default:
-                        $html .= parseElement($child);
-                        break;
-                }
-            }
-            return $html;
-        }
-
-        $htmlOutput = "<html><head><title>XML Parsed</title></head><body>";
-        $htmlOutput .= parseElement($xml);
-        $htmlOutput .= "</body></html>";
-
-        echo $htmlOutput;
-    ?>
-
-    
+    <section id="u1">
+        <?php
+            include 'lessonParser.php';
+            $htmlContent = xml_lesson_parse($xml);
+            echo $htmlContent;
+        ?>
+    </section>
 </body>
 </html>
