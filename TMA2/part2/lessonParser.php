@@ -5,10 +5,9 @@
 
         $header = explode(':', trim((string) $xml->head->title), 2);
 
-        $output .= '<div class="section-container">
-                <div class="top">
-                    <h1 class="section-title"><span>' . htmlspecialchars($header[0] . ' :') . '</span> ' . htmlspecialchars($header[1] ?? '');
-        $output .= '</h1>
+        $output .= '<div class="top">
+                        <h1 class="section-title">' . htmlspecialchars($header[0] . ' :') . '<span> ' . htmlspecialchars($header[1] ?? '');
+        $output .= '</span></h1>
                     <p class="section-subtitle">' . htmlspecialchars($xml->head->subtitle) . '</p>
                     </div>
                 <div class="bottom">';
@@ -102,7 +101,7 @@
         }
       
 
-        $output .= '</div></div>'; 
+        $output .= '</div>'; 
 
         return $output;
     }

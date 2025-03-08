@@ -34,10 +34,11 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                    <li><a href="/part2/U1.php" data-after="Unit1">See Unit 1</a></li>
-                        <li><a href="/part2/U2.php" data-after="unit2">See Unit 2</a></li>
-                        <li><a href="/part2/U3.php" data-after="unit3">See Unit 3</a></li>
-                        <li><a href="../tma2.htm#q2" data-after="quiz">&lt; Go back to cover page</a></li>
+                        <!--Ricky, if this works Ricky-->
+                        <li><a href="/part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
+                        <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
+                        <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
+                        <li><a href="../tma2.htm#q2" data-after="main">&lt; Go back to cover page</a></li>
                         <form action="logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>

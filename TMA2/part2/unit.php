@@ -8,8 +8,11 @@
     }
 
     $username = $_SESSION['username']; 
+    if (!isset($_GET['id']) || !filter_var($_GET['id'], FILTER_VALIDATE_INT)) {
+        die(json_encode(["status" => "error", "message" => "Invalid or missing ID."]));
+    }
 
-    $id = 3; 
+    $id = intval($_GET['id']); 
     $query = "SELECT xml_content FROM xml_storage WHERE id = ?";
     $stmt = mysqli_prepare($database, $query);
 
@@ -39,7 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
-    <title>Unit 3: XML &amp; Ajax</title>
+    <title>Unit 1: HTML5 &amp; CSS</title>
 </head>
 <body>
 <!-- Header -->
@@ -47,16 +50,17 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/index.php">
+                    <a href="/part2/index.php">
                         <h1><span>Learning</span> made<span> fun</span></h1>
                     </a>
                 </div>
                 <div class="nav-list">
                     <ul>
-                    <li><a href="/part2/U1.php" data-after="Unit1">See Unit 1</a></li>
-                        <li><a href="/part2/U2.php" data-after="unit2">See Unit 2</a></li>
-                        <li><a href="/part2/U3.php" data-after="unit3">See Unit 3</a></li>
-                        <li><a href="../tma2.htm#q2" data-after="quiz">&lt; Go back to cover page</a></li>
+                        <!--Ricky, if this works Ricky-->
+                        <li><a href="/part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
+                        <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
+                        <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
+                        <li><a href="../tma2.htm#q2" data-after="main">&lt; Go back to cover page</a></li>
                         <form action="logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
@@ -67,12 +71,16 @@
     </section>
 <!-- End Header -->
 
-    <section id="u3">
-        <?php
-            include 'lessonParser.php';
-            $htmlContent = xml_lesson_parse($xml);
-            echo $htmlContent;
-        ?>
+    <section id="u1">
+        <div class="section-container">
+            <?php
+                include 'lessonParser.php';
+                $htmlContent = xml_lesson_parse($xml);
+                echo $htmlContent;
+            ?>
+            <br></br>
+            <a href="/part2/quiz.html?quiz=quiz2.json" type="button" class="cta">Test your knowledge</a>
+        </div>
     </section>
 </body>
 </html>

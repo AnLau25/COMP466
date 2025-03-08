@@ -21,6 +21,11 @@ session_start();
                         <h1><span>Learning</span> made<span> fun</span></h1>
                     </a>
                 </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="../tma2.htm#q2" data-after="main">&lt; Go back to cover page</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

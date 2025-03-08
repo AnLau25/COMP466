@@ -21,6 +21,11 @@ session_start();
                         <h1><span>The</span> bookmark <span>page</span></h1>
                     </a>
                 </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="../tma2.htm#q1" data-after="main">&lt; Go back to cover page</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
