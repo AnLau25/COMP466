@@ -39,7 +39,7 @@
                         <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
                         <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
                         <li><a href="../tma2.htm#q2" data-after="main">&lt; Go back to cover page</a></li>
-                        <form action="logout.php" method="post">
+                        <form action="/shared/logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
                     </ul>
@@ -63,6 +63,6 @@
 
 </body>
 <!-- It hurts me more than u (could use timer, we'll see)-->
-<script src="./shared/sessClosing.php"></script>
+<script src="/shared/sessClosing.js"></script>
 
 </html>

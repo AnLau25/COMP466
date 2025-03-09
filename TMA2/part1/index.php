@@ -37,7 +37,7 @@
                         <li><a href="#create" data-after="create">Create a bookmark</a></li>
                         <li><a href="#find" data-after="find">Browse your bookmarks</a></li>
                         <li><a href="../tma2.htm#q1" data-after="main">&lt; Go back to cover page</a></li>
-                        <form action="logout.php" method="post">
+                        <form action="../shared/logout.php" method="post">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
                     </ul>
@@ -261,5 +261,5 @@
 
 </body>
 <!-- It hurts me more than u (could use timer, we'll see)-->
-<script src="./shared/sessClosing.php"></script>
+<script src="/shared/sessClosing.js"></script>
 </html>
