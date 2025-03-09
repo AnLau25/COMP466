@@ -38,6 +38,7 @@
                         <li><a href="#find" data-after="find">Browse your bookmarks</a></li>
                         <li><a href="../tma2.htm#q1" data-after="main">&lt; Go back to cover page</a></li>
                         <form action="../shared/logout.php" method="post">
+                            <input type="hidden" name="folder" value="part1">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
                     </ul>
@@ -260,6 +261,5 @@
     <!--Modal-->
 
 </body>
-<!-- It hurts me more than u (could use timer, we'll see)-->
-<script src="/shared/sessClosing.js"></script>
+    <script src="../shared/sessClosing.js"></script>
 </html>

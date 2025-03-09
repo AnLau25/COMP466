@@ -8,6 +8,7 @@
     }
 
     $username = $_SESSION['username']; 
+    
     if (!isset($_GET['id']) || !filter_var($_GET['id'], FILTER_VALIDATE_INT)) {
         die(json_encode(["status" => "error", "message" => "Invalid or missing ID."]));
     }
