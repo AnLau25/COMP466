@@ -63,26 +63,45 @@
                         <p>As requested, the page serves a tool for the user to store and browse their website bookmarks, 
                             once they have signed in. Additionally, the top 10 most visited bookmarks amongst all the users 
                             can be viewed at the top, including bookmarks that do not belong the user themselves.
-                        <div class="section-ul">
-                            <p><strong>Page functionality and documentation:</strong></p>
-                            <ul>
-                                <li>Loads images from an external 'img.json' file and stores them in 'imgData'.</li>
-                                <li>Displays images on an HTML canvas ('slider'), with captions ('txt').</li>
-                                <li>Provides play/pause functionality to cycle through images automatically ('togglePlay').</li>
-                                <li>Allows switching between sequential and random slideshow modes ('toggleMode').</li>
-                                <li>Implements navigation buttons to move between images manually ('showPrev', 'showNext').</li>
-                                <li>Updates the canvas with the current image and caption ('updateCanvas').</li>
-                                <li>Supports different transition effects when switching images ('applyTransitionEffect'):
-                                  <ul>
-                                    <li><strong>Effect 1:</strong> Flash-out.</li>
-                                    <li><strong>Effect 2:</strong> Pixel-out.</li>
-                                    <li><strong>Effect 3:</strong> Shrink-in.</li>
-                                  </ul>
-                                </li>
-                                <li>Uses event listeners to handle button clicks and dropdown selections.</li>
-                                <li>Manages variables like 'index' to track the current image and 'isPlaying' to control the slideshow.</li>
-                            </ul>  
-                        </div>
+                            <div class="section-ul">
+                                <p><strong>Page functionality and documentation:</strong></p>
+                                <ul>
+                                    <li><strong>SignIn & LogIn/Out:</strong>
+                                        <ul>
+                                            <li>For the login, a mix of Ajax (to send in new links and navigate without reloading) and PHP (to fetch credentials) was used.</li>
+                                            <li>User credentials are hashed with a simple hash to protect identity (<a class="abi" href="https://www.php.net/manual/en/function.password-hash.php" target="_blank">PHP: password_hash - Manual</a>).</li>
+                                            <li>Sessions remain open while the user is on the website and close as a safety measure when they leave.</li>
+                                            <li>Passwords are hashed on sign-in using <code>password_hash($plaintextPassword, PASSWORD_BCRYPT)</code> and verified during login using <code>password_verify($password, $row['user_pswrd'])</code>.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Adding a Bookmark:</strong>
+                                        <ul>
+                                            <li>A simple SQL query passed through PHP allows the creation of bookmarks.</li>
+                                            <li>A bookmark consists of a numeric primary key, a name, a username (foreign key), and a click counter.</li>
+                                            <li>Link ID and click counter are automatically generated, and the username is fetched from the current session.</li>
+                                            <li>Click counters track visits and help calculate the most-visited links via SQL queries.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Browsing Bookmarks:</strong>
+                                        <ul>
+                                            <li>Users search by bookmark name, as it’s more memorable than the link path.</li>
+                                            <li>SQL queries filter links by the user's credentials. If no search is performed, all links are displayed using AJAX for seamless interaction (<a class="abi" href="https://www.w3schools.com/php/php_ajax_php.asp" target="_blank">PHP - AJAX and PHP</a>).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Editing/Deleting:</strong>
+                                        <ul>
+                                            <li>Users can edit or delete bookmarks via respective buttons next to each bookmark.</li>
+                                            <li>Delete actions prompt a confirmation window before removal from the database.</li>
+                                            <li>Editing is enabled through a modal, where users can change the bookmark's link or name.</li>
+                                            <li>SQL queries use <code>link_id</code> as a unique identifier for all actions (<a class="abi" href="https://www.w3schools.com/mysql/mysql_primarykey.asp" target="_blank">MySQL PRIMARY KEY Constraint</a>).</li>
+                                        </ul>
+                                    </li>
+                                    <li>The page is divided into two sections: one for storing bookmarks and another for browsing them.</li>
+                                    <li>The homepage greets users and displays the top 10 most-clicked links across all entities.</li>
+                                    <li>A navigation bar facilitates section switching and allows logging out.</li>
+                                    <li>Website access requires signing in first.</li>
+                                </ul>
+                            </div>                            
                         <a href="./part1/index.php" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
