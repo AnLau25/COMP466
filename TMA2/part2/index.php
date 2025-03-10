@@ -55,12 +55,29 @@
         <div class="hero container">
             <div class="text-block">
                 <h1>Hi there, <span><?php echo htmlspecialchars($username); ?>!</span></h1>
-                <h2>This is your progress:</h2>
-                
+                <h2 >Pick up where you left up:</h2>
+                <ul id="lessonList"></ul>
+            </div>
         </div>
     </section>
     <!-- End Hero Section  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadlessons();
 
+            function loadlessons() {
+                let lessonList = document.getElementById("lessonList");
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "tracking.php", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        lessonList.innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        });
+    </script>
 
 </body>
 <!-- It hurts me more than u (could use timer, we'll see)-->
