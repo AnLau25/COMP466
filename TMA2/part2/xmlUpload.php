@@ -1,7 +1,8 @@
 <?php
     include('connect.php');
 
-    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_quiz3.xml';
+    /*Change XML file address to upload a diferent one*/
+    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_U1.xml';
 
     $xmlContent = file_get_contents($xmlFile);
     if ($xmlContent === false) {
@@ -9,17 +10,17 @@
     }
 
 
-    $query = "INSERT INTO xml_storage (filename, status, xml_content) VALUES (?, ?, ?)";
+    $query = "INSERT INTO xml_storage (filename, xml_content) VALUES (?, ?)";
     $stmt = mysqli_prepare($database, $query);
 
     if (!$stmt) {
         die(json_encode(["status" => "error", "message" => "Failed to prepare statement: " . mysqli_error($database)]));
     }
 
+    /*Change the file name here. Please note that the name is only qualitative, and the queries are executed via the primary key.*/
     $filename = 'eml_U1';
-    $status = 'unread';
 
-    mysqli_stmt_bind_param($stmt, "sss", $filename, $status, $xmlContent);
+    mysqli_stmt_bind_param($stmt, "ss", $filename, $xmlContent);
     if (!mysqli_stmt_execute($stmt)) {
         die(json_encode(["status" => "error", "message" => "Query failed: " . mysqli_stmt_error($stmt)]));
     }

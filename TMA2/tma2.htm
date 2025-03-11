@@ -52,8 +52,8 @@
     <section id="q1">
         <div class="section-container">
             <div class="top">
-                <h1 class="section-title"><span>Question 1: </span>Canvas Slideshow</h1>
-                <p class="section-subtitle">A 20 image user interactive slideshow</p>
+                <h1 class="section-title"><span>Question 1: </span>Website bookmarker</h1>
+                <p class="section-subtitle">Page that allows authenticated users to store web links</p>
             </div>
 
             <div class="bottom">
@@ -63,6 +63,27 @@
                         <p>As requested, the page serves a tool for the user to store and browse their website bookmarks, 
                             once they have signed in. Additionally, the top 10 most visited bookmarks amongst all the users 
                             can be viewed at the top, including bookmarks that do not belong the user themselves.
+                            <div class="section-ul">
+                                <p><strong>Database:</strong></p>
+                                <ul>
+                                    <li>This part’s database is named <em>bookmarks</em> and contains two tables to help store user authentication information and their links.</li>
+                                    <li><strong>The <em>users</em> table is formed of two columns:</strong>
+                                        <ul>
+                                            <li><strong>user_name:</strong> This is the primary key, ensuring each username is unique. It's used in the SignIn script and must be filled to create a new user.</li>
+                                            <li><strong>user_pswrd:</strong> Allows the user to verify their identity. Both columns are NOT NULL.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>The <em>links</em> table comprises five columns:</strong>
+                                        <ul>
+                                            <li><strong>link_id:</strong> A numeric INT value, automatically incremented and set by the database. This is the primary key, enabling unique identification of each link.</li>
+                                            <li><strong>link_adr:</strong> The URL address of the website to bookmark.</li>
+                                            <li><strong>link_name:</strong> A user-defined name for easier browsing.</li>
+                                            <li><strong>link_click:</strong> Counts how many times a link has been clicked, useful for analyzing popularity.</li>
+                                            <li><strong>user_name:</strong> A foreign key to the user table, ensuring every link is associated with a user.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="section-ul">
                                 <p><strong>Page functionality and documentation:</strong></p>
                                 <ul>
@@ -96,12 +117,19 @@
                                             <li>SQL queries use <code>link_id</code> as a unique identifier for all actions (<a class="abi" href="https://www.w3schools.com/mysql/mysql_primarykey.asp" target="_blank">MySQL PRIMARY KEY Constraint</a>).</li>
                                         </ul>
                                     </li>
+                                </ul>
+                            </div>    
+                            <div class="section-ul">
+                                <p><strong>Additional notes:</strong></p>
+                                <ul>
                                     <li>The page is divided into two sections: one for storing bookmarks and another for browsing them.</li>
                                     <li>The homepage greets users and displays the top 10 most-clicked links across all entities.</li>
                                     <li>A navigation bar facilitates section switching and allows logging out.</li>
                                     <li>Website access requires signing in first.</li>
+                                    <li>Create the users from the sign-in pages so the passwords are stored as hashed. Otherwise, hash manually via <code>hach.php</code></li>
+                                    <li>Please, ensure proper database acces in in <code>connection.php</code></li>
                                 </ul>
-                            </div>                            
+                            </div>                        
                         <a href="./part1/index.php" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
