@@ -5,361 +5,361 @@
     <question>
         <text>What does XML stand for?</text>
         <choices>
-        <wrong>Extensible Markup Layout</wrong>
-        <wrong>Extra Modern Language</wrong>
-        <correct>Extensible Markup Language</correct>
-        <wrong>Extended Multi Language</wrong>
+            <wrong>Extensible Markup Layout</wrong>
+            <wrong>Extra Modern Language</wrong>
+            <correct>Extensible Markup Language</correct>
+            <wrong>Extended Multi Language</wrong>
         </choices>
     </question>
     <question>
         <text>Who developed XML?</text>
         <choices>
-        <wrong>Microsoft</wrong>
-        <wrong>Mozilla</wrong>
-        <wrong>Google</wrong>
-        <correct>W3C</correct>
+            <wrong>Microsoft</wrong>
+            <wrong>Mozilla</wrong>
+            <wrong>Google</wrong>
+            <correct>W3C</correct>
         </choices>
     </question>
     <question>
         <text>Which of the following is NOT a key feature of XML?</text>
         <choices>
-        <wrong>Case-sensitive</wrong>
-        <wrong>Requires every start tag to have a matching end tag</wrong>
-        <correct>Used for styling web pages</correct>
-        <wrong>Ensures proper nesting of tags</wrong>
+            <wrong>Case-sensitive</wrong>
+            <wrong>Requires every start tag to have a matching end tag</wrong>
+            <correct>Used for styling web pages</correct>
+            <wrong>Ensures proper nesting of tags</wrong>
         </choices>
     </question>
     <question>
         <text>What is the purpose of XML?</text>
         <choices>
-        <wrong>To replace HTML</wrong>
-        <wrong>To format web pages</wrong>
-        <wrong>To create animations</wrong>
-        <correct>To describe and structure data</correct>
+            <wrong>To replace HTML</wrong>
+            <wrong>To format web pages</wrong>
+            <wrong>To create animations</wrong>
+            <correct>To describe and structure data</correct>
         </choices>
     </question>
     <question>
         <text>What must an XML document start with?</text>
         <choices>
-        <correct>An XML declaration specifying the version</correct>
-        <wrong>A DOCTYPE declaration</wrong>
-        <wrong>A root element</wrong>
-        <wrong>A namespace declaration</wrong>
+            <correct>An XML declaration specifying the version</correct>
+            <wrong>A DOCTYPE declaration</wrong>
+            <wrong>A root element</wrong>
+            <wrong>A namespace declaration</wrong>
         </choices>
     </question>
     <question>
         <text>In XML, attribute values must be enclosed in:</text>
         <choices>
-        <wrong>Parentheses</wrong>
-        <wrong>Curly brackets</wrong>
-        <wrong>Square brackets</wrong>
-        <correct>Single or double quotes</correct>
+            <wrong>Parentheses</wrong>
+            <wrong>Curly brackets</wrong>
+            <wrong>Square brackets</wrong>
+            <correct>Single or double quotes</correct>
         </choices>
     </question>
     <question>
         <text>An XML document must contain:</text>
         <choices>
-        <wrong>At least one DOCTYPE declaration</wrong>
-        <wrong>JavaScript functions</wrong>
-        <correct>A single root element</correct>
-        <wrong>A CSS stylesheet</wrong>
+            <wrong>At least one DOCTYPE declaration</wrong>
+            <wrong>JavaScript functions</wrong>
+            <correct>A single root element</correct>
+            <wrong>A CSS stylesheet</wrong>
         </choices>
     </question>
     <question>
         <text>XML differs from HTML because:</text>
         <choices>
-        <wrong>XML is only used for databases</wrong>
-        <correct>XML allows users to define custom markup languages</correct>
-        <wrong>XML does not use tags</wrong>
-        <wrong>XML is a programming language</wrong>
+            <wrong>XML is only used for databases</wrong>
+            <correct>XML allows users to define custom markup languages</correct>
+            <wrong>XML does not use tags</wrong>
+            <wrong>XML is a programming language</wrong>
         </choices>
     </question>
     <question>
         <text>What does XML ensure regarding elements?</text>
         <choices>
-        <wrong>Elements can overlap</wrong>
-        <wrong>Elements must be predefined</wrong>
-        <wrong>Elements must be in lowercase</wrong>
-        <correct>Elements must be properly nested</correct>
+            <wrong>Elements can overlap</wrong>
+            <wrong>Elements must be predefined</wrong>
+            <wrong>Elements must be in lowercase</wrong>
+            <correct>Elements must be properly nested</correct>
         </choices>
     </question>
     <question>
         <text>What is the role of namespaces in XML?</text>
         <choices>
-        <wrong>They style XML documents</wrong>
-        <correct>They prevent element name conflicts</correct>
-        <wrong>They encrypt XML data</wrong>
-        <wrong>They speed up XML processing</wrong>
+            <wrong>They style XML documents</wrong>
+            <correct>They prevent element name conflicts</correct>
+            <wrong>They encrypt XML data</wrong>
+            <wrong>They speed up XML processing</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is NOT a correct XML rule?</text>
         <choices>
-        <wrong>All tags must have closing tags</wrong>
-        <wrong>Tags are case-sensitive</wrong>
-        <correct>XML documents must always have a DOCTYPE declaration</correct>
-        <wrong>Tags must be properly nested</wrong>
+            <wrong>All tags must have closing tags</wrong>
+            <wrong>Tags are case-sensitive</wrong>
+            <correct>XML documents must always have a DOCTYPE declaration</correct>
+            <wrong>Tags must be properly nested</wrong>
         </choices>
     </question>
     <question>
         <text>How can XML documents be validated?</text>
         <choices>
-        <wrong>Using JavaScript</wrong>
-        <correct>Using an XSD (XML Schema Definition)</correct>
-        <wrong>Using CSS</wrong>
-        <wrong>Using SQL</wrong>
+            <wrong>Using JavaScript</wrong>
+            <correct>Using an XSD (XML Schema Definition)</correct>
+            <wrong>Using CSS</wrong>
+            <wrong>Using SQL</wrong>
         </choices>
     </question>
     <question>
         <text>What is required for an XML document to be well-formed?</text>
         <choices>
-        <wrong>Must include JavaScript</wrong>
-        <wrong>Must use predefined tags</wrong>
-        <wrong>Must have more than one root element</wrong>
-        <correct>Must have properly nested tags</correct>
+            <wrong>Must include JavaScript</wrong>
+            <wrong>Must use predefined tags</wrong>
+            <wrong>Must have more than one root element</wrong>
+            <correct>Must have properly nested tags</correct>
         </choices>
     </question>
     <question>
         <text>What does RIA stand for?</text>
         <choices>
-        <wrong>Rich Internet Analytics</wrong>
-        <correct>Rich Internet Applications</correct>
-        <wrong>Rapid Internet Access</wrong>
-        <wrong>Remote Interactive Apps</wrong>
+            <wrong>Rich Internet Analytics</wrong>
+            <correct>Rich Internet Applications</correct>
+            <wrong>Rapid Internet Access</wrong>
+            <wrong>Remote Interactive Apps</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is a key characteristic of RIAs?</text>
         <choices>
-        <wrong>Works only offline</wrong>
-        <wrong>Requires full-page reloads for updates</wrong>
-        <wrong>Does not support JavaScript</wrong>
-        <correct>Provides a desktop-app-like user experience</correct>
+            <wrong>Works only offline</wrong>
+            <wrong>Requires full-page reloads for updates</wrong>
+            <wrong>Does not support JavaScript</wrong>
+            <correct>Provides a desktop-app-like user experience</correct>
         </choices>
     </question>
     <question>
         <text>How do RIAs improve user experience?</text>
         <choices>
-        <correct>By using asynchronous requests instead of full-page reloads</correct>
-        <wrong>By disabling interactivity</wrong>
-        <wrong>By requiring users to download entire applications</wrong>
-        <wrong>By limiting server communication</wrong>
+            <correct>By using asynchronous requests instead of full-page reloads</correct>
+            <wrong>By disabling interactivity</wrong>
+            <wrong>By requiring users to download entire applications</wrong>
+            <wrong>By limiting server communication</wrong>
         </choices>
     </question>
     <question>
         <text>What does AJAX stand for?</text>
         <choices>
-        <wrong>Asynchronous JavaScript and XHTML</wrong>
-        <wrong>Advanced JavaScript and XML</wrong>
-        <wrong>Automated JSON and XML</wrong>
-        <correct>Asynchronous JavaScript and XML</correct>
+            <wrong>Asynchronous JavaScript and XHTML</wrong>
+            <wrong>Advanced JavaScript and XML</wrong>
+            <wrong>Automated JSON and XML</wrong>
+            <correct>Asynchronous JavaScript and XML</correct>
         </choices>
     </question>
     <question>
         <text>What is the key advantage of using AJAX?</text>
         <choices>
-        <wrong>It replaces JavaScript</wrong>
-        <wrong>It improves search engine ranking</wrong>
-        <correct>It allows web pages to update without reloading</correct>
-        <wrong>It disables interactivity</wrong>
+            <wrong>It replaces JavaScript</wrong>
+            <wrong>It improves search engine ranking</wrong>
+            <correct>It allows web pages to update without reloading</correct>
+            <wrong>It disables interactivity</wrong>
         </choices>
     </question>
     <question>
         <text>Which technology enables AJAX to work asynchronously?</text>
         <choices>
-        <wrong>Java</wrong>
-        <wrong>SQL</wrong>
-        <wrong>CSS</wrong>
-        <correct>XMLHttpRequest</correct>
+            <wrong>Java</wrong>
+            <wrong>SQL</wrong>
+            <wrong>CSS</wrong>
+            <correct>XMLHttpRequest</correct>
         </choices>
     </question>
     <question>
         <text>What is the major use of AJAX in RIAs?</text>
         <choices>
-        <wrong>Enhancing security</wrong>
-        <correct>Partial page updates</correct>
-        <wrong>Creating database tables</wrong>
-        <wrong>Blocking JavaScript execution</wrong>
+            <wrong>Enhancing security</wrong>
+            <correct>Partial page updates</correct>
+            <wrong>Creating database tables</wrong>
+            <wrong>Blocking JavaScript execution</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is an example of AJAX functionality?</text>
         <choices>
-        <correct>Autocomplete (Type-ahead search)</correct>
-        <wrong>Printing documents</wrong>
-        <wrong>Playing videos</wrong>
-        <wrong>Saving data to a local file</wrong>
+            <correct>Autocomplete (Type-ahead search)</correct>
+            <wrong>Printing documents</wrong>
+            <wrong>Playing videos</wrong>
+            <wrong>Saving data to a local file</wrong>
         </choices>
     </question>
     <question>
         <text>How does 'Edit-in-Place' work in RIAs?</text>
         <choices>
-        <wrong>Opens a new window for editing</wrong>
-        <correct>Allows inline content editing without reloading the page</correct>
-        <wrong>Requires a server restart</wrong>
-        <wrong>Uses external text editors</wrong>
+            <wrong>Opens a new window for editing</wrong>
+            <correct>Allows inline content editing without reloading the page</correct>
+            <wrong>Requires a server restart</wrong>
+            <wrong>Uses external text editors</wrong>
         </choices>
     </question>
     <question>
         <text>What does 'Partial Page Updates' mean in AJAX?</text>
         <choices>
-        <wrong>Refreshing the entire web page</wrong>
-        <wrong>Using Java instead of JavaScript</wrong>
-        <wrong>Deleting all elements before reloading</wrong>
-        <correct>Updating only specific sections without reloading</correct>
+            <wrong>Refreshing the entire web page</wrong>
+            <wrong>Using Java instead of JavaScript</wrong>
+            <wrong>Deleting all elements before reloading</wrong>
+            <correct>Updating only specific sections without reloading</correct>
         </choices>
     </question>
     <question>
         <text>What prevents malicious cross-domain requests in AJAX?</text>
         <choices>
-        <wrong>Cookies</wrong>
-        <correct>Same-Origin Policy (SOP)</correct>
-        <wrong>JSON format</wrong>
-        <wrong>HTTPS</wrong>
+            <wrong>Cookies</wrong>
+            <correct>Same-Origin Policy (SOP)</correct>
+            <wrong>JSON format</wrong>
+            <wrong>HTTPS</wrong>
         </choices>
     </question>
     <question>
         <text>What is the main JavaScript object used in AJAX?</text>
         <choices>
-        <correct>XMLHttpRequest</correct>
-        <wrong>XSLTProcessor</wrong>
-        <wrong>JSONParser</wrong>
-        <wrong>WebSocket</wrong>
+            <correct>XMLHttpRequest</correct>
+            <wrong>XSLTProcessor</wrong>
+            <wrong>JSONParser</wrong>
+            <wrong>WebSocket</wrong>
         </choices>
     </question>
     <question>
         <text>What is the purpose of a callback function in AJAX?</text>
         <choices>
-        <wrong>It automatically refreshes the page</wrong>
-        <wrong>It sends data to the server</wrong>
-        <wrong>It blocks other scripts from running</wrong>
-        <correct>It executes once the server responds</correct>
+            <wrong>It automatically refreshes the page</wrong>
+            <wrong>It sends data to the server</wrong>
+            <wrong>It blocks other scripts from running</wrong>
+            <correct>It executes once the server responds</correct>
         </choices>
     </question>
     <question>
         <text>How does AJAX send a request to the server?</text>
         <choices>
-        <correct>Using the .send() method</correct>
-        <wrong>Using document.write()</wrong>
-        <wrong>Using JSON.stringify()</wrong>
-        <wrong>Using CSS selectors</wrong>
+            <correct>Using the .send() method</correct>
+            <wrong>Using document.write()</wrong>
+            <wrong>Using JSON.stringify()</wrong>
+            <wrong>Using CSS selectors</wrong>
         </choices>
     </question>
     <question>
         <text>What method initializes an AJAX request?</text>
         <choices>
-        <wrong>.start()</wrong>
-        <correct>.open(method, url, async)</correct>
-        <wrong>.getRequest()</wrong>
-        <wrong>.load()</wrong>
+            <wrong>.start()</wrong>
+            <correct>.open(method, url, async)</correct>
+            <wrong>.getRequest()</wrong>
+            <wrong>.load()</wrong>
         </choices>
     </question>
     <question>
         <text>Which property of XMLHttpRequest holds the server response?</text>
         <choices>
-        <correct>responseText</correct>
-        <wrong>sendData</wrong>
-        <wrong>requestHeader</wrong>
-        <wrong>statusCode</wrong>
+            <correct>responseText</correct>
+            <wrong>sendData</wrong>
+            <wrong>requestHeader</wrong>
+            <wrong>statusCode</wrong>
         </choices>
     </question>
     <question>
         <text>What is the role of .setRequestHeader() in AJAX?</text>
         <choices>
-        <wrong>It cancels a request</wrong>
-        <wrong>It defines an XML schema</wrong>
-        <correct>It sets HTTP headers for the request</correct>
-        <wrong>It parses JSON data</wrong>
+            <wrong>It cancels a request</wrong>
+            <wrong>It defines an XML schema</wrong>
+            <correct>It sets HTTP headers for the request</correct>
+            <wrong>It parses JSON data</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is NOT an XMLHttpRequest method?</text>
         <choices>
-        <wrong>.send()</wrong>
-        <correct>.fetch()</correct>
-        <wrong>.open()</wrong>
-        <wrong>.setRequestHeader()</wrong>
+            <wrong>.send()</wrong>
+            <correct>.fetch()</correct>
+            <wrong>.open()</wrong>
+            <wrong>.setRequestHeader()</wrong>
         </choices>
     </question>
     <question>
         <text>What happens after the server sends a response in AJAX?</text>
         <choices>
-        <wrong>The browser reloads</wrong>
-        <wrong>The user must refresh manually</wrong>
-        <correct>The callback function processes the response</correct>
-        <wrong>The request is canceled</wrong>
+            <wrong>The browser reloads</wrong>
+            <wrong>The user must refresh manually</wrong>
+            <correct>The callback function processes the response</correct>
+            <wrong>The request is canceled</wrong>
         </choices>
     </question>
     <question>
         <text>How does AJAX handle asynchronous operations?</text>
         <choices>
-        <correct>By allowing the page to remain interactive while requests are processed</correct>
-        <wrong>By blocking all user interactions until the request completes</wrong>
-        <wrong>By refreshing the page automatically</wrong>
-        <wrong>By requiring a page reload after every request</wrong>
+            <correct>By allowing the page to remain interactive while requests are processed</correct>
+            <wrong>By blocking all user interactions until the request completes</wrong>
+            <wrong>By refreshing the page automatically</wrong>
+            <wrong>By requiring a page reload after every request</wrong>
         </choices>
     </question>
     <question>
         <text>What type of data formats can be used in AJAX responses?</text>
         <choices>
-        <wrong>HTML only</wrong>
-        <wrong>CSV only</wrong>
-        <wrong>Plain text only</wrong>
-        <correct>XML and JSON</correct>
+            <wrong>HTML only</wrong>
+            <wrong>CSV only</wrong>
+            <wrong>Plain text only</wrong>
+            <correct>XML and JSON</correct>
         </choices>
     </question>
     <question>
         <text>Which event is triggered when an AJAX request completes successfully?</text>
         <choices>
-        <wrong>onClick</wrong>
-        <correct>onreadystatechange</correct>
-        <wrong>onLoad</wrong>
-        <wrong>onSubmit</wrong>
+            <wrong>onClick</wrong>
+            <correct>onreadystatechange</correct>
+            <wrong>onLoad</wrong>
+            <wrong>onSubmit</wrong>
         </choices>
     </question>
     <question>
         <text>Why is AJAX preferred over traditional form submission?</text>
         <choices>
-        <wrong>It replaces the need for a backend</wrong>
-        <wrong>It disables JavaScript execution</wrong>
-        <wrong>It prevents security threats</wrong>
-        <correct>It allows seamless page updates without reloading</correct>
+            <wrong>It replaces the need for a backend</wrong>
+            <wrong>It disables JavaScript execution</wrong>
+            <wrong>It prevents security threats</wrong>
+            <correct>It allows seamless page updates without reloading</correct>
         </choices>
     </question>
     <question>
         <text>What does the 'async' parameter in .open() specify?</text>
         <choices>
-        <correct>Whether the request should be asynchronous</correct>
-        <wrong>The data format for the response</wrong>
-        <wrong>The security level of the request</wrong>
-        <wrong>The size of the response</wrong>
+            <correct>Whether the request should be asynchronous</correct>
+            <wrong>The data format for the response</wrong>
+            <wrong>The security level of the request</wrong>
+            <wrong>The size of the response</wrong>
         </choices>
     </question>
     <question>
         <text>Which protocol does AJAX commonly use?</text>
         <choices>
-        <wrong>FTP</wrong>
-        <wrong>SMTP</wrong>
-        <correct>HTTP/HTTPS</correct>
-        <wrong>WebSocket</wrong>
+            <wrong>FTP</wrong>
+            <wrong>SMTP</wrong>
+            <correct>HTTP/HTTPS</correct>
+            <wrong>WebSocket</wrong>
         </choices>
     </question>
     <question>
         <text>Which JavaScript object is commonly used to process JSON responses in AJAX?</text>
         <choices>
-        <wrong>DOMParser</wrong>
-        <wrong>XSLTProcessor</wrong>
-        <wrong>fetchAPI</wrong>
-        <correct>JSON.parse()</correct>
+            <wrong>DOMParser</wrong>
+            <wrong>XSLTProcessor</wrong>
+            <wrong>fetchAPI</wrong>
+            <correct>JSON.parse()</correct>
         </choices>
     </question>
     <question>
         <text>What allows AJAX to work with different servers securely?</text>
         <choices>
-        <wrong>SOP (Same-Origin Policy)</wrong>
-        <correct>CORS (Cross-Origin Resource Sharing)</correct>
-        <wrong>SQL Queries</wrong>
-        <wrong>JSON Encoding</wrong>
+            <wrong>SOP (Same-Origin Policy)</wrong>
+            <correct>CORS (Cross-Origin Resource Sharing)</correct>
+            <wrong>SQL Queries</wrong>
+            <wrong>JSON Encoding</wrong>
         </choices>
     </question>
 </eml_quiz2>

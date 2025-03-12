@@ -178,7 +178,53 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </div>                            
+                            </div>
+                            <div class="section-ul">
+                                <p><strong>Educational Markup Language (EML):</strong></p>
+                                <ul>
+                                    <li><strong>Lessons:</strong>
+                                        <ul>
+                                            <li><code>&lt;eml_U1&gt;:</code> Root element containing the entire document.</li>
+                                            <li><code>&lt;head&gt;:</code> Holds metadata-like elements:
+                                                <ul>
+                                                    <li><code>&lt;title&gt;:</code> Main title of the document.</li>
+                                                    <li><code>&lt;subtitle&gt;:</code> Describes the document’s content.</li>
+                                                </ul>
+                                            </li>
+                                            <li><code>&lt;lesson&gt;:</code> Represents different lessons:
+                                                <ul>
+                                                    <li><code>&lt;title&gt;:</code> Lesson title.</li>
+                                                    <li><code>&lt;paragraph&gt;:</code> Textual content explaining concepts.</li>
+                                                    <li><code>&lt;list&gt;:</code> Contains lists of items.</li>
+                                                    <li><code>&lt;list-paragraph&gt;:</code> Introductory text for a list.</li>
+                                                    <li><code>&lt;item&gt;:</code> Individual list items.</li>
+                                                    <li><code>&lt;example-block&gt;:</code> Holds example sections.</li>
+                                                    <li><code>&lt;example&gt;:</code> Represents an individual example:
+                                                        <ul>
+                                                            <li><code>&lt;title&gt;:</code> Title of the example.</li>
+                                                            <li><code>&lt;paragraph&gt;:</code> Explanation of the example.</li>
+                                                            <li><code>&lt;list&gt;:</code> Contains structured information (like lesson lists).</li>
+                                                            <li><code>&lt;img&gt;:</code> References an image related to the example.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Quizzes:</strong>
+                                        <ul>
+                                            <li><code>&lt;question&gt;:</code> Represents an individual quiz question.</li>
+                                            <li><code>&lt;text&gt;:</code> Contains the question's text.</li>
+                                            <li><code>&lt;choices&gt;:</code> Groups the possible answer choices for a question:
+                                                <ul>
+                                                    <li><code>&lt;wrong&gt;:</code> Represents an incorrect answer choice.</li>
+                                                    <li><code>&lt;correct&gt;:</code> Represents the correct answer choice.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         <a href="/part2/index.php" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">

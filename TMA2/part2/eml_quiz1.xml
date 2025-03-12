@@ -4,361 +4,361 @@
     <question>
         <text>What is client-side programming responsible for?</text>
         <choices>
-        <wrong>Managing databases</wrong>
-        <wrong>Processing client requests</wrong>
-        <correct>Rendering the UI</correct>
-        <wrong>Running server applications</wrong>
+            <wrong>Managing databases</wrong>
+            <wrong>Processing client requests</wrong>
+            <correct>Rendering the UI</correct>
+            <wrong>Running server applications</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is NOT an example of client-side technology?</text>
         <choices>
-        <wrong>HTML</wrong>
-        <wrong>CSS</wrong>
-        <correct>PHP</correct>
-        <wrong>JavaScript</wrong>
+            <wrong>HTML</wrong>
+            <wrong>CSS</wrong>
+            <correct>PHP</correct>
+            <wrong>JavaScript</wrong>
         </choices>
     </question>
     <question>
         <text>What is a key responsibility of a web server?</text>
         <choices>
-        <correct>Hosting websites</correct>
-        <wrong>Handling user interactions in the browser</wrong>
-        <wrong>Creating UI components</wrong>
-        <wrong>Writing frontend scripts</wrong>
+            <correct>Hosting websites</correct>
+            <wrong>Handling user interactions in the browser</wrong>
+            <wrong>Creating UI components</wrong>
+            <wrong>Writing frontend scripts</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following languages is commonly used for server-side programming?</text>
         <choices>
-        <correct>Python</correct>
-        <wrong>CSS</wrong>
-        <wrong>JavaScript (client-side)</wrong>
-        <wrong>HTML</wrong>
+            <correct>Python</correct>
+            <wrong>CSS</wrong>
+            <wrong>JavaScript (client-side)</wrong>
+            <wrong>HTML</wrong>
         </choices>
     </question>
     <question>
         <text>What does a web server do when it receives a request?</text>
         <choices>
-        <correct>Processes it and sends back the appropriate response</correct>
-        <wrong>Executes JavaScript in the browser</wrong>
-        <wrong>Loads an offline webpage</wrong>
-        <wrong>Blocks unauthorized users</wrong>
+            <correct>Processes it and sends back the appropriate response</correct>
+            <wrong>Executes JavaScript in the browser</wrong>
+            <wrong>Loads an offline webpage</wrong>
+            <wrong>Blocks unauthorized users</wrong>
         </choices>
     </question>
     <question>
         <text>What is the purpose of the '&lt;!DOCTYPE html&gt;' declaration?</text>
         <choices>
-        <wrong>Defines metadata</wrong>
-        <correct>Declares the document as HTML5</correct>
-        <wrong>Applies CSS styles</wrong>
-        <wrong>Specifies the document language</wrong>
+            <wrong>Defines metadata</wrong>
+            <correct>Declares the document as HTML5</correct>
+            <wrong>Applies CSS styles</wrong>
+            <wrong>Specifies the document language</wrong>
         </choices>
     </question>
     <question>
         <text>Which tag wraps the entire HTML document?</text>
         <choices>
-        <wrong>&lt;head&gt;</wrong>
-        <wrong>&lt;body&gt;</wrong>
-        <correct>&lt;html&gt;</correct>
-        <wrong>&lt;meta&gt;</wrong>
+            <wrong>&lt;head&gt;</wrong>
+            <wrong>&lt;body&gt;</wrong>
+            <correct>&lt;html&gt;</correct>
+            <wrong>&lt;meta&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>Where should metadata be placed in an HTML document?</text>
         <choices>
-        <correct>Inside the &lt;head&gt; tag</correct>
-        <wrong>Inside the &lt;body&gt; tag</wrong>
-        <wrong>Before the &lt;!DOCTYPE&gt; declaration</wrong>
-        <wrong>In a separate file</wrong>
+            <correct>Inside the &lt;head&gt; tag</correct>
+            <wrong>Inside the &lt;body&gt; tag</wrong>
+            <wrong>Before the &lt;!DOCTYPE&gt; declaration</wrong>
+            <wrong>In a separate file</wrong>
         </choices>
     </question>
     <question>
         <text>What tag contains the visible content of a webpage?</text>
         <choices>
-        <wrong>&lt;head&gt;</wrong>
-        <wrong>&lt;meta&gt;</wrong>
-        <wrong>&lt;script&gt;</wrong>
-        <correct>&lt;body&gt;</correct>
+            <wrong>&lt;head&gt;</wrong>
+            <wrong>&lt;meta&gt;</wrong>
+            <wrong>&lt;script&gt;</wrong>
+            <correct>&lt;body&gt;</correct>
         </choices>
     </question>
     <question>
         <text>Which of the following is NOT included in the &lt;head&gt; section?</text>
         <choices>
-        <correct>Visible content</correct>
-        <wrong>Metadata</wrong>
-        <wrong>Styles</wrong>
-        <wrong>Scripts</wrong>
+            <correct>Visible content</correct>
+            <wrong>Metadata</wrong>
+            <wrong>Styles</wrong>
+            <wrong>Scripts</wrong>
         </choices>
     </question>
     <question>
         <text>HTML5 is primarily used for:</text>
         <choices>
-        <correct>Structuring content on the web</correct>
-        <wrong>Executing server-side logic</wrong>
-        <wrong>Running background processes</wrong>
-        <wrong>Creating complex algorithms</wrong>
+            <correct>Structuring content on the web</correct>
+            <wrong>Executing server-side logic</wrong>
+            <wrong>Running background processes</wrong>
+            <wrong>Creating complex algorithms</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following does HTML5 NOT support natively?</text>
         <choices>
-        <wrong>Headings</wrong>
-        <wrong>Paragraphs</wrong>
-        <correct>Conditional logic</correct>
-        <wrong>Links</wrong>
+            <wrong>Headings</wrong>
+            <wrong>Paragraphs</wrong>
+            <correct>Conditional logic</correct>
+            <wrong>Links</wrong>
         </choices>
     </question>
     <question>
         <text>How do you create a hyperlink in HTML?</text>
         <choices>
-        <wrong>&lt;link&gt;</wrong>
-        <wrong>&lt;a href="url"&gt;Click here&lt;/a&gt;</wrong>
-        <correct>&lt;a href="url"&gt;Click here&lt;/a&gt;</correct>
-        <wrong>&lt;hyperlink&gt;</wrong>
+            <wrong>&lt;link&gt;</wrong>
+            <wrong>&lt;a href="url"&gt;Click here&lt;/a&gt;</wrong>
+            <correct>&lt;a href="url"&gt;Click here&lt;/a&gt;</correct>
+            <wrong>&lt;hyperlink&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>Which tag is used for defining headings?</text>
         <choices>
-        <wrong>&lt;p&gt;</wrong>
-        <wrong>&lt;title&gt;</wrong>
-        <correct>&lt;h1&gt; - &lt;h6&gt;</correct>
-        <wrong>&lt;header&gt;</wrong>
+            <wrong>&lt;p&gt;</wrong>
+            <wrong>&lt;title&gt;</wrong>
+            <correct>&lt;h1&gt; - &lt;h6&gt;</correct>
+            <wrong>&lt;header&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>What tag is used for inserting an image in HTML?</text>
         <choices>
-        <wrong>&lt;img&gt;</wrong>
-        <wrong>&lt;image&gt;</wrong>
-        <wrong>&lt;pic&gt;</wrong>
-        <correct>&lt;img src="image.jpg" alt="description"&gt;</correct>
+            <wrong>&lt;img&gt;</wrong>
+            <wrong>&lt;image&gt;</wrong>
+            <wrong>&lt;pic&gt;</wrong>
+            <correct>&lt;img src="image.jpg" alt="description"&gt;</correct>
         </choices>
     </question>
     <question>
         <text>What does &lt;thead&gt; represent?</text>
         <choices>
-        <wrong>A paragraph</wrong>
-        <correct>Table header</correct>
-        <wrong>Table row</wrong>
-        <wrong>Table column</wrong>
+            <wrong>A paragraph</wrong>
+            <correct>Table header</correct>
+            <wrong>Table row</wrong>
+            <wrong>Table column</wrong>
         </choices>
     </question>
     <question>
         <text>The &lt;td&gt; tag is used for:</text>
         <choices>
-        <correct>Table data cells</correct>
-        <wrong>Table headers</wrong>
-        <wrong>Defining table rows</wrong>
-        <wrong>Styling the table</wrong>
+            <correct>Table data cells</correct>
+            <wrong>Table headers</wrong>
+            <wrong>Defining table rows</wrong>
+            <wrong>Styling the table</wrong>
         </choices>
     </question>
     <question>
         <text>Which tag defines a row in an HTML table?</text>
         <choices>
-        <wrong>&lt;thead&gt;</wrong>
-        <wrong>&lt;td&gt;</wrong>
-        <wrong>&lt;table&gt;</wrong>
-        <correct>&lt;tr&gt;</correct>
+            <wrong>&lt;thead&gt;</wrong>
+            <wrong>&lt;td&gt;</wrong>
+            <wrong>&lt;table&gt;</wrong>
+            <correct>&lt;tr&gt;</correct>
         </choices>
     </question>
     <question>
         <text>What does &lt;tbody&gt; contain?</text>
         <choices>
-        <correct>The main content of the table</correct>
-        <wrong>The title cells</wrong>
-        <wrong>Metadata</wrong>
-        <wrong>Images</wrong>
+            <correct>The main content of the table</correct>
+            <wrong>The title cells</wrong>
+            <wrong>Metadata</wrong>
+            <wrong>Images</wrong>
         </choices>
     </question>
     <question>
         <text>Which of the following is used for column headings in tables?</text>
         <choices>
-        <wrong>&lt;td&gt;</wrong>
-        <correct>&lt;th&gt;</correct>
-        <wrong>&lt;tr&gt;</wrong>
-        <wrong>&lt;col&gt;</wrong>
+            <wrong>&lt;td&gt;</wrong>
+            <correct>&lt;th&gt;</correct>
+            <wrong>&lt;tr&gt;</wrong>
+            <wrong>&lt;col&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>Which tag is used to create a form?</text>
         <choices>
-        <wrong>&lt;input&gt;</wrong>
-        <wrong>&lt;fieldset&gt;</wrong>
-        <correct>&lt;form&gt;</correct>
-        <wrong>&lt;label&gt;</wrong>
+            <wrong>&lt;input&gt;</wrong>
+            <wrong>&lt;fieldset&gt;</wrong>
+            <correct>&lt;form&gt;</correct>
+            <wrong>&lt;label&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>What type of input hides characters when entered?</text>
         <choices>
-        <wrong>text</wrong>
-        <wrong>email</wrong>
-        <correct>password</correct>
-        <wrong>hidden</wrong>
+            <wrong>text</wrong>
+            <wrong>email</wrong>
+            <correct>password</correct>
+            <wrong>hidden</wrong>
         </choices>
     </question>
     <question>
         <text>Which form input allows users to select multiple options?</text>
         <choices>
-        <correct>Checkbox</correct>
-        <wrong>Radio button</wrong>
-        <wrong>Select dropdown</wrong>
-        <wrong>Button</wrong>
+            <correct>Checkbox</correct>
+            <wrong>Radio button</wrong>
+            <wrong>Select dropdown</wrong>
+            <wrong>Button</wrong>
         </choices>
     </question>
     <question>
         <text>What does &lt;select&gt; do in an HTML form?</text>
         <choices>
-        <wrong>Displays a paragraph</wrong>
-        <correct>Creates a dropdown menu</correct>
-        <wrong>Defines a form section</wrong>
-        <wrong>Submits a form</wrong>
+            <wrong>Displays a paragraph</wrong>
+            <correct>Creates a dropdown menu</correct>
+            <wrong>Defines a form section</wrong>
+            <wrong>Submits a form</wrong>
         </choices>
     </question>
     <question>
         <text>Which input type allows users to pick a color?</text>
         <choices>
-        <correct>color</correct>
-        <wrong>text</wrong>
-        <wrong>number</wrong>
-        <wrong>search</wrong>
+            <correct>color</correct>
+            <wrong>text</wrong>
+            <wrong>number</wrong>
+            <wrong>search</wrong>
         </choices>
     </question>
     <question>
         <text>What does CSS stand for?</text>
         <choices>
-        <wrong>Computer Styling System</wrong>
-        <wrong>Cascading Style Structure</wrong>
-        <correct>Cascading Style Sheets</correct>
-        <wrong>Creative Style Selector</wrong>
+            <wrong>Computer Styling System</wrong>
+            <wrong>Cascading Style Structure</wrong>
+            <correct>Cascading Style Sheets</correct>
+            <wrong>Creative Style Selector</wrong>
         </choices>
     </question>
     <question>
         <text>What is the purpose of CSS?</text>
         <choices>
-        <correct>To style HTML elements</correct>
-        <wrong>To write server-side scripts</wrong>
-        <wrong>To structure a document</wrong>
-        <wrong>To store website data</wrong>
+            <correct>To style HTML elements</correct>
+            <wrong>To write server-side scripts</wrong>
+            <wrong>To structure a document</wrong>
+            <wrong>To store website data</wrong>
         </choices>
     </question>
     <question>
         <text>Which CSS property is used to change text color?</text>
         <choices>
-        <wrong>background-color</wrong>
-        <correct>color</correct>
-        <wrong>font-style</wrong>
-        <wrong>text-transform</wrong>
+            <wrong>background-color</wrong>
+            <correct>color</correct>
+            <wrong>font-style</wrong>
+            <wrong>text-transform</wrong>
         </choices>
     </question>
     <question>
         <text>What is the CSS Box Model used for?</text>
         <choices>
-        <correct>Controlling layout and spacing</correct>
-        <wrong>Adding animations</wrong>
-        <wrong>Creating images</wrong>
-        <wrong>Styling tables</wrong>
+            <correct>Controlling layout and spacing</correct>
+            <wrong>Adding animations</wrong>
+            <wrong>Creating images</wrong>
+            <wrong>Styling tables</wrong>
         </choices>
     </question>
     <question>
         <text>Which positioning type removes an element from normal flow?</text>
         <choices>
-        <wrong>static</wrong>
-        <wrong>relative</wrong>
-        <correct>absolute</correct>
-        <wrong>fixed</wrong>
+            <wrong>static</wrong>
+            <wrong>relative</wrong>
+            <correct>absolute</correct>
+            <wrong>fixed</wrong>
         </choices>
     </question>
     <question>
         <text>Which is the most specific type of CSS styling?</text>
         <choices>
-        <wrong>External stylesheet</wrong>
-        <correct>Inline styles</correct>
-        <wrong>Embedded stylesheet</wrong>
-        <wrong>Internal stylesheet</wrong>
+            <wrong>External stylesheet</wrong>
+            <correct>Inline styles</correct>
+            <wrong>Embedded stylesheet</wrong>
+            <wrong>Internal stylesheet</wrong>
         </choices>
     </question>
     <question>
         <text>Where is an external CSS file linked?</text>
         <choices>
-        <wrong>&lt;head&gt;</wrong>
-        <wrong>&lt;body&gt;</wrong>
-        <wrong>&lt;footer&gt;</wrong>
-        <correct>Inside the &lt;head&gt; section</correct>
+            <wrong>&lt;head&gt;</wrong>
+            <wrong>&lt;body&gt;</wrong>
+            <wrong>&lt;footer&gt;</wrong>
+            <correct>Inside the &lt;head&gt; section</correct>
         </choices>
     </question>
     <question>
         <text>Which tag is used for embedding CSS inside HTML?</text>
         <choices>
-        <wrong>&lt;css&gt;</wrong>
-        <correct>&lt;style&gt;</correct>
-        <wrong>&lt;link&gt;</wrong>
-        <wrong>&lt;style&gt;</wrong>
+            <wrong>&lt;css&gt;</wrong>
+            <correct>&lt;style&gt;</correct>
+            <wrong>&lt;link&gt;</wrong>
+            <wrong>&lt;style&gt;</wrong>
         </choices>
     </question>
     <question>
         <text>What is the advantage of using external CSS?</text>
         <choices>
-        <correct>Reusable across multiple pages</correct>
-        <wrong>Overrides inline styles</wrong>
-        <wrong>Only works for one page</wrong>
-        <wrong>Slows down load times</wrong>
+            <correct>Reusable across multiple pages</correct>
+            <wrong>Overrides inline styles</wrong>
+            <wrong>Only works for one page</wrong>
+            <wrong>Slows down load times</wrong>
         </choices>
     </question>
     <question>
         <text>Inline styles are defined using which attribute?</text>
         <choices>
-        <correct>style</correct>
-        <wrong>class</wrong>
-        <wrong>id</wrong>
-        <wrong>font</wrong>
+            <correct>style</correct>
+            <wrong>class</wrong>
+            <wrong>id</wrong>
+            <wrong>font</wrong>
         </choices>
     </question>
     <question>
         <text>What is the most common measurement unit used to specify space in a document?</text>
         <choices>
-        <wrong>cm</wrong>
-        <wrong>in</wrong>
-        <correct>px</correct>
-        <wrong>vw</wrong>
+            <wrong>cm</wrong>
+            <wrong>in</wrong>
+            <correct>px</correct>
+            <wrong>vw</wrong>
         </choices>
     </question>
     <question>
         <text>Which CSS property is used to set the dimensions of an element?</text>
         <choices>
-        <wrong>padding</wrong>
-        <correct>width and height</correct>
-        <wrong>margin</wrong>
-        <wrong>border</wrong>
+            <wrong>padding</wrong>
+            <correct>width and height</correct>
+            <wrong>margin</wrong>
+            <wrong>border</wrong>
         </choices>
     </question>
     <question>
         <text>What does the margin property define?</text>
         <choices>
-        <wrong>Space between content and border</wrong>
-        <correct>Space outside the border</correct>
-        <wrong>The thickness of the element’s boundary</wrong>
-        <wrong>The width and height of an element</wrong>
+            <wrong>Space between content and border</wrong>
+            <correct>Space outside the border</correct>
+            <wrong>The thickness of the element’s boundary</wrong>
+            <wrong>The width and height of an element</wrong>
         </choices>
     </question>
     <question>
         <text>Which property defines the boundary around the content of an element?</text>
         <choices>
-        <wrong>margin</wrong>
-        <wrong>padding</wrong>
-        <correct>border</correct>
-        <wrong>width</wrong>
+            <wrong>margin</wrong>
+            <wrong>padding</wrong>
+            <correct>border</correct>
+            <wrong>width</wrong>
         </choices>
     </question>
     <question>
         <text>What does the padding property control in an element?</text>
         <choices>
-        <correct>Space between the content and the border</correct>
-        <wrong>Space outside the border</wrong>
-        <wrong>The element’s width and height</wrong>
-        <wrong>The viewport dimensions</wrong>
+            <correct>Space between the content and the border</correct>
+            <wrong>Space outside the border</wrong>
+            <wrong>The element’s width and height</wrong>
+            <wrong>The viewport dimensions</wrong>
         </choices>
     </question>
 </eml_quiz1>
