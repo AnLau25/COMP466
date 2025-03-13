@@ -42,7 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../shared/styles.css" />
     <title>Unit 1: HTML5 &amp; CSS</title>
 </head>
 <body>
@@ -58,12 +58,13 @@
                 <div class="nav-list">
                     <ul>
                         <!--Ricky, if this works Ricky-->
-                        <li><a href="/part2/index.php" data-after="home">Home Page</a></li>
-                        <li><a href="/part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
-                        <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
-                        <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
+                        <li><a href="../part2/index.php" data-after="home">Home Page</a></li>
+                        <li><a href="../part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
+                        <li><a href="../part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
+                        <li><a href="../part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
                         <li><a href="../tma2.htm#q2" data-after="main">&lt; Go back to cover page</a></li>
-                        <form action="logout.php" method="post">
+                        <form action="../shared/logout.php" method="post">
+                            <input type="hidden" name="folder" value="part2">
                             <button type="submit" class="cta">LOG OUT</button>
                         </form>
                     </ul>

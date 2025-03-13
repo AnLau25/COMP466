@@ -24,10 +24,10 @@
     } else {
         while ($row = $result->fetch_assoc()) {
             if ($row['record_status'] == 'reading') {
-                echo '<li>In progress: <a href="/part2/unit.php?id='.$row['id'].'" class="abi">' . $row['filename'] . '</a></li>';
+                echo '<li>In progress: <a href="../part2/unit.php?id='.$row['id'].'" class="abi">' . $row['filename'] . '</a></li>';
             }
             elseif ($row['record_status'] == 'tested') {
-                echo '<li>Completed: <a href="/part2/unit.php?id='.$row['id'].'" class="abi">' . $row['filename'] . '</a></li>';
+                echo '<li>Completed: <a href="../part2/unit.php?id='.$row['id'].'" class="abi">' . $row['filename'] . '</a></li>';
             }
         }
     }

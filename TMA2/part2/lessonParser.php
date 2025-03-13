@@ -92,7 +92,7 @@
         
                 $output .= '</div>
                     <div class="exmpl-cont">
-                        <img src="' . htmlspecialchars(trim($example->img)) . '" alt="img">
+                        <img src="..' . htmlspecialchars(trim($example->img)) . '" alt="img">
                     </div>
                 </div>';
             }

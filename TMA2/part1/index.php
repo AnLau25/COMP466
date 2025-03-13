@@ -19,7 +19,7 @@
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
         </script>
-    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../shared/styles.css" />
 </head>
 
 <body>
