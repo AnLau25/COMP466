@@ -58,6 +58,7 @@
                 <div class="nav-list">
                     <ul>
                         <!--Ricky, if this works Ricky-->
+                        <li><a href="/part2/index.php" data-after="home">Home Page</a></li>
                         <li><a href="/part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
                         <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
                         <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>
@@ -89,7 +90,7 @@
                             <h2>Score: <span id="qScr-txt"> -%</span></h2>
                         </div>
                         <div id="qNum-item">
-                            <h2>Questions: <span id="qNum-txt"> -/40</span></h2>
+                            <h2>Questions: <span id="qNum-txt"> -/-</span></h2>
                         </div>
                     </div>
                 </form>
@@ -99,18 +100,23 @@
     <script src="/part2/grading.js"></script>
     <script>
         document.getElementById('updater').addEventListener('click', function() {
-            fetch('done.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                }
-            })
-            .then(() => {
-                console.log('PHP script executed.');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        
+            if (!confirm("Are you sure you want to get your answers graded? If you do, this lesson will be concidered completed.")) {
+                event.preventDefault();
+            }else{    
+                fetch('done.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                })
+                .then(() => {
+                    console.log('PHP script executed.');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
         });
     </script>
 </body>

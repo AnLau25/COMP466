@@ -185,7 +185,7 @@
                                     <li><strong>Lessons:</strong>
                                         <ul>
                                             <li><code>&lt;eml_U1&gt;:</code> Root element containing the entire document.</li>
-                                            <li><code>&lt;head&gt;:</code> Holds metadata-like elements:
+                                            <li><code>&lt;head&gt;:</code> Holds the lesson's header.
                                                 <ul>
                                                     <li><code>&lt;title&gt;:</code> Main title of the document.</li>
                                                     <li><code>&lt;subtitle&gt;:</code> Describes the document’s content.</li>
@@ -199,14 +199,14 @@
                                                     <li><code>&lt;list-paragraph&gt;:</code> Introductory text for a list.</li>
                                                     <li><code>&lt;item&gt;:</code> Individual list items.</li>
                                                     <li><code>&lt;example-block&gt;:</code> Holds example sections.</li>
-                                                    <li><code>&lt;example&gt;:</code> Represents an individual example:
-                                                        <ul>
-                                                            <li><code>&lt;title&gt;:</code> Title of the example.</li>
-                                                            <li><code>&lt;paragraph&gt;:</code> Explanation of the example.</li>
-                                                            <li><code>&lt;list&gt;:</code> Contains structured information (like lesson lists).</li>
-                                                            <li><code>&lt;img&gt;:</code> References an image related to the example.</li>
-                                                        </ul>
-                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><code>&lt;example&gt;:</code> Represents an individual example:
+                                                <ul>
+                                                    <li><code>&lt;title&gt;:</code> Title of the example.</li>
+                                                    <li><code>&lt;paragraph&gt;:</code> Explanation of the example.</li>
+                                                    <li><code>&lt;list&gt;:</code> Contains structured information (like lesson lists).</li>
+                                                    <li><code>&lt;img&gt;:</code> References an image related to the example.</li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -223,6 +223,62 @@
                                             </li>
                                         </ul>
                                     </li>
+                                </ul>
+                            </div>
+                            <div class="section-ul">
+                                <p><strong>Functionality Overview:</strong></p>
+                                <ul>
+                                    <li><strong>Authentication:</strong>
+                                        <ul>
+                                            <li>The same authentication system as part 1 is utilized. The user table in the database remains private to the lessons database.</li>
+                                            <li>Refer to the <strong>SignIn & LogIn/Out</strong> section of part 1 for details.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Parsers:</strong>
+                                        <ul>
+                                            <li>PHP EML parser is divided into two files for lessons and quizzes, ensuring cleaner code (<a class="abi" href="https://www.php.net/manual/en/function.xml-parse.php" target="_blank">PHP: xml_parse - Manual</a>).</li>
+                                            <li>Specific EML is required as input, incorrect types result in parsing errors.</li>
+                                            <li><strong>Lessons parser:</strong>
+                                                <ul>
+                                                    <li>Iterates through EML elements using <code>foreach</code> to handle repeated elements (<a class="abi" href="https://www.php.net/manual/en/simplexml.examples-basic.php" target="_blank">PHP: Basic SimpleXML usage - Manual</a>).</li>
+                                                    <li>Examples and lessons vary slightly in formatting (e.g., inclusion of images) but share core structures.</li>
+                                                    <li>List and paragraph elements are consistently displayed under both tags.</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Quiz parser:</strong>
+                                                <ul>
+                                                    <li>All questions are displayed within <code>fieldset</code>, with class attributes for correct/wrong answers to allow corrections.</li>
+                                                    <li>Loops through <code>questions</code>, <code>text</code>, and <code>choices</code> straightforwardly.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Lesson grading:</strong>
+                                        <ul>
+                                            <li>A JS script (<code>grading.js</code>) counts questions and tracks answers, marking correct ones with class “green” and wrong ones with “red”.</li>
+                                            <li>It calculates success percentage and displays correct choices over total questions.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Tracking logic:</strong>
+                                        <ul>
+                                            <li>The <code>progress_record</code> table tracks user progress on lessons.</li>
+                                            <li>Displays user progress on the homepage (reading or tested material). If no progress is found, it suggests starting from Unit 1.</li>
+                                            <li><code>unit.php</code>: Checks for progress entries and adds them if reviewing a unit for the first time.</li>
+                                            <li><code>done.php</code>: Updates the lesson as “tested” upon quiz grading, displaying it as completed on the homepage.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section-ul">
+                                <p><strong>Additional notes:</strong></p>
+                                <ul>
+                                    <li>Same hashing rules from part 1 apply.</li>
+                                    <li>The homepage addresses the user and shows them their progress.</li>
+                                    <li>A navigation bar facilitates going from one lesson to the next and back to the home page, also allowing logging out.</li>
+                                    <li>Website access requires signing in first.</li>
+                                    <li>The EMLs can be uploaded to the database via <code>xmlUpload.php</code>, one at a time, specifying the proper file URL and name.</li>
+                                    <li>Please ensure the EML’s IDs are numbered 1-6, from 1 to 3 as units and 4 to 6 as quizzes. (Otherwise, you’d have to change the URLs in the nav-bar)</li>
+                                    <li>Please ensure proper database access in <code>connect.php</code></li>
                                 </ul>
                             </div>
                         <a href="/part2/index.php" type="button" class="cta">See Solution</a>

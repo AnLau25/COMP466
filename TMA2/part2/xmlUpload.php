@@ -2,7 +2,7 @@
     include('connect.php');
 
     /*Change XML file address to upload a diferent one*/
-    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_quiz3.xml';
+    $xmlFile = 'C:/Users/User/Documents/A_UNI/YOff/Atha/COMP466/TMA2/part2/eml_U1.xml';
 
     $xmlContent = file_get_contents($xmlFile);
     if ($xmlContent === false) {
@@ -18,7 +18,7 @@
     }
 
     /*Change the file name here. Please note that the name is only qualitative, and the queries are executed via the primary key.*/
-    $filename = 'Quiz_U3';
+    $filename = 'Unit 1';
 
     mysqli_stmt_bind_param($stmt, "ss", $filename, $xmlContent);
     if (!mysqli_stmt_execute($stmt)) {

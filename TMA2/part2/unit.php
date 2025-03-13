@@ -76,6 +76,7 @@
                 <div class="nav-list">
                     <ul>
                         <!--Ricky, if this works Ricky-->
+                        <li><a href="/part2/index.php" data-after="home">Home Page</a></li>
                         <li><a href="/part2/unit.php?id=1" data-after="unit1">See Unit 1</a></li>
                         <li><a href="/part2/unit.php?id=2" data-after="unit2">See Unit 2</a></li>
                         <li><a href="/part2/unit.php?id=3" data-after="unit3">See Unit 3</a></li>

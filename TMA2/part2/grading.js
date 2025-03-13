@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         console.log(`Correct answers: ${correctCount} out of ${totalQuestions}`);
-        scoreDisplay.textContent = `${(correctCount / 40) * 100}%`;
-        questionCountDisplay.textContent = `${correctCount}/40`;
+        scoreDisplay.textContent = `${(correctCount / totalQuestions) * 100}%`;
+        questionCountDisplay.textContent = `${correctCount}/${totalQuestions}`;
 
         const urlParams = new URLSearchParams(window.location.search);
         const _id = urlParams.get("id");
