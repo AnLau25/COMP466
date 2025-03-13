@@ -4,7 +4,7 @@ CREATE DATABASE bookmarks;
 --For user identification
 CREATE TABLE users(
    user_name VARCHAR(50) NOT NULL PRIMARY KEY,
-   user_pswrd VARCHAR(50) NOT NULL   
+   user_pswrd VARCHAR(255) NOT NULL --VERY IMPORTANT FOR HASHING    
 );
 
 --For link storage
@@ -33,13 +33,13 @@ CREATE DATABASE lessons;
 --For user identification
 CREATE TABLE users(
    user_name VARCHAR(50) NOT NULL PRIMARY KEY,
-   user_pswrd VARCHAR(50) NOT NULL   
+   user_pswrd VARCHAR(255) NOT NULL   
 );
 
 --For XML
 CREATE TABLE xml_storage (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    filename VARCHAR(255) UNIQUE,
+    filename VARCHAR(50) UNIQUE,
     xml_content LONGTEXT 
 );--Upload the xml files via xmlUpload.php (One at a time) 
 
