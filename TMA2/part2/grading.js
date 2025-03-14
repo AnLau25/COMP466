@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const newLink = document.createElement("a");
         newLink.className = "cta"; 
         newLink.textContent = "Go Back to Lesson"; 
-        newLink.href = "/part2/unit.php?id="+ _id;
+        newLink.href = `../part2/unit.php?id=${_id}`;
 
         submitButton.parentNode.replaceChild(newLink, submitButton);
     });

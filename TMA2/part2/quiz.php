@@ -51,8 +51,8 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/part2/index.php">
-                        <h1><span>Learning</span> made<span> fun</span></h1>
+                    <a href="../part2/index.php">
+                        <h1>Learning <span>made</span> fun</h1>
                     </a>
                 </div>
                 <div class="nav-list">
@@ -98,7 +98,7 @@
             </div>       
         </div>
     </section>
-    <script src="/part2/grading.js"></script>
+    <script src="./grading.js"></script>
     <script>
         document.getElementById('updater').addEventListener('click', function() {
         

@@ -69,8 +69,8 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/part2/index.php">
-                        <h1><span>Learning</span> made<span> fun</span></h1>
+                    <a href="../part2/index.php">
+                        <h1>Learning <span>made</span> fun</h1>
                     </a>
                 </div>
                 <div class="nav-list">
@@ -103,13 +103,13 @@
 
                 switch ($id) {
                     case 1:
-                        echo '<a href="/part2/quiz.php?quiz=4&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
+                        echo '<a href="../part2/quiz.php?quiz=4&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
                         break;
                     case 2:
-                        echo '<a href="/part2/quiz.php?quiz=5&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
+                        echo '<a href="../part2/quiz.php?quiz=5&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
                         break;
                     case 3:
-                        echo '<a href="/part2/quiz.php?quiz=6&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
+                        echo '<a href="../part2/quiz.php?quiz=6&id='.$id.'" type="button" class="cta">Test your knowledge</a>';
                         break;
                     default:
                         echo "Invalid ID.";
