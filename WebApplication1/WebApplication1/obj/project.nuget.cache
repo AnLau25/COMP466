@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uM+DPdbjuxo=",
+  "dgSpecHash": "GOlMsCS+tp8TW37JIDUt6yWIof9JAuMlCBnyqO/qWa8oaco/IEr/KWiaxDoR25Fxg479Yu+Sc78h2J42B9M3gA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\9.0.3\\microsoft.dotnet.ilcompiler.9.0.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.3\\microsoft.net.illink.tasks.9.0.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\9.0.3\\runtime.win-x64.microsoft.dotnet.ilcompiler.9.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

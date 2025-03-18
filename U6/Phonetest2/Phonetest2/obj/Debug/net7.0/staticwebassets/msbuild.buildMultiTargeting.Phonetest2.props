@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Phonetest2.props" />
+</Project>

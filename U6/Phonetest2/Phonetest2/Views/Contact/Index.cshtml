@@ -1,0 +1,29 @@
+﻿@{
+}
+
+<div>
+	<h2>Contact Form</h2>
+</div>
+
+<div class="container">
+	<p>Add an entry to the phone book: </p>
+	<form method="POST">
+		<label for="fname">First Name</label><br>
+		<input type="text" id="fname" name="firstaname"/><br>
+		<label for="lname">First Name</label><br />
+		<input type="text" id="lname" name="firstaname"/><br>
+		<label for="num">Phone number</label></br>
+		<input type="number" id="num" name="phonenum"/><br>
+		<input type="submit" value="Add number" style="margin:10px 0 10px 0" /><br>
+	</form>
+
+	<p>Find entries by mast name: </p>
+	<form>
+		<label for="glast">Last Name</label><br />
+		<input type="text" id="glast" name="getlast"/><br>
+		<input type="submit" id="gnum" value="Find" style="margin:10px 0 10px 0"/><br>
+	</form>
+	<p>Results:</p>
+	<textarea id="res" style="height:200px; width:250px"></textarea>
+
+</div>
