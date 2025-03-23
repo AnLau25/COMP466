@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\PhoneBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58312919-0205-4CCC-B52E-00B043B9E927}|PhoneBook.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\phonebook\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58312919-0205-4CCC-B52E-00B043B9E927}|PhoneBook.csproj|solutionrelative:contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58312919-0205-4CCC-B52E-00B043B9E927}|PhoneBook.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\phonebook\\contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58312919-0205-4CCC-B52E-00B043B9E927}|PhoneBook.csproj|solutionrelative:contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Contact.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\PhoneBook\\Contact.aspx.cs",
+              "RelativeDocumentMoniker": "Contact.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\PhoneBook\\Contact.aspx.cs*",
+              "RelativeToolTip": "Contact.aspx.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T15:28:38.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\PhoneBook\\Contact.aspx",
+              "RelativeDocumentMoniker": "Contact.aspx",
+              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\PhoneBook\\Contact.aspx",
+              "RelativeToolTip": "Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-23T14:47:34.54Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
