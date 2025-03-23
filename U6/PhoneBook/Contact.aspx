@@ -4,14 +4,14 @@
         <p>Add and entry to the phone book:</p>
         <asp:Label ID="Label1" runat="server" Text="Last name: "></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtlastName" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="First name: "></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtfirstName" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label3" runat="server" Text="Phone number: "></asp:Label>
-    &nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+    &nbsp;<asp:TextBox ID="txtnum" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Add" runat="server" Text="Add Phone Book Entry" />
@@ -20,7 +20,7 @@
         <p>Locate entries in the phone book:<p>
         <asp:Label ID="Label4" runat="server" Text="Last name: "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="findLast" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Find" runat="server" Text="Find Entries by Last Name" />
