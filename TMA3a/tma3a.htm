@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>README</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+        </script>
+    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <h1><span>The</span> homework <span>page</span></h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="#q1" data-after="Unit1">Question 1</a></li>
+                        <li><a href="#q2" data-after="unit2">Question 2</a></li>
+                        <li><a href="#q3" data-after="unit3">Question 3</a></li>
+                        <li><a href="#q4" data-after="Unit1">Question 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header -->
+
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="text-block">
+                <h1>COMP466 <span>Advanced Technologies for Web-Based Systems</span> <strong
+                        style="font-size: 15px;">Assignment 3</strong> </h1>
+                <p><strong>Name: </strong>Ana Laura Valdés Rodríguez</p>
+                <p><strong>Student number: </strong>3728648</p>
+                <p><strong>Start date: </strong>2025-03-24</p>
+                <p><strong>Submit date: </strong>2025-03-31</p>
+                <p><strong>Time estimate: </strong>We pray ig</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section  -->
+
+    <!-- q1 Section -->
+    <section id="q1">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 1: </span>Persistent cookie</h1>
+                <p class="section-subtitle">ASP.net with C# program that counts visist while displaying timezone and IP address</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>Since the program requests my resume, I decided to render it on a simple white page
+                            containing a table.
+                            The table is generated through iteration and features a larger row for section titles, with
+                            additional rows divided to display categories and their descriptions.
+                        </p>
+                        <a href="/part1.aspx" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q1.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q1 Section -->
+
+    <!-- q2 Section -->
+    <section id="q2">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 2: </span>Course Page</h1>
+                <p class="section-subtitle">Web page for units 1, 2 and 3.</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>The software, as requested, contains lesson content and examples to get
+                            the basics of web design technologies, with an emphasis on dynamic visuals and scripting.
+                            In addition, it provides quizzes which can be accessed at the end of each section or at the
+                            end of the whole page in their own section.
+                        </p>
+                        <div class="section-ul">
+                            <p><strong>Quiz functionality:</strong></p>
+                            <ul>
+                                <li>Retrieves quiz file name from the URL query parameter (defaulting to "quiz1.json") and stores it in `localStorage`.</li>
+                                <li>Fetches quiz questions from the specified JSON file.</li>
+                                <li>Initializes quiz variables such as score, question counter, and available questions.</li>
+                                <li>Starts the quiz by resetting values and loading the first question.</li>
+                                <li>Selects a random question from the available ones and displays it.</li>
+                                <li>Updates the question counter on the screen.</li>
+                                <li>Assigns possible answer choices to corresponding HTML elements.</li>
+                                <li>Listens for user answer selection and determines correctness:
+                                  <ul>
+                                    <li>If correct, increments the score and updates the display.</li>
+                                    <li>If incorrect, briefly highlights the correct answer.</li>
+                                  </ul>
+                                </li>
+                                <li>Moves to the next question after a short delay.</li>
+                                <li>Ends the quiz after 20 questions or when no questions remain, redirecting the user to an end page.</li>
+                              </ul>
+                              
+                        </div>
+                        <a href="/part2/index.html" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q2.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q2 Section -->
+
+    <!-- q3 Section -->
+    <section id="q3">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 3: </span>Canvas Slideshow</h1>
+                <p class="section-subtitle">A 20 image user interactive slideshow</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>The slideshow will offer the user the opportunity to visit their images chronologically or
+                            randomly, pausing when necessary and having the possibility to move forwards and backwards
+                            through the slides.
+                        <div class="section-ul">
+                            <p><strong>Canvas functionality:</strong></p>
+                            <ul>
+                                <li>Loads images from an external 'img.json' file and stores them in 'imgData'.</li>
+                                <li>Displays images on an HTML canvas ('slider'), with captions ('txt').</li>
+                                <li>Provides play/pause functionality to cycle through images automatically ('togglePlay').</li>
+                                <li>Allows switching between sequential and random slideshow modes ('toggleMode').</li>
+                                <li>Implements navigation buttons to move between images manually ('showPrev', 'showNext').</li>
+                                <li>Updates the canvas with the current image and caption ('updateCanvas').</li>
+                                <li>Supports different transition effects when switching images ('applyTransitionEffect'):
+                                  <ul>
+                                    <li><strong>Effect 1:</strong> Flash-out.</li>
+                                    <li><strong>Effect 2:</strong> Pixel-out.</li>
+                                    <li><strong>Effect 3:</strong> Shrink-in.</li>
+                                  </ul>
+                                </li>
+                                <li>Uses event listeners to handle button clicks and dropdown selections.</li>
+                                <li>Manages variables like 'index' to track the current image and 'isPlaying' to control the slideshow.</li>
+                              </ul>
+                              
+                        </div>
+                        <a href="/part3/index.html" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q3.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q3 Section -->
+
+    <!-- q4 Section -->
+    <section id="q4">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 4: </span>Tools Page</h1>
+                <p class="section-subtitle">Set of three useful tools</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>As requested, this page features three tools. The first is a standard measurement converter
+                            for the imperial and metric systems, covering the most common conventions based on my
+                            knowledge
+                            and an article from the <a href="https://www.unitscenter.com/converters" class="abi"
+                                target="_blank">UnitCenter</a> website. The second tool is a simple mortgage calculator,
+                            and the third is a temperature converter that supports Fahrenheit, Celsius, and Kelvin.</p>
+                        <div class="section-ul">
+                            <p> <strong>Measurement converter:</strong> </p>
+                            <ul>
+                                <li>The equations for the length conversion (or rather, the factors) come from the first
+                                    <a href="https://www.google.com/search?q=miles+to+km&rlz=1C1CHBF_enCA913CA913&oq=miles+t&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQLhiABDIGCAMQBhhAMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAuGIAEMgcIBxAAGIAEMgcICBAAGIAEMgkICRAuGAoYgATSAQgyNzM5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                                        class="abi" target="_blank">Google page</a>.
+                                </li>
+                                <li>To go from inches to centimeters, we use \(inches \cdot 2.54\)</li>
+                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
+                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
+                                <li>To go from feet to centimeters, we use \(feet \cdot 30.48\)</span></li>
+                                <li>To go from feet to meters, we use \(feet \cdot 0.3048\)</span></li>
+                                <li>To go from miles to kilometer, we use \(miles \cdot 1.609\)</span></li>
+                                <li>Finally, for the reverse operation, would have to divide the metric values. But, for
+                                    consistency reasons, we chose to multiply by the inverse of the factor.
+                                    So, \(metric \cdot (\frac{1}{factor})\).</li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p> <strong>Mortgage calculator:</strong> </p>
+                            <ul>
+                                <li>For this tool, unlike the other two, I chose to use a button with an event listener to generate the answer. </li>
+                                <li>Since, to calculate the mortgage, you imperatively need all three values, the button allows for the page to verify the validity of all three variables before calculating.</li>
+                                <li>The equation used to calculate the mortgage comes from a page dedicated to explaining this concept in the <a href="https://www.calculatorsoup.com/calculators/financial/mortgage-calculator.php" class="abi" target="_blank">Calculator Soup</a> website.  </li>
+                                <li>Thus, this equation for the mortgage is: \(MP = \frac{PVi(1 + i)^n}{(1 + i)^n - 1}\)</li>
+                                    <ul>
+                                        <li>\(MP\), being the monthly payment</li>
+                                        <li>\(n\), the term in months</li>
+                                        <li>\(i\), being the monthly interest rate</li>
+                                        <li>\(PV\), as the mortage amount or present value</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p> <strong>Temperature converter:</strong> </p>
+                            <ul>
+                                <li>I chose to build a temperature converter because not only did I feel it matched with the previous tools, it is also quite handy as a standalone.</li>
+                                <li>The previous tools seem to imply a house buying/building purpose. Knowing the temperature could be useful for someone buying a house in a foreign country and checking  for security measures.</li>
+                                <li>Additionally, things like heating or inbuilt ovens could have parameters associated with temperature measurement.</li>
+                                <li>Those conditions mainly regards Fahrenheit and Celsius. Kelvin conversion was solely added to have a more complete tool and  for “in case of” situations.</li>
+                                <li>For simplicity, we only convert back and forth between Celsius and the other two temperatures. </li>
+                                <li>The equations were sourced from the <a href="https://byjus.com/temperature-conversion-formula/" class="abi" target="_blank">Byjus</a> website and they are:</li>
+                                <ul>
+                                    <li>\(C^o = (F^o - 32) \cdot \frac{5}{9} \)</li>
+                                    <li>\(F^o = (C^o\frac{9}{5}) + 32\)</li>
+                                    <li>\(C^o = K^o - 273.15\)</li>
+                                    <li>\(K^o = C^o + 273.15\)</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <a href="/part4/index.html" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q4.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q4 Section -->
+
+
+</body>
+
+</html>
