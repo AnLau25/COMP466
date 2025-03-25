@@ -67,7 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TMA3a_DB.mdf" />
+    <Content Include="App_Data\TMA3a_DB_log.ldf">
+      <DependentUpon>TMA3a_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="part1.aspx" />
+    <Content Include="part2\part2.aspx" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -83,6 +88,13 @@
     <Compile Include="part1.aspx.designer.cs">
       <DependentUpon>part1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="part2\part2.aspx.cs">
+      <DependentUpon>part2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part2\part2.aspx.designer.cs">
+      <DependentUpon>part2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,7 +107,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

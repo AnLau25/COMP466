@@ -24,7 +24,7 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="#q3" data-after="home">&lt; Go back</a></li>
+                        <li><a href="/tma3a.htm" data-after="home">&lt; Go back</a></li>
                         <li><a href="/tma3a.htm" data-after="next">See next solution &gt;</a></li>
                     </ul>
                 </div>
