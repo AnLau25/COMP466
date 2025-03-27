@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.Services;
+using System.Web.Script.Serialization;
 
 namespace TMA3a.part2
 {
@@ -16,99 +18,50 @@ namespace TMA3a.part2
 		SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 		SqlCommand cmd;
 		SqlDataReader dr;
-		string qres = "";
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (!IsPostBack)
+
+			if (Request.QueryString["getImages"] == "true")
+			{
+				Response.ContentType = "application/json";
+				Response.Write(GetImageData());
+				Response.End();
+			}
+
+		}
+		/*
+		public static string FetchImgs()
+		{
+			part2 instance = new part2();
+			return instance.GetImageData();
+		}*/
+
+		private string GetImageData(){
+
+			string imagesJson = "[]";
+
+			try
 			{
 				connect.Open();
-				cmd = new SqlCommand("SELECT * FROM Canvas_Imgs FOR JSON AUTO", connect);
+				cmd = new SqlCommand("SELECT Img, Caption FROM Canvas_Imgs", connect);
 				dr = cmd.ExecuteReader();
-				if (dr.Read())
-				{
-					qres = dr.GetString(0);
+				List<object> images = new List<object>();
+				while (dr.Read()) {
+					images.Add(new
+					{
+						ImgURL = dr["Img"],
+						ImgCaption = dr["Caption"]
+					});
 				}
 				connect.Close();
-
-				// Inject JavaScript on page load
-				string js = $@"
-                    var imgData = {qres};
-                    var index = 0;
-                    var isPlaying = false;
-                    var isSequential = false;
-                    var slider, context, playBtn, modeBtn, prevBtn, nextBtn;
-            
-                    window.onload = function () {{
-                        slider = document.getElementById('slider');
-                        context = slider.getContext('2d');
-                        playBtn = document.getElementById('{play.ClientID}');
-                        modeBtn = document.getElementById('{mode.ClientID}');
-                        prevBtn = document.getElementById('{prev.ClientID}');
-                        nextBtn = document.getElementById('{next.ClientID}');
-
-                        updateCanvas();
-                    }};
-
-                    function updateCanvas() {{
-                        if (!slider || !slider.getContext) return;
-                        let images = Object.values(imgData);
-                        let pic = new Image();
-                        pic.onload = function () {{
-                            slider.width = pic.width;
-                            slider.height = pic.height;
-                            context.drawImage(pic, 0, 0, slider.width, slider.height);
-                        }};
-                        pic.src = images[index].img;
-                        document.getElementById('caption').textContent = images[index].caption;
-                    }}
-
-                    function showPrev() {{
-                        index--;
-                        if (index < 0) index = Object.values(imgData).length - 1;
-                        updateCanvas();
-                    }}
-
-                    function showNext() {{
-                        index++;
-                        if (index >= Object.values(imgData).length) index = 0;
-                        updateCanvas();
-                    }}
-
-                    function togglePlay() {{
-                        isPlaying = !isPlaying;
-                        if (isPlaying) {{
-                            playBtn.value = 'Pause';
-                        }} else {{
-                            playBtn.value = 'Play';
-                        }}
-                    }}
-
-                    function toggleMode() {{
-                        isSequential = !isSequential;
-                        modeBtn.value = isSequential ? 'RANDOM' : 'SEQUENTIAL';
-                    }}
-                ";
-
-				ClientScript.RegisterStartupScript(this.GetType(), "initScript", js, true);
+				JavaScriptSerializer js = new JavaScriptSerializer();
+				imagesJson = js.Serialize(images);
 			}
-		}
-
-
-		protected void showPrev(object sender, EventArgs e)	{
-			ClientScript.RegisterStartupScript(this.GetType(), "showPrev", "showPrev();", true);
-		}
-
-		protected void showNext(object sender, EventArgs e)	{
-			ClientScript.RegisterStartupScript(this.GetType(), "showNext", "showNext();", true);
-		}
-
-		protected void togglePlay(object sender, EventArgs e) {
-			ClientScript.RegisterStartupScript(this.GetType(), "togglePlay", "togglePlay();", true);
-		}
-
-		protected void toggleMode(object sender, EventArgs e) {
-			ClientScript.RegisterStartupScript(this.GetType(), "toggleMode", "toggleMode();", true);
+			catch (Exception ex) {
+				imagesJson = "{\"error\":\"" + ex.Message + "\"}";
+			}
+			return imagesJson;
 		}
 
 	}
