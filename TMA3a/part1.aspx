@@ -25,7 +25,7 @@
                 <div class="nav-list">
                     <ul>
                         <li><a href="/tma3a.htm" data-after="home">&lt; Go back to cover page</a></li>
-                        <li><a href="/tma3a.htm" data-after="next">See next solution &gt;</a></li>
+                        <li><a href="/part2/part2.aspx" data-after="next">See next solution &gt;</a></li>
                     </ul>
                 </div>
             </div>
