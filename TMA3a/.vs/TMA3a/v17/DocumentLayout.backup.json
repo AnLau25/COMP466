@@ -43,8 +43,7 @@
               "ViewState": "AgIAAFIAAAAAaWZmZmYOwFwAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-03-24T20:35:33.189Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -57,8 +56,7 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-03-25T17:13:45.402Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -71,8 +69,7 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-03-25T17:13:39.507Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -86,7 +83,7 @@
               "RelativeDocumentMoniker": "part2\\canvas.js",
               "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\canvas.js",
               "RelativeToolTip": "part2\\canvas.js",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFsAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-03-27T16:56:24.297Z",
               "EditorCaption": ""
@@ -101,8 +98,7 @@
               "RelativeToolTip": "part2\\part2.aspx.cs",
               "ViewState": "AgIAABoAAACAmZmZmZkdwB0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:15:07.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T17:15:07.041Z"
             }
           ]
         }
