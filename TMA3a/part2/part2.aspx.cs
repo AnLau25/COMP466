@@ -1,68 +1,157 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Web.Services;
-using System.Web.Script.Serialization;
 
 namespace TMA3a.part2
 {
 	public partial class part2 : System.Web.UI.Page
 	{
 		SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-		SqlCommand cmd;
-		SqlDataReader dr;
+		private static readonly Random rand = new Random();
+
+		[Serializable]
+		public class Slide
+		{
+			public string Img { get; set; }
+			public string Caption { get; set; }
+		}
+
+		private bool IsPlaying
+		{
+			get => ViewState["IsPlaying"] != null && (bool)ViewState["IsPlaying"];
+			set => ViewState["IsPlaying"] = value;
+		}
+
+		private bool IsSequential
+		{
+			get => ViewState["IsSequential"] != null && (bool)ViewState["IsSequential"];
+			set => ViewState["IsSequential"] = value;
+		}
+
+		private int CurrentIndex
+		{
+			get => (int)(ViewState["CurrentIndex"] ?? 0);
+			set => ViewState["CurrentIndex"] = value;
+		}
+
+		private List<Slide> Slides
+		{
+			get => ViewState["Slides"] as List<Slide>;
+			set => ViewState["Slides"] = value;
+		}
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
-			if (Request.QueryString["getImages"] == "true")
-			{
-				Response.ContentType = "application/json";
-				Response.Write(GetImageData());
-				Response.End();
+			if (!IsPostBack){
+				Slides = GetImgs();
+				CurrentIndex = 0;
+				IsPlaying = false;
+				IsSequential = false;
+				SlideTimer.Enabled = false;
+				DisplaySlide(0);
 			}
-
 		}
-		/*
-		public static string FetchImgs()
+
+		private List<Slide> GetImgs()
 		{
-			part2 instance = new part2();
-			return instance.GetImageData();
-		}*/
-
-		private string GetImageData(){
-
-			string imagesJson = "[]";
-
-			try
-			{
+			List<Slide> slides = new List<Slide>();
+			try{
 				connect.Open();
-				cmd = new SqlCommand("SELECT Img, Caption FROM Canvas_Imgs", connect);
-				dr = cmd.ExecuteReader();
-				List<object> images = new List<object>();
-				while (dr.Read()) {
-					images.Add(new
-					{
-						ImgURL = dr["Img"],
-						ImgCaption = dr["Caption"]
-					});
+				using (SqlCommand cmd = new SqlCommand("SELECT Img, Caption FROM Canvas_Imgs", connect))
+				using (SqlDataReader dr = cmd.ExecuteReader()){
+					while (dr.Read()){
+						slides.Add(new Slide
+						{
+							Img = dr["Img"].ToString(),
+							Caption = dr["Caption"].ToString()
+						});
+					}
 				}
+			}catch (Exception ex){
+				slides.Add(new Slide { Img = "", Caption = "Error: " + ex.Message });
+			
+			}finally{
 				connect.Close();
-				JavaScriptSerializer js = new JavaScriptSerializer();
-				imagesJson = js.Serialize(images);
 			}
-			catch (Exception ex) {
-				imagesJson = "{\"error\":\"" + ex.Message + "\"}";
-			}
-			return imagesJson;
+			return slides;
 		}
 
+		private void DisplaySlide(int index)
+		{
+			if (Slides != null && Slides.Count > 0){
+				Slide slide = Slides[index];
+				ImageSlider.ImageUrl = slide.Img;
+				Caption.Text = slide.Caption;
+			}
+		}
+
+		protected void Clock(object sender, EventArgs e)
+		{
+			if (Slides == null || Slides.Count == 0)
+				return;
+
+			if (IsSequential)
+			{
+				CurrentIndex = rand.Next(Slides.Count);
+			}
+			else
+			{
+				CurrentIndex = (CurrentIndex + 1) % Slides.Count;
+			}
+
+			ViewState["CurrentIndex"] = CurrentIndex;
+			DisplaySlide(CurrentIndex);
+		}
+
+		protected void Play_Click(object sender, EventArgs e)
+		{
+			if (!IsPlaying){
+				Play.Text = "Pause";
+				SlideTimer.Enabled = true;
+			}
+			else{
+				Play.Text = "Play";
+				SlideTimer.Enabled = false;
+			}
+			IsPlaying = !IsPlaying;
+			Clock(sender, e);
+		}
+
+		protected void Mode_Click(object sender, EventArgs e)
+		{
+			IsSequential = !IsSequential;
+
+			if (IsSequential){
+				Mode.Text = "SEQUENTIAL";
+				Prev.Enabled = false;
+				Next.Enabled = false;
+				Prev.CssClass = "cta-disabled";
+				Next.CssClass = "cta-disabled";
+			}else{
+				Mode.Text = "RANDOM";
+				Prev.Enabled = true;
+				Next.Enabled = true;
+				Prev.CssClass = "cta";
+				Next.CssClass = "cta";
+			}
+		}
+
+		protected void Prev_Click(object sender, EventArgs e)
+		{
+			if (Slides != null && Slides.Count > 0){
+				CurrentIndex = (CurrentIndex - 1 + Slides.Count) % Slides.Count;
+				DisplaySlide(CurrentIndex);
+			}
+		}
+
+		protected void Next_Click(object sender, EventArgs e)
+		{
+			if (Slides != null && Slides.Count > 0){
+				CurrentIndex = (CurrentIndex + 1) % Slides.Count;
+				DisplaySlide(CurrentIndex);
+			}
+		}
 	}
 }
