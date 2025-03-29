@@ -62,11 +62,37 @@
                     <div class="exmpl-info">
                         <h1>Explanation</h1>
                         <p>
-                            Since the program requests my resume, I decided to render it on a simple white page
-                            containing a table.
-                            The table is generated through iteration and features a larger row for section titles, with
-                            additional rows divided to display categories and their descriptions.
+                            This page, as requested, not only counts the number of times a user has visited the site, but it also displays the user's IP and time zone.
                         </p>
+                        <div class="section-ul">
+                            <p> <strong>Functionality:</strong> </p>
+                            <ul>
+                                <li>
+                                    For the cookie, we create a persistent cookie in the page’s backend (part1.aspx.cs) with
+                                    <a href="https://www.csharp.com/UploadFile/annathurai/cookies-in-Asp-Net/" class="abi" target="_blank">HttpCookie</a>
+                                    and assign it a 30-day expiry date.
+                                </li>
+                                <li>
+                                    We render the cookie in the frontend using asp to call its value with
+                                    <code>&lt;%= Request.Cookies["countVisit"].Value %&gt;</code>.
+                                </li>
+                                <li>The cookie is initialized once, on the first time the user visits the page.</li>
+                                <li>
+                                    To increment the cookie, we call its functionality on the Page_Load function, increasing the cookie’s stored value every time the user opens the page.
+                                </li>
+                                <li>
+                                    For the IP address, we use
+                                    <a href="https://www.csharp.com/article/get-ip-address-in-Asp-Net/" class="abi" target="_blank">Request.ServerVariable</a>
+                                    and store it in a view state that is then called in the front end for display with
+                                    <code>&lt;%= ViewState["UserIP"] %&gt;</code>.
+                                </li>
+                                <li>
+                                    Finally, we use a small JavaScript to get the time zone on page load as well, by implementing an
+                                    <a href="https://therootcompany.com/blog/javascript-timezone-cheat-sheet/" class="abi" target="_blank">Intl</a>
+                                    and sending it to a “timezone” element, in the frontend, for display.
+                                </li>
+                            </ul>
+                        </div>
                         <a href="/part1.aspx" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
