@@ -72,7 +72,6 @@
       <DependentUpon>TMA3a_DB.mdf</DependentUpon>
     </Content>
     <Content Include="part1.aspx" />
-    <Content Include="part2\canvas.js" />
     <Content Include="part2\part2.aspx" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />

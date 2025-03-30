@@ -13,14 +13,14 @@
         <section id="canvas">
             <div class="section-container">
                 <h1>Here is my canvas App</h1>
-                <asp:ScriptManager ID="ScriptManager2" runat="server" />
-                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <asp:ScriptManager ID="ScriptManager" runat="server" />
+                <asp:UpdatePanel ID="UpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
                     <ContentTemplate>
                         <asp:Image ID="ImageSlider" CssClass="slider" runat="server" />
                         <p class="section-subtitle">
                             <asp:Label ID="Caption" runat="server" Text="Image caption here" />
                         </p>
-                        <asp:Timer ID="SlideTimer" runat="server" Interval="4000" OnTick="Clock" />
+                        <asp:Timer ID="SlideTimer" runat="server" Interval="4000" OnTick="Timer_Tick" />
                         <div class="slider-buttons">
                             <asp:Button ID="Play" runat="server" CssClass="cta" Text="Start" OnClick="Play_Click" />
                             <asp:Button ID="Mode" runat="server" CssClass="cta" Text="Random" OnClick="Mode_Click" />

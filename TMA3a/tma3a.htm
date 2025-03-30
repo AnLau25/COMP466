@@ -116,35 +116,56 @@
                     <div class="exmpl-info">
                         <h1>Explanation</h1>
                         <p>
-                            The slideshow will offer the user the opportunity to visit their images chronologically or
-                            randomly, pausing when necessary and having the possibility to move forwards and backwards
-                            through the slides.
-                            <div class="section-ul">
-                                <p><strong>Canvas functionality:</strong></p>
-                                <ul>
-                                    <li>Loads images from an external 'img.json' file and stores them in 'imgData'.</li>
-                                    <li>Displays images on an HTML canvas ('slider'), with captions ('txt').</li>
-                                    <li>Provides play/pause functionality to cycle through images automatically ('togglePlay').</li>
-                                    <li>Allows switching between sequential and random slideshow modes ('toggleMode').</li>
-                                    <li>Implements navigation buttons to move between images manually ('showPrev', 'showNext').</li>
-                                    <li>Updates the canvas with the current image and caption ('updateCanvas').</li>
-                                    <li>
-                                        Supports different transition effects when switching images ('applyTransitionEffect'):
-                                        <ul>
-                                            <li><strong>Effect 1:</strong> Flash-out.</li>
-                                            <li><strong>Effect 2:</strong> Pixel-out.</li>
-                                            <li><strong>Effect 3:</strong> Shrink-in.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Uses event listeners to handle button clicks and dropdown selections.</li>
-                                    <li>Manages variables like 'index' to track the current image and 'isPlaying' to control the slideshow.</li>
-                                </ul>
-
-                            </div>
-                            <a href="/part2/part2.aspx" type="button" class="cta">See Solution</a>
+                            This page, as requested, showcases the functionality of a canvas that manages and displays images dynamically with AJAX integration.
+                        </p>
+                        <div class="section-ul">
+                            <p> <strong>Canvas Functionality:</strong> </p>
+                            <ul>
+                                <li>
+                                    I use
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.scriptmanager?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:ScriptManager/&gt;</a>,
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.updatepanel?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:UpdatePanel&gt;</a>,
+                                    and
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.updatepanel.contenttemplate?view=netframework-4.8.1" class="abi" target="_blank">&lt;ContentTemplate&gt;</a>
+                                    to manage AJAX functionality, ensuring C# scripts load asynchronously with onClick events.
+                                </li>
+                                <li>An <code>&lt;asp:Image/&gt;</code> element displays the images, while an <code>&lt;asp:Label&gt;</code> shows the captions.</li>
+                                <li>
+                                    A
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.timer?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:Timer/&gt;</a>
+                                    is used for timing intervals between images, with an onTick function.
+                                </li>
+                                <li>
+                                    The Play, Mode, Prev, and Next functionalities are handled by <code>&lt;asp:Button&gt;</code> elements with their respective onClick functions.
+                                </li>
+                                <li>
+                                    <strong>Functions:</strong>
+                                    <ul>
+                                        <li><strong>OnLoad:</strong> Initializes variables, calls <code>GetImgs()</code> to fetch image URLs and captions, and displays the first image via <code>DisplaySlide(0)</code>.</li>
+                                        <li>
+                                            <strong>GetImgs:</strong> Connects to a database with
+                                            <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlconnection?view=sqlclient-dotnet-standard-5.2" class="abi" target="_blank">SqlConnection</a>
+                                            and retrieves image URLs and captions using the query
+                                            <code>SELECT Img, Caption FROM Canvas_Imgs</code>, returning them as a
+                                            <code>List&lt;Slide&gt; slides = new List&lt;Slide&gt;();</code>.
+                                        </li>
+                                        <li><strong>DisplaySlide:</strong> Updates the current image and caption based on the <code>CurrentIndex</code>.</li>
+                                        <li><strong>Timer_Tick:</strong> Controls image display intervals, handling sequential or random navigation based on the <code>IsSequential</code> flag.</li>
+                                        <li><strong>Play_Click:</strong> Toggles between automatic and manual modes, enabling or disabling the <code>SlideTimer</code>, and updates the button text accordingly.</li>
+                                        <li>
+                                            <strong>Mode_Click:</strong> Switches between random and sequential display modes, adjusts button states for Prev and Next, and updates the button text based on the inactive mode.
+                                        </li>
+                                        <li>
+                                            <strong>Prev_Click & Next_Click:</strong> Manually navigates through images by modifying the <code>CurrentIndex</code>.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="/part2/part2.aspx" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img src="/shared/q3.jpg" alt="img">
+                        <img src="/shared/q2.jpg" alt="img">
                     </div>
                 </div>
             </div>

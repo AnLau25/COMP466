@@ -87,7 +87,7 @@ namespace TMA3a.part2
 			}
 		}
 
-		protected void Clock(object sender, EventArgs e)
+		protected void Timer_Tick(object sender, EventArgs e)
 		{
 			if (Slides == null || Slides.Count == 0)
 				return;
@@ -116,7 +116,7 @@ namespace TMA3a.part2
 				SlideTimer.Enabled = false;
 			}
 			IsPlaying = !IsPlaying;
-			Clock(sender, e);
+			//Timer_Tick(sender, e);
 		}
 
 		protected void Mode_Click(object sender, EventArgs e)

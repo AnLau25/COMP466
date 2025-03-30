@@ -24,22 +24,22 @@ namespace TMA3a.part2
 		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
 		/// <summary>
-		/// ScriptManager2 control.
+		/// ScriptManager control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.ScriptManager ScriptManager2;
+		protected global::System.Web.UI.ScriptManager ScriptManager;
 
 		/// <summary>
-		/// UpdatePanel2 control.
+		/// UpdatePanel control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+		protected global::System.Web.UI.UpdatePanel UpdatePanel;
 
 		/// <summary>
 		/// ImageSlider control.
