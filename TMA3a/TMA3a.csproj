@@ -73,6 +73,7 @@
     </Content>
     <Content Include="part1.aspx" />
     <Content Include="part2\part2.aspx" />
+    <Content Include="part3\part3.aspx" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="part2\part2.aspx.designer.cs">
       <DependentUpon>part2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part3\part3.aspx.cs">
+      <DependentUpon>part3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part3\part3.aspx.designer.cs">
+      <DependentUpon>part3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

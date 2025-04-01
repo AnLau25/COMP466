@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\tma3a\\part3\\part3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part3\\part3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\tma3a.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:tma3a.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part2\\part2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part2\\part2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +26,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "tma3a.htm",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\tma3a.htm",
               "RelativeDocumentMoniker": "tma3a.htm",
               "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\tma3a.htm",
               "RelativeToolTip": "tma3a.htm",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAgwKcAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAAAN0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-03-24T20:35:33.189Z",
               "IsPinned": true,
@@ -48,43 +40,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "part1.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part1.aspx",
-              "RelativeDocumentMoniker": "part1.aspx",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part1.aspx",
-              "RelativeToolTip": "part1.aspx",
+              "DocumentIndex": 0,
+              "Title": "part3.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part3\\part3.aspx",
+              "RelativeDocumentMoniker": "part3\\part3.aspx",
+              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part3\\part3.aspx",
+              "RelativeToolTip": "part3\\part3.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-25T17:13:45.402Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "part2.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx",
-              "RelativeDocumentMoniker": "part2\\part2.aspx",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx",
-              "RelativeToolTip": "part2\\part2.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-25T17:13:39.507Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "part2.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx.cs",
-              "RelativeDocumentMoniker": "part2\\part2.aspx.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part2\\part2.aspx.cs",
-              "RelativeToolTip": "part2\\part2.aspx.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAmwHYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:15:07.041Z",
+              "WhenOpened": "2025-03-31T16:34:00.427Z",
               "EditorCaption": ""
             }
           ]
