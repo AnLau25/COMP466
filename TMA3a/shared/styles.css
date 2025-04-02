@@ -2,33 +2,14 @@
 @import 'https://fonts.googleapis.com/css2?family=Fredericka+the+Great:wght@400;700&family=Rubik+Burned&display=swap';
 
 
-table {
-    border-collapse: collapse;
-    margin: 20px auto;
-}
-
-th,
-td {
-    font-size: 15px;
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-
-}
-
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
 }
-
-/*part 1*/
 
 /*part2*/
 a {
@@ -211,6 +192,7 @@ caption {
     max-width: 1500px;
     margin: 0 auto;
     padding: 100px 0;
+    overflow-x: hidden;
 }
 
 .top {
@@ -408,9 +390,12 @@ code{
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 #footer .footer {
-	min-height: 200px;
-	flex-direction: column;
-	padding: 10px;
+    display: flex;
+	min-height: 10rem;
+    width: auto;
+	padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 #footer h2 {
 	color: white;

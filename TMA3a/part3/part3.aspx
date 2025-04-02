@@ -23,8 +23,8 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="#q1" data-after="Unit1">Browse computers</a></li>
-                        <li><a href="#q2" data-after="unit2">Browse components</a></li>
+                        <li><a href="#pcs" data-after="PCs">Browse computers</a></li>
+                        <li><a href="/part3/comps.aspx" data-after="components">Browse components</a></li>
                         <li><a href="#q4" data-after="Unit1">Contact us</a></li>
                         <li><a href="#q3" data-after="unit3">Cart</a></li>
                     </ul>
@@ -68,7 +68,7 @@
     <!-- End Hero Section  -->
 
     <!-- Computer section -->
-    <section id="q3">
+    <section id="pcs">
         <div class="section-container">
             <div class="top">
                 <h1 class="section-title"><span>SEE our </span> offers</h1>
@@ -214,22 +214,34 @@
     <!-- Footer  -->
     <section id="footer">
         <div class="footer container">
-            <div class="brand">
-                <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
+            <div>
+                <div class="brand">
+                    <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
+                </div>
+                <p>Copyright © 2022 Lupin. All rights reserved</p>
             </div>
-            <h2>Where technology meets art</h2>
-            <div class="social-icon">
-                <div class="social-item">
-                    <a href="https://github.com/AnLau25" target="_blank"><img src="https://img.icons8.com/?size=100&id=TEYr8ETaIfBJ&format=png&color=000000" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://github.com/AnLau25/COMP466https://github.com/AnLau25" target="_blank"><img src="https://img.icons8.com/?size=100&id=eeQY_dRSUIMV&format=png&color=000000" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://github.com/AnLau25/COMP466/tree/master/TMA3a" target="_blank"><img src="https://img.icons8.com/?size=100&id=-x2V8Q63DerT&format=png&color=000000" /></a>
+            
+            <div>
+                <h2>Where technology meets art</h2>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="https://github.com/AnLau25" target="_blank"><img src="https://img.icons8.com/?size=100&id=TEYr8ETaIfBJ&format=png&color=000000" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://github.com/AnLau25/COMP466https://github.com/AnLau25" target="_blank"><img src="https://img.icons8.com/?size=100&id=eeQY_dRSUIMV&format=png&color=000000" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://github.com/AnLau25/COMP466/tree/master/TMA3a" target="_blank"><img src="https://img.icons8.com/?size=100&id=-x2V8Q63DerT&format=png&color=000000" /></a>
+                    </div>
                 </div>
             </div>
-            <p>Copyright © 2022 Lupin. All rights reserved</p>
+            <div>
+                <p><strong>Questions?</strong></p>
+                <p>Contact us at : costumerhelp@thepcstore.com</p>
+                <p><strong>Having issues?</strong></p>
+                <p>Contact us at : techsupport@thepcstore.com</p>
+            </div>
+            
         </div>
     </section>
     <!-- Footer  -->
