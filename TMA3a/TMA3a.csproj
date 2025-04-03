@@ -74,7 +74,10 @@
     <Content Include="part1.aspx" />
     <Content Include="part2\part2.aspx" />
     <Content Include="part3\comps.aspx" />
+    <Content Include="part3\paid.aspx" />
     <Content Include="part3\part3.aspx" />
+    <Content Include="part3\pay.aspx" />
+    <Content Include="part3\pricing.js" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -104,12 +107,26 @@
     <Compile Include="part3\comps.aspx.designer.cs">
       <DependentUpon>comps.aspx</DependentUpon>
     </Compile>
+    <Compile Include="part3\paid.aspx.cs">
+      <DependentUpon>paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part3\paid.aspx.designer.cs">
+      <DependentUpon>paid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="part3\part3.aspx.cs">
       <DependentUpon>part3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="part3\part3.aspx.designer.cs">
       <DependentUpon>part3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part3\pay.aspx.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part3\pay.aspx.designer.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

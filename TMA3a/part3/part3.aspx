@@ -17,7 +17,7 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/part3/part3.aspx">
                         <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
                     </a>
                 </div>
@@ -25,8 +25,8 @@
                     <ul>
                         <li><a href="#pcs" data-after="PCs">Browse computers</a></li>
                         <li><a href="/part3/comps.aspx" data-after="components">Browse components</a></li>
-                        <li><a href="#q4" data-after="Unit1">Contact us</a></li>
-                        <li><a href="#q3" data-after="unit3">Cart</a></li>
+                        <li><a href="#footer" data-after="Unit1">Contact us</a></li>
+                        <!--<li><a href="#q3" data-after="unit3">Cart</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -96,7 +96,8 @@
                             </ul>
 
                         </div>
-                        <a href="/part3/part3.aspx" type="button" class="cta">Add to cart</a>
+                        <p><strong>Price with default components: </strong>449.99$</p>
+                        <a href="/part3/pay.aspx?pc=1" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
                         <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
@@ -114,15 +115,15 @@
                         <div class="section-ul">
                             <ul>
                                 <li><strong>RAM:</strong> 16GB Unified Memory</li>
-                                <li><strong>Hard Drive:</strong> 1TB SSD</li>
+                                <li><strong>Hard Drive:</strong> 512GB SSD</li>
                                 <li><strong>CPU:</strong> Apple M2 Chip (8-Core CPU + 8-Core GPU)</li>
                                 <li><strong>Display:</strong> 13.6" Liquid Retina Display (2560x1664)</li>
                                 <li><strong>OS:</strong> macOS Ventura</li>
                                 <li><strong>Sound Card:</strong> Integrated High-Fidelity Audio</li>
                             </ul>
-
                         </div>
-                        <a href="/part3/part3.aspx" type="button" class="cta">Add to cart</a>
+                        <p><strong>Price with default components: </strong>899.00$</p>
+                        <a href="/part3/pay.aspx?pc=2" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
                         <img style="height:57rem;" src="/shared/DummyMax.jpg" alt="img">
@@ -146,9 +147,9 @@
                                 <li><strong>OS:</strong> Windows 11 Pro</li>
                                 <li><strong>Sound Card:</strong> Dolby Atmos Speaker System</li>
                             </ul>
-
                         </div>
-                        <a href="/part3/part3.aspx" type="button" class="cta">Add to cart</a>
+                        <p><strong>Price with default components: </strong>1215.00$</p>
+                        <a href="/part3/pay.aspx?pc=3" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
                         <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
@@ -172,9 +173,9 @@
                                 <li><strong>OS:</strong> Windows 11 Home</li>
                                 <li><strong>Sound Card:</strong> Realtek Audio</li>
                             </ul>
-
                         </div>
-                        <a href="/part3/part3.aspx" type="button" class="cta">Add to cart</a>
+                        <p><strong>Price with default components: </strong>1099.99$</p>
+                        <a href="/part3/pay.aspx?pc=4" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
                         <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
@@ -192,15 +193,15 @@
                         <div class="section-ul">
                             <ul>
                                 <li><strong>RAM:</strong> 16GB DDR5</li>
-                                <li><strong>Hard Drive:</strong> 2TB PCIe SSD</li>
+                                <li><strong>Hard Drive:</strong> 4TB PCIe SSD</li>
                                 <li><strong>CPU:</strong> AMD Ryzen 9 7945HX (16 cores, 32 threads)</li>
                                 <li><strong>Display:</strong> 17.3" QHD (2560x1440), 165Hz Refresh Rate</li>
                                 <li><strong>OS:</strong> Windows 11 Home</li>
                                 <li><strong>Sound Card:</strong> ESS Sabre Hi-Fi DAC</li>
                             </ul>
-
                         </div>
-                        <a href="/part3/part3.aspx" type="button" class="cta">Add to cart</a>
+                        <p><strong>Price with default components: </strong>1899.00$</p>
+                        <a href="/part3/pay.aspx?pc=5" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
                         <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">

@@ -335,7 +335,7 @@ caption {
     flex-direction: column;
     align-items: center;
     font-size: 25px;
-    margin: 10px;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -465,3 +465,36 @@ code{
     font-family: 'Montserrat', sans-serif;
 }
 
+.payement, .select-comps{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select-comps h1{
+
+}
+
+#form1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.payement{
+    border: solid 1px darkgreen;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+#form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill-label{
+    font-size: 15px;
+}

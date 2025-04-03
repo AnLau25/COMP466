@@ -17,7 +17,7 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/part3/part3.aspx">
                         <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
                     </a>
                 </div>
@@ -25,8 +25,8 @@
                     <ul>
                         <li><a href="/part3/part3.aspx/#pcs" data-after="PCs">Browse computers</a></li>
                         <li><a href="/part3/comps.aspx" data-after="components">Browse components</a></li>
-                        <li><a href="#q4" data-after="Unit1">Contact us</a></li>
-                        <li><a href="#q3" data-after="unit3">Cart</a></li>
+                        <li><a href="#footer" data-after="Unit1">Contact us</a></li>
+                        <!--<li><a href="#q3" data-after="unit3">Cart</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -35,8 +35,8 @@
     <!-- End Header -->
 
 
-    <!-- Computer section -->
-    <section id="pcs">
+    <!-- Components section -->
+    <section id="comps">
         <div class="section-container">
             <div class="top">
                 <h1 class="section-title">Browse our<span> component options</span></h1>
@@ -192,24 +192,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </section>
     <!-- End Computer section -->
