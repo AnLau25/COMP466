@@ -37,7 +37,7 @@
     <!-- End Header -->
 
 
-    <!-- Components section -->
+    <!-- Paid section -->
     <section id="comps">
         <div class="section-container">
             <div class="top">

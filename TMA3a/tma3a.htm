@@ -177,46 +177,192 @@
     <section id="q3">
         <div class="section-container">
             <div class="top">
-                <h1 class="section-title"><span>Question 3: </span>Online store, frontend only</h1>
-                <p class="section-subtitle">Web page for units 1, 2 and 3.</p>
+                <h1 class="section-title"><span>Question 3: </span>Online store, frontend</h1>
+                <p class="section-subtitle">Basic online store, hardcoded.</p>
             </div>
 
             <div class="bottom">
                 <div class="exmpl-item">
                     <div class="exmpl-info">
-                        <h1>Explanation</h1>
+                        <h1>Nav, Footer & Home page</h1>
                         <p>
-                            The software, as requested, contains lesson content and examples to get
-                            the basics of web design technologies, with an emphasis on dynamic visuals and scripting.
-                            In addition, it provides quizzes which can be accessed at the end of each section or at the
-                            end of the whole page in their own section.
+                            The software is a simple hardocded webpage to sell computers with modifieable compoents. After a study of other webpages,
+                            I took note that for this one to be considered functional, four main pages would be necesary: A home page, a components page, a payement page and a bill page.
+                            Aditionaly, a footer containing the contact information for the store exist for the main pages and the nav-bar exists for all.
                         </p>
                         <div class="section-ul">
-                            <p><strong>Quiz functionality:</strong></p>
+                            <p><strong>Navigation bar:</strong></p>
                             <ul>
-                                <li>Retrieves quiz file name from the URL query parameter (defaulting to "quiz1.json") and stores it in `localStorage`.</li>
-                                <li>Fetches quiz questions from the specified JSON file.</li>
-                                <li>Initializes quiz variables such as score, question counter, and available questions.</li>
-                                <li>Starts the quiz by resetting values and loading the first question.</li>
-                                <li>Selects a random question from the available ones and displays it.</li>
-                                <li>Updates the question counter on the screen.</li>
-                                <li>Assigns possible answer choices to corresponding HTML elements.</li>
                                 <li>
-                                    Listens for user answer selection and determines correctness:
+                                    Includes a <strong>navigation bar</strong> inside a container.
+                                </li>
+                                <li>
+                                    <strong>Brand/Logo:</strong>
                                     <ul>
-                                        <li>If correct, increments the score and updates the display.</li>
-                                        <li>If incorrect, briefly highlights the correct answer.</li>
+                                        <li>
+                                            Styled to make parts of it look different and says <em>"The PC store"</em>.
+                                        </li>
+                                        <li>
+                                            Clicking the logo navigates to another the home page.
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>Moves to the next question after a short delay.</li>
-                                <li>Ends the quiz after 20 questions or when no questions remain, redirecting the user to an end page.</li>
+                                <li>
+                                    <strong>Menu:</strong>
+                                    <ul>
+                                        <li>Link to browse computers.</li>
+                                        <li>Link to browse components.</li>
+                                        <li>Link to contact the site (jumps to the footer).</li>
+                                    </ul>
+                                </li>
                             </ul>
-
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Footer:</strong></p>
+                            <ul>
+                                <li>
+                                    Creates a footer section with the ID <code>footer</code> and class <code>footer container</code>.
+                                </li>
+                                <li>
+                                    Displays the brand name <em>"The PC store"</em> with stylized text.
+                                </li>
+                                <li>
+                                    Shows a copyright line: <em>© 2022 Lupin. All rights reserved</em>.
+                                </li>
+                                <li>
+                                    Displays a subtitle/tagline: <em>"Where technology meets art"</em>.
+                                </li>
+                                <li>
+                                    Includes four social icon links:
+                                    <ul>
+                                        <li>One linking to the home page <code>/tma3a.htm</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Each social link is represented by a black icon image that lights up on hover.
+                                </li>
+                                <li>
+                                    Provides contact information:
+                                    <ul>
+                                        <li>General customer support email: <code>costumerhelp@thepcstore.com</code>.</li>
+                                        <li>Technical support email: <code>techsupport@thepcstore.com</code>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Home page:</strong></p>
+                            <ul>
+                                <li>
+                                    Presents a <strong>hero section</strong> featuring two highlighted laptops with catchy, lifestyle-oriented descriptions.
+                                </li>
+                                <li>
+                                    Encourages visitors to explore a curated selection of <em>"everyone’s favourites."</em>
+                                </li>
+                                <li>
+                                    Introduces a <strong>product showcase</strong> section titled <em>"SEE our offers."</em>
+                                </li>
+                                <li>
+                                    Displays <strong>five detailed laptop profiles</strong>, each including:
+                                    <ul>
+                                        <li>A persuasive, personality-driven pitch.</li>
+                                        <li>Full tech specs (RAM, CPU, storage, etc.).</li>
+                                        <li>A price for the default configuration.</li>
+                                        <li>A “Buy” button linking to a purchase page.</li>
+                                        <li>A large image representing the product.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Uses distinct tones and descriptions tailored to different types of users.
+                                </li>
+                                <li>
+                                    Aims to blend <strong>marketing appeal</strong> with <strong>technical detail</strong> for informed and emotional purchase decisions.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q3_1.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Component page & payment</h1>
+                        <div class="section-ul">
+                            <p><strong>Components page:</strong></p>
+                            <ul>
+                                <li>
+                                    Displays a <strong>custom PC component selection interface</strong> for users to browse and choose parts.
+                                </li>
+                                <li>
+                                    Introduces the section with a <strong>title and subtitle</strong> encouraging customization.
+                                </li>
+                                <li>
+                                    Presents <strong>five categories</strong> of components:RAM, hard drives, CPUs, displays and soundcards.
+                                </li>
+                                <li>
+                                    Each component is displayed in a <strong>card format</strong>, including: Component name, brief description, price, compatible devices/laptops.
+                                </li>
+                                <li>
+                                    Helps users <strong>visualize upgrade options</strong> and match parts to their existing or desired PC setup.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Customizable Purchase Form:</strong></p>
+                            <ul>
+                                <li>
+                                    Displays a <strong>customizable purchase form</strong> for a selected laptop model (based on a <code>pc</code> query string).
+                                </li>
+                                <li>
+                                    Shows <strong>base model name</strong> and <strong>base price</strong> on page load using server-side C# logic.
+                                </li>
+                                <li>
+                                    Populates <strong>drop-downs</strong> with component options (RAM, HDD, CPU, display, sound card) based on selected model compatibility.
+                                </li>
+                                <li>
+                                    Uses <strong>JavaScript</strong> to dynamically update the <strong>total price</strong> as components are selected.
+                                </li>
+                                <li>
+                                    Collects <strong>user payment and contact info</strong> via textboxes, including: Full name, address, e-mail, credit card and CVV.
+                                </li>
+                                <li>
+                                    When the user clicks <strong>"Pay,"</strong> it:
+                                    <ul>
+                                        <li>Retrieves all selected options and input data.</li>
+                                        <li>Saves them into a <strong>cookie</strong> called <code>PurchaseDetails</code> (expires in 1 hour).</li>
+                                        <li>Redirects the user to a confirmation page (<code>paid.aspx</code>).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Purchase Details Form:</strong></p>
+                            <ul>
+                                <li>
+                                    Uses <strong>ASP.NET</strong> with Web Forms and server controls (<code>&lt;asp:Label&gt;</code>) to show purchase details.
+                                </li>
+                                <li>
+                                    Reads purchase information from a browser cookie named <code>PurchaseDetails</code> on page load.
+                                </li>
+                                <li>
+                                    If the cookie exists and the page is not a postback:
+                                    <ul>
+                                        <li>Retrieves and displays values such as computer specs (RAM, HDD, CPU, etc.), user info (name, address, email), and final price.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Populates the labels in the form dynamically with data from the cookie.
+                                </li>
+                                <li>
+                                    Includes a <strong>"Back to home" button</strong> that redirects to the homepage (<code>part3.aspx</code>).
+                                </li>
+                            </ul>
                         </div>
                         <a href="/part3/part3.aspx" type="button" class="cta">See Solution</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img src="/shared/q2.jpg" alt="img">
+                        <img src="/shared/q3_2.jpg" alt="img">
                     </div>
                 </div>
             </div>
@@ -245,57 +391,7 @@
                             and the third is a temperature converter that supports Fahrenheit, Celsius, and Kelvin.
                         </p>
                         <div class="section-ul">
-                            <p> <strong>Measurement converter:</strong> </p>
-                            <ul>
-                                <li>
-                                    The equations for the length conversion (or rather, the factors) come from the first
-                                    <a href="https://www.google.com/search?q=miles+to+km&rlz=1C1CHBF_enCA913CA913&oq=miles+t&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQLhiABDIGCAMQBhhAMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAuGIAEMgcIBxAAGIAEMgcICBAAGIAEMgkICRAuGAoYgATSAQgyNzM5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                                       class="abi" target="_blank">Google page</a>.
-                                </li>
-                                <li>To go from inches to centimeters, we use \(inches \cdot 2.54\)</li>
-                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
-                                <li>To go from inches to meters, we use \(inches \cdot 0.0254\)</li>
-                                <li>To go from feet to centimeters, we use \(feet \cdot 30.48\)</span></li>
-                                <li>To go from feet to meters, we use \(feet \cdot 0.3048\)</span></li>
-                                <li>To go from miles to kilometer, we use \(miles \cdot 1.609\)</span></li>
-                                <li>
-                                    Finally, for the reverse operation, would have to divide the metric values. But, for
-                                    consistency reasons, we chose to multiply by the inverse of the factor.
-                                    So, \(metric \cdot (\frac{1}{factor})\).
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section-ul">
-                            <p> <strong>Mortgage calculator:</strong> </p>
-                            <ul>
-                                <li>For this tool, unlike the other two, I chose to use a button with an event listener to generate the answer. </li>
-                                <li>Since, to calculate the mortgage, you imperatively need all three values, the button allows for the page to verify the validity of all three variables before calculating.</li>
-                                <li>The equation used to calculate the mortgage comes from a page dedicated to explaining this concept in the <a href="https://www.calculatorsoup.com/calculators/financial/mortgage-calculator.php" class="abi" target="_blank">Calculator Soup</a> website.  </li>
-                                <li>Thus, this equation for the mortgage is: \(MP = \frac{PVi(1 + i)^n}{(1 + i)^n - 1}\)</li>
-                                <ul>
-                                    <li>\(MP\), being the monthly payment</li>
-                                    <li>\(n\), the term in months</li>
-                                    <li>\(i\), being the monthly interest rate</li>
-                                    <li>\(PV\), as the mortage amount or present value</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="section-ul">
-                            <p> <strong>Temperature converter:</strong> </p>
-                            <ul>
-                                <li>I chose to build a temperature converter because not only did I feel it matched with the previous tools, it is also quite handy as a standalone.</li>
-                                <li>The previous tools seem to imply a house buying/building purpose. Knowing the temperature could be useful for someone buying a house in a foreign country and checking  for security measures.</li>
-                                <li>Additionally, things like heating or inbuilt ovens could have parameters associated with temperature measurement.</li>
-                                <li>Those conditions mainly regards Fahrenheit and Celsius. Kelvin conversion was solely added to have a more complete tool and  for “in case of” situations.</li>
-                                <li>For simplicity, we only convert back and forth between Celsius and the other two temperatures. </li>
-                                <li>The equations were sourced from the <a href="https://byjus.com/temperature-conversion-formula/" class="abi" target="_blank">Byjus</a> website and they are:</li>
-                                <ul>
-                                    <li>\(C^o = (F^o - 32) \cdot \frac{5}{9} \)</li>
-                                    <li>\(F^o = (C^o\frac{9}{5}) + 32\)</li>
-                                    <li>\(C^o = K^o - 273.15\)</li>
-                                    <li>\(K^o = C^o + 273.15\)</li>
-                                </ul>
-                            </ul>
+                            
                         </div>
                         <a href="/part4/index.html" type="button" class="cta">See Solution</a>
                     </div>

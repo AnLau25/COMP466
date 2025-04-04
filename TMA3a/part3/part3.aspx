@@ -226,6 +226,9 @@
                 <h2>Where technology meets art</h2>
                 <div class="social-icon">
                     <div class="social-item">
+                        <a href="/tma3a.htm"><img src="https://img.icons8.com/?size=100&id=91234&format=png&color=000000" /></a>
+                    </div>
+                    <div class="social-item">
                         <a href="https://github.com/AnLau25" target="_blank"><img src="https://img.icons8.com/?size=100&id=TEYr8ETaIfBJ&format=png&color=000000" /></a>
                     </div>
                     <div class="social-item">
