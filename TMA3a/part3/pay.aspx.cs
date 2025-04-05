@@ -83,7 +83,7 @@ namespace TMA3a.part3
 				{ 2, new List<(string, string)> {  ("512GB SSD", "75") } },
 				{ 3, new List<(string, string)> { ("1TB PCIe SSD", "70"), ("512GB SSD", "75"),  ("4TB PCIe SSD", "240") } },
 				{ 4, new List<(string, string)> { ("256GB SSD", "30"), ("1TB PCIe SSD", "70"), ("2TB HDD", "55") } },
-				{ 5, new List<(string, string)> { ("4TB PCIe SSD", "240"), ("16GB RAM", "50"), ("1TB PCIe SSD", "70") } }
+				{ 5, new List<(string, string)> { ("4TB PCIe SSD", "240"), ("1TB PCIe SSD", "70") } }
 			};
 
 			Dictionary<int, List<(string display, string value)>> cpuOptions = new Dictionary<int, List<(string display, string value)>>(){

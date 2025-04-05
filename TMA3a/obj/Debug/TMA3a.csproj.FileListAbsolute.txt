@@ -1,3 +1,5 @@
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.AssemblyReference.cache
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\TMA3a.dll.config
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\TMA3a.dll
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\TMA3a.pdb
@@ -52,8 +54,6 @@ C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\roslyn\VBCSCompiler.ex
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.AssemblyReference.cache
-C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.Up2Date
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.dll
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.pdb

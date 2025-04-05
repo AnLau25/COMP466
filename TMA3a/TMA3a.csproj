@@ -78,6 +78,11 @@
     <Content Include="part3\part3.aspx" />
     <Content Include="part3\pay.aspx" />
     <Content Include="part3\pricing.js" />
+    <Content Include="part4\comps.aspx" />
+    <Content Include="part4\login.aspx" />
+    <Content Include="part4\part4.aspx" />
+    <Content Include="part4\profile.aspx" />
+    <Content Include="part4\signin.aspx" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -127,6 +132,41 @@
     </Compile>
     <Compile Include="part3\pay.aspx.designer.cs">
       <DependentUpon>pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\comps.aspx.cs">
+      <DependentUpon>comps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\comps.aspx.designer.cs">
+      <DependentUpon>comps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\part4.aspx.cs">
+      <DependentUpon>part4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\part4.aspx.designer.cs">
+      <DependentUpon>part4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
