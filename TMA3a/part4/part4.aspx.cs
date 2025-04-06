@@ -22,7 +22,7 @@ namespace TMA3a.part4
 			{
 				Session.Clear();
 				Session.Abandon();
-				userDropdown.InnerHtml = $@"<a href=""/part4/login.aspx"" data-after=""cart"">SignIn/LogIn</a>";
+				userDropdown.InnerHtml = $@"<a href=""/part4/login.aspx"" data-after=""log"">SignIn/LogIn</a>";
 				return;
 			}
 
@@ -33,6 +33,8 @@ namespace TMA3a.part4
 				<select class=""cta"" id=""userDropdown"" onchange=""handleUserAction(this)"">
 					<option disabled selected>Hi, {user}</option>
 					<option value=""profile"">Profile</option>
+					<option value=""cart"">Cart</option>
+					<option value=""orders"">Orders</option>
 					<option value=""logout"">Log Out</option>
 				</select>";
 			}
@@ -71,7 +73,7 @@ namespace TMA3a.part4
 					sb.AppendLine($"<h1>{name}</h1>");
 					sb.AppendLine($"<p>{descript}</p>");
 					sb.AppendLine($"<p><strong>Price with default components: </strong>{price:C}</p>");
-					sb.AppendLine($"<a href=\"/part3/pay.aspx?pc={id}\" type=\"button\" class=\"cta\">Buy</a>");
+					sb.AppendLine($"<a href=\"/part4/custom.aspx?pc={id}\" type=\"button\" class=\"cta\">Add to cart</a>");
 					sb.AppendLine("</div>");
 					sb.AppendLine("<div class=\"exmpl-cont\">");
 					sb.AppendLine("<img style=\"height:55rem;\" src=\"/shared/laptop.png\" alt=\"img\">");

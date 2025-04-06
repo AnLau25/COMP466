@@ -18,18 +18,17 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/part4/part.aspx">
+                    <a href="/part4/part4.aspx">
                         <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
                     </a>
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="/part4/comps.aspx/#pcs" data-after="PCs">Browse computers</a></li>
+                        <li><a href="/part4/part4.aspx/#pcs" data-after="PCs">Browse computers</a></li>
                         <li><a href="/part4/comps.aspx" data-after="components">Browse components</a></li>
                         <li><a href="#footer" data-after="foot">Contact us</a></li>
-                        <li><a href="#q3" data-after="cart">Cart</a></li>
                         <li id="userDropdown" runat="server">
-                            <a href="/part4/login.aspx" data-after="cart">SignIn/LogIn</a>
+                            <a href="/part4/login.aspx" data-after="log">SignIn/LogIn</a>
                         </li>
                     </ul>
                 </div>
@@ -114,14 +113,18 @@
     <!-- Footer  -->
     <script>
        
-            function handleUserAction(select) {
-                const value = select.value;
-                if (value === "profile") {
-                    window.location.href = 'profile.aspx';
-                } else if (value === "logout") {
-                    window.location.href = 'part4.aspx?logout=true';
-                }
+        function handleUserAction(select) {
+            const value = select.value;
+            if (value === "profile") {
+                window.location.href = 'profile.aspx';
+            } else if (value === "cart") {
+                window.location.href = 'cart.aspx';
+            } else if (value === "orders") {
+                window.location.href = 'Orders.aspx';
+            } else if (value === "logout") {
+                window.location.href = 'part4.aspx?logout=true';
             }
+        }
  
     </script>
 </body>

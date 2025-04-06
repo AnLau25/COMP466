@@ -40,7 +40,7 @@
                 <div class="faves">
                     <div class="exmpl-item">
                         <div class="exmpl-cont">
-                            <img src="/shared/ex1.jpg" alt="img">
+                            <img src="/shared/laptop.png" alt="img">
                         </div>
                         <div class="exmpl-info">
                             <h1 style="color:white !important;">Dell Inspiron 15</h1>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="exmpl-item">
                         <div class="exmpl-cont">
-                            <img src="/shared/ex1.jpg" alt="img">
+                            <img src="/shared/laptop.png" alt="img">
                         </div>
                         <div class="exmpl-info">
                             <h1 style="color:white !important;">HP Pavilion 14</h1>
@@ -81,8 +81,6 @@
                         <h1>Dell Inspiron 15</h1>
                         <p>
                             So, you’re the type to buy a car just to get from point A to point B — the type who sees a computer as the mean to an end. If that’s you, we have exactly what you need.
-                        </p>
-                        <p>
                             The Dell Inspiron is simple — no fancy, high-tech extras attached. It serves one purpose: <strong>Get. Things. Done.</strong> Whether it’s schoolwork or professional tasks, if you value practicality, this is the laptop for you.
                         </p>
                         <div class="section-ul">
@@ -100,7 +98,7 @@
                         <a href="/part3/pay.aspx?pc=1" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
+                        <img src="/shared/laptop.png" alt="img">
                     </div>
                 </div>
                 <div class="exmpl-item" id="2">
@@ -108,8 +106,6 @@
                         <h1>Apple MacBook Air (M2)</h1>
                         <p>
                             You are a hipster, but not the "I want a frappapakeke" at Starbucks type. You are a traveler — the kind who enjoys the small things in life and knows the worth of handcrafted goods. Obviously, that includes coffee from lost to the crowds coffee shops and well-crafted computers.
-                        </p>
-                        <p>
                             The MacBook Air might not be for everyone, but it is for you. It is lightweight, travel-sized, and packs definitely more power than it might appear at first glance. Clearly, your kind of find.
                         </p>
                         <div class="section-ul">
@@ -126,7 +122,7 @@
                         <a href="/part3/pay.aspx?pc=2" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img style="height:57rem;" src="/shared/DummyMax.jpg" alt="img">
+                        <img src="/shared/laptop.png" alt="img">
                     </div>
                 </div>
                 <div class="exmpl-item" id="3">
@@ -134,8 +130,6 @@
                         <h1 style="text-align:left;">Lenovo ThinkPad X1 Carbon Gen 11</h1>
                         <p>
                             People call you a workaholic, yet you only smirk in response, you know better. You are not a slave to your work — you are a productivity god.
-                        </p>                     
-                        <p>
                             Thus, the only option befitting you is the Lenovo ThinkPad, a multitasking monster ready to tackle upcoming tasks and clear your calendar before the weekend.
                         </p>
                         <div class="section-ul">
@@ -152,7 +146,7 @@
                         <a href="/part3/pay.aspx?pc=3" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
+                        <img src="/shared/laptop.png" alt="img">
                     </div>
                 </div>
                 <div class="exmpl-item" id="4">
@@ -160,8 +154,6 @@
                         <h1 style="text-align:left;">HP Pavilion 14</h1>
                         <p>
                             Be real, it took you a week before you finally sat down to look for a new computer because you were too busy working on your ongoing projects. 
-                        </p>                     
-                        <p>
                             It’s okay, we get it — creativity waits for no one. That’s why you should be ready for action when the spark ignites with the HP Pavilion: compact, casual, and always ready for your next strike of genius. 
                         </p>
                         <div class="section-ul">
@@ -178,7 +170,7 @@
                         <a href="/part3/pay.aspx?pc=4" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
+                        <img src="/shared/laptop.png" alt="img">
                     </div>
                 </div>
                 <div class="exmpl-item" id="5">
@@ -186,8 +178,6 @@
                         <h1 style="text-align:left;">ASUS ROG Strix G17</h1>
                         <p>
                             If you made it all the way here after an hour of reading specs, go touch grass. Just kidding — but you clearly know your stuff, most likely because you're a gamer, dedicated to finding the best setup to lead your team to victory or solo travel through dangerous lands.
-                        </p>                     
-                        <p>
                             The ASUS ROG is the nat 20 to your boss fight — powerful, dynamic, and easy to tune. This computer is right up your Diagon Alley.
                         </p>
                         <div class="section-ul">
@@ -204,7 +194,7 @@
                         <a href="/part3/pay.aspx?pc=5" type="button" class="cta">Buy</a>
                     </div>
                     <div class="exmpl-cont">
-                        <img style="height:55rem;" src="/shared/DummyMax.jpg" alt="img">
+                        <img src="/shared/laptop.png" alt="img">
                     </div>
                 </div>
             </div>

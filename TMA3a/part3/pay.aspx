@@ -40,7 +40,7 @@
                 <h1 class="section-title"><span>Costumize</span> your choice</h1>
                 <p class="section-subtitle">Carefull, different components might make your price vary</p>
             </div>
-            <div class="pay">
+            <div>
                 <form id="form1" runat="server">
                     <div class="select-comps">
                         <asp:Label ID="Pchoice" runat="server" CssClass="section-title">-</asp:Label>

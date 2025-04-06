@@ -78,8 +78,11 @@
     <Content Include="part3\part3.aspx" />
     <Content Include="part3\pay.aspx" />
     <Content Include="part3\pricing.js" />
+    <Content Include="part4\cart.aspx" />
     <Content Include="part4\comps.aspx" />
+    <Content Include="part4\custom.aspx" />
     <Content Include="part4\login.aspx" />
+    <Content Include="part4\Orders.aspx" />
     <Content Include="part4\part4.aspx" />
     <Content Include="part4\profile.aspx" />
     <Content Include="part4\signin.aspx" />
@@ -133,6 +136,13 @@
     <Compile Include="part3\pay.aspx.designer.cs">
       <DependentUpon>pay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="part4\cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="part4\comps.aspx.cs">
       <DependentUpon>comps.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,12 +150,26 @@
     <Compile Include="part4\comps.aspx.designer.cs">
       <DependentUpon>comps.aspx</DependentUpon>
     </Compile>
+    <Compile Include="part4\custom.aspx.cs">
+      <DependentUpon>custom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\custom.aspx.designer.cs">
+      <DependentUpon>custom.aspx</DependentUpon>
+    </Compile>
     <Compile Include="part4\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="part4\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="part4\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="part4\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="part4\part4.aspx.cs">
       <DependentUpon>part4.aspx</DependentUpon>

@@ -19,7 +19,7 @@ namespace TMA3a.part4
 			{
 				Session.Clear();
 				Session.Abandon();
-				userDropdown.InnerHtml = $@"<a href=""/part4/login.aspx"" data-after=""cart"">SignIn/LogIn</a>";
+				userDropdown.InnerHtml = $@"<a href=""/part4/login.aspx"" data-after=""log"">SignIn/LogIn</a>";
 				return;
 			}
 			
@@ -31,6 +31,8 @@ namespace TMA3a.part4
 				<select class=""cta"" id=""userDropdown"" onchange=""handleUserAction(this)"">
 					<option disabled selected>Hi, {user}</option>
 					<option value=""profile"">Profile</option>
+                    <option value=""cart"">Cart</option>
+					<option value=""orders"">Orders</option>
 					<option value=""logout"">Log Out</option>
 				</select>";
 			}else{
