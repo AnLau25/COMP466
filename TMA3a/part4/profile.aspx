@@ -42,10 +42,10 @@
                 <h1 class="section-title"><span>Costumize</span> your account</h1>
                 <p class="section-subtitle">If you just want to chnage your name, input it alone. To chnage passwords you need both the old and the new one.You can always change bothe name and password. You can always also, delete your account.</p>
             </div>
-            <div class="pay">
+            <div class="pay" style="display:block;">
                 <form id="form1" runat="server">
                     <div class="payement"  style="align-items:center !important">
-                        <asp:Label ID="NName" runat="server" Text="New user ame:" CssClass="select-label"></asp:Label>
+                        <asp:Label ID="NName" runat="server" Text="New user name:" CssClass="select-label"></asp:Label>
                         <asp:TextBox ID="NameBox" runat="server" CssClass="cta"></asp:TextBox>
                         <asp:Label ID="Oldpwrd" runat="server" Text="Old password:" CssClass="select-label"></asp:Label>
                         <asp:TextBox ID="OldpwrdBox" runat="server" CssClass="cta"></asp:TextBox>                  

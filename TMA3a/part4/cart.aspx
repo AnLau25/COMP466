@@ -41,30 +41,46 @@
             <div class="top">
                 <h1 class="section-title">Last step to acquire<span> your PC</span></h1>
                 <p class="section-subtitle">Please fill out all the fields carefully.</p>
-            </div>
-            <div class="thatdiv">
-                <div class="cartOrder">
-                   <div ID="litOrders" runat="server"/>
-                </div>  
+            </div>                
                 <form id="form3" runat="server"> 
-                    <div class="payement">
-                        <asp:Label ID="TotalPrice" runat="server" CssClass="select-label">-</asp:Label>
-                        <asp:Label ID="FName" runat="server" Text="First Name:" CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="FNameBox" runat="server" CssClass="cta"></asp:TextBox>
-                        <asp:Label ID="LName" runat="server" Text="Last Name:" CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="LNameBox" runat="server" CssClass="cta"></asp:TextBox>                  
-                        <asp:Label ID="Address" runat="server" Text="Address: " CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="AddressBox" runat="server" CssClass="cta"></asp:TextBox>
-                        <asp:Label ID="Email" runat="server" Text="E-mail: " CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="EmailtBox" runat="server" CssClass="cta"></asp:TextBox>
-                        <asp:Label ID="CreditCard" runat="server" Text="Credit Card Number: " CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="CreditCardBox" runat="server" CssClass="cta"></asp:TextBox>
-                        <asp:Label ID="CVV" runat="server" Text="CVV: " CssClass="select-label"></asp:Label>
-                        <asp:TextBox ID="CVVBox" runat="server" CssClass="cta"></asp:TextBox>
-                        <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="cta" OnClick="Pay_Click"/>
+                     <div class="thatdiv">
+                         <asp:Label ID="LblNoItems" runat="server" Text="There are no items in your cart." CssClass="select-label" Visible="false" />
+                         <asp:Repeater ID="CartRepeater" runat="server" OnItemCommand="CartRepeater_ItemCommand">
+                            <ItemTemplate>
+                                <div class='orders'>
+                                    <h3>Order #<%# Container.ItemIndex + 1 %></h3>
+                                    <p><strong>PC:</strong> <%# Eval("PCName") %></p>
+                                    <p><strong>CPU:</strong> <%# Eval("CPU") %></p>  
+                                    <p><strong>Display:</strong> <%# Eval("Display") %></p>
+                                    <p><strong>Hard Drive:</strong> <%# Eval("HD") %></p>
+                                    <p><strong>RAM:</strong> <%# Eval("RAM") %></p>
+                                    <p><strong>Sound:</strong> <%# Eval("Sound") %></p>
+                                    <p><strong>Price:</strong> <%# Eval("Price") %></p>
+                                    <asp:Button ID="DeleteButton" runat="server" Text="Delete"
+                                        CommandName="Delete" CommandArgument='<%# Eval("CookieName") %>' CssClass="cta" />
+                                    <asp:Button ID="EditButton" runat="server" Text="Edit"
+                                        CommandName="Edit" CommandArgument='<%# Eval("CookieName") %>' CssClass="cta" />
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <div class="payement">
+                            <asp:Label ID="TotalPrice" runat="server" CssClass="select-label">-</asp:Label>
+                            <asp:Label ID="FName" runat="server" Text="First Name:" CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="FNameBox" runat="server" CssClass="cta"></asp:TextBox>
+                            <asp:Label ID="LName" runat="server" Text="Last Name:" CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="LNameBox" runat="server" CssClass="cta"></asp:TextBox>                  
+                            <asp:Label ID="Address" runat="server" Text="Address: " CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="AddressBox" runat="server" CssClass="cta"></asp:TextBox>
+                            <asp:Label ID="Email" runat="server" Text="E-mail: " CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="EmailtBox" runat="server" CssClass="cta"></asp:TextBox>
+                            <asp:Label ID="CreditCard" runat="server" Text="Credit Card Number: " CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="CreditCardBox" runat="server" CssClass="cta"></asp:TextBox>
+                            <asp:Label ID="CVV" runat="server" Text="CVV: " CssClass="select-label"></asp:Label>
+                            <asp:TextBox ID="CVVBox" runat="server" CssClass="cta"></asp:TextBox>
+                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="cta" OnClick="Pay_Click"/>
+                        </div>
                     </div>
                 </form>
-            </div>
         </div>
     </section>
 

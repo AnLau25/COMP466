@@ -528,13 +528,18 @@ code{
     margin-top: 50px;
 }
 
-.order{
+.order, .orders{
     border: solid 1px darkgreen;
     border-radius: 5px;
     padding: 20px;
+    margin: 10px;
 }
 
-.order p{
+.orders{
+    max-height: 35rem;
+}
+
+.order p, .orders p{
     color: black;
 }
 
@@ -548,5 +553,13 @@ code{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#CartRepeater{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 50px;
 }
 

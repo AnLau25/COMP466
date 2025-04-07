@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -11,6 +12,7 @@ namespace TMA3a.part4
 {
 	public partial class cart : System.Web.UI.Page
 	{
+		string connStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (Request.QueryString["logout"] == "true")
@@ -40,136 +42,84 @@ namespace TMA3a.part4
 			}
 
 			if (!IsPostBack)
-				LoadCart();
-
-			if (IsPostBack)
 			{
-				if (Request.Form["deleteCookie"] != null)
-				{
-					string cookieToDelete = HttpUtility.UrlDecode(Request.Form["deleteCookie"]);
-					if (Request.Cookies[cookieToDelete] != null)
-					{
-						HttpCookie original = Request.Cookies[cookieToDelete];
-
-						HttpCookie expired = new HttpCookie(cookieToDelete);
-						expired.Expires = DateTime.Now.AddDays(-1);
-
-						expired.Path = original.Path ?? "/part4";
-
-						Response.Cookies.Add(expired);
-					}
-					LoadCart();
-				}
-				else if (Request.Form["editCookie"] != null)
-				{
-					string cookieToEdit = HttpUtility.UrlDecode(Request.Form["editCookie"]);
-					HttpCookie cookie = Request.Cookies[cookieToEdit];
-
-					if (cookie != null)
-					{
-						Session["EditCookie"] = cookie.Values;
-						Response.Redirect("custom.aspx");
-
-						return;
-					}
-				}
+				LoadCart();
 			}
 		}
 		private void LoadCart()
 		{
-			litOrders.InnerHtml = "";
-			var allCookies = Request.Cookies.AllKeys;
-			var html = new System.Text.StringBuilder();
+			List<CartItem> cartItems = new List<CartItem>();
+			HttpCookieCollection cookies = Request.Cookies;
 
-			bool foundOrders = false;
-			decimal totalPrice = 0;
-
-			string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-
-			using (SqlConnection conn = new SqlConnection(connStr))
+			foreach (string key in cookies.AllKeys)
 			{
-				conn.Open();
-
-				int orderNum = 1;
-				foreach (string cookieName in allCookies)
+				if (key != null && key.StartsWith("CartItem"))
 				{
-					if (!cookieName.StartsWith("CartItem")) continue;
-
-					HttpCookie cartCookie = Request.Cookies[cookieName];
-					if (cartCookie == null) continue;
-
-					foundOrders = true;
-
-					string pcId = cartCookie.Values["ComputerId"];
-					string cpuId = cartCookie.Values["CPU"];
-					string displayId = cartCookie.Values["Display"];
-					string hddId = cartCookie.Values["HDD"];
-					string ramId = cartCookie.Values["RAM"];
-					string soundId = cartCookie.Values["Sound"];
-					string priceStr = cartCookie.Values["Price"];
-					decimal price = decimal.TryParse(priceStr, out decimal parsed) ? parsed : 0;
-					totalPrice += price;
-
-					// Fetch names
-					string pcName = GetPCName(conn, pcId);
-					string cpuName = GetCompName(conn, cpuId);
-					string displayName = GetCompName(conn, displayId);
-					string hdName = GetCompName(conn, hddId);
-					string ramName = GetCompName(conn, ramId);
-					string soundName = GetCompName(conn, soundId);
-					string encodedCookieName = HttpUtility.UrlEncode(cookieName);
-
-					html.Append("<div class='order'>");
-					html.AppendFormat("<h3>Order #{0}</h3>", orderNum++);
-					html.AppendFormat("<p><strong>PC:</strong> {0}</p>", pcName);
-					html.AppendFormat("<p><strong>Cost:</strong> ${0}</p>", price);
-					html.AppendFormat("<p><strong>CPU:</strong> {0}</p>", cpuName);
-					html.AppendFormat("<p><strong>Display:</strong> {0}</p>", displayName);
-					html.AppendFormat("<p><strong>Hard Drive:</strong> {0}</p>", hdName);
-					html.AppendFormat("<p><strong>RAM:</strong> {0}</p>", ramName);
-					html.AppendFormat("<p><strong>Sound Card:</strong> {0}</p>", soundName);
-					html.AppendFormat(@"
-					<form method='post' style='display:inline;'>
-						<input type='hidden' name='deleteCookie' value='{0}' />
-						<button type='submit' class='cta'>Delete</button>
-					</form>
-					<form method='post' style='display:inline;'>
-						<input type='hidden' name='editCookie' value='{0}' />
-						<button type='submit' class='cta'>Edit</button>
-					</form>", encodedCookieName);
-					html.Append("</div>");
-
-					
-
-					
+					HttpCookie cookie = cookies[key];
+					var query = HttpUtility.ParseQueryString(cookie.Value);
+					if (Session["username"].ToString() == query["UserName"])
+					{
+						CartItem item = new CartItem
+						{
+							CookieName = key,
+							PCName = GetPCName(query["ComputerId"]),
+							CPU = GetCompName(query["CPU"]),
+							Display = GetCompName(query["Display"]),
+							HD = GetCompName(query["HDD"]),
+							RAM = GetCompName(query["RAM"]),
+							Sound = GetCompName(query["Sound"]),
+							Price = query["Price"]
+						};
+						cartItems.Add(item);
+					}		
 				}
 			}
+			CartRepeater.DataSource = cartItems;
+			CartRepeater.DataBind();
 
-			if (foundOrders)
-			{
-				litOrders.InnerHtml = html.ToString();
-				TotalPrice.Text = $"Total Price: ${totalPrice:F2}";
-			}
-			else
-			{	
-				litOrders.InnerHtml = "<div class='order'><p>Sorry, nothing to see here yet. You are always welcome to buy one of our PC's! :)</p></div>";
-				TotalPrice.Text = "-";
-			}
+			Pay.Visible = cartItems.Count > 0;
+			LblNoItems.Visible = cartItems.Count == 0;
 		}
 
-		private string GetPCName(SqlConnection conn, string pcId)
+		protected void CartRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
 		{
+			string cookieName = e.CommandArgument.ToString();
+
+			if (e.CommandName == "Delete")
+			{
+				if (Request.Cookies[cookieName] != null)
+				{
+					HttpCookie expired = new HttpCookie(cookieName);
+					expired.Expires = DateTime.Now.AddDays(-1);
+					expired.Path = "/part4";
+					Response.Cookies.Add(expired);
+				}
+				Response.Redirect("cart.aspx");
+			}
+			else if (e.CommandName == "Edit")
+			{
+				Response.Redirect("custom.aspx?cookie=" + cookieName);
+			} 
+		}
+
+
+		private string GetPCName(string pcId)
+		{
+			using (SqlConnection conn = new SqlConnection(connStr))
 			using (SqlCommand cmd = new SqlCommand("SELECT Name FROM PCs WHERE Id = @id", conn))
 			{
+				conn.Open();
 				cmd.Parameters.AddWithValue("@id", pcId);
 				return cmd.ExecuteScalar()?.ToString() ?? "Unknown PC";
 			}
 		}
 
-		private string GetCompName(SqlConnection conn, string compId)
+		private string GetCompName(string compId)
 		{
+			using (SqlConnection conn = new SqlConnection(connStr))
 			using (SqlCommand cmd = new SqlCommand("SELECT Name FROM Comps WHERE Id = @id", conn))
 			{
+				conn.Open();
 				cmd.Parameters.AddWithValue("@id", compId);
 				return cmd.ExecuteScalar()?.ToString() ?? "Unknown Component";
 			}
@@ -181,8 +131,6 @@ namespace TMA3a.part4
 			int userId = Convert.ToInt32(Session["UserId"]);
 			string address = AddressBox.Text.Trim();
 			decimal cardNo = Convert.ToDecimal(CreditCardBox.Text.Trim());
-
-			string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
 			using (SqlConnection conn = new SqlConnection(connStr))
 			{
@@ -196,7 +144,7 @@ namespace TMA3a.part4
 					if (cartCookie == null) continue;
 
 					int newId = 1;
-					using (SqlCommand getMaxIdCmd = new SqlCommand("SELECT ISNULL(MAX(Id), 0) + 1 FROM Users", conn))
+					using (SqlCommand getMaxIdCmd = new SqlCommand("SELECT ISNULL(MAX(Id), 0) + 1 FROM Orders", conn))
 					{
 						newId = (int)getMaxIdCmd.ExecuteScalar();
 					}
@@ -229,11 +177,30 @@ namespace TMA3a.part4
 					}
 
 					cartCookie.Expires = DateTime.Now.AddDays(-1);
+					cartCookie.Path = "/part4";
 					Response.Cookies.Add(cartCookie);
 				}
 			}
 
 			Response.Redirect("Orders.aspx");
 		}
+
+		public class CartItem
+		{
+			public string CookieName { get; set; }
+			public string PCName { get; set; }
+			public string Display { get; set; }
+			public string CPU { get; set; }
+			public string RAM { get; set; }
+			public string HD { get; set; }
+			public string Sound { get; set; }
+			public string Price { get; set; }
+		}
 	}
 }
+
+/*
+For more detailed cookie attributes (including paths), navigate to the "Application" tab or "Storage" 
+in your browser's developer tools. There, you can view cookies and their attributes such as Path, 
+Domain, and Expiration.
+ */

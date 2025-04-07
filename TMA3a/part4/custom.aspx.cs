@@ -14,6 +14,8 @@ namespace TMA3a.part4
 		string connStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		int computerId;
 		decimal basePrice = 0;
+		string editingCookieName = null;
+		decimal totalPrice = 0;
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (Request.QueryString["logout"] == "true")
@@ -43,7 +45,26 @@ namespace TMA3a.part4
 
 			if (!IsPostBack)
 			{
-				if (int.TryParse(Request.QueryString["pc"], out computerId))
+				if (Request.QueryString["cookie"] != null)
+				{
+					editingCookieName = Request.QueryString["cookie"];
+					HttpCookie cookie = Request.Cookies[editingCookieName];
+					if (cookie != null)
+					{
+						computerId = int.Parse(cookie["ComputerId"]);
+						LoadComputerInfo(computerId);
+						LoadComponentDropdowns(computerId);
+
+						CPUDropDown.SelectedValue = cookie["CPU"];
+						DisplayDropDown.SelectedValue = cookie["Display"];
+						HDDropDown.SelectedValue = cookie["HDD"];
+						RAMDropDown.SelectedValue = cookie["RAM"];
+						SoundDropDown.SelectedValue = cookie["Sound"];
+
+						UpdatePrice();
+					}
+				}
+				else if (int.TryParse(Request.QueryString["pc"], out computerId))
 				{
 					LoadComputerInfo(computerId);
 					LoadComponentDropdowns(computerId);
@@ -134,9 +155,9 @@ namespace TMA3a.part4
 			}
 		}
 
-		private string UpdatePrice()
+		private void UpdatePrice()
 		{
-			decimal totalPrice = basePrice;
+			totalPrice = basePrice;
 
 			if (CPUDropDown.SelectedValue != "")
 				totalPrice += GetComponentPrice(Convert.ToInt32(CPUDropDown.SelectedValue));
@@ -150,7 +171,6 @@ namespace TMA3a.part4
 				totalPrice += GetComponentPrice(Convert.ToInt32(SoundDropDown.SelectedValue));
 
 			Price.Text = "Price: $" + totalPrice.ToString("0.00");
-			return totalPrice.ToString("0.00");
 		}
 
 		protected void Component_Changed(object sender, EventArgs e)
@@ -160,20 +180,37 @@ namespace TMA3a.part4
 
 		protected void Button1_Click(object sender, EventArgs e)
 		{
+			string pc = Request.QueryString["pc"] ?? Request.Cookies[Request.QueryString["cookie"]]?["ComputerId"];
+			LoadComputerInfo(int.Parse(pc));
+			UpdatePrice();
 			var config = new
 			{
-				ComputerId = Request.QueryString["pc"],
+				ComputerId = pc,
 				CPU = CPUDropDown.SelectedValue,
 				Display = DisplayDropDown.SelectedValue,
 				HDD = HDDropDown.SelectedValue,
 				RAM = RAMDropDown.SelectedValue,
 				Sound = SoundDropDown.SelectedValue,
-				Price = UpdatePrice()
+				UserName = Session["username"].ToString(),
+				Price = totalPrice.ToString("0.00")
 			};
 
-			string cookieId = Guid.NewGuid().ToString();
-			HttpCookie cartCookie = new HttpCookie("CartItem_" + cookieId);
+			string cookieName = Request.QueryString["cookie"];
+			HttpCookie cartCookie;
+
+			if (!string.IsNullOrEmpty(cookieName) && Request.Cookies[cookieName] != null)
+			{
+				cartCookie = Request.Cookies[cookieName];
+			}
+			else
+			{
+				cookieName = "CartItem_" + Guid.NewGuid().ToString();
+				cartCookie = new HttpCookie(cookieName);
+			}
+
 			cartCookie.Path = "/part4";
+			cartCookie.Expires = DateTime.Now.AddMonths(1);
+			cartCookie.Values["UserName"] = config.UserName;
 			cartCookie.Values["ComputerId"] = config.ComputerId;
 			cartCookie.Values["CPU"] = config.CPU;
 			cartCookie.Values["Display"] = config.Display;
@@ -181,10 +218,9 @@ namespace TMA3a.part4
 			cartCookie.Values["RAM"] = config.RAM;
 			cartCookie.Values["Sound"] = config.Sound;
 			cartCookie.Values["Price"] = config.Price;
-			cartCookie.Expires = DateTime.Now.AddMonths(1);
-			Response.Cookies.Add(cartCookie);
 
-			Response.Redirect("cart.aspx");
+			Response.Cookies.Add(cartCookie);
+			Response.Redirect($"cart.aspx?price='{totalPrice.ToString("0.00")}'");
 		}
 	}
 }

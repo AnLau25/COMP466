@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmark</title>
+    <title>PC Store</title>
     <link rel="stylesheet" type="text/css" href="/shared/styles.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -17,7 +17,7 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/part3/part3.aspx">
+                    <a href="part4.aspx">
                         <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
                     </a>
                 </div>

@@ -24,15 +24,6 @@ namespace TMA3a.part4
 		protected global::System.Web.UI.HtmlControls.HtmlGenericControl userDropdown;
 
 		/// <summary>
-		/// litOrders control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlGenericControl litOrders;
-
-		/// <summary>
 		/// form3 control.
 		/// </summary>
 		/// <remarks>
@@ -40,6 +31,24 @@ namespace TMA3a.part4
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.HtmlControls.HtmlForm form3;
+
+		/// <summary>
+		/// LblNoItems control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label LblNoItems;
+
+		/// <summary>
+		/// CartRepeater control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Repeater CartRepeater;
 
 		/// <summary>
 		/// TotalPrice control.

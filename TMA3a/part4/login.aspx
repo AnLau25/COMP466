@@ -15,7 +15,7 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="/part3/part3.aspx">
+                    <a href="part4.aspx">
                         <h1><span>The</span> PC <span style="font-size:small;">store</span></h1>
                     </a>
                 </div>

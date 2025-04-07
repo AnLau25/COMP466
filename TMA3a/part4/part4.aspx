@@ -24,7 +24,7 @@
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li><a href="/part4/part4.aspx/#pcs" data-after="PCs">Browse computers</a></li>
+                        <li><a href="#pcs" data-after="PCs">Browse computers</a></li>
                         <li><a href="/part4/comps.aspx" data-after="components">Browse components</a></li>
                         <li><a href="#footer" data-after="foot">Contact us</a></li>
                         <li id="userDropdown" runat="server">
