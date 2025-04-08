@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -86,6 +93,50 @@
     <Content Include="part4\part4.aspx" />
     <Content Include="part4\profile.aspx" />
     <Content Include="part4\signin.aspx" />
+    <Content Include="shared\anx.jpg" />
+    <Content Include="shared\apples.jpg" />
+    <Content Include="shared\brut.jpg" />
+    <Content Include="shared\build.jpg" />
+    <Content Include="shared\cup.jpg" />
+    <Content Include="shared\cup2.jpg" />
+    <Content Include="shared\DummyMax.jpg" />
+    <Content Include="shared\eng.jpg" />
+    <Content Include="shared\ex1.jpg" />
+    <Content Include="shared\ex10.jpg" />
+    <Content Include="shared\ex11.jpg" />
+    <Content Include="shared\ex12.jpg" />
+    <Content Include="shared\ex2.jpg" />
+    <Content Include="shared\ex3.jpg" />
+    <Content Include="shared\ex4.jpg" />
+    <Content Include="shared\ex5.jpg" />
+    <Content Include="shared\ex6.jpg" />
+    <Content Include="shared\ex7.jpg" />
+    <Content Include="shared\ex8.jpg" />
+    <Content Include="shared\ex9.jpg" />
+    <Content Include="shared\flaque.jpg" />
+    <Content Include="shared\frtulla.jpg" />
+    <Content Include="shared\grayScale.jpg" />
+    <Content Include="shared\juice.jpg" />
+    <Content Include="shared\laptop.png" />
+    <Content Include="shared\lily.jpg" />
+    <Content Include="shared\maison.jpg" />
+    <Content Include="shared\mint.jpg" />
+    <Content Include="shared\moon.jpg" />
+    <Content Include="shared\neon.jpg" />
+    <Content Include="shared\odd.jpg" />
+    <Content Include="shared\q1.jpg" />
+    <Content Include="shared\q2.jpg" />
+    <Content Include="shared\q3.jpg" />
+    <Content Include="shared\q3_1.jpg" />
+    <Content Include="shared\q3_2.jpg" />
+    <Content Include="shared\q4.jpg" />
+    <Content Include="shared\q4_1.jpg" />
+    <Content Include="shared\q4_2.jpg" />
+    <Content Include="shared\q4_3.jpg" />
+    <Content Include="shared\redCar.jpg" />
+    <Content Include="shared\sourPatch.jpg" />
+    <Content Include="shared\styles.css" />
+    <Content Include="shared\vamp1.jpg" />
     <Content Include="tma3a.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -196,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\TMA3a-FinalProject-Athabasca - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,7 +288,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

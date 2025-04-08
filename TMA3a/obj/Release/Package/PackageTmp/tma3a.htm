@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignement3a</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+        </script>
+    <link rel="stylesheet" type="text/css" href="/shared/styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <h1><span>The</span> homework <span>page</span></h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="#q1" data-after="Unit1">Question 1</a></li>
+                        <li><a href="#q2" data-after="unit2">Question 2</a></li>
+                        <li><a href="#q3" data-after="unit3">Question 3</a></li>
+                        <li><a href="#q4" data-after="Unit1">Question 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header -->
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="text-block">
+                <h1>
+                    COMP466 <span>Advanced Technologies for Web-Based Systems</span> <strong style="font-size: 15px;">Assignment 3</strong>
+                </h1>
+                <p><strong>Name: </strong>Ana Laura Valdés Rodríguez</p>
+                <p><strong>Student number: </strong>3728648</p>
+                <p><strong>Start date: </strong>2025-03-24</p>
+                <p><strong>Submit date: </strong>2025-04-06</p>
+                <p><strong>Time estimate: </strong>51h</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section  -->
+    <!-- q1 Section -->
+    <section id="q1">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 1: </span>Persistent cookie</h1>
+                <p class="section-subtitle">ASP.net with C# program that counts visist while displaying timezone and IP address</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>
+                            This page, as requested, not only counts the number of times a user has visited the site, but it also displays the user's IP and time zone.
+                        </p>
+                        <div class="section-ul">
+                            <p> <strong>Functionality:</strong> </p>
+                            <ul>
+                                <li>
+                                    For the cookie, we create a persistent cookie in the page’s backend (part1.aspx.cs) with
+                                    <a href="https://www.csharp.com/UploadFile/annathurai/cookies-in-Asp-Net/" class="abi" target="_blank">HttpCookie</a>
+                                    and assign it a 30-day expiry date.
+                                </li>
+                                <li>
+                                    We render the cookie in the frontend using asp to call its value with
+                                    <code>&lt;%= Request.Cookies["countVisit"].Value %&gt;</code>.
+                                </li>
+                                <li>The cookie is initialized once, on the first time the user visits the page.</li>
+                                <li>
+                                    To increment the cookie, we call its functionality on the Page_Load function, increasing the cookie’s stored value every time the user opens the page.
+                                </li>
+                                <li>
+                                    For the IP address, we use
+                                    <a href="https://www.csharp.com/article/get-ip-address-in-Asp-Net/" class="abi" target="_blank">Request.ServerVariable</a>
+                                    and store it in a view state that is then called in the front end for display with
+                                    <code>&lt;%= ViewState["UserIP"] %&gt;</code>.
+                                </li>
+                                <li>
+                                    Finally, we use a small JavaScript to get the time zone on page load as well, by implementing an
+                                    <a href="https://therootcompany.com/blog/javascript-timezone-cheat-sheet/" class="abi" target="_blank">Intl</a>
+                                    and sending it to a “timezone” element, in the frontend, for display.
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="/part1.aspx" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q1.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q1 Section -->
+    <!-- q2 Section -->
+    <section id="q2">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 2: </span>Canvas Slideshow</h1>
+                <p class="section-subtitle">A 20 image user interactive slideshow</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Explanation</h1>
+                        <p>
+                            This page, as requested, showcases the functionality of a canvas that manages and displays images dynamically with AJAX integration.
+                        </p>
+                        <div class="section-ul">
+                            <p> <strong>Canvas Functionality:</strong> </p>
+                            <ul>
+                                <li>
+                                    I use
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.scriptmanager?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:ScriptManager/&gt;</a>,
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.updatepanel?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:UpdatePanel&gt;</a>,
+                                    and
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.updatepanel.contenttemplate?view=netframework-4.8.1" class="abi" target="_blank">&lt;ContentTemplate&gt;</a>
+                                    to manage AJAX functionality, ensuring C# scripts load asynchronously with onClick events.
+                                </li>
+                                <li>An <code>&lt;asp:Image/&gt;</code> element displays the images, while an <code>&lt;asp:Label&gt;</code> shows the captions.</li>
+                                <li>
+                                    A
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.timer?view=netframework-4.8.1" class="abi" target="_blank">&lt;asp:Timer/&gt;</a>
+                                    is used for timing intervals between images, with an onTick function.
+                                </li>
+                                <li>
+                                    The Play, Mode, Prev, and Next functionalities are handled by <code>&lt;asp:Button&gt;</code> elements with their respective onClick functions.
+                                </li>
+                                <li>
+                                    <strong>Functions:</strong>
+                                    <ul>
+                                        <li><strong>OnLoad:</strong> Initializes variables, calls <code>GetImgs()</code> to fetch image URLs and captions, and displays the first image via <code>DisplaySlide(0)</code>.</li>
+                                        <li>
+                                            <strong>GetImgs:</strong> Connects to a database with
+                                            <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlconnection?view=sqlclient-dotnet-standard-5.2" class="abi" target="_blank">SqlConnection</a>
+                                            and retrieves image URLs and captions using the query
+                                            <code>SELECT Img, Caption FROM Canvas_Imgs</code>, returning them as a
+                                            <code>List&lt;Slide&gt; slides = new List&lt;Slide&gt;();</code>.
+                                        </li>
+                                        <li><strong>DisplaySlide:</strong> Updates the current image and caption based on the <code>CurrentIndex</code>.</li>
+                                        <li><strong>Timer_Tick:</strong> Controls image display intervals, handling sequential or random navigation based on the <code>IsSequential</code> flag.</li>
+                                        <li><strong>Play_Click:</strong> Toggles between automatic and manual modes, enabling or disabling the <code>SlideTimer</code>, and updates the button text accordingly.</li>
+                                        <li>
+                                            <strong>Mode_Click:</strong> Switches between random and sequential display modes, adjusts button states for Prev and Next, and updates the button text based on the inactive mode.
+                                        </li>
+                                        <li>
+                                            <strong>Prev_Click & Next_Click:</strong> Manually navigates through images by modifying the <code>CurrentIndex</code>.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="/part2/part2.aspx" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q2.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q2 Section -->
+
+    <!-- q3 Section -->
+    <section id="q3">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 3: </span>Online store, frontend</h1>
+                <p class="section-subtitle">Basic online store, hardcoded.</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Nav, Footer & Home page</h1>
+                        <p>
+                            The software is a simple hardocded webpage to sell computers with modifieable compoents. After a study of other webpages,
+                            I took note that for this one to be considered functional, four main pages would be necesary: A home page, a components page, a payement page and a bill page.
+                            Aditionaly, a footer containing the contact information for the store exist for the main pages and the nav-bar exists for all.
+                        </p>
+                        <div class="section-ul">
+                            <p><strong>Navigation bar:</strong></p>
+                            <ul>
+                                <li>
+                                    Includes a <strong>navigation bar</strong> inside a container.
+                                </li>
+                                <li>
+                                    <strong>Brand/Logo:</strong>
+                                    <ul>
+                                        <li>
+                                            Styled to make parts of it look different and says <em>"The PC store"</em>.
+                                        </li>
+                                        <li>
+                                            Clicking the logo navigates to another the home page.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Menu:</strong>
+                                    <ul>
+                                        <li>Link to browse computers.</li>
+                                        <li>Link to browse components.</li>
+                                        <li>Link to contact the site (jumps to the footer).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Footer:</strong></p>
+                            <ul>
+                                <li>
+                                    Creates a footer section with the ID <code>footer</code> and class <code>footer container</code>.
+                                </li>
+                                <li>
+                                    Displays the brand name <em>"The PC store"</em> with stylized text.
+                                </li>
+                                <li>
+                                    Shows a copyright line: <em>© 2022 Lupin. All rights reserved</em>.
+                                </li>
+                                <li>
+                                    Displays a subtitle/tagline: <em>"Where technology meets art"</em>.
+                                </li>
+                                <li>
+                                    Includes four social icon links:
+                                    <ul>
+                                        <li>One linking to the home page <code>/tma3a.htm</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Each social link is represented by a black icon image that lights up on hover.
+                                </li>
+                                <li>
+                                    Provides contact information:
+                                    <ul>
+                                        <li>General customer support email: <code>costumerhelp@thepcstore.com</code>.</li>
+                                        <li>Technical support email: <code>techsupport@thepcstore.com</code>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Home page:</strong></p>
+                            <ul>
+                                <li>
+                                    Presents a <strong>hero section</strong> featuring two highlighted laptops with catchy, lifestyle-oriented descriptions.
+                                </li>
+                                <li>
+                                    Encourages visitors to explore a curated selection of <em>"everyone’s favourites."</em>
+                                </li>
+                                <li>
+                                    Introduces a <strong>product showcase</strong> section titled <em>"SEE our offers."</em>
+                                </li>
+                                <li>
+                                    Displays <strong>five detailed laptop profiles</strong>, each including:
+                                    <ul>
+                                        <li>A persuasive, personality-driven pitch.</li>
+                                        <li>Full tech specs (RAM, CPU, storage, etc.).</li>
+                                        <li>A price for the default configuration.</li>
+                                        <li>A “Buy” button linking to a purchase page.</li>
+                                        <li>A large image representing the product.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Uses distinct tones and descriptions tailored to different types of users.
+                                </li>
+                                <li>
+                                    Aims to blend <strong>marketing appeal</strong> with <strong>technical detail</strong> for informed and emotional purchase decisions.
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="/part3/part3.aspx" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q3_1.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Component page & payment</h1>
+                        <div class="section-ul">
+                            <p><strong>Components page:</strong></p>
+                            <ul>
+                                <li>
+                                    Displays a <strong>custom PC component selection interface</strong> for users to browse and choose parts.
+                                </li>
+                                <li>
+                                    Introduces the section with a <strong>title and subtitle</strong> encouraging customization.
+                                </li>
+                                <li>
+                                    Presents <strong>five categories</strong> of components:RAM, hard drives, CPUs, displays and soundcards.
+                                </li>
+                                <li>
+                                    Each component is displayed in a <strong>card format</strong>, including: Component name, brief description, price, compatible devices/laptops.
+                                </li>
+                                <li>
+                                    Helps users <strong>visualize upgrade options</strong> and match parts to their existing or desired PC setup.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Customizable Purchase Form:</strong></p>
+                            <ul>
+                                <li>
+                                    Displays a <strong>customizable purchase form</strong> for a selected laptop model (based on a <code>pc</code> query string).
+                                </li>
+                                <li>
+                                    Shows <strong>base model name</strong> and <strong>base price</strong> on page load using server-side C# logic.
+                                </li>
+                                <li>
+                                    Populates <strong>drop-downs</strong> with component options (RAM, HDD, CPU, display, sound card) based on selected model compatibility.
+                                </li>
+                                <li>
+                                    Uses <strong>JavaScript</strong> to dynamically update the <strong>total price</strong> as components are selected.
+                                </li>
+                                <li>
+                                    Collects <strong>user payment and contact info</strong> via textboxes, including: Full name, address, e-mail, credit card and CVV.
+                                </li>
+                                <li>
+                                    When the user clicks <strong>"Pay,"</strong> it:
+                                    <ul>
+                                        <li>Retrieves all selected options and input data.</li>
+                                        <li>Saves them into a <strong>cookie</strong> called <code>PurchaseDetails</code> (expires in 1 hour).</li>
+                                        <li>Redirects the user to a confirmation page (<code>paid.aspx</code>).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Purchase Details Form:</strong></p>
+                            <ul>
+                                <li>
+                                    Uses <strong>ASP.NET</strong> with Web Forms and server controls (<code>&lt;asp:Label&gt;</code>) to show purchase details.
+                                </li>
+                                <li>
+                                    Reads purchase information from a browser cookie named <code>PurchaseDetails</code> on page load.
+                                </li>
+                                <li>
+                                    If the cookie exists and the page is not a postback:
+                                    <ul>
+                                        <li>Retrieves and displays values such as computer specs (RAM, HDD, CPU, etc.), user info (name, address, email), and final price.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Populates the labels in the form dynamically with data from the cookie.
+                                </li>
+                                <li>
+                                    Includes a <strong>"Back to home" button</strong> that redirects to the homepage (<code>part3.aspx</code>).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q3_2.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End q3 Section -->
+
+    <!-- q4 Section -->
+    <section id="q4">
+        <div class="section-container">
+            <div class="top">
+                <h1 class="section-title"><span>Question 4: </span>Online store, fullstack</h1>
+                <p class="section-subtitle">Full auomation of the online store, with database entities</p>
+            </div>
+
+            <div class="bottom">
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>Summary & Database</h1>
+                        <p>
+                            As requested, the website now features an integrated database system that securely stores users, computers, components, and orders. It generates a user session whenever they log in, which automatically closes when they leave the main page. Users can place orders, with options to edit or delete them if needed. Additionally, they can finalize their orders and review their order history. Finally, users have the ability to update their password or username directly from the profile page.
+                        </p>
+                        <div class="section-ul">
+                            <p><strong>Users Table</strong></p>
+                            <ul>
+                                <li>Stores user account information.</li>
+                                <li><strong>Id</strong>: Unique identifier for the user (Primary Key).</li>
+                                <li><strong>Name</strong>: Username (max 50 characters).</li>
+                                <li><strong>Password</strong>: User password (hashed/stored up to 255 characters).</li>
+                            </ul>
+
+                            <p><strong>Comps Table</strong></p>
+                            <ul>
+                                <li>Represents computer components.</li>
+                                <li><strong>Id</strong>: Unique identifier for the component (Primary Key).</li>
+                                <li><strong>Name</strong>: Name of the component.</li>
+                                <li><strong>Type</strong>: Type/category of component (e.g., CPU, RAM).</li>
+                                <li><strong>Descript</strong>: Description of the component (no size limit).</li>
+                                <li><strong>Price</strong>: Price of the component (up to 2 decimal places).</li>
+                            </ul>
+
+                            <p><strong>PCs Table</strong></p>
+                            <ul>
+                                <li>Represents base PC models (preconfigured).</li>
+                                <li><strong>Id</strong>: Unique identifier for the PC (Primary Key).</li>
+                                <li><strong>Name</strong>: Name of the PC.</li>
+                                <li><strong>Descript</strong>: Description of the PC.</li>
+                                <li><strong>Price</strong>: Total price with default components.</li>
+                                <li><strong>BasePrice</strong>: Starting price (before customization).</li>
+                            </ul>
+
+                            <p><strong>Compat Table</strong></p>
+                            <ul>
+                                <li>Maps which components are compatible with which PC models.</li>
+                                <li><strong>Id</strong>: Unique identifier (Primary Key).</li>
+                                <li><strong>PC_ID</strong>: References a PC (Foreign Key → <code>PCs.Id</code>).</li>
+                                <li><strong>Comp_ID</strong>: References a component (Foreign Key → <code>Comps.Id</code>).</li>
+                            </ul>
+
+                            <p><strong>Orders Table</strong></p>
+                            <ul>
+                                <li>Stores user orders and selected components for each PC.</li>
+                                <li><strong>Id</strong>: Unique identifier for the order (Primary Key).</li>
+                                <li><strong>User_ID</strong>: References the user who placed the order (Foreign Key → <code>Users.Id</code>).</li>
+                                <li><strong>PC_ID</strong>: References the base PC model (Foreign Key → <code>PCs.Id</code>).</li>
+                                <li><strong>CPU_ID</strong>, <strong>Display_ID</strong>, <strong>HD_ID</strong>, <strong>RAM_ID</strong>, <strong>Sound_ID</strong>: IDs of selected components.</li>
+                                <li><strong>Address</strong>: Shipping address.</li>
+                                <li><strong>CardNo</strong>: Payment card number (stored as a decimal – not ideal for real applications).</li>
+                                <li><strong>Price</strong>: Final price of the order.</li>
+                            </ul>
+                        </div>
+
+                        <a href="/part4/part4.aspx" type="button" class="cta">See Solution</a>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q4.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>SignIn/LogIn & LogOut</h1>
+                        <div class="section-ul">
+                            <p><strong>Sign-in Page Summary:</strong></p>
+                            <ul>
+                                <li><strong>Purpose:</strong> Handles user registration (sign-up).</li>
+                                <li>
+                                    <strong>Input Handling:</strong>
+                                    <ul>
+                                        <li>Gets username, password, and confirm password.</li>
+                                        <li>Validates: all fields filled, passwords match.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Password Security:</strong> Hashes password using <strong>SHA-256</strong>.
+                                </li>
+                                <li>
+                                    <strong>Database Logic:</strong>
+                                    <ul>
+                                        <li>Connects using connection string from <code>Web.config</code>.</li>
+                                        <li>Checks if username already exists.</li>
+                                        <li>Gets next available user ID (<code>MAX(Id) + 1</code>).</li>
+                                        <li>Inserts new user (ID, username, hashed password).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>On Success:</strong> Redirects to <code>login.aspx</code>.
+                                </li>
+                                <li>
+                                    <strong>Error Handling:</strong> Displays error message on exception or validation failure.
+                                </li>
+                                <li>
+                                    <strong>Hashing Method:</strong> Converts password to SHA-256 hash in hex format.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Login Page Summary:</strong></p>
+                            <ul>
+                                <li><strong>Page_Load:</strong> Empty; runs on page load.</li>
+                                <li>
+                                    <strong>BtnLogin_Click:</strong> On login button click:
+                                    <ul>
+                                        <li>Gets and trims username/password input.</li>
+                                        <li>Hashes password using SHA-256 (<a href="https://www.c-sharpcorner.com/UploadFile/225740/introduction-of-session-in-Asp-Net/" class="abi">Session</a>).</li>
+                                        <li>Connects to database using connection string from <code>web.config</code>.</li>
+                                        <li>Executes parameterized SQL query to find matching user.</li>
+                                        <li>
+                                            If user exists:
+                                            <ul>
+                                                <li>Stores userID and username in <a href="https://www.c-sharpcorner.com/UploadFile/225740/introduction-of-session-in-Asp-Net/" class="abi">Session</a>.</li>
+                                                <li>Redirects to <code>part4.aspx</code>.</li>
+                                            </ul>
+                                        </li>
+                                        <li>If not: Displays "Invalid username or password" message.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>HashPassword(string password):</strong>
+                                    <ul>
+                                        <li>Hashes password with SHA-256.</li>
+                                        <li>Returns hexadecimal string.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Session Logic:</strong></p>
+                            <ul>
+                                <li>
+                                    <strong>Logout logic</strong> (if <code>?logout=true</code> in URL):
+                                    <ul>
+                                        <li>Clears session (<code>Session.Clear()</code>).</li>
+                                        <li>Ends session (<code>Session.Abandon()</code>).</li>
+                                        <li>Updates <code>userDropdown</code> to show <strong>"SignIn/LogIn"</strong> link.</li>
+                                        <li>Stops page processing with <code>return</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>If user is logged in</strong> (<code>Session["username"] != null</code>):
+                                    <ul>
+                                        <li>Shows greeting + dropdown with options (Profile, Cart, Orders, Logout).</li>
+                                        <li>Gets <code>UserId</code> from session.</li>
+                                        <li>Calls <code>DisplayOrders(userId)</code> and displays it in <code>orderContainer</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>If user not logged in</strong>:
+                                    <ul>
+                                        <li>Redirects to <code>login.aspx</code> page.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q4_1.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1>General display & Profile</h1>
+                        <div class="section-ul">
+                            <p><strong>Display Computers:</strong></p>
+                            <ul>
+                                <li>
+                                    On <code>Page_Load</code>:
+                                    <ul>
+                                        <li>Call <code>GeneratePCSection()</code> → set output to <code>pcSectionContainer.InnerHtml</code>.</li>
+                                        <li>Handle logout and user dropdown like above.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>GeneratePCSection()</code>:
+                                    <ul>
+                                        <li>Query <code>PCs</code> table for all computers.</li>
+                                        <li>For each PC: Output card with name, description, base price.</li>
+                                        <li>Add "Add to cart" link → <code>custom.aspx?pc=ID</code>.</li>
+                                        <li>Include default image.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p><strong>Display Components:</strong></p>
+                            <ul>
+                                <li>
+                                    On <code>Page_Load</code>:
+                                    <ul>
+                                        <li>Call <code>GeneratePCSection()</code> → set output to <code>litComponents.InnerHtml</code>.</li>
+                                        <li>Handle logout (<code>Session.Clear</code>) and update user dropdown if logged in.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>GeneratePCSection()</code>:
+                                    <ul>
+                                        <li>Query <code>Comps</code>, <code>Compat</code>, and <code>PCs</code> to get components and their compatible PCs.</li>
+                                        <li>Build a dictionary of components grouped by type.</li>
+                                        <li>Each component tracks compatible PCs.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>GenerateHtml()</code>:
+                                    <ul>
+                                        <li>
+                                            For each type group, output a section with component cards composed of: Name, Description, Price and Compatible PC names.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Profile page:</strong></p>
+                            <ul>
+                                <li>
+                                    <strong>On <code>Changebtn_Click</code>:</strong>
+                                    <ul>
+                                        <li>Get user ID, new name, old & new passwords.</li>
+                                        <li>Connect to DB, retrieve stored password hash.</li>
+                                        <li>
+                                            <strong>If new name is given:</strong>
+                                            <ul>
+                                                <li>If name exists: show error.</li>
+                                                <li>Else: update name, clear session, redirect to login.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>If both passwords given:</strong>
+                                            <ul>
+                                                <li>If old password matches hash: update to new hashed password, clear session, redirect to login.</li>
+                                                <li>Else: show wrong password error.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>If only one password is given:</strong> show "both required" error.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>On <code>Delbtn_Click</code>:</strong>
+                                    <ul>
+                                        <li>Get user ID, delete user from DB.</li>
+                                        <li>Clear session, redirect to <code>part4.aspx</code>.</li>
+                                    </ul>
+                                </li>
+                                <li><strong><code>HashPassword</code>:</strong> returns SHA256 hash of input password as hex string.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="exmpl-cont">
+                        <img src="/shared/q4_2.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="exmpl-item">
+                    <div class="exmpl-info">
+                        <h1 style="text-align:left">Order creating, stpring and displaying</h1>
+                        <div class="section-ul">
+                            <p><strong>Create/Edit order page:</strong></p>
+                            <ul>
+                                <li>
+                                    <strong>Page Load</strong>
+                                    <ul>
+                                        <li>
+                                            If editing (<code>cookie</code> in query string):
+                                            <ul>
+                                                <li>Loads cookie data (PC + component selections).</li>
+                                                <li>Sets dropdowns and updates price.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            If creating new <code>pc</code> in query string:
+                                            <ul>
+                                                <li>Loads PC info and compatible components.</li>
+                                                <li>Updates price.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Dropdowns</strong>
+                                    <ul>
+                                        <li>
+                                            Each component dropdown (CPU, Display, HDD, RAM, Sound):
+                                            <ul>
+                                                <li>Populated based on PC compatibility.</li>
+                                                <li>Auto-postback enabled.</li>
+                                                <li>Triggers price update on change.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Price Calculation</strong>
+                                    <ul>
+                                        <li>Base price + sum of selected component prices.</li>
+                                        <li>Component prices fetched from DB.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Cart Handling (Button Click)</strong>
+                                    <ul>
+                                        <li>Gathers selected config + total price.</li>
+                                        <li>Updates existing cookie or creates a new one.</li>
+                                        <li>Saves data to cookie and redirects to <code>cart.aspx</code> with price.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Cart page:</strong></p>
+                            <ul>
+                                <li>On first load (<code>!IsPostBack</code>): call <code>LoadCart()</code> to fetch and bind cart items.</li>
+                                <li>
+                                    <strong><code>LoadCart()</code> Method:</strong>
+                                    <ul>
+                                        <li>Loops through all cookies.</li>
+                                        <li>Filters cookies starting with <code>"CartItem"</code> and matching current username.</li>
+                                        <li>Extracts component IDs and fetches corresponding names using SQL queries.</li>
+                                        <li>Binds list of <code>CartItem</code> objects to the <code>CartRepeater</code> control.</li>
+                                        <li>Shows or hides the Pay button and “No Items” label based on cart item count.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Repeater Item Commands (<code>CartRepeater_ItemCommand</code>):</strong>
+                                    <ul>
+                                        <li><strong>Delete:</strong> expires (removes) the selected cookie and reloads the page.</li>
+                                        <li><strong>Edit:</strong> redirects to <code>custom.aspx</code> with the cookie name in the query string.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Helper Methods:</strong> <code>GetPCName()</code> and <code>GetCompName()</code> fetch component names from the database using IDs.</li>
+                                <li>
+                                    <strong>Payment (<code>Pay_Click</code>):</strong>
+                                    <ul>
+                                        <li>Gets current user's ID, address, and card number.</li>
+                                        <li>
+                                            For each cart cookie:
+                                            <ul>
+                                                <li>Extracts component IDs and price.</li>
+                                                <li>Inserts an order into the <code>Orders</code> table.</li>
+                                                <li>Expires the cookie (removes the item from the cart).</li>
+                                            </ul>
+                                        </li>
+                                        <li>Redirects to <code>Orders.aspx</code> after processing all items.</li>
+                                    </ul>
+                                </li>
+                                <li><strong><code>CartItem</code> Class:</strong> Holds properties for displaying a cart item: component names, price, and cookie identifier.</li>
+                            </ul>
+                        </div>
+                        <div class="section-ul">
+                            <p><strong>Order display page:</strong></p>
+                            <ul>
+                                <li>Establishes DB connection using connection string.</li>
+                                <li>Queries user-specific order details with component joins (PC, CPU, Display, HD, RAM, Sound).</li>
+                                <li>
+                                    For each order:
+                                    <ul>
+                                        <li>Formats and appends order details to the <code>html</code> string.</li>
+                                        <li>Masks card number (shows only last 4 digits).</li>
+                                    </ul>
+                                </li>
+                                <li>If no orders are found, shows a friendly message.</li>
+                                <li>Returns the constructed HTML string.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="exmpl-cont">
+                        <img src="/shared/q4_3.jpg" alt="img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End q4 Section -->
+
+
+</body>
+
+</html>

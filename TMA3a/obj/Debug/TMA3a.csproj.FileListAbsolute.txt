@@ -57,3 +57,7 @@ C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.Cor
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.csproj.Up2Date
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.dll
 C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\obj\Debug\TMA3a.pdb
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\EntityFramework.dll
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\EntityFramework.xml
+C:\Users\User\Documents\A_UNI\YOff\Atha\COMP466\TMA3a\bin\EntityFramework.SqlServer.xml

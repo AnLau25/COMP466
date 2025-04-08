@@ -1,0 +1,10 @@
+TMA3a-FinalProject-Athabasca
+Server
+tma3a-dbdbserver
+Alexjb
+Rhum123Cric!
+TMA3aConnectionString
+Server=tcp:tma3a-dbdbserver.database.windows.net;Authentication=Active Directory Default;Database=TMA3a_DB;
+
+https://tma3a-finalproject-athabasca-cjeqddbdebe4fkcd.canadacentral-01.azurewebsites.net
+http://tma2.42web.io/index.htm
