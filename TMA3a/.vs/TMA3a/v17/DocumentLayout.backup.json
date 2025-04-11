@@ -3,19 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\tma3a\\part4\\profile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part4\\profile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\tma3a\\shared\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:shared\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\tma3a\\part4\\custom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part4\\custom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:part4\\custom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\tma3a\\tma3a.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\tma3a.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{97580D49-F0C5-4232-B853-1073CB3E7CA8}|TMA3a.csproj|solutionrelative:tma3a.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -26,24 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "profile.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part4\\profile.aspx",
-              "RelativeDocumentMoniker": "part4\\profile.aspx",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part4\\profile.aspx",
-              "RelativeToolTip": "part4\\profile.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-07T02:57:53.17Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "custom.aspx",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\part4\\custom.aspx",
               "RelativeDocumentMoniker": "part4\\custom.aspx",
@@ -51,29 +38,24 @@
               "RelativeToolTip": "part4\\custom.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-07T02:48:02.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T02:48:02.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\shared\\styles.css",
               "RelativeDocumentMoniker": "shared\\styles.css",
               "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\shared\\styles.css",
               "RelativeToolTip": "shared\\styles.css",
-              "ViewState": "AgIAADICAAAAAAAAAAAhwDwCAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAADYCAAAAODMzMzP7v0UCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-07T02:37:24.549Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "tma3a.htm",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\TMA3a\\tma3a.htm",
               "RelativeDocumentMoniker": "tma3a.htm",
@@ -81,8 +63,7 @@
               "RelativeToolTip": "tma3a.htm",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAAKQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-07T00:10:58.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T00:10:58.941Z"
             }
           ]
         }
