@@ -62,6 +62,14 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     <head>
         <meta charset="utf-8"/>
         <title>Test q1</title>
+        <style>
+            td{
+                border: 1px solid black;
+            }
+            table{
+                boder-collapse: collapse;
+            }
+        </style>
     </head>
     <body>
         <h1>Dummy page</h1>
