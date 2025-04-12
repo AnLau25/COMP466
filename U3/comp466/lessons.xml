@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<course>
+    <cname>COMP466</cname>
+    <profesor>Ali</profesor>
+    <content>
+        <unit>
+            <uname>Html and CSS</uname>
+            <sections>
+                <sname>1</sname>
+                <sname>2</sname>
+                <sname>3</sname>
+            </sections>
+        </unit>
+        <unit>
+            <uname>JavaScript</uname>
+            <sections>
+                <sname>1</sname>
+                <sname>2</sname>
+                <sname>3</sname>
+            </sections>
+        </unit>
+        <unit>
+            <uname>Ajax</uname>
+            <sections>
+                <sname>1</sname>
+                <sname>2</sname>
+                <sname>3</sname>
+            </sections>
+        </unit>
+        <unit>
+            <uname>PHP</uname>
+            <sections>
+                <sname>1</sname>
+                <sname>2</sname>
+                <sname>3</sname>
+            </sections>
+        </unit>
+        <unit>
+            <uname>Asp.net with C#</uname>
+            <sections>
+                <sname>1</sname>
+                <sname>2</sname>
+                <sname>3</sname>
+            </sections>
+        </unit>
+    </content>
+</course>
