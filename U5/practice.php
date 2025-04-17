@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         }
     }
 
-    echo "<table>";
+    echo "<table><caption>GCD of ".$M." and ".$N." </caption><tbody>";
     echo "<tr>
             <td>GCD:</td>
             <td>$GCD</td>
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         echo "<td>" .$N_Divs[$i]. "</td>";
     }
     echo"</tr>";
-    echo "</table>";
+    echo "</tbody></table>";
     
 }
 

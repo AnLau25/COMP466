@@ -33,7 +33,7 @@
 		}
 	}
 
-	echo "<table>";
+	echo "<table><caption>GCD of ".$M." and ".$N." </caption><tbody>";
 	echo "<tr><td>GCD: </td><td>".$GCD."</td></tr>";
 	echo "<tr><td>Divisors of ".$M."</td><td>";
 	for ($i=0; $i<$M_count; $i++){
@@ -45,7 +45,7 @@
 		echo $N_div[$i]." ";
 	}
 	echo"</tr>";
-	echo "</table>";
+	echo "</tbody></table>";
 }
 
 php>

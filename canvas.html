@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Draw</title>
+	<style>
+		.red {
+			color: red;
+			background-color: red;
+		}
+		.blue {
+			color: blue;
+			background-color: blue;
+		}
+		td {
+			width: 5px;
+			height: 5px;
+		}
+	</style>
+	<script>
+		function createCanvas() {
+			var side = 60;
+			var tbody = document.getElementById("tablebody");
+
+			for (var i = 0; i < side; i++) {
+				var row = document.createElement("tr");
+				for (var j = 0; j < side; j++) {
+					var cell = document.createElement("td");
+					row.appendChild(cell);
+				}
+				tbody.appendChild(row);
+			}
+
+			document.getElementById("canvas").addEventListener("mousemove", processMouseMove, false);
+			document.getElementById("erase").addEventListener("click", clear, false);
+		}
+
+		function clear (event){
+			var side = 60;
+			var canvas = document.getElementById("canvas");
+
+			for (var i = 0; i < side; i++) {
+				for (var j = 0; j < side; j++) {
+						canvas.rows[i].cells[j].setAttribute("class","");
+				}
+			}
+		}
+
+		function processMouseMove(event) {
+			if (event.target.tagName.toLowerCase() == "td") {
+				if (event.ctrlKey) {
+					event.target.setAttribute("class", "red");
+				}
+				if (event.shiftKey) {
+					event.target.setAttribute("class", "blue");
+				}
+				if (event.altKey){
+					event.target.setAttribute("class","");
+				}
+			}
+		}
+
+		window.addEventListener("load", createCanvas, false);
+	</script>
+</head>
+<body>
+	<table id="canvas">
+		<caption>Hold Ctrl for Red, Shift for Blue</caption>
+		<tbody id="tablebody"></tbody>
+	</table>
+	<button id="erase">Erase</button>
+</body>
+</html>
