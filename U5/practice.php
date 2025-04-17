@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
                 <button type="submit">Submit</button>
             </p>
         </form>
-
+        <img src="../DummyMax.jpg" width="10px" height="auto"/>
         <script>
             document.getElementById('form').addEventListener('submit', handleSubmit);
 

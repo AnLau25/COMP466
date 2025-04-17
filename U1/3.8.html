@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Autocomplete Datalist</title>
+	</head>
+
+	<body>
+		<form method="post" id="form" autocomplete="on">
+			<p>
+				<label for="entry">Autocomplete with datalist:
+					<input type="textbox" id="entry" placeholder="F1 driver?" list="drivers"/>
+					<datalist id="drivers">
+						<option Value="Max Verstapen">
+						<option Value="Fernando Alonso">
+						<option Value="Michael Schumacher">
+						<option Value="Ayrton Senna">
+					</datalist>
+				</label>
+			</p>
+			<p>
+				<button type="submit">Submit</button>
+			</p>
+		</form>
+		<script>
+			document.getElementById("form").addEventListener('submit',getValue);
+			
+			function getValue(event){
+				event.preventDefault();
+				console.log(document.getElementById("entry").value);
+			}
+		</script>
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+
+</html>

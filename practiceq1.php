@@ -48,8 +48,9 @@
 	echo "</tbody></table>";
 }
 
-php>
+?>
 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Find GCD</title>
@@ -75,7 +76,7 @@ php>
 		
 		<button type="submit">Submit</button>
 	</form>
-	
+	<img src="DummyMax.jpg" width="10px" height="auto"/>
 	<script>
 		document.getElementById('form').addEventListener('submit', handleSubmit);
 		
