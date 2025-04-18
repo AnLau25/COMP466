@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Biggest</title>
+	</head>
+		
+	<body>	
+		<h1>Biggest sale was...</h1>
+		
+		<script>
+			var biggest = 0;
+			var number = 0;
+			
+			for(var i=0; i<10; i++){
+				number = Number(window.prompt("Enter the first sale."));
+				biggest = number>biggest ? number : biggest;
+				document.write("<p>Value " + (i+1) + ": "+ number.toFixed(2) + "</p>");			
+			}
+			document.write("<p>Winner: " + biggest.toFixed(2) + " </p>");	
+		</script>
+		
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+</html>

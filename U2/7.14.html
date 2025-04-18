@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Paid hours</title>
+	</head>
+
+	<body>
+        	<h1>Dummy page</h1>
+       	 	<img src="DummyMax.jpg"/>
+				<script>
+			document.write("<h1>Playroll</h1>");
+			for(i=0; i<3; i++){
+				var name = window.prompt("Worker name");
+				var wage = Number(window.prompt("Input hourly wage"));
+				var hours = Number(window.prompt("Input worked hours"));
+				var salary = 0;
+
+				if(hours==40){
+					salary=hours*wage;
+				}else if(hours>40){
+					salary= (40*wage) + (hours-40)*(wage*1.5);
+				}
+
+				document.write("<p>"+ name + ": " + (salary).toFixed(2) +"</p>");
+
+				
+			}
+		</script>
+    	</body>
+</html>
