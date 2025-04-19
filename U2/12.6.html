@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Body modif</title>
+	</head>
+
+	<body>
+		<form id="form" method=post>
+			<p>
+				<label>Choose a background color:
+					<input type="color" id="bg"/>
+				</label>
+			</p>
+			<p>
+				<label>Choose a font family:
+					<select id="font">
+						<option value="serif">Serif</option>
+						<option value="sans-serif">Sans Serif</option>
+					</select>
+				</label>
+			</p>
+			<p>
+				<button type="submit">Apply changes</button>
+			</p>
+		</form>
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+		<script>
+			document.getElementById("form").addEventListener("submit",change);
+
+			function change(event){
+
+				event.preventDefault();
+
+				let color = document.getElementById("bg").value;
+				let font = document.getElementById("font").value;
+
+				document.body.setAttribute("style",`background-color:${color};font-family:${font}`);
+			}
+		</script>
+	</body>
+
+</html>

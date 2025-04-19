@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Pig Latin</title>
+	</head>
+
+	<body>
+		<h1>Pig Latin translator</h1>
+		<form id="form" method=post>
+			<p>
+				<label>Input your phrase:
+					<input type="textbox" id="clean" placeholder="Phrase here" required="true"/>
+				</label>
+			</p>
+			<p>
+				<button type="submit">Translate</button>
+			</p>
+			<p id="latin"></p>
+
+			<img src="../DummyMax.jpg" width="10px" height="auto"/>
+		</form>
+		<script>
+			document.getElementById("form").addEventListener("submit", translate);
+
+			function translate(event){
+
+				event.preventDefault();
+
+				let clean = (document.getElementById("clean").value).split(" ");
+				let dirty = [];//concatenation is not an option put u can .split() .join() and .slice
+
+				for (word of clean){
+					let nword;
+					let first = word[0]; 
+					
+					nword = word.slice(1) + first + "ay";
+					dirty.push(nword);//pushes in order
+				}
+
+				/*
+				if (isNaN(Number(clean))){
+					window.alert("Please enter words, otherwise it stops being funny");
+				}
+				*/
+				
+				document.getElementById("latin").innerHTML = "Your phrase in Pig Latin is: " + dirty.join(" ");		
+			}
+		</script>
+	</body>
+
+</html>
