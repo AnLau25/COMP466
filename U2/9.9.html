@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Distance</title>
+	</head>
+
+	<body>
+		<form id="form" method="post">
+			<p>
+				<label>Point 1:
+					<input id="x1" type="number" placeholder="x or horizontal"/>
+					<input id="y1" type="number" placeholder="y or vertical"/>
+				</label>
+			</p>
+			<p>
+				<label>Point 2:
+					<input id="x2" type="number" placeholder="x or horizontal"/>
+					<input id="y2" type="number" placeholder="y or vertical"/>
+				</label>
+			</p>
+			<p>
+				<button type="submit">Calculate</button>
+			</p>
+		</form>
+			<p id=distance></p>
+		<script>
+			document.getElementById("form").addEventListener("submit", calculate);
+
+			function calculate(event){
+				event.preventDefault();
+				
+				var x1 = parseFloat((document.getElementById("x1").value));
+				var y1 = parseFloat((document.getElementById("y1").value));
+				var x2 = parseFloat((document.getElementById("x2").value));
+				var y2 = parseFloat((document.getElementById("y2").value));
+				
+				var distance = Math.sqrt((x1-x2)**2 + (y1-y2)**2);
+
+				document.getElementById("distance").innerHTML = "Distance between points is: " + distance.toFixed(2) + "units"; 
+			}
+		</script>
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+</html>

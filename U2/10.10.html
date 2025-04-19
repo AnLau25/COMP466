@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Array stats</title>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+
+			td, th {
+				border: 1px solid black;
+				padding: 4px;
+			}
+		</style>
+	</head>
+	
+
+	<body>
+		<h1>Employee statistics:</h1>
+		<script>
+			let employees;
+			while (!Number.isInteger(employees)){
+				employees = Number(window.prompt("Number of employees:"));
+				if (!Number.isInteger(employees)){
+					window.alert("Please enter an integer");
+				}
+			}
+
+			const form = document.createElement("form");
+			form.method="post";
+			form.id="form";
+
+			for (var i=1; i<=employees; i++){
+				const p = document.createElement("p");
+	
+				const label = document.createElement("label");
+				label.textContent = `Employee ${i} gross sales: `;
+			
+				const input = document.createElement("input");
+				input.type = "number";
+				input.id = `${i}_in`;
+				input.step = "1";
+				input.placeholder = "Number of sales (int)";
+			
+				label.appendChild(input);
+				p.appendChild(label);
+				form.appendChild(p);				
+			}
+			const btn = document.createElement("button");
+			btn.type = "submit";
+			btn.textContent = "Get stats"; 
+			
+			form.appendChild(btn);
+			document.body.appendChild(form);
+			
+			document.getElementById("form").addEventListener("submit", getStat);
+	
+			const ranges = ["200-399", "400-599", "600-799", "800-more"]	
+
+			function getStat (event){
+				event.preventDefault();
+				
+				const counters = [0,0,0,0];
+				const existingTable = document.querySelector("table");
+				if (existingTable) existingTable.remove();
+
+				for (let i = 1; i<=employees; i++){
+					let curr = Number(document.getElementById(`${i}_in`).value);
+					if (Number.isNaN(curr)||curr==0) {//Empty is 0 in terms of numbers
+						window.alert("Please enter all the values properly, or start over");
+						return;
+					}
+					let salary = 200 + curr*0.09;
+					
+					if (salary >= 200 && salary <= 399) {
+    						counters[0]++;
+					} else if (salary >= 400 && salary <= 599) {
+    						counters[1]++;
+					} else if (salary >= 600 && salary <= 799) {
+    						counters[2]++;
+					} else if (salary >= 800) {
+    						counters[3]++;
+					}
+				}
+				
+				const table = document.createElement("table");
+				const headerRow = document.createElement("tr");
+
+				const thead1 = document.createElement("th");
+				thead1.textContent = "Range";
+
+				const thead2 = document.createElement("th");
+				thead2.textContent = "Computed";
+
+				headerRow.appendChild(thead1);
+				headerRow.appendChild(thead2);
+				table.appendChild(headerRow);
+				
+				table.appendChild(thead1);
+				table.appendChild(thead2);
+			
+				for (let i = 0; i<=3; i++){
+					const tr = document.createElement("tr");
+					const tdr = document.createElement("td");
+					tdr.textContent = ranges[i];
+					const tdc = document.createElement("td");
+					tdc.textContent = counters[i];
+
+					tr.appendChild(tdr);
+					tr.appendChild(tdc);
+					table.appendChild(tr);					
+				}
+				document.body.appendChild(table);
+			}
+			
+		</script>
+		<img src="../DummyMax.jpg" width="10px" height="auto"/> 
+	</body>
+</html>
