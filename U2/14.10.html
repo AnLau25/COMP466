@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Shadow box</title>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="525" height="250" style="border: 1px solid darkgreen;"></canvas>
+
+		<form id="form" method="post">
+			<p>
+			<label>shadowOffsetX: 
+				<input id="x" type="range" min="-30" max="30" step="1" value="0"/>
+			</label>
+			</p>
+			<p>
+			<label>shadowOffsetY: 
+				<input id="y" type="range" min="-30" max="30" step="1" value="0"/>
+			</label>
+			</p>	
+			<p>
+			<label>shadowBlur: 
+				<input id="blur" type="range" min="0" max="100" step="1" value="50"/>
+			</label>
+			</p>
+		</form>
+
+		<script>
+			let context = (document.getElementById("canvas")).getContext("2d");
+			let blur = document.getElementById("blur");	
+			let xoff = document.getElementById("x");
+			let yoff = document.getElementById("y");
+
+			function drawBox() {
+				// Clear previous drawing
+				context.clearRect(0, 0, canvas.width, canvas.height);
+
+				// Apply shadow properties
+				context.shadowBlur = parseInt(blur.value);
+				context.shadowOffsetX = parseInt(xoff.value);
+				context.shadowOffsetY = parseInt(yoff.value);
+				context.shadowColor = "green";
+				context.fillStyle = "darkgreen";
+
+				// Draw rectangle
+				context.fillRect(150, 25, 200, 200);
+			}
+
+			drawBox();
+
+			//Gotta re-draw the whole thing every time
+			blur.addEventListener("change",drawBox);
+
+			xoff.addEventListener("change", drawBox);
+
+			yoff.addEventListener("change", drawBox);
+
+		</script>
+
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+
+</html>

@@ -1,4 +1,4 @@
-<xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="course">
 		<xs:complexType>
 			<xs:sequence>
@@ -10,7 +10,7 @@
 							<xs:element name="unit" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:sequence name="unit_name" type="xs:string"/>
+										<xs:element name="unit_name" type="xs:string"/>
 										<xs:element name="sections">
 											<xs:complexType>
 												<xs:sequence>

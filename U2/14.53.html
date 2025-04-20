@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Snellen Chart</title>
+	</head>
+
+	<body style="text-align:center;">
+	
+		<script>
+			const snellenLetters = ["C", "D", "E", "F", "L", "N", "O", "P", "T", "Z"];
+			
+			for (let i=0; i<=9; i++){
+				snellenLine(i);
+			}
+
+			function snellenLine (num){
+				let line = [];
+
+				for(let i=0; i<=num; i++){
+					line.push(snellenLetters[i]);
+				}
+				let p = document.createElement("p");
+				
+				p.textContent = line.join(" "); 
+				p.style.fontSize = `${50 - (num*4)}` + "px";
+				p.style.letterSpacing = `${2+ num*1.5}` + "px";
+				
+				document.body.appendChild(p);
+			}
+		</script>
+
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+
+</html>

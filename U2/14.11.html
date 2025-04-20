@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Concentric circle</title>
+	</head>
+
+	<body>
+		<canvas id="canvas" width=500 height=500 style="border:1px solid darkgreen"></canvas>
+				
+		<script>
+			const context = document.getElementById("canvas").getContext("2d");
+
+			for(let i = 40; i>=5; i-=5 ){
+				drawCircle(i);
+			}
+
+			function drawCircle(rad){
+				context.beginPath();
+				context.arc(250, 250, rad, 0, Math.PI*2);
+				context.fillStyle = `rgb(${rad},${rad+50},${rad+100})`;
+				context.fill();
+				console.log(`cricle drawn, radius ${rad}`)
+			}
+
+		</script>
+
+		<img src="../DummyMax.jpg" width="10px" height="auto"/>
+	</body>
+
+</html>

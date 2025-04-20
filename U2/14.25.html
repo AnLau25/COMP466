@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixel out</title>
+</head>
+<body>
+  <canvas id="canva" width="500" height="auto"></canvas>
+  <script>
+    const canvas = document.getElementById("canva");
+    const context = canvas.getContext("2d");
+    const img = new Image();
+    img.src = "../DummyMax.jpg";
+
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      context.drawImage(img, 0, 0);
+    };
+
+    canvas.addEventListener("click", () => {
+      const gridSize = 5;
+      const cols = Math.ceil(canvas.width / gridSize);
+      const rows = Math.ceil(canvas.height / gridSize);
+
+      const squares = [];
+      for (let x = 0; x < cols; x++) {
+        for (let y = 0; y < rows; y++) {
+          squares.push({ x: x * gridSize, y: y * gridSize });
+        }
+      }
+
+      const interval = setInterval(() => {
+        if (squares.length === 0) {
+          clearInterval(interval);
+          return;
+        }
+
+        for (let i = 0; i < 50 && squares.length > 0; i++) {
+          const randIndex = Math.floor(Math.random() * squares.length);
+          const { x, y } = squares.splice(randIndex, 1)[0];
+          context.fillStyle = "white";
+          context.fillRect(x, y, gridSize, gridSize);
+        }
+      }, 10);
+    });
+  </script>
+</body>
+</html>
