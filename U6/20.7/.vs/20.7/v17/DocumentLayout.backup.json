@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|solutionrelative:addressbook.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\mailbook\\addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\MailBook\\addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|solutionrelative:addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\mailbook\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\MailBook\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|solutionrelative:site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
@@ -38,8 +38,7 @@
               "RelativeToolTip": "AddressBook.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-20T16:44:50.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T16:44:50.859Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-20T16:37:20.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T16:37:20.614Z"
             }
           ]
         }
