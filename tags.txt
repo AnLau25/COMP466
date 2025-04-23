@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<form method="post" id="form" autocomplete="on">
+	<input type="number" id="id" step="1" name="name" required=true placeholder="Number input"/>
+	<input type="color" id="color"/>
+	<input type="range" max="100" min="0" value="50" step="1" placeholder="Number by range input"/>
+	<label>Holds text
+		<input type="textbox" list="listforAutocomplete" id="forText">
+		<datalist id="listforAutocomplete">
+			<option Value="1">
+			<option Value="2">
+		</datalist>
+	</label>
+	<select id="select">
+		<option value="1">1</option>
+		<option value="2">2</option>
+	</select>
+	<input type="hidden" name="htmlNAME" id="htmlID">
+	<button type="submit">
+	<button type="reset">
+	<button id="toSummonFunctionsFromTheNether">
+	<canvas id="hopeNot" width=250 height=250 style="border: 1px solid darkgreen"/>
+</form>
+<table>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+----------------------------------php----------------------------------
+<?php?>
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	$variable = $_POST['htmlNAME']??null;
+	echo "<p>Proprer html with".$variable."</p>";
+}
+
+----------------------------------jss----------------------------------
+window.addEventListener("load", draw);
+
+document.getElementById("form").addEventListener("submit",functionToExecute);
+document.getElementById("toSummonFunctionsFromTheNether").addEventListener("click",functionFromTheNether)
+
+let thing;
+let flag;
+
+document.getElementById("stuffFromHTML").addEventListener("mousedown",()=>{
+	flag = true; //otherwise it will drag whatever
+	thing = event.target; //thing = tuffFromHTML
+	document.body.style.cursor = "grabbing"	
+});
+
+document.getElementById("stuffFromHTML").addEventListener("mouseup",()=>{
+	document.body.style.cursor = "default"
+});
+
+document.getElementById("stuffFromHTML").addEventListener("mousemove",()=>{
+	if(flag){
+		thing.style.left = event.ClientX + "px";
+		thing.style.top = event.ClientY + "px";
+	}
+});
+
+function draw (event){
+	let context = document.getElementById("hopeNot").getContext("2d");
+	context.shadowBlur = int;
+	context.shadowOffsetX = int;
+	context.shadowOffsetY = int;
+	context.fillStyle = document.getElementById("color").value;
+	context.fillRect(xToTheLeft, yToTheTop, width, height);
+
+	context.beginPath();
+	context.arc(xToTheLeft, yToTheTop, radius, 0, Math.PI*2); //*2 for full circle
+	context.fillStyle = "rgba(60, 95, 84, 92)";
+	context.fill();
+}
+
+function functionToExecute(event){
+	event.preventDefault();
+
+	if (document.getElementById("forText").value==null!!){
+		window.alert("Gotta be fast!");
+	}else{
+		document.getElementById("htmlID").value = document.getElementById("forText").value;
+
+		let ul = document.createElement("ul");
+		let li = document.createElement("li");
+		li.textContent = document.getElementById("htmlID").value;
+		
+		ul.appendChild(li);
+		document.body.appendChild(ul);
+
+		document.body.setAttribute("style", "background-color:'Pink';font-family='serif'");
+	}
+	
+	document.write("<p>Same as echo, but deletes all:" + (1+2).toFixed(2) + "</p>");
+	
+}
+
+----------------------------------xml----------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<nameFromXML>
+	<innerElementFromXML></innerElementFromXML>
+</nameFromXML>
+<nameFromXML>
+	<innerElementFromXML></innerElementFromXML>
+</nameFromXML>
+
+----------------------------------xsd----------------------------------
+<xs:schema>
+</xs:schema>
+<xs:element name="nameFromXML" maxOccur="unbound">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="innerElementFromXML" type="xs:string">
+		<xs:sequence>
+	<xs:complexType>
+<xs:element>
+
+----------------------------------xsl----------------------------------
+<xsl:stylesheet>
+	<xsl:output method="html">
+
+	<xsl:for-each select="/nameFromXML">
+		<p><xsl:value-of select="innerElementFromXML"/></p>
+	</xsl:for-each>
+</xsl:stylesheet>
+<!--Use "." to get inner content-->
+
+----------------------------------asp----------------------------------
+<form id="form1" runat="server">
+	<asp:Label runat="server" ID="label1" Text="Everything is runnat server"/>
+	<asp:TextBox runat"server" ID="Text1" Placeholder="This one is for text"/>
+	<asp:RequiredFieldValidator runat="server" ControlToValidate="Text1" ErrorMessage="Eh yo! Text1 required!">
+	<asp:RegularExpressionValidator runat="server" ControlToValidate="Text1" ErrorMessage="Eh yo! Wrong format!" ValidationExpression="^\d+$"/>
+	<asp:DropDownList runat="server" ID="dropItLikeItsHot" AutoPostBack="true">
+		<asp:ListItem Value="1" Text="Its like">
+		<asp:ListItem Value="2" Text="Windows Combobox">
+	</asp:DropDownList>
+	<asp:Button ID="btn" OnClick="sender" Text=""/>
+	<asp:ValidationSummary runat="server" foreColor="Red">
+</form>
+
+public partial class NameOfChoice:System.Web.UI.Page{
+
+	protected void Page_Load(object sender, EventArgs e){
+
+		label1.Text = "I can change the text on load";
+
+		functionForAutoPostBack(sender, e);
+	}
+
+	protected void functionForAutoPostBack(object sender, EventArgs e){
+		btn.Text = dropItLikeItsHot.SelectedValue + ": " + dropItLikeItsHot.SelectedItem.Text;
+		dropItLikeItsHot.SelectedItem.Value = (int.Parse(dropItLikeItsHot.SelectedValue) + 1).ToString();
+
+		if(Request.Cookies["cookie"]==null){
+			HttpCookie cookie = new HttpCookie("cookie");
+			cookie.Expires = DateTime.Now.AddMinutes(10);
+			cookie.Values["valName"] = dropItLikeItsHot.SelectedItem.Text + " is option " + dropItLikeItsHot.SelectedValue.ToString();
+			Response.Cookies.Add(cookie);    
+		}else{
+			Request.Cookies["cookie"].Values["valName"] = dropItLikeItsHot.SelectedItem.Text + " is option " + dropItLikeItsHot.SelectedValue.ToString("2F");
+		}
+	}
+
+	protected void sender(object sender, EventArgs e){
+		label1.Text = Request.UserHostAddress.ToString() + " " + TimeZoneInfo.Local.StandardTime.ToString(); 
+	}
+
+} 
