@@ -18,7 +18,7 @@
 	<button type="submit">
 	<button type="reset">
 	<button id="toSummonFunctionsFromTheNether">
-	<canvas id="hopeNot" width=250 height=250 style="border: 1px solid darkgreen"/>
+	<canvas id="hopeNot" width=250 height=250 style="border: 1px solid darkgreen"></canvas>
 </form>
 <table>
 	<thead>
