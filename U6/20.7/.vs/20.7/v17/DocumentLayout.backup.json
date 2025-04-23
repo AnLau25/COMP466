@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|solutionrelative:sessionclick.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\20.7\\sessionclick.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\sessionclick.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|solutionrelative:sessionclick.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\20.7\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|solutionrelative:site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|MailBook.csproj|solutionrelative:addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|c:\\users\\user\\documents\\a_uni\\yoff\\atha\\comp466\\u6\\20.7\\addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{886FA5FF-6BB0-4B4B-9F2F-14CA29C8C256}|20.7.csproj|solutionrelative:addressbook.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddressBook.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\AddressBook.aspx",
+              "RelativeDocumentMoniker": "AddressBook.aspx",
+              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\AddressBook.aspx",
+              "RelativeToolTip": "AddressBook.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-23T01:44:17.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +49,7 @@
               "RelativeDocumentMoniker": "SessionClick.aspx.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\SessionClick.aspx.cs",
               "RelativeToolTip": "SessionClick.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T13:36:22.01Z",
               "EditorCaption": ""
@@ -57,31 +66,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-21T13:34:34.919Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Site.Master",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\Site.Master",
-              "RelativeDocumentMoniker": "Site.Master",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\Site.Master",
-              "RelativeToolTip": "Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-21T13:31:22.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddressBook.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\AddressBook.aspx",
-              "RelativeDocumentMoniker": "AddressBook.aspx",
-              "ToolTip": "C:\\Users\\User\\Documents\\A_UNI\\YOff\\Atha\\COMP466\\U6\\20.7\\AddressBook.aspx",
-              "RelativeToolTip": "AddressBook.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-20T16:44:50.859Z"
             }
           ]
         }
